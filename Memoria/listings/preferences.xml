@@ -1,0 +1,27 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:widgetLayout="@layout/custom_preference_layout"
+    >
+    <PreferenceCategory
+        android:title="@string/user_data">
+        <EditTextPreference
+            android:id="@+id/userPref"
+            android:key="userName"
+            android:title="@string/user_name"
+            android:summary="@string/summary_user_name"
+            android:dialogTitle="@string/dialog_user_name"
+            android:defaultValue="@string/user_name"/>
+        <EditTextPreference
+            android:key="userAlu"
+            android:title="@string/user_alu"
+            android:summary="@string/summary_user_alu"
+            android:dialogTitle="@string/dialog_user_alu"
+            android:defaultValue="@string/user_alu"/>
+        <EditTextPreference
+            android:key="userDni"
+            android:title="@string/user_dni"
+            android:summary="@string/summary_user_dni"
+            android:dialogTitle="@string/dialog_user_dni"
+            android:defaultValue="@string/user_dni"/>
+    </PreferenceCategory>
+</PreferenceScreen>

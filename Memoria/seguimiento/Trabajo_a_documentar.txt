@@ -1,0 +1,100 @@
+Se ha instalado el SDK de Vuforia y se han hecho pruebas con el emulador, pero habia problemas con la camara del emulador.
+Posteriormente se ha generado el apk y se ha instalado en mi dispositivo y funciona correctamente, lo siguiente sera entender su funcionamiento
+Y empezar a desarrollar una demo APP basica, para profundizar los conocimientos sobre este SDK y ver su potencial y ver si dispone de la
+ funcionalidad para integrarla en la del TFG.
+
+
+Otros:
+    1. posibles solucion para el reconocimento ubicaciones entre dos puntos cuando se encuentran de frente. enlaces:
+       - https://www.youtube.com/watch?v=8mC_QRYHHZ0
+       - https://developer.android.com/guide/topics/sensors/sensors_position.html
+
+    2. soluciones simples para la muestra de cuadros simples de texto encima de la camara. Nada claro o relevante
+
+
+
+
+1.Vuforia  ---- Prioridad 1 ---     https://developer.vuforia.com/ 
+    Es un SDK disponible para todas la plataformas(android, IOS, windows)y para Android Studio. Es muy potente para el desarrollo de aplicaciones de
+    realidad virtual, ya sea para el reconocimiento de imagenes, escanearlas, reconocimiento de multiples objetos, reconocimiento
+    y superficies planas. Ademas tambien permiten el reconocimento de acciones realizadas por el usuario para la interaccion con
+    los distintos elementos disponibles. El uso de esta SDK esta principalmente enfocado para trabajar junto Unity.
+
+    Se han descargado los ejemplos de prueba presentes en la app, y funcionan, se ha usado una clave gratuita de desarrollador que tiene un limite de
+    usos en cuanto al reconocimiento de objetos mediante la nube(1000 al mes) y el uso VuMarks. 
+    Pros: facilidad
+
+    Enlaces de interes para el desarrollo de TFG:
+      -  https://www.vuforia.com/case-studies.html
+      -  https://www.vuforia.com/case-studies/augmented-expeditions.html
+
+2. EasyAR ---- Prioridad 3 ---  https://www.easyar.com/
+    En su version Free, tienes soporte para todas la plataformas y para Android Studio. Contiene reconocimento de imagenes planas, reconocimiento 
+    de imagenes multiples con deteccion de refleco y oclusion, reconocimiento limitado de imagenes en la nube.
+    Su version mas potente se llama SLAM y solo es disponible para la version de pago.
+
+    Demos:
+       - https://www.youtube.com/watch?v=H0aFbUEptxM
+
+    No se ha probado
+
+3. Wikitude -----descartada------
+    Contiene todas las funcionalidades de reconociento de objetos imagenes y seguimiento de ellas, y viene con soporte para ARkit, ARcore y soporte
+    de geolocalizacion para realidad virtual.
+
+    Desafortunadamente no tiene soporte para android studio.
+
+    
+
+4.ARToolkit -----descartada------
+    Fue comprada por otra compañia y ya no es open source, ni tienes soporte ni documentacion en su pagina
+    
+5. Kudan   ---- Prioridad 2 ---     https://www.kudan.eu/
+    Principal rival de Vuforia, facil de usar y eficiente, usa SLAM para el reconociento de objetos e imagenes
+    Tiene una licencia gratis para desarrolladores, una de sus desventajas es que tiene problemas con su key pare empezar a desarrollar y que a
+    veces tiene problemas con el editor de Unity.
+
+    Esta para Android Studio y tiene ejemplos sencillos para empezar.
+    ejemplos:
+        https://www.youtube.com/user/KudanLimited/videos
+    
+    No se ha probado. Pero tiene buena pinta.
+
+6. Maxst   ---- Prioridad 4 --- https://developer.maxst.com/
+    reconociento de objetos de imagenes, SLAM, multiplataforma, facil de usar. Optimizado para moviles, incluso con bajos recursos
+    Se puede utilizar con android studio, tienen un plan para desarrolladores free, con acceso a la mayoria de funcionalidades de su SDK
+    ejemplo:
+        https://www.youtube.com/watch?v=hz5sojXanNw
+
+7. Xzimg  -----descartada------  https://www.xzimg.com/
+    Reconocimiento de caras y realidad aumentada, reconociento de imagenes planas.
+    Soporte para android e iOS, tiene una licencia gratis para desarrolladores.
+    No es de mucho interés para el TFG puesto que su funcionalidad principal es el reconociento de caras y realidad aumentada sobre ellas.
+
+8. NyARToolkit  -----descartada------
+    Basada ARToolkit, es bastante vieja y no esta muy optimizada, la pagina oficial no se encuentra en ingles, con lo que la documentacion es 
+    dificil de entender, gratis
+
+
+9. ARcore  -----descartada------ https://developers.google.com/ar/discover/
+    ARCore es una plataforma para crear aplicaciones de realidad aumentada en Android. ARCore utiliza tres tecnologías clave para integrar 
+    el contenido virtual con el mundo real como se ve a través de la cámara de su teléfono:
+
+        -El seguimiento de movimiento permite que el teléfono comprenda y rastree su posición relativa al mundo.
+        -La comprensión ambiental permite que el teléfono detecte el tamaño y la ubicación de superficies horizontales 
+            planas como el suelo o una mesa de centro.
+        -La estimación de la luz le permite al teléfono estimar las condiciones de iluminación actuales del entorno.
+
+    Pese a que pinta muy interesante, su principal problema es que solo lo soportan contados dispositivos que ademas han de correr un Android 7.0 o
+    superior, lo cual es complicado llevar a cabo las pruebas en cuanto a su desarrollo, ya que solo una minoria dispone de esos dispositivos
+    Android.
+
+otros AR SDK:
+    -http://www.mood-me.com/ Reconocimiento de caras.
+
+
+(SLAM)
+La localización y mapeado simultáneos (SLAM) permiten construir un mapa en entornos a priori desconocidos
+así como hacer un seguimiento de la posición actual de un objeto móvil en dicho entorno.
+
+

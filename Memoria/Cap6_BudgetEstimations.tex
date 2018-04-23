@@ -1,0 +1,51 @@
+% ---------------------------------------------------
+%
+% Trabajo de Fin de Grado. 
+% Author: Alejandro Hernández Padrón. 
+% Capítulo: Presupuesto. 
+% Fichero: Cap6_BudgetEstimations.tex
+%
+% ----------------------------------------------------
+%
+
+\chapter{Presupuesto y puesta en marcha} \label{chap:presupuesto} 
+
+En este capítulo se expondrán las estimaciones de recursos necesarios para poner en práctica este despliegue teniendo en cuenta el estado actual del proyecto. 
+
+El desglose del presupuesto de la aplicación se puede separar en dos partes: por un lado, la compra de los distintos dispositivos, y por otro el desarrollo y mantenimiento de la aplicación. Se puede contabilizar de la siguiente manera: 
+
+\begin{itemize}
+\item Para el caso de uso de los autobuses, sería necesario un beacon por parada. Si sólo se cubriesen las paradas dentro de la zona universitaria, obtendríamos unos 20 beacons a distribuir entre Anchieta y Guajara.
+\item Siguiendo con el caso de uso de los eventos, se podrían calcular  10 zonas de eventos principales nuevamente a distribuir entre Guajara y Anchieta. Estas zonas abarcarían desde el paraninfo, aulas magnas o bibliotecas hasta lugares destinados específicamente para la realización de eventos.
+\item Para los casos de uso que dependen de la localización, debemos realizar un análisis de cada recinto: los aparcamientos para el módulo del aparcamiento, las aulas para el módulo de asistencia y los edificios o exteriores para el módulo de guía.
+\end{itemize}
+
+Teniendo en cuenta que cada dispositivo de Aruba lo comercializamos por 25 euros:
+
+ 
+\begin{itemize}
+\item Para cubrir el primer caso de uso sería necesaria una inversión de 500 euros y cubriríamos 20 paradas de autobús.
+\item Para las 10 zonas de eventos se necesitarían 250 euros (aunque es posible añadir más beacons)
+\item Los casos de uso que dependen de la localización son relativos: como hay 8 aparcamientos y se necesitan como mínimo 3 beacons por recinto, podríamos hablar de un mínimo de 600 euros a desembolsar. En el caso de la asistencia y guía, si calculamos  que para cubrir todos los edificios de la ULL (facultades en su mayoría) se necesitarían unos 100 beacons, el importe asciende a 2500 euros.
+\end{itemize}
+
+
+Esta primera parte del presupuesto suma en total 3.850 euros y con ellos quedarían cubiertos los edificios, aparcamientos y paradas de autobús cercanas al campus. La instalación y configuración de los dispositivos se ha calculado en base a la suma de 12,40 euros por hora trabajada. Se necesitarían 2 especialistas trabajando durante un mes a jornada completo (8 horas) para realizar la instalación.
+
+El total del despliegue ascendería a 3.968 euros. Si lo sumamos al precio de los dispositivos obtenemos la suma de 7.818 euros. Los dispositivos cuentan con una garantía de un año por lo que, si el dispositivo fuese considerado defectuoso en ese plazo, se procedería al cambio del mismo sin coste para el cliente.
+
+
+Aparte de los dispositivos hay que añadir la segunda parte del coste, derivada del mantenimiento de la aplicación y  del coste de un servidor para almacenar los datos y realizar las consultas. Para esta parte se ofrecen dos opciones: 
+
+\begin{itemize}
+\item Compra del servidor dedicado junto con el soporte y configuración servidor (cuota anual) : 1300 + 250 = 1.550 euros.
+\item Configuración de un servidor ya disponible en la Universidad (sin cuota anual de soporte ni mantenimiento): 550 euros. 
+\end{itemize}
+
+
+Por otro lado, sería recomendable el mantenimiento de la aplicación. Ofrecemos un especialista programador en Android que se haría cargo de las incidencias que pudieran surgir con la app en horario laboral a jornada completa, con un tiempo de respuesta de 24 horas y solución de la incidencia en 72 horas a partir de la confirmación de la misma.
+
+El coste final ascendería a 21.600 euros anuales netos durante el primer año y a 18.000 euros en adelante. Este mantenimiento no incluye nuevas funcionalidades, únicamente el mantenimiento y el correcto funcionamiento de los módulos disponibles a día de hoy.
+
+ 
+El presupuesto final habría que calcularlo en función de las distintas opciones presentadas.

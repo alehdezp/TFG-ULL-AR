@@ -1,0 +1,53 @@
+\begin{frame}
+	\frametitle{Especificación de Requisitos}
+	\begin{columns}
+		\begin{column}{0.6\textwidth}
+			\block {Funcionalidades}
+			\begin{itemize}
+				\item Registro (Roles).
+				%\item Acceso.
+				%\item Recuerdo de la contraseña.
+				\item Contactos.
+				%\item Chat.
+				\item Notificaciones.
+				\item Circulares.
+				%\item Citas.
+				%\item Visualización de datos.
+				\item Modificación de datos.
+				\item Baja de Usuario.
+			\end{itemize}
+			\endblock{}
+		\end{column}
+		\begin{column}{0.4\textwidth}
+			\vfill 
+			\begin{center}
+				\includegraphics[width=0.9\linewidth]{Images/padresProfesNinos}
+			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Especificación de Requisitos}
+	\block {Comunicaciones Permitidas}
+		\begin{table} [!hbt]
+			\begin{center}
+				\begin{tabular}{|| c | c | c | c ||}
+					\hline
+					\hline
+					& Padre & Alumno & Profesor \\
+					\hline
+					Padre & Mensajes & - & Mensajes \\
+					\hline
+					Alumno & - & Mensajes & Mensajes \\
+					\hline
+					Profesor & Circulares y Mensajes & Circulares y Mensajes & Mensajes \\
+					\hline
+					\hline
+				\end{tabular}
+			\end{center}
+		\end{table}
+	\endblock{}
+\end{frame}

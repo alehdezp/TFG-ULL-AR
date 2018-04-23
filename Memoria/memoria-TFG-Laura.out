@@ -1,0 +1,40 @@
+\BOOKMARK [0][-]{chapter*.3}{Introducci\363n}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Objetivos}{}% 2
+\BOOKMARK [0][-]{chapter.2}{Herramientas y Tecnolog\355as}{}% 3
+\BOOKMARK [1][-]{section.2.1}{Introduccion}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.1.1}{Android Studio}{section.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.1.2}{LaTex}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.3}{Github}{section.2.1}% 7
+\BOOKMARK [1][-]{section.2.2}{Tecnolog\355as utilizadas}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{El Sistema Operativo Android}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{Los Beacons}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.3}{CouchBase Server}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.4}{La librer\355a AltBeacon}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.5}{El algoritmo de trilateraci\363n}{section.2.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Beacons en entornos universitarios}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Aplicaciones m\363viles en entornos universitarios}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Posibles casos de uso de la tecnolog\355a beacon en entornos universitarios}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.2.1}{Gu\355a a trav\351s del campus de la universidad}{section.3.2}% 17
+\BOOKMARK [2][-]{subsection.3.2.2}{Descarga autom\341tica de material}{section.3.2}% 18
+\BOOKMARK [2][-]{subsection.3.2.3}{Acceso al parking y recuento de n\372mero de plazas disponibles}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.4}{Gesti\363n de eventos e informaci\363n, entrada autom\341tica}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.5}{Despacho del profesorado e informaci\363n}{section.3.2}% 21
+\BOOKMARK [2][-]{subsection.3.2.6}{Informaci\363n y descuentos para usuarios de la app}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.7}{Control de asistencia}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.8}{Control de acceso a instalaciones}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.9}{Biblioteca informativa}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.10}{Actividades interactivas por el campus, jornadas de acogida u otros eventos}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.11}{Localizaci\363n de transporte p\372blico, horarios e informaci\363n de la parada}{section.3.2}% 27
+\BOOKMARK [0][-]{chapter.4}{La aplicaci\363n BulletPoint}{}% 28
+\BOOKMARK [1][-]{section.4.1}{Casos de uso elegidos}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.1.1}{Localizaci\363n de transporte p\372blico, horarios e informaci\363n de la parada}{section.4.1}% 30
+\BOOKMARK [2][-]{subsection.4.1.2}{Gesti\363n de eventos e informaci\363n}{section.4.1}% 31
+\BOOKMARK [2][-]{subsection.4.1.3}{Control de asistencia}{section.4.1}% 32
+\BOOKMARK [2][-]{subsection.4.1.4}{Gu\355a a trav\351s del campus de la universidad}{section.4.1}% 33
+\BOOKMARK [2][-]{subsection.4.1.5}{Acceso al parking}{section.4.1}% 34
+\BOOKMARK [1][-]{section.4.2}{Despliegue}{chapter.4}% 35
+\BOOKMARK [0][-]{chapter.5}{Conclusiones y l\355neas de trabajo futuras}{}% 36
+\BOOKMARK [1][-]{subsection.5.0.1}{Conclusiones}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.0.2}{Conclusions}{subsection.5.0.1}% 38
+\BOOKMARK [2][-]{subsection.5.0.3}{L\355neas de trabajo futuras}{subsection.5.0.1}% 39
+\BOOKMARK [0][-]{chapter.6}{Presupuesto y puesta en marcha}{}% 40

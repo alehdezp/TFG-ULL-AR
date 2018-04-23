@@ -1,0 +1,30 @@
+\select@language {spanish}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Android Studio, un IDE flexible e intuitivo.}}{4}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Uno de los beacons de la compa\IeC {\~n}\IeC {\'\i }a Estimote}}{7}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Uno de los beacons de la compa\IeC {\~n}\IeC {\'\i }a Estimote en formato Pegatina}}{7}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Representaci\IeC {\'o}n de un beacon emitiendo mediante Bluetooth a un dispositivo m\IeC {\'o}vil}}{7}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Interior de un beacon de Estimote}}{8}{figure.2.5}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces N\IeC {\'u}meros identificativos de los beacons}}{9}{figure.2.6}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Ejemplificaci\IeC {\'o}n del rango de un beacon}}{9}{figure.2.7}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces La aplicaci\IeC {\'o}n de Clevedon School}}{11}{figure.2.8}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces La aplicaci\IeC {\'o}n de Levi's Stadium}}{12}{figure.2.9}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces La aplicaci\IeC {\'o}n del Aeropuerto Internacional de Orlando}}{13}{figure.2.10}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Sincronizaci\IeC {\'o}n de CouchBase Server con CouchBase Lite mediante Sync Gateway}}{14}{figure.2.11}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces En el algoritmo de trilateraci\IeC {\'o}n se utilizan las localizaciones conocidas de varios puntos de referencia y las distancias entre el sujeto y cada punto de referencia.}}{16}{figure.2.12}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Servicios de localizaci\IeC {\'o}n a trav\IeC {\'e}s de la Universidad}}{20}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces La aplicaci\IeC {\'o}n presenta informaci\IeC {\'o}n al usuario sobre el evento que est\IeC {\'a} teniendo lugar.}}{22}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces La biblioteca de la Universidad de Salamanca contiene m\IeC {\'a}s de 1.000.000 de ejemplares lo que puede dificultar la localizaci\IeC {\'o}n de algunos t\IeC {\'\i }tulos.}}{24}{figure.3.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Informaci\IeC {\'o}n mostrada por TITSA actualmente en su p\IeC {\'a}gina web.}}{27}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \texttt {BulletPoint}{}{} permite conocer en tiempo real, autobuses que se acercan a la parada, junto con su destino y tiempo de llegada de la parada identificada por un beacon.}}{32}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Las diferentes categor\IeC {\'\i }as de los RSS del portal web de eventos.ull.es}}{35}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces El portal web de eventos, donde podemos obtener informaci\IeC {\'o}n adicional de un evento concreto.}}{36}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Usando \texttt {BulletPoint}{}{} podemos conocer eventos asociados a un RSS del portal web.}}{36}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Pantalla de confirmaci\IeC {\'o}n de asistencia en la localizaci\IeC {\'o}n.}}{39}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces La estructura de los datos del usuario en CouchBase Server.}}{40}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Se puede apreciar la estructura del parking central. Los puntos A, B y C se\IeC {\~n}alan las posiciones de los beacons.}}{45}{figure.4.8}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

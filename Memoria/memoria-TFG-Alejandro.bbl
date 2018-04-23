@@ -1,0 +1,593 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{[#1]}
+\providecommand{\urlprefix}{}
+
+\bibitem{URL::Android}
+{Android}: \textbf{{Android}} 2008, \urlprefix\url{[https://www.android.com/]}.
+  [\href{https://www.android.com/} [Disponible electrónicamente. Último
+  acceso, julio de 2016]].
+
+\bibitem{URL::Github}
+{Github}: \textbf{{Repositorio Github}} 2008,
+  \urlprefix\url{[https://github.com/]}. [\href{https://github.com/}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::LaTeX}
+{LaTeX3 Project}: \textbf{{LaTeX}} 1985,
+  \urlprefix\url{[https://www.latex-project.org/]}.
+  [\href{https://www.latex-project.org/} [Disponible electrónicamente. Último
+  acceso, julio de 2016]].
+
+\bibitem{URL::AndroidStudio}
+{IntelliJ}: \textbf{{Android Studio}} 2014,
+  \urlprefix\url{[https://developer.android.com/studio/index.html]}.
+  [\href{https://developer.android.com/studio/index.html} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::IntelliJIDEA}
+{IntelliJ IDEA}: \textbf{{IntelliJ IDEA}} 2001,
+  \urlprefix\url{[https://www.jetbrains.com/idea/]}.
+  [\href{https://www.jetbrains.com/idea/} [Disponible electrónicamente.
+  Último acceso, julio de 2016]].
+
+\bibitem{URL::Gradle}
+\textbf{{Gradle}} 2007, \urlprefix\url{[http://gradle.org/]}.
+  [\href{http://gradle.org/} [Disponible electrónicamente. Último acceso,
+  julio de 2016]].
+
+\bibitem{URL::eclipseADT}
+{Google, Inc}: \textbf{{Eclipse con ADT plugin}} 2012,
+  \urlprefix\url{[https://marketplace.eclipse.org/content/android-development-tools-eclipse]}.
+  [\href{https://marketplace.eclipse.org/content/android-development-tools-eclipse}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::manualLatex}
+\textbf{{Manual de Latex en español}} 2004,
+  \urlprefix\url{[http://www.fing.edu.uy/~canale/latex.pdf]}.
+  [\href{http://www.fing.edu.uy/~canale/latex.pdf} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::repositorioAplicacion}
+\textbf{{Repositorio de la aplicación
+  BulletPoint}}\urlprefix\url{[https://github.com/ccetsii/BulletPoint]}.
+  [\href{https://github.com/ccetsii/BulletPoint} [Disponible electrónicamente.
+  Último acceso, julio de 2016]].
+
+\bibitem{URL::PATFL}
+\textbf{{Plataforma del Programa de Apoyo a Trabajos Finales
+  Libres}}\urlprefix\url{[http://osl.ull.es/programa-apoyo-trabajos-finales-libres//]}.
+  [\href{http://osl.ull.es/programa-apoyo-trabajos-finales-libres/} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::GooglePlay}
+\textbf{{Google Play}}\urlprefix\url{[https://play.google.com/store]}.
+  [\href{https://play.google.com/store} [Disponible electrónicamente. Último
+  acceso, julio de 2016]].
+
+\bibitem{URL::SamsungApps}
+\textbf{{Samsung
+  Apps}}\urlprefix\url{[http://www.samsung.com/es/apps/mobile/galaxyapps/]}.
+  [\href{http://www.samsung.com/es/apps/mobile/galaxyapps/} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::Beacon}
+\textbf{{Beacon}} 2014,
+  \urlprefix\url{[http://meridianapps.com/news/2014/11/04/beacons]}.
+  [\href{http://meridianapps.com/news/2014/11/04/beacons} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::GPS}
+\textbf{{Sistema de Posicionamiento
+  global}}\urlprefix\url{[https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global]}.
+  [\href{https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::Bluetooth}
+{Jaap Haartsen y Mattisson Sven}: \textbf{{Bluetooth}} 1994,
+  \urlprefix\url{[https://es.wikipedia.org/wiki/Bluetooth]}.
+  [\href{https://es.wikipedia.org/wiki/Bluetooth} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::BluetoothLowEnergy}
+{Nokia}: \textbf{{Bluetooth Low Energy}} 2010,
+  \urlprefix\url{[https://en.wikipedia.org/wiki/Bluetooth_low_energy]}.
+  [\href{https://en.wikipedia.org/wiki/Bluetooth_low_energy} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::UUID}
+\textbf{{UUID Universal Unique Identifier
+  }}\urlprefix\url{[https://en.wikipedia.org/wiki/Universally_unique_identifier]}.
+  [\href{https://en.wikipedia.org/wiki/Universally_unique_identifier}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::IOS7}
+{Apple Inc}: \textbf{{IOS7
+  }}\urlprefix\url{[https://es.wikipedia.org/wiki/IOS_7]}.
+  [\href{https://es.wikipedia.org/wiki/IOS_7} [Disponible electrónicamente.
+  Último acceso, julio de 2016]].
+
+\bibitem{URL::Incompatibilidades}
+\textbf{{Discusiones del funcionamiento de AltBeacon en Android Deep Sleep
+  mode}}\urlprefix\url{[https://github.com/AltBeacon/android-beacon-library/issues/21]}.
+  [\href{https://github.com/AltBeacon/android-beacon-library/issues/21}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::Blackberry}
+{Blackberry}: \textbf{{Blackberry }} 1999,
+  \urlprefix\url{[https://es.wikipedia.org/wiki/BlackBerry]}.
+  [\href{https://es.wikipedia.org/wiki/BlackBerry} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::Articulo}
+Mareco D: \textbf{{3 Brilliant example of how beacon technology is transforming
+  mobility}}\urlprefix\url{[http://www.securedgenetworks.com/blog/3-brilliant-examples-of-how-beacon-technology-is-transforming-mobility]}.
+  [\href{http://www.securedgenetworks.com/blog/3-brilliant-examples-of-how-beacon-technology-is-transforming-mobility}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::couchBase}
+\textbf{{CouchBase
+  Server}}\urlprefix\url{[http://www.couchbase.com/nosql-databases/couchbase-server]}.
+  [\href{http://www.couchbase.com/nosql-databases/couchbase-server} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::nosql}
+\textbf{{Tecnología
+  NoSQL}}\urlprefix\url{[https://es.wikipedia.org/wiki/NoSQL]}.
+  [\href{https://es.wikipedia.org/wiki/NoSQL} [Disponible electrónicamente.
+  Último acceso, julio de 2016]].
+
+\bibitem{URL::json}
+\textbf{{El formato de texto
+  JSON}}\urlprefix\url{[https://es.wikipedia.org/wiki/JSON]}.
+  [\href{https://es.wikipedia.org/wiki/JSON} [Disponible electrónicamente.
+  Último acceso, julio de 2016]].
+
+\bibitem{URL::couchweb}
+\textbf{{Página web de CouchBase}}\urlprefix\url{[http://www.couchbase.com/]}.
+  [\href{http://www.couchbase.com/} [Disponible electrónicamente. Último
+  acceso, julio de 2016]].
+
+\bibitem{URL::couchbaseDownload}
+\textbf{{Descarga de CouchBase
+  Server}}\urlprefix\url{[http://www.couchbase.com/nosql-databases/downloads]}.
+  [\href{http://www.couchbase.com/nosql-databases/downloads} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::couchBaseGuide}
+\textbf{{Guía de Instalación de CouchBase
+  Server}}\urlprefix\url{[http://developer.couchbase.com/documentation/server/4.5/getting-started/installing.html]}.
+  [\href{http://developer.couchbase.com/documentation/server/4.5/getting-started/installing.html}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::couchBaseLite}
+\textbf{{Guía de Desarrollo usando CouchBase
+  Lite}}\urlprefix\url{[http://developer.couchbase.com/documentation/mobile/1.2/develop/training/build-first-android-app/index.html]}.
+  [\href{http://developer.couchbase.com/documentation/mobile/1.2/develop/training/build-first-android-app/index.html}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::importGradle}
+\textbf{{Dependencia Gradle de
+  AltBeacon}}\urlprefix\url{[https://altbeacon.github.io/android-beacon-library/configure.html]}.
+  [\href{https://altbeacon.github.io/android-beacon-library/configure.html}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::versionAltBeacon}
+\textbf{{Diferentes versiones de Alt
+  Beacon}}\urlprefix\url{[https://altbeacon.github.io/android-beacon-library/download.htm]}.
+  [\href{https://altbeacon.github.io/android-beacon-library/download.htm}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::altbeaconSamples}
+\textbf{{Ejemplos de utilización de la libería
+  AltBeacon}}\urlprefix\url{[https://altbeacon.github.io/android-beacon-library/samples.html]}.
+  [\href{https://altbeacon.github.io/android-beacon-library/samples.html}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::algoritmolm}
+\textbf{{Algoritmo de
+  Levenberg-Marquardt}}\urlprefix\url{[https://en.wikipedia.org/wiki/Levenberg-Marquardt_algorithm]}.
+  [\href{https://en.wikipedia.org/wiki/Levenberg-Marquardt_algorithm}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::apachemath}
+\textbf{{Librería Apache
+  Commons}}\urlprefix\url{[http://commons.apache.org/proper/commons-math/]}.
+  [\href{http://commons.apache.org/proper/commons-math/} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::trilateracion}
+\textbf{{Algoritmo de
+  Trilateración}}\urlprefix\url{[https://github.com/lemmingapex/Trilateration]}.
+  [\href{https://github.com/lemmingapex/Trilateration} [Disponible
+  electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::galileo}
+\textbf{{Aplicación de la Universidad
+  Galileo}}\urlprefix\url{[https://play.google.com/store/apps/details?id=edu.galileo.ges]}.
+  [\href{https://play.google.com/store/apps/details?id=edu.galileo.ges}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::valladolid}
+\textbf{{Aplicación de la Universidad de
+  Valladolid}}\urlprefix\url{[https://play.google.com/store/apps/details?id=com.pocketuniversity.uva]}.
+  [\href{https://play.google.com/store/apps/details?id=com.pocketuniversity.uva}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::oviedo}
+\textbf{{Aplicación de la Universidad de
+  Oviedo}}\urlprefix\url{[https://play.google.com/store/apps/details?id=es.uniovi.innova.unioviapp]}.
+  [\href{https://play.google.com/store/apps/details?id=es.uniovi.innova.unioviapp}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::titsa}
+\textbf{{Página web de Transportes interurbanos de Tenerife,
+  SA}}\urlprefix\url{[http://www.titsa.com/]}. [\href{http://www.titsa.com/}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\bibitem{URL::Jsoup}
+\textbf{{Librería Jsoup para parseo de
+  HTML}}\urlprefix\url{[https://jsoup.org/download]}.
+  [\href{https://jsoup.org/download} [Disponible electrónicamente. Último
+  acceso, julio de 2016]].
+
+\bibitem{URL::eventsull}
+\textbf{{Página web de eventos de la Universidad de la
+  Laguna}}\urlprefix\url{[http://eventos.ull.es/]}.
+  [\href{http://eventos.ull.es/} [Disponible electrónicamente. Último acceso,
+  julio de 2016]].
+
+\bibitem{URL::licencia}
+\textbf{{Licencia Creative CommonsReconocimiento-NoComercial-CompartirIgual 4.0
+  Internacional}}\urlprefix\url{[https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es_ES]}.
+  [\href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es_ES}
+  [Disponible electrónicamente. Último acceso, julio de 2016]].
+
+\end{thebibliography}
+
+\newcommand{\BMCxmlcomment}[1]{}
+
+\BMCxmlcomment{
+
+<refgrp>
+
+<bibl id="B1">
+  <title><p>{Android}</p></title>
+  <aug>
+    <au><cnm>{Android}</cnm></au>
+  </aug>
+  <pubdate>2008</pubdate>
+  <url>https://www.android.com/</url>
+  <note>\href{https://www.android.com/} [Disponible electrónicamente. Último
+  acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B2">
+  <title><p>{Repositorio Github}</p></title>
+  <aug>
+    <au><cnm>{Github}</cnm></au>
+  </aug>
+  <pubdate>2008</pubdate>
+  <url>https://github.com/</url>
+  <note>\href{https://github.com/} [Disponible electrónicamente. Último
+  acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B3">
+  <title><p>{LaTeX}</p></title>
+  <aug>
+    <au><cnm>{LaTeX3 Project}</cnm></au>
+  </aug>
+  <pubdate>1985</pubdate>
+  <url>https://www.latex-project.org/</url>
+  <note>\href{https://www.latex-project.org/} [Disponible electrónicamente.
+  Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B4">
+  <title><p>{Android Studio}</p></title>
+  <aug>
+    <au><cnm>{IntelliJ}</cnm></au>
+  </aug>
+  <pubdate>2014</pubdate>
+  <url>https://developer.android.com/studio/index.html</url>
+  <note>\href{https://developer.android.com/studio/index.html} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B5">
+  <title><p>{IntelliJ IDEA}</p></title>
+  <aug>
+    <au><cnm>{IntelliJ IDEA}</cnm></au>
+  </aug>
+  <pubdate>2001</pubdate>
+  <url>https://www.jetbrains.com/idea/</url>
+  <note>\href{https://www.jetbrains.com/idea/} [Disponible electrónicamente.
+  Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B6">
+  <title><p>{Gradle}</p></title>
+  <pubdate>2007</pubdate>
+  <url>http://gradle.org/</url>
+  <note>\href{http://gradle.org/} [Disponible electrónicamente. Último
+  acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B7">
+  <title><p>{Eclipse con ADT plugin}</p></title>
+  <aug>
+    <au><cnm>{Google, Inc.}</cnm></au>
+  </aug>
+  <pubdate>2012</pubdate>
+  <url>https://marketplace.eclipse.org/content/android-development-tools-eclipse</url>
+  <note>\href{https://marketplace.eclipse.org/content/android-development-tools-eclipse}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B8">
+  <title><p>{Manual de Latex en español}</p></title>
+  <pubdate>2004</pubdate>
+  <url>http://www.fing.edu.uy/~canale/latex.pdf</url>
+  <note>\href{http://www.fing.edu.uy/~canale/latex.pdf} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B9">
+  <title><p>{Repositorio de la aplicación BulletPoint}</p></title>
+  <url>https://github.com/ccetsii/BulletPoint</url>
+  <note>\href{https://github.com/ccetsii/BulletPoint} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B10">
+  <title><p>{Plataforma del Programa de Apoyo a Trabajos Finales
+  Libres}</p></title>
+  <url>http://osl.ull.es/programa-apoyo-trabajos-finales-libres//</url>
+  <note>\href{http://osl.ull.es/programa-apoyo-trabajos-finales-libres/}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B11">
+  <title><p>{Google Play}</p></title>
+  <url>https://play.google.com/store</url>
+  <note>\href{https://play.google.com/store} [Disponible electrónicamente.
+  Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B12">
+  <title><p>{Samsung Apps}</p></title>
+  <url>http://www.samsung.com/es/apps/mobile/galaxyapps/</url>
+  <note>\href{http://www.samsung.com/es/apps/mobile/galaxyapps/} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B13">
+  <title><p>{Beacon}</p></title>
+  <pubdate>2014</pubdate>
+  <url>http://meridianapps.com/news/2014/11/04/beacons</url>
+  <note>\href{http://meridianapps.com/news/2014/11/04/beacons} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B14">
+  <title><p>{Sistema de Posicionamiento global}</p></title>
+  <url>https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global</url>
+  <note>\href{https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B15">
+  <title><p>{Bluetooth}</p></title>
+  <aug>
+    <au><cnm>{Jaap Haartsen y Mattisson Sven}</cnm></au>
+  </aug>
+  <pubdate>1994</pubdate>
+  <url>https://es.wikipedia.org/wiki/Bluetooth</url>
+  <note>\href{https://es.wikipedia.org/wiki/Bluetooth} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B16">
+  <title><p>{Bluetooth Low Energy}</p></title>
+  <aug>
+    <au><cnm>{Nokia}</cnm></au>
+  </aug>
+  <pubdate>2010</pubdate>
+  <url>https://en.wikipedia.org/wiki/Bluetooth_low_energy</url>
+  <note>\href{https://en.wikipedia.org/wiki/Bluetooth_low_energy} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B17">
+  <title><p>{UUID Universal Unique Identifier }</p></title>
+  <url>https://en.wikipedia.org/wiki/Universally_unique_identifier</url>
+  <note>\href{https://en.wikipedia.org/wiki/Universally_unique_identifier}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B18">
+  <title><p>{IOS7 }</p></title>
+  <aug>
+    <au><cnm>{Apple Inc.}</cnm></au>
+  </aug>
+  <url>https://es.wikipedia.org/wiki/IOS_7</url>
+  <note>\href{https://es.wikipedia.org/wiki/IOS_7} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B19">
+  <title><p>{Discusiones del funcionamiento de AltBeacon en Android Deep Sleep
+  mode}</p></title>
+  <url>https://github.com/AltBeacon/android-beacon-library/issues/21</url>
+  <note>\href{https://github.com/AltBeacon/android-beacon-library/issues/21}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B20">
+  <title><p>{Blackberry }</p></title>
+  <aug>
+    <au><cnm>{Blackberry}</cnm></au>
+  </aug>
+  <pubdate>1999</pubdate>
+  <url>https://es.wikipedia.org/wiki/BlackBerry</url>
+  <note>\href{https://es.wikipedia.org/wiki/BlackBerry} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B21">
+  <title><p>{3 Brilliant example of how beacon technology is transforming
+  mobility}</p></title>
+  <aug>
+    <au><snm>Mareco</snm><fnm>D</fnm></au>
+  </aug>
+  <url>http://www.securedgenetworks.com/blog/3-brilliant-examples-of-how-beacon-technology-is-transforming-mobility</url>
+  <note>\href{http://www.securedgenetworks.com/blog/3-brilliant-examples-of-how-beacon-technology-is-transforming-mobility}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B22">
+  <title><p>{CouchBase Server}</p></title>
+  <url>http://www.couchbase.com/nosql-databases/couchbase-server</url>
+  <note>\href{http://www.couchbase.com/nosql-databases/couchbase-server}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B23">
+  <title><p>{Tecnología NoSQL}</p></title>
+  <url>https://es.wikipedia.org/wiki/NoSQL</url>
+  <note>\href{https://es.wikipedia.org/wiki/NoSQL} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B24">
+  <title><p>{El formato de texto JSON}</p></title>
+  <url>https://es.wikipedia.org/wiki/JSON</url>
+  <note>\href{https://es.wikipedia.org/wiki/JSON} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B25">
+  <title><p>{Página web de CouchBase}</p></title>
+  <url>http://www.couchbase.com/</url>
+  <note>\href{http://www.couchbase.com/} [Disponible electrónicamente. Último
+  acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B26">
+  <title><p>{Descarga de CouchBase Server}</p></title>
+  <url>http://www.couchbase.com/nosql-databases/downloads</url>
+  <note>\href{http://www.couchbase.com/nosql-databases/downloads} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B27">
+  <title><p>{Guía de Instalación de CouchBase Server}</p></title>
+  <url>http://developer.couchbase.com/documentation/server/4.5/getting-started/installing.html</url>
+  <note>\href{http://developer.couchbase.com/documentation/server/4.5/getting-started/installing.html}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B28">
+  <title><p>{Guía de Desarrollo usando CouchBase Lite}</p></title>
+  <url>http://developer.couchbase.com/documentation/mobile/1.2/develop/training/build-first-android-app/index.html</url>
+  <note>\href{http://developer.couchbase.com/documentation/mobile/1.2/develop/training/build-first-android-app/index.html}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B29">
+  <title><p>{Dependencia Gradle de AltBeacon}</p></title>
+  <url>https://altbeacon.github.io/android-beacon-library/configure.html</url>
+  <note>\href{https://altbeacon.github.io/android-beacon-library/configure.html}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B30">
+  <title><p>{Diferentes versiones de Alt Beacon}</p></title>
+  <url>https://altbeacon.github.io/android-beacon-library/download.htm</url>
+  <note>\href{https://altbeacon.github.io/android-beacon-library/download.htm}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B31">
+  <title><p>{Ejemplos de utilización de la libería AltBeacon}</p></title>
+  <url>https://altbeacon.github.io/android-beacon-library/samples.html</url>
+  <note>\href{https://altbeacon.github.io/android-beacon-library/samples.html}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B32">
+  <title><p>{Algoritmo de Levenberg-Marquardt}</p></title>
+  <url>https://en.wikipedia.org/wiki/Levenberg-Marquardt_algorithm</url>
+  <note>\href{https://en.wikipedia.org/wiki/Levenberg-Marquardt_algorithm}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B33">
+  <title><p>{Librería Apache Commons}</p></title>
+  <url>http://commons.apache.org/proper/commons-math/</url>
+  <note>\href{http://commons.apache.org/proper/commons-math/} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B34">
+  <title><p>{Algoritmo de Trilateración}</p></title>
+  <url>https://github.com/lemmingapex/Trilateration</url>
+  <note>\href{https://github.com/lemmingapex/Trilateration} [Disponible
+  electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B35">
+  <title><p>{Aplicación de la Universidad Galileo}</p></title>
+  <url>https://play.google.com/store/apps/details?id=edu.galileo.ges</url>
+  <note>\href{https://play.google.com/store/apps/details?id=edu.galileo.ges}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B36">
+  <title><p>{Aplicación de la Universidad de Valladolid}</p></title>
+  <url>https://play.google.com/store/apps/details?id=com.pocketuniversity.uva</url>
+  <note>\href{https://play.google.com/store/apps/details?id=com.pocketuniversity.uva}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B37">
+  <title><p>{Aplicación de la Universidad de Oviedo}</p></title>
+  <url>https://play.google.com/store/apps/details?id=es.uniovi.innova.unioviapp</url>
+  <note>\href{https://play.google.com/store/apps/details?id=es.uniovi.innova.unioviapp}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B38">
+  <title><p>{Página web de Transportes interurbanos de Tenerife,
+  SA}</p></title>
+  <url>http://www.titsa.com/</url>
+  <note>\href{http://www.titsa.com/} [Disponible electrónicamente. Último
+  acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B39">
+  <title><p>{Librería Jsoup para parseo de HTML}</p></title>
+  <url>https://jsoup.org/download</url>
+  <note>\href{https://jsoup.org/download} [Disponible electrónicamente.
+  Último acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B40">
+  <title><p>{Página web de eventos de la Universidad de la Laguna}</p></title>
+  <url>http://eventos.ull.es/</url>
+  <note>\href{http://eventos.ull.es/} [Disponible electrónicamente. Último
+  acceso, julio de 2016]</note>
+</bibl>
+
+<bibl id="B41">
+  <title><p>{Licencia Creative CommonsReconocimiento-NoComercial-CompartirIgual
+  4.0 Internacional}</p></title>
+  <url>https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es_ES</url>
+  <note>\href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es_ES}
+  [Disponible electrónicamente. Último acceso, julio de 2016]</note>
+</bibl>
+
+</refgrp>
+} % end of \BMCxmlcomment

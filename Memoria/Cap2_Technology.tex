@@ -1,0 +1,379 @@
+% ---------------------------------------------------
+%
+% Trabajo de Fin de Grado. 
+% Author: Alejandro Hernández Padrón. 
+% Capítulo: Tecnologías utilizadas en el Trabajo de Fin de Grado. 
+% Fichero: Cap2_Technology.tex
+%
+% ----------------------------------------------------
+%
+
+\cleardoublepage
+\chapter{Herramientas y Tecnologías} \label{chap:Tecnologias} 
+
+Este capítulo tiene como objetivo presentar las distintas herramientas software y tecnologías empleadas por el alumno en el desarrollo de \ULLNavigation{}.
+
+\section{Introduccion}
+
+A continuación se explicarán brevemente las distintas herramientas software utilizadas en el proyecto. 
+
+\subsection{Android Studio}
+
+Android Studio \cite{URL::AndroidStudio} es el IDE (Entorno de Desarrollo Integrado) oficial para el desarrollo de aplicaciones en Android, basado en IntelliJ IDEA \cite{URL::IntelliJIDEA}. Android Studio ofrece una serie de funcionalidades que han facilitado a la desarrolladora numerosas tareas, entre las cuales podemos destacar:
+
+
+\begin{itemize}
+\item Un sistema de compilación basado en Gradle\cite{URL::Gradle} que ha simplificado tanto la inserción de dependencias de las distintas librerías que se han tenido que utilizar, como la compilación de la aplicación.
+\item Un emulador rápido y fácil de utilizar que ha ayudado a visualizar las distintas pantallas durante el desarrollo aunque no ha sido de mucha utilidad para probar el funcionamiento al ser dependiente la app de la tecnología Bluetooth.
+\item La facilidad para publicar cambios a aplicaciones ya funcionando sin tener que eliminar y volver a crear un nuevo APK parando la app.
+\item Un sistema de visualización de las diferentes pantallas muy completo, con soporte visual para añadir componentes y cambiar atributos fácilmente.
+\item Un sistema de depuración, con una interfaz sencilla e intuitiva.
+\end{itemize} 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{androidstudio}
+	\caption{Android Studio, un IDE flexible e intuitivo.}
+	\label{fig:androidstudio}
+\end{figure}
+
+Se ha utilizado este IDE frente a otros como Eclipse + ADT \cite{URL::eclipseADT} debido a que en la actualidad es el IDE oficial con soporte de Google. Se ha preferido aprender a utilizar este entorno con vistas al futuro, ya que parece que se consolidará como el preferido para los desarrolladores Android.
+
+\subsection{LaTex}
+
+LaTeX es un sistema de composición de textos, orientado a la creación de documentos que presenten una alta calidad tipográfica. Por sus características y posibilidades, es usado especialmente en la generación de artículos y publicaciones científicas que incluyen, entre otros elementos, expresiones matemáticas, gráficos o figuras.
+
+
+LaTeX está formado por un gran conjunto de macros de TeX, escrito por Leslie Lamport en 1984, con la intención de facilitar el uso del lenguaje de composición tipográfica, creado por Donald Knuth. LaTeX es software libre bajo licencia LPPL.
+
+
+Se ha decidido utilizar este sistema debido al carácter profesional que aporta a los documentos. Ha sido una buena oportunidad para aprender a usar un sistema de composición de texto como este, ya que en un futuro puede ser beneficioso el saber manejar esta herramienta. 
+
+
+Si bien es cierto, que el uso de esta herramienta frente a otros editores más familiares ha sido algo tedioso en el inicio, es verdad que una vez acostumbrada a su uso ha resultado ser muy eficaz. En el proceso de aprendizaje se recurrió principalmente a manuales por internet, alguno a destacar en español sería \cite{URL::manualLatex}
+
+\subsection{Github}
+
+GitHub\cite{URL::Github} es una forja (plataforma de desarrollo colaborativo) para alojar proyectos que utiliza el sistema de control de versiones Git. Utiliza el framework Ruby on Rails por GitHub, Inc. (anteriormente conocida como Logical Awesome). Desde enero de 2010, GitHub opera bajo el nombre de GitHub, Inc. El código se almacena de forma pública, aunque también se puede hacer de forma privada, creando una cuenta de pago.
+
+
+Se ha decidido crear un repositorio en esta plataforma para poder llevar un control y una trazabilidad del proyecto. El tutor y el alumno han trabajado en este repositorio de manera conjunta. En el caso del tutor, principalmente para revisar el seguimiento semanal y llevar un control de las tareas. En el caso del alumno, para tener un repositorio donde subir los distintos elementos que se han ido generando a lo largo del trabajo. Aparte de este repositorio, también se ha abierto un segundo repositorio \cite{URL::repositorioAplicacion} asociado a la oficina del software libre (OSL) para subir el código una vez terminado como parte del programa de apoyo a trabajos finales libres (PATFL) \cite{URL::PATFL} de la ULL.
+
+
+Mediante el uso de este repositorio, el alumno ha conseguido ampliar sus conocimientos en Git y familiarizarse con la interfaz de GitHub. Previamente se había utilizado como repositorios GitLab, SVN y RTC en otros proyectos, por lo que no ha sido una complicación mayor utilizar este sistema.
+
+\section{Tecnologías utilizadas}
+
+A continuación se revisan las distintas tecnologías utilizadas en el desarrollo de la aplicación.
+
+\subsection{El Sistema Operativo Android}
+
+Android es un sistema operativo que emplea Linux en la interfaz del hardware.  Los componentes del SO subyacentes se codifican en C o C++ pero las aplicaciones se desarrollan en Java. De esta manera Android asegura una amplia operatividad en una gran variedad de dispositivos debido a dos hechos: la interfaz en Linux ofrece gran potencia y funcionalidad para aprovechar el hardware, mientras que el desarrollo de las aplicaciones en Java permite que Android sea accesible para un gran número de programadores conocedores del código.
+
+Este SO fue diseñado principalmente para dispositivos móviles con pantalla táctil: smartphones, tablets y otros dispositivos como televisores o automóviles. Fue desarrollado inicialmente por Android Inc., empresa que fue respaldada económicamente por Google y más tarde adquirida por esta misma empresa.
+
+Actualmente tiene una gran comunidad de desarrolladores creando aplicaciones para extender la funcionalidad de los dispositivos. A fecha de hoy existen más de un millón de aplicaciones disponibles para la tienda oficial de Apps de Android, Google Play \cite{URL::GooglePlay} sin tener en cuenta las aplicaciones de otras tiendas no oficiales, como por ejemplo, la tienda de aplicaciones de Samsung Apps \cite{URL::SamsungApps}.
+
+\subsection{Los Beacons}
+
+Los \textit{``Beacons''} \cite{URL::Beacon} (la traducción del término sería a \textit{``balizas''} o \textit{``faros''}) son una tecnología emergente que desde hace algunos años intenta abrirse paso en el mercado. Como su propio nombre indica, estos dispositivos intentan ser un mecanismo de guía, dando una solución al posicionamiento en interiores, donde otras tecnologías, como el GPS \cite{URL::GPS} o el Wifi dejan de funcionar o resultan imprecisas. Sin embargo, estos no son los únicos usos de los beacons, actualmente muchas empresas están ampliando sus usos a otros campos.
+
+
+A continuación se intentará responder a las preguntas más frecuentes que nos pueden surgir con respecto a esta tecnología:
+
+
+\begin{itemize}
+\item ¿Qué es un beacon?
+\item ¿Cómo funcionan estos dispositivos?
+\item ¿Qué rango de alcance poseen?
+\item ¿Con qué dispositivos móviles son compatibles? 
+\item ¿Qué ventajas y desventajas tienen con respecto a otras tecnologías?
+\item ¿Qué usos se le ha dado a esta tecnología hasta ahora?
+\end{itemize}
+
+\begin{figure}[!h]
+        \begin{floatrow}
+        \ffigbox{\includegraphics[width=\textwidth/2]{estimoteBeacon}}{\caption{Uno de los beacons de la compañía Estimote}\label{fig:estimote_Beacon}}
+        \ffigbox{\includegraphics[width=\textwidth/2]{estimoteSticker}}{\caption{Uno de los beacons de la compañía Estimote en formato Pegatina}\label{fig:estimote_Beacon_Sticker}}
+        \end{floatrow}
+\end{figure}
+
+\subsubsection{¿Qué es un Beacon?}
+
+Para quienes no conozcan este término, en el marco en el que nos movemos, hace referencia a un pequeño dispositivo (sus tamaños varían de uno a otro, pero siempre de tamaño reducido) que emite señales de onda corta utilizando la tecnología Bluetooth \cite{URL::Bluetooth}. Estas señales contienen una pequeña cantidad de información que es recibida por dispositivos móviles con tecnología Bluetooth dentro de un rango de cobertura variable dependiendo del beacon y su configuración. Normalmente, la intensidad de esta señal y su frecuencia son configurables.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{beaconPhone}
+	\caption{Representación de un beacon emitiendo mediante Bluetooth a un dispositivo móvil}
+	\label{fig:beaconBluetooth}
+\end{figure}
+
+El funcionamiento de un beacon es sencillo: El dispositivo emite una señal ininterrumpida (véase Figura \ref{fig:beaconBluetooth}) que es captada por los dispositivos móviles dentro de su radio de cobertura. La señal nos ofrece información que sirve para detectar y localizar estos dispositivos. Esta señal es captada por una aplicación previamente instalada en un dispositivo móvil que esté programada para recibirla y reaccionar de manera acorde a la información recibida.
+
+
+Hay que tener en cuenta que esta señal es unidireccional: los beacons son capaces de enviar pero no están preparados para recibir. También hay que tener en cuenta, que la mayoría de los beacon actuales en el mercado transmiten información preconfigurada, confiando en la aplicación móvil para utilizar la información; sin embargo es muy posible que esto cambie en un futuro, ampliando las posibilidades de los beacons.
+
+\subsubsection{¿Como funcionan estos dispositivos?}
+
+Los beacons usan Bluetooth Low Energy (BLE) \cite{URL::BluetoothLowEnergy}, una versión del protocolo Bluetooth diseñada para usar mucha menos energía y enviar menos información. Los beacons funcionan con baterías cuyo tiempo de vida depende de la configuración establecida, teniendo en cuenta la emisión de la señal (intensidad y frecuencia) y tiempo de hibernación. Sus tiempos de vida son variables, pudiendo durar desde un mes hasta varios años. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{estimoteBeaconInside}
+	\caption{Interior de un beacon de Estimote}
+	\label{fig:beaconInside}
+\end{figure}
+
+Independientemente de lo que se pueda pensar, los beacons en sí mismos no transmiten información significativa, transmiten identificadores cortos (a modo de información configurable), que son interpretados por una aplicación que sepa lo que ha de hacer cuando detecte esta información y que es la que se encarga de procesarla y realizar la acción pertinente.
+
+Este identificador se divide en tres partes: 
+
+\begin{itemize}
+\item \textit{"`UUID"'} \cite{URL::UUID} : corresponde con una ID dada por el fabricante e identifica el beacon en cuestión, nosotros utilizaremos el término MAC para referirnos a este identificador. \label{el:mac}
+\item ID Superior : configurables y utilizadas con un significado específico que puede identificar una acción o parámetro. 
+\item ID Inferior: configurables y utilizadas al igual que la superior con un significado específico que se puede usar para identificar una acción o parámetro.
+\end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{identity}
+	\caption{Números identificativos de los beacons}
+	\label{fig:beaconId}
+\end{figure}
+
+\subsubsection{¿Qué rango de alcance poseen?}
+
+Actualmente los beacons en el mercado presentan un rango de aproximadamente 70 metros de radio sin obstáculos. Está demostrado que este rango disminuye significativamente al atravesar paredes de metal o ladrillo; otros materiales disminuyen en menor medida el rango. 
+
+Las aplicaciones que trabajan con beacons suelen definir acciones en tres rangos de distancia (véase Figura \ref{fig:beaconRange}) principalmente: 
+
+\begin{itemize}
+\item Lejos: diseñado para que el dispositivo móvil pueda lanzar una acción cuando el usuario se encuentre en el rango exterior de un beacon, es decir, cuando se entra en el rango del beacon.
+\item Cerca: diseñado para que el dispositivo móvil pueda lanzar una acción cuando el usuario se encuentre en el rango interior del beacon. 
+\item Inmediato: diseñado para que el dispositivo móvil pueda lanzar una acción cuando el usuario se encuentre muy cercano al beacon.
+\end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{BeaconsRange}
+	\caption{Ejemplificación del rango de un beacon}
+	\label{fig:beaconRange}
+\end{figure}
+
+Sin embargo, esto depende de como esté diseñada la aplicación, es posible lanzar acciones a una distancia determinada sin tener en cuenta estos rangos mencionados anteriormente, ya que en todo momento es posible conocer la distancia a la que nos encontramos del beacon.
+
+\subsubsection{¿Con qué dispositivos funcionan?}
+
+Las beacons son compatibles con todos los dispositivos que soporten el protocolo Bluetooth Low Energy, pero para que las señales de los beacons sean detectadas por un dispositivo, se ha de tener activado el Bluetooth. 
+
+
+En dispositivos con IOS7 \cite{URL::IOS7} o superior el dispositivo móvil puede estar constantemente buscando dispositivos BLE. El sistema operativo se encarga de activar las aplicaciones implicadas cuando registra la entrada de un beacon en su rango incluso estando cerradas las aplicaciones.
+
+
+En dispositivos Android \cite{URL::Android} el sistema operativo no está preparado para escanear dispositivos BLE, por lo que son las aplicaciones las que tienen que encargarse de escanear las proximidades buscando beacons. Esto supone que las aplicaciones tienen que estar funcionando y despiertas (aunque sea en segundo plano). Existen librerías que solucionan esta limitación haciendo que la aplicación escanee cada cierto tiempo. Sin embargo, no es muy eficaz y suele tener incompatibilidades con el sistema operativo. Un ejemplo de estas incompatibilidades lo podemos ver en el hilo de discusión \cite{URL::Incompatibilidades} de los desarrolladores de la librería AltBeacon que se ha utilizado para el desarrollo de \BulletPoint{} y que mencionaremos más tarde.
+
+Por último en dispositivos Windows Phone \cite{URL::WindowsPhone} o Blackberry \cite{URL::Blackberry} existen diferentes niveles de compatibilidad pero en los que soportan BLE, su funcionamiento es similar al de los dispositivos Android, por lo que no nos pararemos a analizarlo. 
+
+\subsubsection{¿Qué ventajas y desventajas tienen con respecto a otras tecnologías?}
+
+A la hora de hablar de los beacons existen una serie de ventajas pero también podemos encontrar algunas desventajas que revisaremos a continuación. 
+
+Las principales ventajas que se distinguen a la hora de hablar de los beacons son las siguientes: 
+
+\begin{itemize}
+\item A diferencia de la tecnología GPS, la activación del Bluetooth consume mucha menos batería. 
+\item Las aplicaciones desarrolladas suelen ser dependientes de la red de datos al necesitar información. 
+\item A diferencia de la tecnología GPS, sigue funcionando con precisión en el interior de los edificios.
+\end{itemize}
+
+En cuanto a las desventajas, podemos destacar las siguientes:
+
+\begin{itemize}
+\item Dependen de aplicaciones instaladas en el dispositivo móvil para funcionar. 
+\item Es necesario tener el Bluetooth activado, lo que consume batería durante el tiempo que esté activado. 
+\item Su utilidad depende de la voluntad de terceros de utilizar estos dispositivos, configurarlos y distribuir las aplicaciones.
+\end{itemize}
+
+\subsubsection{¿Qué usos se le ha dado a esta tecnología hasta ahora?}
+
+Por ahora esta tecnología se ha utilizado en entornos muy diversos y con distintas funcionalidades. Entre los más conocidos podríamos destacar los siguientes: 
+
+\vspace{5mm}
+
+\textsl{\textbf{{Clevedon School}}}
+
+\vspace{2mm}
+
+Este ejemplo es bastante significativo para nosotros ya que se aplicó en el mismo entorno en el que queremos trabajar, una institución de enseñanza universitaria. Después de desplegar cerca de 1200 iPads  la universidad de Clevedon (Figura \ref{fig:clevedonApp}) utilizó esta tecnología junto con su aplicación universitaria ya existente. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{ClevedonApp}
+	\caption{La aplicación de Clevedon School}
+	\label{fig:clevedonApp}
+\end{figure}
+
+
+Han sido capaces de crear una manera fácil para que los profesores puedan añadir recursos que se envían automáticamente a los alumnos transitando diferentes zonas en diferentes horarios. Para realizar este trabajo de manera eficiente fue necesaria la creación de una interfaz para la gestión de los recursos en las diferentes beacons.
+
+
+Esta interfaz junto con la aplicación móvil es capaz de: 
+
+\begin{itemize}
+\item Programar los recursos para distribuirse a una hora del día especificada. 
+\item Programar el material para ser distribuido en un momento determinado durante una clase o evento. 
+\item Poner los recursos a disposición del alumnado que se encuentre en una localización específica.
+\end{itemize}
+
+Utilizando estos tres recursos, la aplicación, la interfaz y los beacons han sido capaces de crear un entorno interactivo y eficiente motivando tanto al profesorado como al alumnado. 
+
+\vspace{5mm}
+
+\textsl{\textbf{{Cleveland Cavaliers Stadium y Levi's Stadium}}}
+
+\vspace{2mm}
+
+Dos de los ejemplos más conocidos han sido los despliegues que se han realizado en estos dos estadios (Ver Figura \ref{fig:levisStadium}). 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{LevisStadium}
+	\caption{La aplicación de Levi's Stadium}
+	\label{fig:levisStadium}
+\end{figure}
+
+Por un lado tenemos el despliegue del estadio de Levi's , cuya intención ha sido la de ayudar a sus seguidores a navegar por el estadio dadas sus dimensiones. En este caso los beacons (de la compañía Aruba Networks) se utilizan en conjunto con puntos de acceso y repetidores situados por toda la infraestructura de manera que queda el estadio cubierto. Con la aplicación los fanes también son capaces de ver repeticiones de las jugadas y pedir comida directamente desde sus dispositivos móviles.
+
+
+Un punto importante de este  despliegue ha sido la monitorización continua del funcionamiento de los beacons, incluyendo si están en funcionamiento o necesitan batería nueva. Los beacons son también más económicos que los puntos de acceso WiFi, lo cual les ha beneficiado.
+
+En el caso del estadio de Cleveland, los beacons se encargan de proveer al usuario de información personalizada dependiendo del lugar y la hora. En algunos casos vídeos, ofertas promocionales y contenido adicional.
+
+\vspace{5mm}
+
+\textsl{\textbf{{Orlando Int'l Airport}}}
+
+\vspace{2mm}
+
+Otro despliegue exitoso de esta tecnología ha sido en el aeropuerto internacional de Orlando, donde mediante el uso de los beacons y de una aplicación móvil propia han sido capaces de proporcionar una serie de funcionalidades de vital importancia en una infraestructura como el aeropuerto: 
+
+\begin{itemize}
+\item Navegación paso por paso a través de cerca de 1000 establecimientos o servicios dentro del aeropuerto. 
+\item Actualizaciones inmediatas de la información de los vuelos. 
+\item Instrucciones a puntos de interés críticos como puntos de recogida de equipaje, puertas de embarque o puestos de información.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{orlandoAirport}
+	\caption{La aplicación del Aeropuerto Internacional de Orlando}
+	\label{fig:orlandoAirport}
+\end{figure}
+
+El siguiente punto sería ampliar la opción a los establecimientos de ofrecer anuncios o promociones, opción que mantienen abierta y no se descarta en un futuro.
+
+
+Esta información ha sido extraída de: \cite{URL::Articulo} 
+
+\subsection{CouchBase Server}
+
+Couchbase Server \cite{URL::couchBase} es una base de datos NoSQL \cite{URL::nosql} con una arquitectura distribuida orientada al rendimiento, escalabilidad y disponibilidad. Permite desarrollar aplicaciones de manera sencilla y rápida combinando la flexibilidad del JSON \cite{URL::json} y la tecnología NoSQL.
+
+\subsubsection{¿Por qué utilizar Couchbase Server?}
+
+Hemos decidido utilizar esta tecnología por su flexibilidad y potencia para almacenar documentos fácilmente. Además resulta muy sencillo integrarla con la tecnología móvil mediante el uso de una base de datos reducida dentro del dispositivo móvil (véase Figura \ref{fig:couchbaseexplanation}). La sincronización con la base de datos principal del servidor se realiza mediante una puerta de sincronización.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{couchbaseexplanation}
+	\caption{Sincronización de CouchBase Server con CouchBase Lite mediante Sync Gateway}
+	\label{fig:couchbaseexplanation}
+\end{figure}
+
+En este caso se ha configurado el servidor en un ordenador portátil haciendo uso de las indicaciones de la página web del producto \cite{URL::couchweb}. Se procederá a desglosar brevemente los pasos seguidos a la hora de configurar el servidor.
+
+
+\subsubsection{Configuración de la arquitectura}
+
+Para configurar el servidor se han seguido los siguientes pasos: 
+
+
+\begin{itemize}
+\item Descargar la versión Community del producto desde la página web siguiendo el enlace \cite{URL::couchbaseDownload}. 
+\item Seguir los pasos de la página de desarrolladores para la instalación y configuración \cite{URL::couchBaseGuide}. 
+\item Una vez configurado CouchBase Server procederemos a descargar Sync Gateway que será el servicio que se encargue de sincronizar el contenido del nuestra aplicación al servidor, para ello lo descargaremos de la página al igual que el servidor siguiendo el enlace \cite{URL::couchbaseDownload} .
+\item Para vincular el servidor con Sync Gateway es necesario hacer uso de un fichero de configuración con el que lanzaremos el servicio Sync Gateway.
+\item Una vez configurado Sync Gateway, ya tenemos el canal de configuración entre el servidor y la aplicación, para utilizar la base de datos móvil seguiremos los pasos desglosados en: \cite{URL::couchBaseLite} .
+\end{itemize}
+
+
+En este caso se ha tenido que conectar el dispositivo al ordenador. Tanto el ordenador como el dispositivo móvil han de estar en la misma red y hemos utilizado la dirección IP de la máquina para realizar las peticiones del móvil al servidor (alojado en el portátil) al utilizar la API. De esta manera se ha comprobado el funcionamiento del servidor, del servicio de sincronización y de la base de datos versión Lite en el dispositivo móvil.
+
+
+\subsection{La librería AltBeacon}
+
+
+\subsubsection{¿Qué es AltBeacon?}
+
+Se puede definir AltBeacon como una especificación que: 
+
+\begin{itemize}
+\item Define el formato del protocolo publicitario que los beacons transmiten a través de Bluetooth Low Energy (BLE).
+\item Intenta crear un mercado abierto y competitivo para implementaciones usando proximidad con los beacons.
+\item Puede ser utilizada gratuitamente, sin cuotas ni compromisos.
+\item No favorece a ningún proveedor sobre otro. Las limitaciones vienen determinadas por los estándares técnicos de cada uno.
+\end{itemize}
+
+A continuación se profundizará en el funcionamiento y configuración de la librería AltBeacon, que cumple con la especificación AltBeacon y que se ha utilizado para trabajar en Android.
+
+\subsubsection{Configuración}
+
+Para trabajar con esta librería en Android Studio solo hemos tenido que importarla mediante el uso de Gradle a nuestro proyecto como se explica en \cite{URL::importGradle}.
+
+
+También es posible descargarla desde la página oficial, donde además podremos encontrar diferentes versiones de la misma. Para ello podemos hacer uso del siguiente enlace \cite{URL::versionAltBeacon} y seleccionar la versión deseada.
+
+
+\subsubsection{Funcionamiento}
+
+La funcionalidad de esta librería se centra en dos elementos principales: 
+
+\begin{itemize}
+\item Monitorización (\textit{``Monitoring''}) que sería algo como supervisar, saber qué beacons se encuentran en una región o si ha entrado o salido un beacon de una región.
+\item Rastreo (\textit{``Ranging''}), que permite saber a que distancia se encuentran los beacons en todo momento dentro de una región.
+\end{itemize}
+
+Utilizando estas dos funcionalidades la aplicación es capaz de controlar, monitorizar y rastrear los distintos beacons en una determinada región. En la página web de la librería \cite{URL::altbeaconSamples} se pueden encontrar ejemplos básicos de cómo se realizan estas dos funciones en la sección \textit{``Samples''}, además en la sección \textit{``Documentación''} se pueden encontrar también algunos artículos, que pueden resultar interesantes dependiendo del tipo de aplicación que se esté desarrollando.
+
+
+\subsection{El algoritmo de trilateración}
+
+
+Durante el desarrollo de este trabajo se nombrará en diferentes puntos el término trilateración. A continuación explicaremos qué es la trilateración y cómo se ha aplicado el algoritmo al trabajar con beacons en \BulletPoint{}.
+
+\subsubsection{¿Qué es la trilateración?}
+
+
+La trilateración es un método matemático para determinar las posiciones relativas de objetos utilizando la geometría de triángulos de forma análoga a la triangulación. La triangulación utilizada en la tecnología GPS, utiliza medidas de ángulo junto con al menos una distancia para calcular la posición del sujeto. 
+
+
+A diferencia de ésta, aunque muchas veces se confundan los términos por la similitud, la trilateración utiliza las localizaciones conocidas de dos o más puntos de referencia y las distancias entre el sujeto y cada punto de referencia (véase Figura \ref{fig:trilateration}). Para determinar de forma única y precisa la localización relativa de un punto en un plano bidimensional utilizando solo la trilateración, se necesitan generalmente al menos 3 puntos de referencia.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{trilateration}
+	\caption{En el algoritmo de trilateración se utilizan las localizaciones conocidas de varios puntos de referencia y las distancias entre el sujeto y cada punto de referencia.}
+	\label{fig:trilateration}
+\end{figure}
+
+
+En el desarrollo de la aplicación se ha utilizado un algoritmo de trilateración implementado en Java que utiliza el algoritmo de Levenberg-Marquardt \cite{URL::algoritmolm} de Apache Commons Math \cite{URL::apachemath} tal y como explica el autor en \cite{URL::trilateracion}. 
+
+
+En nuestro caso, las posiciones de los beacons son determinadas en una imagen separados entre sí a menos de 70 metros. Los beacons se sitúan en estas posiciones elegidas en la imagen y se obtiene una posición ``X'' e ``Y'' que queda registrada para cada beacon en la aplicación (Listado \ref{code:trilaterate}). 
+
+Las distancias medidas hasta la posición de cada beacon vienen dadas por la distancia registrada por la aplicación. Aparte de estos dos datos, para obtener una posición ``X'' e ``Y'' donde representar el punto, es necesario aplicar una escala que convierta los metros a píxeles. Tras la aplicación del algoritmo de trilateración, se consigue como resultado la posición del usuario en la imagen representado por ``X'' e ``Y'' en píxeles.
+
+\lstinputlisting[float, floatplacement=H,caption={Usamos el algoritmo de trilateración, utilizando las posiciones de los beacons y las distancias. El algoritmo los resuelve y devuelve una posición ``X'' e ``Y'' que transformamos en un objeto de la clase \textit{Point} }, label={code:trilaterate}]
+{listings/trilaterateexp.java} %% LISTING

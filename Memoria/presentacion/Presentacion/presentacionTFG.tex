@@ -1,0 +1,198 @@
+\documentclass[blue,uncompressed]{beamer}
+\usepackage{tikz}
+\usepackage{graphicx}
+%\usepackage{listingsutf8}
+\usepackage{listings}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{multirow}
+\pdfinfo
+{
+  /Title       (BulletPoint. Tecnología beacon en entornos universitarios.)
+  /Creator     (Alejandro Hernández Padrón)
+  /Author      (Alejandro Hernández Padrón)
+  /Subject     (Trabajo de Fin de Grado)
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definiendo colores para los listados de código fuente - Univ. Deusto
+\definecolor{violet}{rgb}{0.5,0,0.5}
+\definecolor{navy}{rgb}{0,0,0.5}
+\definecolor{hellgelb}{rgb}{1,1,0.8}
+\definecolor{colKeys}{rgb}{0,0,53}           %%% Todo : check color for keys
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+\definecolor{lightlightgray}{rgb}{204,204,204}
+
+\definecolor{marron}       {rgb}{0.496, 0.203, 0.152}
+\definecolor{verde-claro}  {rgb}{0.625, 0.734, 0.199}
+\definecolor{oscuro}       {rgb}{0.187, 0.141, 0.285}
+\definecolor{gris}     	   {rgb}{0.500, 0.500, 0.500}
+\definecolor{bgd-listings} {rgb}{0.999, 0.999, 0.900}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+\definecolor{gray}{gray}{.45}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstloadlanguages{Java}
+\lstloadlanguages{XML}
+\lstset{
+	float=hbp,
+		language = Java,
+			morekeywords={hicuda,global,alloc,shape,kernel,thread,loop_partition,tblock,over_tblock,over_thread,kernel_end,copyout,free,data,region,task,input,inout,output,pragma,omp,parallel,reduction,private,shared,target,device,copy_in,copy_out,acc,kernels,loop,copyin,copy,pcopy,pcopyin,collapse,gang,worker,independent,firstprivate,endfor,in},
+				%\emph      ={omp,parallel,reduction,private,shared},
+				xleftmargin=5.0ex,    % Margen izq. para que los números de línea se vean
+				emphstyle=\textbf,
+        basicstyle=\ttfamily\scriptsize,
+        identifierstyle=\color{colIdentifier},
+        keywordstyle=\color{colKeys},
+        stringstyle=\color{colString},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        columns=flexible,
+        tabsize=4,
+        frame=single,
+        extendedchars=true,
+        showspaces=false,
+        showstringspaces=false,
+        numbers=left,
+        numberstyle=\tiny,
+        breaklines=true,
+        backgroundcolor=\color{lightlightgray},
+        breakautoindent=true,
+        captionpos=b
+        morecomment=[l][\color{colKeys}]{\#}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<handout>
+{
+	\usepackage{pgfpages}
+	\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+	\setbeamercolor{background canvas}{bg=black!0}
+	\setbeameroption{show notes}
+}
+
+\mode<presentation>
+{
+	\usetheme{Madrid}
+	\usecolortheme{ull}
+	\setbeamercovered{transparent}
+	%\logo{  % Logo ULL en esquina inferior derecha
+	%    \includegraphics[width=.25\textwidth]{FIGURES/logoull-oficial.png}
+	%}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginSection[]
+{
+	\begin{frame}<beamer>
+		\frametitle{Outline}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{BulletPoint}}
+\subtitle{Tecnología beacon en entornos universitarios}
+\author[Alejandro Hernández Padrón]
+{
+	\textbf{Alejandro Hernández Padrón}
+	%\alert{Francisco~de Sande} \\
+	%\url{fsande@ull.es}
+}
+\institute[ULL]
+
+\date[Trabajo de Fin de Grado]{\textsc{Trabajo de Fin de Grado}     \\
+                           La Laguna, 15 de Julio, 2016}
+\subject{TFG}
+
+\AtBeginSection[]
+{
+	\frame<handout:0>
+		{
+			\frametitle{Índice}
+			\tableofcontents[current]
+		}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\BulletPoint}{\texttt{BulletPoint{}}}
+
+\setbeamerfont{title}{size=\Large,shape=\sffamily}
+\setbeamerfont{author}{size=\small,shape=\sffamily}
+\setbeamerfont{institute}{size=\scriptsize,shape=\sffamily}
+\setbeamerfont{date}{size=\scriptsize,shape=\sffamily}
+%%%%%%%%%%%%%%%%%%%%%%%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\defbeamertemplate*{title page}{AGH}[1][]
+{
+  \vbox{}
+  %\vspace*{2.3cm}
+  \vfill \includegraphics[width=0.15\linewidth]{Images/logos/logo_vertical}
+    \vfill
+  %\hspace*{1.8cm}
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      \begin{beamercolorbox}[sep=8pt,#1]{title}
+	\centering{\usebeamerfont{title}\inserttitle\par}
+	\ifx\insertsubtitle\@empty%
+	\else%
+	  \vskip0.25em%
+	  {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+	\fi%
+	
+      \end{beamercolorbox}%
+      \vskip1em\par
+      \hspace*{2.35cm}
+      \begin{beamercolorbox}[sep=8pt,#1]{author}
+	\usebeamerfont{author}\insertauthor
+      \end{beamercolorbox}
+      \vskip1em\par
+      \hspace*{2.35cm}
+      \begin{beamercolorbox}[sep=8pt,#1]{institute}
+	\usebeamerfont{institute}\insertinstitute
+      \end{beamercolorbox}
+      \hspace*{2.35cm}
+      \begin{beamercolorbox}[sep=8pt,#1]{date}
+	\usebeamerfont{date}\insertdate
+      \end{beamercolorbox}\vskip0.5em
+    \end{column}
+    
+    \begin{column}{0.4\textwidth}
+      \hfill \includegraphics[width=0.8\linewidth]{Images/App/menuPrincipal.png}
+    \end{column}
+  \end{columns}
+    %\hfill \includegraphics[width=0.2\linewidth]{Images/varios/MainActivity.png}
+    %{\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+	%	\vfill \includegraphics[width=0.3\linewidth]{FIGURES/logos/nwo}
+	%	\hfill \includegraphics[width=0.17\linewidth]{FIGURES/logos/stw}
+	%	\hfill \includegraphics[width=0.2\linewidth]{FIGURES/logos/ipn.jpg}
+  %\vfill
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Slide numbers. 
+%\expandafter\def\expandafter\insertshorttitle\expandafter{%
+%  \insertshorttitle\hfill%
+%  \insertframenumber\,/\,\inserttotalframenumber
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	%\frame{\titlepage}
+	\begin{frame}[plain]
+	\titlepage
+	\end{frame}
+
+	\frame{\frametitle{Índice}\tableofcontents}
+		\section{Introducción}
+			\include{Capitulos/Cap1_Prologo}
+		\section{Herramientas y Tecnologías utilizadas}
+			\include{Capitulos/Cap2_HerrSoft}
+		\section{Beacons en entornos universitarios}
+			\include{Capitulos/Cap3_EntornosUniversitarios}
+		\section{La aplicación \BulletPoint}
+			\include{Capitulos/Cap4_Desarrollo}
+		\section{Despliegue}
+			\include{Capitulos/Cap5_Despliegue}
+		\section{Presupuesto}	
+			\include{Capitulos/Cap6_Presupuesto}
+		\section{Summary and conclusions}
+			\include{Capitulos/Cap7_Conclusiones}
+		\include{Capitulos/Cap8_Agradecimientos}
+		\include{Capitulos/Cap9_final}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
