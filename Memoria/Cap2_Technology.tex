@@ -375,5 +375,3 @@ En nuestro caso, las posiciones de los beacons son determinadas en una imagen se
 
 Las distancias medidas hasta la posición de cada beacon vienen dadas por la distancia registrada por la aplicación. Aparte de estos dos datos, para obtener una posición ``X'' e ``Y'' donde representar el punto, es necesario aplicar una escala que convierta los metros a píxeles. Tras la aplicación del algoritmo de trilateración, se consigue como resultado la posición del usuario en la imagen representado por ``X'' e ``Y'' en píxeles.
 
-\lstinputlisting[float, floatplacement=H,caption={Usamos el algoritmo de trilateración, utilizando las posiciones de los beacons y las distancias. El algoritmo los resuelve y devuelve una posición ``X'' e ``Y'' que transformamos en un objeto de la clase \textit{Point} }, label={code:trilaterate}]
-{listings/trilaterateexp.java} %% LISTING
