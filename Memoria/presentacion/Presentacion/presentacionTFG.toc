@@ -1,9 +1,0 @@
-\beamer@endinputifotherversion {3.36pt}
-\select@language {spanish}
-\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{3}{0}{1}
-\beamer@sectionintoc {2}{Herramientas y Tecnolog\IeC {\'\i }as utilizadas}{6}{0}{2}
-\beamer@sectionintoc {3}{Beacons en entornos universitarios}{19}{0}{3}
-\beamer@sectionintoc {4}{La aplicaci\IeC {\'o}n \texttt {BulletPoint{}}}{23}{0}{4}
-\beamer@sectionintoc {5}{Despliegue}{36}{0}{5}
-\beamer@sectionintoc {6}{Presupuesto}{38}{0}{6}
-\beamer@sectionintoc {7}{Summary and conclusions}{43}{0}{7}
