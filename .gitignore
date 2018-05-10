@@ -1,5 +1,6 @@
 MemoriaLaura/
 Memoria/*.log
 Memoria/*.aux
+Memoria/*.old
 app/
 .vscode/

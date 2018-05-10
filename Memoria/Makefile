@@ -18,10 +18,10 @@ SRC      =                                                          \
 						Preface.tex 			                    \
 						Cap1_Goals.tex                              \
 						Cap2_Technology.tex                         \
-						Cap3_BeaconsInStudentEnvironments.tex       \
+						Cap3_ARInStudentEnvironments.tex	        \
 						Cap4_TheApplication.tex						\
 						Cap5_ConclusionsAndFutureLinesOfWork.tex	\
-						Cap6_BudgetEstimations.tex                  \
+
 						
 
 DVI = $(MASTER:.tex=.dvi)
