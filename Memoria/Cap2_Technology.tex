@@ -79,17 +79,36 @@ Actualmente tiene una gran comunidad de desarrolladores creando aplicaciones par
 La Realidad Aumentada(RA) o Augmented Reality(AR) en inglés es el término que se usa para definir la visión de un entorno físico del mundo real, a través de un dispositivo tecnológico. Este dispositivo, lo que hace es agregar elementos virtuales a una realidad existente, en lugar de crear esa realidad desde cero, como lo haría la realidad
 virtual. 
 
-La AR es una técnologia que se encuentra en auge en este momento sobre todo por el potencial que tendrá esta tecnologias en un futuro a largo y medio plazo. Sus posibles aplicaciones no tiene limites, puede llegar desde reconocer plantas e incluso monumentos y mostrar informacion sobre lo que se esta viendo , hasta añadir informacion en tiempo real en una operación a un paciente o sus aplicaciones para realizar videojuegos como podemos ver con el reciente éxito de Pokemon Go!
+ AR esta cambiando la manera en la que sus usuarios pueden ver el mundo, actualmente es una técnologia que se encuentra en auge sobre todo por el potencial que tendrá esta tecnologias en un futuro a largo y medio plazo. Sus posibles aplicaciones no tiene limites, puede llegar desde reconocer plantas e incluso monumentos y mostrar informacion sobre lo que se esta viendo , hasta añadir informacion en tiempo real en una operación a un paciente, comprobar como queda un mueble en tu salón o sus aplicaciones para realizar videojuegos como podemos ver con el recientce éxito de Pokemon Go!c
 
 A continuacion se explicará en detalle:
 \begin{itemize}
 \item ¿Como funciona esta tecnologia?
-\item Estado de AR en la actualidad
+\item Diferencias entre AR y VR
+\item Futuro y usos de la AR
+\item AR SDK en Android Studio
 \end{itemize}  
 
 \subsubsection{¿Como funciona esta tecnología?}
 	
- AR esta cambiando la manera en la que sus usuarios pueden ver el mundo. La realidad aumentada puede ser representada de multiples formas y en una gran variedad de dispositivos, desde pantallas de moviles, monitores o incluso gafas, como las Google Glass. 
+ En cuanto a la parte de hardware necesaria para poder hacer uso de esta tecnología necesitamos de un sistema de visualización, el cual puede ser una pantalla óptica transparente (Google Glass\cite{URL::GoogleGlass} )  o una pantalla de mezcla de imagenes(ej. pantalla de un móvil). 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{googleglass}
+	\caption{Google Glass. Desmostracion de su uso en deportes}
+	\label{fig:googleglass}
+\end{figure}
+Además de esto sistemas de visualizacion, necesitaríamos de un sistema de computacion que realize los calculos y de otros sensores como el GPS\cite{URL::gps}, acelerometro, giroscopio, etc., que pese a nos ser estrictamente necesario, mejora la experiencia y las posibilidades de esta tecnologia.
+
+Todo esto necesita una parte software la cual se encarga de hacer los calculos y de dar sentido la union de las imagenes obtenidas del mundo real junto a las imagenes virtuales a superponer en el mundo real.
+ El software en una primera parte deberá de reconocer el terreno, ubicaciones, objetos e imagenes, mediante las imagenes obtenidas de la camara y los sensores. Este proceso de transformacion de diferentes conjuntos de datos a un sistema de coordenadas se llama registro de la imagen
+
+y en una segunda reestructura el mundo real en función del registro de imagenes\cite{URL::ImageRegister} de del primer paso. Existen multiples maneras en las que se puede restructurar este mundo. 
+
+
+\subsubsection{Diferencias entre AR y VR}
+\subsubsection{Futuro y usos de la AR}
+\subsubsection{AR SDK en Android Studio}
 
 \subsubsection{Vuforia}
 

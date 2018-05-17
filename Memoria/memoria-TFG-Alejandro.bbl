@@ -72,6 +72,24 @@
   [\href{http://www.samsung.com/es/apps/mobile/galaxyapps/} [Disponible
   electrónicamente. Último acceso, julio de 2018]].
 
+\bibitem{URL::GoogleGlass}
+\textbf{{Google
+  Glass}}\urlprefix\url{[https://es.wikipedia.org/wiki/Google_Glass]}.
+  [\href{https://es.wikipedia.org/wiki/Google_Glass} [Disponible
+  electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::gps}
+\textbf{{Sistema de Posicionamiento
+  global}}\urlprefix\url{[https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global]}.
+  [\href{https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global}
+  [Disponible electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::ImageRegister}
+\textbf{{Registro de
+  Imagenes}}\urlprefix\url{[https://es.wikipedia.org/wiki/Registro_de_la_imagen]}.
+  [\href{https://es.wikipedia.org/wiki/Registro_de_la_imagen } [Disponible
+  electrónicamente. Último acceso, julio de 2018]].
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -188,6 +206,27 @@
   <title><p>{Samsung Apps}</p></title>
   <url>http://www.samsung.com/es/apps/mobile/galaxyapps/</url>
   <note>\href{http://www.samsung.com/es/apps/mobile/galaxyapps/} [Disponible
+  electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B13">
+  <title><p>{Google Glass}</p></title>
+  <url>https://es.wikipedia.org/wiki/Google_Glass</url>
+  <note>\href{https://es.wikipedia.org/wiki/Google_Glass} [Disponible
+  electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B14">
+  <title><p>{Sistema de Posicionamiento global}</p></title>
+  <url>https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global</url>
+  <note>\href{https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global}
+  [Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B15">
+  <title><p>{Registro de Imagenes}</p></title>
+  <url>https://es.wikipedia.org/wiki/Registro_de_la_imagen</url>
+  <note>\href{https://es.wikipedia.org/wiki/Registro_de_la_imagen } [Disponible
   electrónicamente. Último acceso, julio de 2018]</note>
 </bibl>
 
