@@ -162,8 +162,9 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
             radians = radians - 360;
         radians = Math.toRadians(radians);
 
-
-        boolean result = navULL.canSee(getCurrentPos(), radians);
+        boolean result = false;
+        if(getCurrentPos() != null){
+             result = navULL.canSee(getCurrentPos(), radians);}
 
         topRightText.setText("Brujula: "+event.values[0]+ "\nRadianes: " + radians + "\nEn rango: "
                 + result + "\nDireccion objetivo: " + navULL.getDestDir() );
@@ -180,8 +181,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
                 LatLng currentPos = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
                 return currentPos;
             } catch (Exception e) {
-                Toast.makeText(getContext(), "Asegurate de que tienes el GPS activado" +
-                        " o que se ha establecido tu ubicacion", Toast.LENGTH_LONG).show();
+
             }
         }
         return null;
