@@ -1,3 +1,26 @@
+
+Seguimiento 3
+
+Se ha creado un proyecto a partir del anterior de MAPS con la funcionalidad necesaria para el proyecto actual
+se ha anadido un boton que nos desplaza hacia la aplicacion de realidad aumentada con Kudan
+
+La aplicacion funciona correctamente con el codigo de los ejemplos y se ha aprendido a integrar el activiti de
+AR dentro de un layout 
+
+Se ha probado las funcionalidades del sdk de kudan, no se ha encontrado nada de utilidad para el desarrollo de TFG
+La opcion de crear un modelo 3d de un centro universitario para que sea escaneado por algunos de los SDK 
+se ha descartado por la dificultad para crear este modelo en la actualidad
+
+
+Seguimiento 2
+
+Se ha creado un proyecto con la api de google MAPS y se han adquirido conocimientos sobre el uso de esta api
+Aprendido el manejo de permisos en activities y fragments 
+
+
+
+Seguimiento 1
+
 Se ha instalado el SDK de Vuforia y se han hecho pruebas con el emulador, pero habia problemas con la camara del emulador.
 Posteriormente se ha generado el apk y se ha instalado en mi dispositivo y funciona correctamente, lo siguiente sera entender su funcionamiento
 Y empezar a desarrollar una demo APP basica, para profundizar los conocimientos sobre este SDK y ver su potencial y ver si dispone de la
