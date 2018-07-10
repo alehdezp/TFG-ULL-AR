@@ -4,6 +4,8 @@ package com.example.alehp.ar_maps.Models;
 
 
 
+import android.location.Location;
+
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
@@ -11,90 +13,154 @@ import java.util.ArrayList;
 
 public class Navigation {
 
-    private Vector2D currentPos;
-    private ArrayList<Vector2D> destPoints = new ArrayList<Vector2D>();
+    private static double PI = Math.PI;
+    private static final double MAX_DIST = 200;
+    private static final double MAX_CONE_GRADS = Math.PI / 2;
+    private static final double MIN_CONE_GRADS = Math.PI / 16;
 
-    private double destDir;
+    private Location location;
+
+
+    private Vector2D currentPos = new Vector2D();
     private double currentDir;
 
-
-    private double distanceDest;
-    private static final double MAX_DIST = 150;
-
-    private double coneValue;
-    private static final double MAX_CONE_GRADS = Math.PI;
-    private static final double MIN_CONE_GRADS = Math.PI / 8;
-
+    private ArrayList<ULLSite> allSites= new ArrayList<ULLSite>();
+    private ArrayList<ULLSite> destSites= new ArrayList<ULLSite>();
 
 
     private Vector2D home = new Vector2D(-16.271370844238504, 28.467337376756998);
     private Vector2D ull = new Vector2D(-16.316877139026133, 28.481857638227176);
 
     public Navigation(){
-//        destPoints.add(getHome());
-        setCurrentPos(new Vector2D());
+//        getDestSites().add(new ULLSite("Facultad de Fisica y Matemáticas", "nº 922222222",
+//                new Vector2D(-16.271370844238504,28.467337376756998)));
+//        getDestSites().add(new ULLSite("Facultad de Ingenieria Informatica", "nº 922222222",
+//                new Vector2D(-16.272370844238504,28.466337376756998)));
+//        getDestSites().add(new ULLSite("Parking ESIT", "nº 922222222",
+//                new Vector2D(-16.273370844238504,28.467337376756998)));
+//        getDestSites().add(new ULLSite("Punto detras", "nº 922222222",
+//                new Vector2D(-16.270708,28.467699)));
+
+        getDestSites().add(new ULLSite("Edificio Fundacion de la Universidad de La Laguna", "Some info",
+                new Vector2D(-16.317462,28.481930 )));
+        getDestSites().add(new ULLSite("Edificio Central de la Universidad de La Laguna", "Some info",
+                new Vector2D(-16.316690, 28.481753)));
+        getDestSites().add(new ULLSite("Colegio Mayor San Fernando", "Some info",
+                new Vector2D( -16.3157322, 28.481173)));
+        getDestSites().add(new ULLSite("Parking de Estudiantes Universitarios", "Some info",
+                new Vector2D(-16.315613, 28.481604)));
+        getDestSites().add(new ULLSite("Campus Central - Torre Profesor Agustín Arévalo", "Some info",
+                new Vector2D(-16.317531,28.481173)));
+        getDestSites().add(new ULLSite("Deportes ULL", "Some info",
+                new Vector2D(-16.316478,28.479994)));
+
+
+
     }
 
-    public boolean canSee(LatLng actualPos, double actualDir){
+    public ULLSite whatCanSee(LatLng actualPos, double actualDir){
         getCurrentPos().set(actualPos.longitude, actualPos.latitude);
         setCurrentDir(actualDir);
 
-        setDistanceDest(getCurrentPos().getDistance(ull));
-        if (getDistanceDest() > MAX_DIST) return false;
 
-        setDestDir(getCurrentPos().getAngleRad(ull));
-        rotateRad(getDestDir());
-        calculateCone();
-        double auxCurrenDir = getCurrentDir();
-        double auxMinCone = getDestDir() - getConeValue()/2;
-        double auxMaxCone = getDestDir() + getConeValue()/2;
 
-        if(auxMaxCone >= 0 && auxMinCone <  0) {
-            auxMaxCone += Math.PI * 2;
-            auxMinCone = Math.PI * 2 - auxMinCone;
-        }else {
-            if (auxMaxCone < 0)
-                auxMaxCone = Math.PI * 2 - auxMaxCone;
-            if (auxMinCone < 0)
-                auxMinCone = Math.PI * 2 - auxMinCone;
+        int id = -1;
+        double minDist = MAX_DIST;
+
+
+        for (int i = 0; i < getDestSites().size(); i++) {
+            double dirToSite = recalculeAng(getCurrentPos().getAngleRad(getDestSites().get(i).getPoint()));
+            double distToSite = getDistanceBetween(getCurrentPos(), getDestSites().get(i).getPoint());
+            double coneValue = calculateCone(distToSite);
+
+            if(isInCone(dirToSite, coneValue)){
+                if (minDist > distToSite) {
+                    minDist = distToSite;
+                    id = i;
+                }
+            }
+
+            getDestSites().get(i).setConeValue(coneValue);
+            getDestSites().get(i).setDirToSite(dirToSite);
+            getDestSites().get(i).setDistToSite(distToSite);
+
         }
 
-        if(auxCurrenDir >= auxMinCone && auxCurrenDir <= auxMaxCone)
+        if(id != -1)
+            return getDestSites().get(id);
+        else
+            return null;
+
+    }
+
+    public double getDistanceBetween(Vector2D v1, Vector2D v2){
+        float result[] = new float[3];
+        Location.distanceBetween(v1.getY(), v1.getX(), v2.getY(),v2.getX(), result);
+        return result[0];
+    }
+
+    private boolean isInCone(double directionToSite, double coneValue ) {
+
+        double auxCurrentDir = getCurrentDir();
+        double auxMinCone = directionToSite - coneValue/2;
+        double auxMaxCone = directionToSite + coneValue/2;
+
+        if(auxCurrentDir >= auxMinCone && auxCurrentDir <= auxMaxCone)
             return true;
         else
             return false;
+
     }
 
-    public void rotateRad(double rad){
-        rad += Math.PI/2;
-        if(rad >= Math.PI)
-            rad = rad - Math.PI * 2;
+    private double recalculeAng(double angleRad) {
+//        Log.d("m", "angulo: " + angleRad);
+        double aux = rotateRad(angleRad);
+//        Log.d("s", "rotacion: " + aux);
+        aux = invertAng(aux);
+//        Log.d("n", "invertido: " + aux);
+        return aux;
 
-        setDestDir(rad);
+    }
+
+    public double invertAng(double rad){
+        rad = 2 * PI - rad;
+        return rad;
+
+    }
+
+    public double rotateRad(double rad){
+        rad -= PI/2;
+        if(rad < 0)
+            rad += PI * 2;
+
+
+        return rad;
     }
 
 
-    public void rotateDegrees(double degrees){
-        degrees = degrees + 90;
-        if (degrees >= 360){
-            degrees = degrees - 360;
-        }
-        setDestDir(degrees);
-    }
 
-    public void calculateCone(){
+    public double calculateCone(double dist){
         double totalRads = MAX_CONE_GRADS - MIN_CONE_GRADS;
-        setConeValue((getDistanceDest() * (totalRads / MAX_DIST)) + MIN_CONE_GRADS);
+        return (MAX_DIST - dist) * totalRads / MAX_DIST  + MIN_CONE_GRADS;
 
     }
 
-    public double getDestDir() {
-        return destDir;
+    public ArrayList<ULLSite> getAllSites() {
+        return allSites;
     }
 
-    public void setDestDir(double destDir) {
-        this.destDir = destDir;
+    public void setAllSites(ArrayList<ULLSite> allSites) {
+        this.allSites = allSites;
     }
+
+    public ArrayList<ULLSite> getDestSites() {
+        return destSites;
+    }
+
+    public void setDestSites(ArrayList<ULLSite> destSites) {
+        this.destSites = destSites;
+    }
+
 
     public double getCurrentDir() {
         return currentDir;
@@ -102,14 +168,6 @@ public class Navigation {
 
     public void setCurrentDir(double currentDir) {
         this.currentDir = currentDir;
-    }
-
-    public double getConeValue() {
-        return coneValue;
-    }
-
-    public void setConeValue(double coneValue) {
-        this.coneValue = coneValue;
     }
 
 
@@ -121,18 +179,8 @@ public class Navigation {
         this.currentPos = currentPos;
     }
 
-    public ArrayList<Vector2D> getDestPoints() {
-        return destPoints;
-    }
-
-    public void setDestPoints(ArrayList<Vector2D> destPoints) {
-        this.destPoints = destPoints;
-    }
 
 
-    public void setConeValue(float coneValue) {
-        this.coneValue = coneValue;
-    }
 
     public Vector2D getHome() {
         return home;
@@ -142,13 +190,7 @@ public class Navigation {
         this.home = home;
     }
 
-    public double getDistanceDest() {
-        return distanceDest;
-    }
 
-    public void setDistanceDest(double distanceDest) {
-        this.distanceDest = distanceDest;
-    }
 
 
 }

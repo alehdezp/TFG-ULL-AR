@@ -25,6 +25,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.alehp.ar_maps.Activities.ARNavigation;
+import com.example.alehp.ar_maps.Models.ULLSite;
+import com.example.alehp.ar_maps.Models.Vector2D;
 import com.example.alehp.ar_maps.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -53,6 +55,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
     private FloatingActionButton buttonCurrentPos;
     private Marker actualPosMarker;
 
+
+
     private Button buttonARStart;
 
     private LocationManager locationManager;
@@ -62,14 +66,45 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
     private LatLng ull = new LatLng( 28.481857638227176, -16.316877139026133);
     private LatLng myHome = new LatLng(28.46749041, -16.27173752);
 
+
+    private ArrayList<ULLSite> allSites= new ArrayList<ULLSite>();
+
     public MapsFragment() {
-        // Required empty public constructor
-    }
+   }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        // Required empty public constructor
+        getAllSites().add(new ULLSite("Facultad de Fisica y Matemáticas", "nº 922222222",
+                new Vector2D(-16.271370844238504,28.467337376756998)));
+        getAllSites().add(new ULLSite("Facultad de Ingenieria Informatica", "nº 922222222",
+                new Vector2D(-16.272370844238504,28.466337376756998)));
+        getAllSites().add(new ULLSite("Parking ESIT", "nº 922222222",
+                new Vector2D(-16.273370844238504,28.467337376756998)));
+        getAllSites().add(new ULLSite("Facultad de Fisica y Matemáticas", "nº 922222222",
+                new Vector2D(-16.320805, 28.481849 )));
+        getAllSites().add(new ULLSite("ESIT, Facultad de Ingenieria Informatica", "nº 922222222",
+                new Vector2D(-16.322039,28.483075)));
+        getAllSites().add(new ULLSite("Parking ESIT", "nº 922222222",
+                new Vector2D(-16.321946,28.481952)));
+        getAllSites().add(new ULLSite("Parking Facultad", "Some info",
+                new Vector2D(-16.320909,28.482755)));
+
+        getAllSites().add(new ULLSite("Edificio Fundacion de la Universidad de La Laguna", "Some info",
+                new Vector2D(-16.317462,28.481930 )));
+        getAllSites().add(new ULLSite("Edificio Central de la Universidad de La Laguna", "Some info",
+                new Vector2D(-16.316690, 28.481753)));
+        getAllSites().add(new ULLSite("Colegio Mayor San Fernando", "Some info",
+                new Vector2D( -16.3157322, 28.481173)));
+        getAllSites().add(new ULLSite("Parking de Estudiantes Universitarios", "Some info",
+                new Vector2D(-16.315613, 28.481604)));
+        getAllSites().add(new ULLSite("Campus Central - Torre Profesor Agustín Arévalo", "Some info",
+                new Vector2D(-16.317531,28.481173)));
+        getAllSites().add(new ULLSite("Deportes ULL", "Some info",
+                new Vector2D(-16.316478,28.479994)));
+
 
 
         rootView = inflater.inflate(R.layout.fragment_maps, container, false);
@@ -118,13 +153,22 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
         if (currentPos != null)
             actualPosMarker = goMap.addMarker(new MarkerOptions().position(currentPos).title("Im Here!"));
 
-        goMap.addMarker(new MarkerOptions().position(ull).title("Im Here!").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+
         goMap.moveCamera(CameraUpdateFactory.newLatLng(ull));
         goMap.setOnMapClickListener(this);
+
+        drawAllSites();
 
     }
 
 
+
+    private void drawAllSites() {
+        for (int i = 0; i < getAllSites().size(); i++) {
+            goMap.addMarker(new MarkerOptions().position(getAllSites().get(i).getMapPoint()).title("Im Here!")
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        }
+    }
 
 
     @Override
@@ -315,6 +359,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 
             }
         }
+    }
+
+    public ArrayList<ULLSite> getAllSites() {
+        return allSites;
+    }
+
+    public void setAllSites(ArrayList<ULLSite> allSites) {
+        this.allSites = allSites;
     }
 }
 

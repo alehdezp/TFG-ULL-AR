@@ -29,6 +29,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.alehp.ar_maps.Models.Navigation;
+import com.example.alehp.ar_maps.Models.ULLSite;
 import com.example.alehp.ar_maps.R;
 import com.google.android.gms.maps.model.LatLng;
 
@@ -76,14 +77,113 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
             topRightText = findViewById(R.id.MainText);
 
-
             navULL = new Navigation();
-
         }
 
         ARAPIKey key = ARAPIKey.getInstance();
         key.setAPIKey("Y8/NRauyJ4RvhIsPcHHd7xhYLwiBZsn3+cqswOaTTIMlmRpw9Sw4OJM78CIarRJ3ysRFdFVJDtIcmyfyypN8lAkNA4+ZZt5QVLaty7BFleng3YmPs7QA19WwLWM7x7ZVy/N44Anjf89OBk/zIhcVS+38bN9FNvJvVwsfFKmPLnmqYYJYHvG0DSVOVATME3BwWU9ulJXYyLAJ4jt1tO9CzGr6Z0oaKkZh4zeW3AyCQiq7VB4oxnYV2hBsrDeTPDcekfPDaAbb1JfYtZJZZse4LOBtk7/Pi8t3shVQkFwvwF0lU9znoN5E34adFU2CG3jCfnTIy1+6Rg6vlvWpd/StvpBMn/HnZ5SBNHD6BDDmWVHLIA16xaAOrJnTKMrpIDRRHq0g6cG6W+q15RS8RbXv8h1spR6crJOLP2u03Cv6lbJMMpQLvjremRKcN7cfNoO7ot8X0LUMOssKxjGpaIt6qIx/6DbQJ+b3Wx5j+DH1DUo/Z+pcLyb+lBFGkVr44AS3vb8c5eE4qP/lgzSS+nkfIQ4/x/vDkWc3jjnMseCpN7BQLRL26eOm3ApvFbHoQJpC5KC4eQnYzrWjQqgQilFIldR5xtkLfArzOaD+8V18lNWGlKWwHAeedHO7iaRebJJm0R2wqRMMfnfc6cZBqjE20Vp2R9D67GnZactxlbyA3No=");
     }
+
+
+
+    @Override
+    public void setup()
+    {
+        super.setup();
+
+//        arbiTracker();
+
+    }
+
+    @SuppressLint("SetTextI18n")
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        double radians = event.values[0];
+        if(radians >= 360)
+            radians = radians - 360;
+        radians = Math.toRadians(radians);
+
+        ULLSite result = null;
+        if(getCurrentPos() != null)
+            result = navULL.whatCanSee(getCurrentPos(), radians);
+        if (result != null) {
+            topRightText.setText("Brujula: " + event.values[0] + "\nLugar: " + result.getId()
+                    + "\nDireccion objetivo: " + Math.toDegrees(result.getDirToSite()) + "\nDistancia: " + result.getDistToSite()
+                    + "\nValor del cono: " + Math.toDegrees(result.getConeValue()));
+        }else{
+            topRightText.setText("Apunte a algun centro universitario para mostrar su informacion");
+        }
+    }
+
+
+    @SuppressLint("MissingPermission")
+    private LatLng getCurrentPos(){
+        if (!isGPSEnabled()) {
+            this.enableGPSAlert();
+        }
+        if (this.checkPermissions() && enableLocation()) {
+            try {
+                currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                LatLng currentPos = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+                return currentPos;
+            } catch (Exception e) {
+
+            }
+        }
+        return null;
+    }
+
+
+
+
+    public boolean isGPSEnabled(){
+        try {
+            int gpsSignal = Settings.Secure.getInt(this.getContentResolver(), Settings.Secure.LOCATION_MODE);
+            if(gpsSignal == 0){
+                return false;
+            }else
+                return true;
+        } catch (Settings.SettingNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
+    @SuppressLint("MissingPermission")
+    private boolean enableLocation() {
+
+        if(locationEnable == true)
+            return true;
+
+        locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
+        if (!checkPermissions()) {
+            locationEnable = false;
+            return false;
+
+        }else {
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 3000, 5, this);
+            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 3000, 5, this);
+            locationEnable = true;
+            return  true;
+        }
+    }
+
+    private void enableGPSAlert(){
+        new AlertDialog.Builder(getContext())
+                .setTitle("Señal GPS")
+                .setMessage("Activa la señal GPS para poder obtener tu ubicación actual")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("CANCEL", null)
+                .show();
+    }
+
 
     public void markerTracker(){
 
@@ -145,98 +245,33 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
     }
 
+
     @Override
-    public void setup()
-    {
-        super.setup();
-
-        arbiTracker();
-
+    public boolean onTouchEvent(MotionEvent event) {
+        gestureDetect.onTouchEvent(event);
+        return super.onTouchEvent(event);
     }
 
 
     @Override
-    public void onSensorChanged(SensorEvent event) {
-        double radians = event.values[0];
-        if(radians >= 180)
-            radians = radians - 360;
-        radians = Math.toRadians(radians);
-
-        boolean result = false;
-        if(getCurrentPos() != null){
-             result = navULL.canSee(getCurrentPos(), radians);}
-
-        topRightText.setText("Brujula: "+event.values[0]+ "\nRadianes: " + radians + "\nEn rango: "
-                + result + "\nDireccion objetivo: " + navULL.getDestDir() );
-    }
-
-    @SuppressLint("MissingPermission")
-    private LatLng getCurrentPos(){
-        if (!isGPSEnabled()) {
-            this.enableGPSAlert();
-        }
-        if (this.checkPermissions() && enableLocation()) {
-            try {
-                currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                LatLng currentPos = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
-                return currentPos;
-            } catch (Exception e) {
-
-            }
-        }
-        return null;
-    }
-
-
-
-
-    public boolean isGPSEnabled(){
-        try {
-            int gpsSignal = Settings.Secure.getInt(this.getContentResolver(), Settings.Secure.LOCATION_MODE);
-            if(gpsSignal == 0){
-                return false;
-            }else
-                return true;
-        } catch (Settings.SettingNotFoundException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
-
-
-
-    @SuppressLint("MissingPermission")
-    private boolean enableLocation() {
-
-        if(locationEnable == true)
-            return true;
-
-        locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
-        if (!checkPermissions()) {
-            locationEnable = false;
-            return false;
-
-        }else {
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 3000, 5, this);
-            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 3000, 5, this);
-            locationEnable = true;
-            return  true;
-        }
-    }
-
-    private void enableGPSAlert(){
-        new AlertDialog.Builder(getContext())
-                .setTitle("Señal GPS")
-                .setMessage("Activa la señal GPS para poder obtener tu ubicación actual")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                        startActivity(intent);
-                    }
-                })
-                .setNegativeButton("CANCEL", null)
-                .show();
+    public boolean onSingleTapUp(MotionEvent e) {
+//        ARArbiTrack arbiTrack = ARArbiTrack.getInstance();
+//
+//        // If arbitrack is tracking, stop tracking so that its world is no longer rendered, and make the target node visible.
+//        if (arbiTrack.getIsTracking())
+//        {
+//            arbiTrack.stop();
+//            arbiTrack.getTargetNode().setVisible(true);
+//        }
+//
+//        // If it's not tracking, start tracking and hide the target node.
+//        else
+//        {
+//            arbiTrack.start();
+//            arbiTrack.getTargetNode().setVisible(false);
+//        }
+//
+        return false;
     }
 
 
@@ -283,34 +318,6 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
         }
     }
 
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        gestureDetect.onTouchEvent(event);
-        return super.onTouchEvent(event);
-    }
-
-
-    @Override
-    public boolean onSingleTapUp(MotionEvent e) {
-        ARArbiTrack arbiTrack = ARArbiTrack.getInstance();
-
-        // If arbitrack is tracking, stop tracking so that its world is no longer rendered, and make the target node           visible.
-        if (arbiTrack.getIsTracking())
-        {
-            arbiTrack.stop();
-            arbiTrack.getTargetNode().setVisible(true);
-        }
-
-        // If it's not tracking, start tracking and hide the target node.
-        else
-        {
-            arbiTrack.start();
-            arbiTrack.getTargetNode().setVisible(false);
-        }
-
-        return false;
-    }
 
     @Override
     public boolean onDown(MotionEvent e) {
