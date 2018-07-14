@@ -1,3 +1,5 @@
+//Recuerda configurar API Maps y API google
+
 
 Seguimiento 3
 
