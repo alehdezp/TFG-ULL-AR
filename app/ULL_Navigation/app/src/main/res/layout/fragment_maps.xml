@@ -23,8 +23,7 @@
         android:layout_marginBottom="120dp"
         android:layout_marginRight="15dp"
         android:clickable="true"
-
-        android:src="@mipmap/current_location_round"
+        android:src="@android:drawable/ic_menu_mylocation"
         app:backgroundTint="@android:color/white"
         app:rippleColor="@android:color/holo_blue_bright" />
 

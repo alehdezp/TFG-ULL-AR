@@ -1,4 +1,18 @@
 //Recuerda configurar API Maps y API google
+Seguimiento 4
+
+Creacion del proyecto definitivo de ULL Navigation
+
+Pasos seguidos para Maps
+Configuracion de un proyecto con Kudan, pasos a seguir y .jar
+Configuracion de apis de google para poder utilizar 
+
+
+
+Seeguimiento 4
+
+Creacion del login, splash screen
+Conexion y creacion de una base de datos online en mongolab, como futura base de datos del proyecto
 
 
 Seguimiento 3

@@ -234,11 +234,15 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 
     public boolean isGPSEnabled(){
         try {
-            int gpsSignal = Settings.Secure.getInt(getActivity().getContentResolver(), Settings.Secure.LOCATION_MODE);
-            if(gpsSignal == 0){
+            if(getActivity() != null) {
+                int gpsSignal = Settings.Secure.getInt(getActivity().getContentResolver(), Settings.Secure.LOCATION_MODE);
+                if (gpsSignal == 0) {
+                    return false;
+                } else
+                    return true;
+            }else{
                 return false;
-            }else
-                return true;
+            }
         } catch (Settings.SettingNotFoundException e) {
             e.printStackTrace();
             return false;
@@ -285,18 +289,18 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
     }
 
     private void enableGPSAlert(){
-        new AlertDialog.Builder(getContext())
-                .setTitle("Señal GPS")
-                .setMessage("Activa la señal GPS para poder obtener tu ubicación actual")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                        startActivity(intent);
-                    }
-                })
-                .setNegativeButton("CANCEL", null)
-                .show();
+//        new AlertDialog.Builder(getContext())
+//                .setTitle("Señal GPS")
+//                .setMessage("Activa la señal GPS para poder obtener tu ubicación actual")
+//                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+//                        startActivity(intent);
+//                    }
+//                })
+//                .setNegativeButton("CANCEL", null)
+//                .show();
     }
 
 
@@ -311,19 +315,19 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
             // Should we show an explanation?
             if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
                     Manifest.permission.ACCESS_FINE_LOCATION)) {
-                new AlertDialog.Builder(getContext())
-                        .setTitle(R.string.title_location_permission)
-                        .setMessage(R.string.text_location_permission)
-                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                requestPermissions( //Fragment request
-                                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                                        MY_PERMISSIONS_REQUEST_LOCATION);
-                            }
-                        })
-                        .create()
-                        .show();
+//                new AlertDialog.Builder(getContext())
+//                        .setTitle(R.string.title_location_permission)
+//                        .setMessage(R.string.text_location_permission)
+//                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
+//                                requestPermissions( //Fragment request
+//                                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+//                                        MY_PERMISSIONS_REQUEST_LOCATION);
+//                            }
+//                        })
+//                        .create()
+//                        .show();
 
             }else {
 

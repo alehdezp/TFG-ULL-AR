@@ -16,7 +16,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            debuggable true
+            debuggable false
         }
     }
     aaptOptions {
@@ -36,5 +36,7 @@ dependencies {
     implementation 'com.android.support:design:27+'
     implementation(name: 'KudanAR', ext: 'aar')
     implementation 'com.google.android.gms:play-services-auth:15.0.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
 
 }

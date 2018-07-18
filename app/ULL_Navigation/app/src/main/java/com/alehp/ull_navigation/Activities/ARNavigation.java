@@ -72,8 +72,9 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
             mSensorManager.registerListener(this, compass, SensorManager.SENSOR_DELAY_NORMAL);
 
             topRightText = findViewById(R.id.MainText);
-
+            isGPSEnabled();
             navULL = new Navigation();
+
         }
 
         ARAPIKey key = ARAPIKey.getInstance();
@@ -112,9 +113,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
     @SuppressLint("MissingPermission")
     private LatLng getCurrentPos() {
-        if (!isGPSEnabled()) {
-            this.enableGPSAlert();
-        }
+
         if (this.checkPermissions() && enableLocation()) {
             try {
                 currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
@@ -129,9 +128,11 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
 
     public boolean isGPSEnabled() {
+        enableGPSAlert();
         try {
             int gpsSignal = Settings.Secure.getInt(this.getContentResolver(), Settings.Secure.LOCATION_MODE);
             if (gpsSignal == 0) {
+                enableGPSAlert();
                 return false;
             } else
                 return true;

@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.alehp.ull_navigation.R;
 
 
-public class ULL_LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivityULL extends AppCompatActivity implements View.OnClickListener {
 
     Button registerButton;
     Button loginButton;
@@ -68,8 +68,10 @@ public class ULL_LoginActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         if (v.getId() == loginButton.getId()) {
 
-            Toast.makeText(this, "login", Toast.LENGTH_LONG).show();
-            startActivity(new Intent(this, MapsActivity.class));
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.putExtra("firstStart", true);
+            startActivity(intent);
+            finish();
         }
         else if (v.getId() == registerButton.getId())
             Toast.makeText(this, "register", Toast.LENGTH_LONG).show();

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.alehp.ull_navigation">
 
@@ -19,8 +20,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.MapsActivity" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCd3PF0K5X9qnEgqcFsmN2hFC5IyMnIbCQ" />
@@ -28,13 +27,7 @@
         <activity
             android:name=".Activities.ARNavigation"
             android:label="@string/app_name" />
-
-        <activity
-            android:name=".Activities.LoginActivity"
-            android:label="@string/title_activity_login" />
-
-        <activity android:name=".Activities.ULL_LoginActivity"></activity>
-
+        <activity android:name=".Activities.LoginActivityULL" />
         <activity
             android:name=".Activities.SplashActivity"
             android:theme="@style/SplashScreen">
@@ -44,6 +37,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.BaseActivity" />
+        <activity android:name=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".Activities.MapsActivity"></activity>
     </application>
 
 </manifest>
