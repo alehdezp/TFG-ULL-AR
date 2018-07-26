@@ -5,10 +5,16 @@ package com.alehp.ull_navigation.Models;
 
 
 import android.location.Location;
+import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 public class Navigation {
@@ -16,49 +22,42 @@ public class Navigation {
     private static double PI = Math.PI;
     private static final double MAX_DIST = 200;
     private static final double MAX_CONE_GRADS = Math.PI / 2;
-    private static final double MIN_CONE_GRADS = Math.PI / 16;
+    private static final double MIN_CONE_GRADS = 0;
 
     private Location location;
+    private JSONArray jsonSites;
 
 
     private Vector2D currentPos = new Vector2D();
     private double currentDir;
 
-    private ArrayList<ULLSite> allSites= new ArrayList<ULLSite>();
-    private ArrayList<ULLSite> destSites= new ArrayList<ULLSite>();
+    private ArrayList<ULLSite> allSites= new ArrayList<>();
+    private ArrayList<ULLSite> destSites;
 
 
     private Vector2D home = new Vector2D(-16.271370844238504, 28.467337376756998);
     private Vector2D ull = new Vector2D(-16.316877139026133, 28.481857638227176);
 
-    public Navigation(){
-//        getDestSites().add(new ULLSite("Facultad de Fisica y Matemáticas", "nº 922222222",
-//                new Vector2D(-16.271370844238504,28.467337376756998)));
-//        getDestSites().add(new ULLSite("Facultad de Ingenieria Informatica", "nº 922222222",
-//                new Vector2D(-16.272370844238504,28.466337376756998)));
-//        getDestSites().add(new ULLSite("Parking ESIT", "nº 922222222",
-//                new Vector2D(-16.273370844238504,28.467337376756998)));
-//        getDestSites().add(new ULLSite("Punto detras", "nº 922222222",
-//                new Vector2D(-16.270708,28.467699)));
+    public Navigation(JSONArray jsonAux){
 
-        getDestSites().add(new ULLSite("Edificio Fundacion de la Universidad de La Laguna", "Some info",
-                new Vector2D(-16.317462,28.481930 )));
-        getDestSites().add(new ULLSite("Edificio Central de la Universidad de La Laguna", "Some info",
-                new Vector2D(-16.316690, 28.481753)));
-        getDestSites().add(new ULLSite("Colegio Mayor San Fernando", "Some info",
-                new Vector2D( -16.3157322, 28.481173)));
-        getDestSites().add(new ULLSite("Parking de Estudiantes Universitarios", "Some info",
-                new Vector2D(-16.315613, 28.481604)));
-        getDestSites().add(new ULLSite("Campus Central - Torre Profesor Agustín Arévalo", "Some info",
-                new Vector2D(-16.317531,28.481173)));
-        getDestSites().add(new ULLSite("Deportes ULL", "Some info",
-                new Vector2D(-16.316478,28.479994)));
+        try {
 
+            jsonSites = jsonAux;
+            for (int i = 0; i < jsonSites.length(); i++) {
+                JSONObject row = null;
+                allSites.add(new ULLSite(jsonSites.getJSONObject(i)));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
-
+        destSites = allSites;
+        for(int i = 0; i < destSites.size(); i++){
+            Log.d("position", destSites.get(i).getMapPoint().toString());
+        }
     }
 
-    public ULLSite whatCanSee(LatLng actualPos, double actualDir){
+    public ArrayList<ULLSite> whatCanSee(LatLng actualPos, double actualDir){
         getCurrentPos().set(actualPos.longitude, actualPos.latitude);
         setCurrentDir(actualDir);
 
@@ -66,7 +65,7 @@ public class Navigation {
 
         int id = -1;
         double minDist = MAX_DIST;
-
+        ArrayList<ULLSite> result = new ArrayList<>();
 
         for (int i = 0; i < getDestSites().size(); i++) {
             double dirToSite = recalculeAng(getCurrentPos().getAngleRad(getDestSites().get(i).getPoint()));
@@ -74,23 +73,22 @@ public class Navigation {
             double coneValue = calculateCone(distToSite);
 
             if(isInCone(dirToSite, coneValue)){
+                getDestSites().get(i).setConeValue(coneValue);
+                getDestSites().get(i).setDirToSite(dirToSite);
+                getDestSites().get(i).setDistToSite(distToSite);
+                result.add(getDestSites().get(i));
                 if (minDist > distToSite) {
                     minDist = distToSite;
                     id = i;
                 }
             }
-
-            getDestSites().get(i).setConeValue(coneValue);
-            getDestSites().get(i).setDirToSite(dirToSite);
-            getDestSites().get(i).setDistToSite(distToSite);
-
         }
 
-        if(id != -1)
-            return getDestSites().get(id);
-        else
+        if(id != -1) {
+            result.add(0,getDestSites().get(id));
+            return result;
+        }else
             return null;
-
     }
 
     public double getDistanceBetween(Vector2D v1, Vector2D v2){
@@ -194,3 +192,26 @@ public class Navigation {
 
 
 }
+
+
+//        getDestSites().add(new ULLSite("Facultad de Fisica y Matemáticas", "nº 922222222",
+//                new Vector2D(-16.271370844238504,28.467337376756998)));
+//        getDestSites().add(new ULLSite("Facultad de Ingenieria Informatica", "nº 922222222",
+//                new Vector2D(-16.272370844238504,28.466337376756998)));
+//        getDestSites().add(new ULLSite("Parking ESIT", "nº 922222222",
+//                new Vector2D(-16.273370844238504,28.467337376756998)));
+//        getDestSites().add(new ULLSite("Punto detras", "nº 922222222",
+//                new Vector2D(-16.270708,28.467699)));
+
+//        getDestSites().add(new ULLSite("Edificio Fundacion de la Universidad de La Laguna", "Some info",
+//                new Vector2D(-16.317462,28.481930 )));
+//        getDestSites().add(new ULLSite("Edificio Central de la Universidad de La Laguna", "Some info",
+//                new Vector2D(-16.316690, 28.481753)));
+//        getDestSites().add(new ULLSite("Colegio Mayor San Fernando", "Some info",
+//                new Vector2D( -16.3157322, 28.481173)));
+//        getDestSites().add(new ULLSite("Parking de Estudiantes Universitarios", "Some info",
+//                new Vector2D(-16.315613, 28.481604)));
+//        getDestSites().add(new ULLSite("Campus Central - Torre Profesor Agustín Arévalo", "Some info",
+//                new Vector2D(-16.317531,28.481173)));
+//        getDestSites().add(new ULLSite("Deportes ULL", "Some info",
+//                new Vector2D(-16.316478,28.479994)));

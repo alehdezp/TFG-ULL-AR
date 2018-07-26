@@ -25,6 +25,8 @@ import android.widget.Toast;
 
 
 import com.alehp.ull_navigation.Activities.ARNavigation;
+import com.alehp.ull_navigation.Models.GetData;
+import com.alehp.ull_navigation.Models.Navigation;
 import com.alehp.ull_navigation.Models.ULLSite;
 import com.alehp.ull_navigation.Models.Vector2D;
 import com.alehp.ull_navigation.R;
@@ -32,13 +34,18 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -53,6 +60,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
     private FloatingActionButton buttonCurrentPos;
     private Marker actualPosMarker;
 
+    private String test;
 
 
     private Button buttonARStart;
@@ -68,42 +76,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
     private ArrayList<ULLSite> allSites= new ArrayList<ULLSite>();
 
     public MapsFragment() {
-   }
+    }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Required empty public constructor
-        getAllSites().add(new ULLSite("Facultad de Fisica y Matemáticas", "nº 922222222",
-                new Vector2D(-16.271370844238504,28.467337376756998)));
-        getAllSites().add(new ULLSite("Facultad de Ingenieria Informatica", "nº 922222222",
-                new Vector2D(-16.272370844238504,28.466337376756998)));
-        getAllSites().add(new ULLSite("Parking ESIT", "nº 922222222",
-                new Vector2D(-16.273370844238504,28.467337376756998)));
-        getAllSites().add(new ULLSite("Facultad de Fisica y Matemáticas", "nº 922222222",
-                new Vector2D(-16.320805, 28.481849 )));
-        getAllSites().add(new ULLSite("ESIT, Facultad de Ingenieria Informatica", "nº 922222222",
-                new Vector2D(-16.322039,28.483075)));
-        getAllSites().add(new ULLSite("Parking ESIT", "nº 922222222",
-                new Vector2D(-16.321946,28.481952)));
-        getAllSites().add(new ULLSite("Parking Facultad", "Some info",
-                new Vector2D(-16.320909,28.482755)));
-
-        getAllSites().add(new ULLSite("Edificio Fundacion de la Universidad de La Laguna", "Some info",
-                new Vector2D(-16.317462,28.481930 )));
-        getAllSites().add(new ULLSite("Edificio Central de la Universidad de La Laguna", "Some info",
-                new Vector2D(-16.316690, 28.481753)));
-        getAllSites().add(new ULLSite("Colegio Mayor San Fernando", "Some info",
-                new Vector2D( -16.3157322, 28.481173)));
-        getAllSites().add(new ULLSite("Parking de Estudiantes Universitarios", "Some info",
-                new Vector2D(-16.315613, 28.481604)));
-        getAllSites().add(new ULLSite("Campus Central - Torre Profesor Agustín Arévalo", "Some info",
-                new Vector2D(-16.317531,28.481173)));
-        getAllSites().add(new ULLSite("Deportes ULL", "Some info",
-                new Vector2D(-16.316478,28.479994)));
-
-
+        getSites();
 
         rootView = inflater.inflate(R.layout.fragment_maps, container, false);
 
@@ -113,6 +93,18 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
         buttonCurrentPos.setOnClickListener(this);
         buttonARStart.setOnClickListener(this);
         checkLocationPermission();
+
+        GetData testGet = new GetData();
+
+        try {
+            test = testGet.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
+            Toast.makeText(getContext(), test, Toast.LENGTH_LONG);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
 
         return rootView;
     }
@@ -132,10 +124,12 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
     }
 
 
+
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         goMap = googleMap;
-
+        goMap.getUiSettings().setCompassEnabled(true);
 
         //Necesita permisos de localizacion
         if (checkLocationPermission()) {
@@ -161,10 +155,27 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 
 
 
+
+    public void getSites(){
+        GetData getSites = new GetData();
+
+        try {
+            String sites = getSites.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
+            JSONArray array = new JSONArray(sites);
+            allSites = new Navigation(array).getAllSites();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     private void drawAllSites() {
-        for (int i = 0; i < getAllSites().size(); i++) {
-            goMap.addMarker(new MarkerOptions().position(getAllSites().get(i).getMapPoint()).title("Im Here!")
-                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        for (int i = 0; i < allSites.size(); i++) {
+            goMap.addMarker(new MarkerOptions().position(getAllSites().get(i).getMapPoint()).title(allSites.get(i).getName()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
         }
     }
 
@@ -371,4 +382,34 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
         this.allSites = allSites;
     }
 }
+
+//
+//    getAllSites().add(new ULLSite("Facultad de Fisica y Matemáticas", "nº 922222222",
+//        new Vector2D(-16.271370844238504,28.467337376756998)));
+//        getAllSites().add(new ULLSite("Facultad de Ingenieria Informatica", "nº 922222222",
+//        new Vector2D(-16.272370844238504,28.466337376756998)));
+//        getAllSites().add(new ULLSite("Parking ESIT", "nº 922222222",
+//        new Vector2D(-16.273370844238504,28.467337376756998)));
+//        getAllSites().add(new ULLSite("Facultad de Fisica y Matemáticas", "nº 922222222",
+//        new Vector2D(-16.320805, 28.481849 )));
+//        getAllSites().add(new ULLSite("ESIT, Facultad de Ingenieria Informatica", "nº 922222222",
+//        new Vector2D(-16.322039,28.483075)));
+//        getAllSites().add(new ULLSite("Parking ESIT", "nº 922222222",
+//        new Vector2D(-16.321946,28.481952)));
+//        getAllSites().add(new ULLSite("Parking Facultad", "Some info",
+//        new Vector2D(-16.320909,28.482755)));
+//
+//        getAllSites().add(new ULLSite("Edificio Fundacion de la Universidad de La Laguna", "Some info",
+//        new Vector2D(-16.317462,28.481930 )));
+//        getAllSites().add(new ULLSite("Edificio Central de la Universidad de La Laguna", "Some info",
+//        new Vector2D(-16.316690, 28.481753)));
+//        getAllSites().add(new ULLSite("Colegio Mayor San Fernando", "Some info",
+//        new Vector2D( -16.3157322, 28.481173)));
+//        getAllSites().add(new ULLSite("Parking de Estudiantes Universitarios", "Some info",
+//        new Vector2D(-16.315613, 28.481604)));
+//        getAllSites().add(new ULLSite("Campus Central - Torre Profesor Agustín Arévalo", "Some info",
+//        new Vector2D(-16.317531,28.481173)));
+//        getAllSites().add(new ULLSite("Deportes ULL", "Some info",
+//        new Vector2D(-16.316478,28.479994)));
+
 

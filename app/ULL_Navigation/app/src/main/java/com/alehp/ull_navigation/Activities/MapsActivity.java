@@ -17,6 +17,5 @@ public class MapsActivity extends BaseActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, new MapsFragment()).commit();
         drawerLayout.closeDrawers();
-        ;
     }
 }

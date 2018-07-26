@@ -18,8 +18,14 @@
         completions."
     </string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="about_text">ULL Navigation app by Alejandro Hernandez Padrón.</string>
+    <!-- About screen-->
+    <string name="about_text">ULL Navigation</string>
+    <string name="about_autor">Autor: Alejandro Hernandez Padrón.</string>
+    <string name="about_version">Version: 1.0.0</string>
+    <string name="about_email">Email: alu0100891836@ull.edu.es</string>
+    <string name="about_description">Esta app el resultado del Trabajo de Fin de Grado de su autor, consiste en un prototipo funcional, con el objetivo de estudiar posibilidades y diseñar una aplicación que permita a futuros alumnos ubicarse y moverse por los distintos centros de la Universidad de La Laguna.</string>
+
+    <!-- About screen END-->
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

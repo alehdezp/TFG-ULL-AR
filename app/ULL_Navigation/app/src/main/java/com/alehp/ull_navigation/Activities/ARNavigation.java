@@ -21,13 +21,23 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GestureDetectorCompat;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
+import com.alehp.ull_navigation.Models.GetData;
 import com.alehp.ull_navigation.Models.Navigation;
 import com.alehp.ull_navigation.Models.ULLSite;
 import com.alehp.ull_navigation.R;
 import com.google.android.gms.maps.model.LatLng;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import eu.kudan.kudan.ARAPIKey;
 import eu.kudan.kudan.ARActivity;
@@ -51,6 +61,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     private Boolean locationEnable = false;
 
     private TextView topRightText;
+    private Button moreSitesButton;
 
 
     private GestureDetectorCompat gestureDetect;
@@ -71,9 +82,11 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
             Sensor compass = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
             mSensorManager.registerListener(this, compass, SensorManager.SENSOR_DELAY_NORMAL);
 
-            topRightText = findViewById(R.id.MainText);
+            topRightText = findViewById(R.id.ullSiteText);
+            moreSitesButton = findViewById(R.id.moreSitesButton);
             isGPSEnabled();
-            navULL = new Navigation();
+            getSites();
+
 
         }
 
@@ -90,6 +103,22 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
     }
 
+    public void getSites(){
+        GetData getSites = new GetData();
+
+        try {
+            String sites = getSites.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
+            JSONArray array = new JSONArray(sites);
+            navULL = new Navigation(array);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
     @SuppressLint("SetTextI18n")
     @Override
     public void onSensorChanged(SensorEvent event) {
@@ -98,15 +127,34 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
             radians = radians - 360;
         radians = Math.toRadians(radians);
 
-        ULLSite result = null;
-        if (getCurrentPos() != null)
-            result = navULL.whatCanSee(getCurrentPos(), radians);
-        if (result != null) {
-            topRightText.setText("Brujula: " + event.values[0] + "\nLugar: " + result.getId()
-                    + "\nDireccion objetivo: " + Math.toDegrees(result.getDirToSite()) + "\nDistancia: " + result.getDistToSite()
-                    + "\nValor del cono: " + Math.toDegrees(result.getConeValue()));
+        ArrayList<ULLSite> allResults = null;
+        ULLSite nearResult = null;
+        if (getCurrentPos() != null) {
+            allResults = navULL.whatCanSee(getCurrentPos(), radians);
+        }
+        if (allResults != null) {
+            nearResult = allResults.get(0);
+            String AuxCanFound = "";
+            for(int i = 0; i < nearResult.getCanFound().size(); i++){
+                AuxCanFound += nearResult.getCanFound().get(i).first + "\n";
+            }
+
+            int brujula = Math.round(event.values[0]);
+            int objetivoDir = Math.round(Math.round(Math.toDegrees(nearResult.getDirToSite())));
+            int distanceDir = Math.round((float)nearResult.getDistToSite());
+            int coneValue = Math.round((float)Math.toDegrees(nearResult.getConeValue()));
+
+            topRightText.setText("Lugar: " + nearResult.getId() + "\nBrújula: " + brujula + "º"
+                    + "\nDireccion objetivo: " + objetivoDir + "º" + "\nDistancia: " + distanceDir + "m."
+                    + "\nValor del cono: " + coneValue + "º" + "\nAquí se encuentra:\n" + AuxCanFound );
+            if(allResults.size() > 2) {
+
+                moreSitesButton.setText("Encontradas " + (allResults.size() - 2) + " ubicacion(es) más en esta dirección");
+                moreSitesButton.setVisibility(View.VISIBLE);
+            }
         } else {
             topRightText.setText("Apunte a algun centro universitario para mostrar su informacion");
+            moreSitesButton.setVisibility(View.GONE);
         }
     }
 
@@ -128,7 +176,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
 
     public boolean isGPSEnabled() {
-        enableGPSAlert();
+
         try {
             int gpsSignal = Settings.Secure.getInt(this.getContentResolver(), Settings.Secure.LOCATION_MODE);
             if (gpsSignal == 0) {
@@ -240,33 +288,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        gestureDetect.onTouchEvent(event);
-        return super.onTouchEvent(event);
-    }
-
-
-    @Override
-    public boolean onSingleTapUp(MotionEvent e) {
-//        ARArbiTrack arbiTrack = ARArbiTrack.getInstance();
-//
-//        // If arbitrack is tracking, stop tracking so that its world is no longer rendered, and make the target node visible.
-//        if (arbiTrack.getIsTracking())
-//        {
-//            arbiTrack.stop();
-//            arbiTrack.getTargetNode().setVisible(true);
-//        }
-//
-//        // If it's not tracking, start tracking and hide the target node.
-//        else
-//        {
-//            arbiTrack.start();
-//            arbiTrack.getTargetNode().setVisible(false);
-//        }
-//
-        return false;
-    }
-
+/
 
     public boolean checkPermissions() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)

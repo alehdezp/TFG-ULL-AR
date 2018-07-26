@@ -9,10 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alehp.ull_navigation.Activities.ARNavigation;
 import com.alehp.ull_navigation.Activities.MapsActivity;
+import com.alehp.ull_navigation.Models.GetData;
 import com.alehp.ull_navigation.R;
+
+import java.util.concurrent.ExecutionException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,6 +46,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         startMapsButton.setOnClickListener(this);
         startRAButton.setOnClickListener(this);
+
+//        GetData testGet = new GetData();
+//        String test;
+//        try {
+//            test = testGet.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
+//            TextView text = view.findViewById(R.id.textView);
+//            text.setText(test);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        } catch (ExecutionException e) {
+//            e.printStackTrace();
+//        }
     }
 
 
@@ -48,7 +65,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.home_button_maps:
-                startActivity(new Intent(getContext(), MapsActivity.class));
+                getFragmentManager().beginTransaction().add(R.id.content_frame, new MapsFragment()).addToBackStack("fragBack").commit();
                 break;
             case R.id.home_button_RA:
                 startActivity(new Intent(getContext(), ARNavigation.class));

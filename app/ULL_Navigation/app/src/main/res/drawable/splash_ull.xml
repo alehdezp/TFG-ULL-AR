@@ -3,12 +3,10 @@
     <item android:drawable="@color/colorULL"/>
     <item>
         <bitmap
-            android:src="@drawable/ull_logo_blanco"
+            android:src="@drawable/splash_logo"
             android:gravity="center"
 
             />
-
-
     </item>
 
 </layer-list>

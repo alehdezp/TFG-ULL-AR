@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "669888053350",
+    "firebase_url": "https://ull-navigation-7edbb.firebaseio.com",
+    "project_id": "ull-navigation-7edbb",
+    "storage_bucket": "ull-navigation-7edbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669888053350:android:9feb4c851a83c43e",
+        "android_client_info": {
+          "package_name": "com.alehp.ull_navigation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669888053350-taah4qpc50ncdps5aknolc53b57oh9mk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alehp.ull_navigation",
+            "certificate_hash": "896d3efa84d924297f32b914b1213677e0834590"
+          }
+        },
+        {
+          "client_id": "669888053350-c8k1u1uj58ecfbf7ldimbpn6h25j441o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWGGlf9o8VFSjo0_4A7u_vnDIkDSm4Kpg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669888053350-c8k1u1uj58ecfbf7ldimbpn6h25j441o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

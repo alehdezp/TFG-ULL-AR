@@ -12,7 +12,7 @@ Configuracion de apis de google para poder utilizar
 Seeguimiento 4
 
 Creacion del login, splash screen
-Conexion y creacion de una base de datos online en mongolab, como futura base de datos del proyecto
+Conexion y creacion de una base de datos online en mongolab, como futura base de datos del proyectok
 
 
 Seguimiento 3
