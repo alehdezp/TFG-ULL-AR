@@ -24,6 +24,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.alehp.ull_navigation.Models.GetData;
@@ -90,6 +91,8 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
         }
 
+
+
         ARAPIKey key = ARAPIKey.getInstance();
         key.setAPIKey("Y8/NRauyJ4RvhIsPcHHd7xhYLwiBZsn3+cqswOaTTIMlmRpw9Sw4OJM78CIarRJ3ysRFdFVJDtIcmyfyypN8lAkNA4+ZZt5QVLaty7BFleng3YmPs7QA19WwLWM7x7ZVy/N44Anjf89OBk/zIhcVS+38bN9FNvJvVwsfFKmPLnmqYYJYHvG0DSVOVATME3BwWU9ulJXYyLAJ4jt1tO9CzGr6Z0oaKkZh4zeW3AyCQiq7VB4oxnYV2hBsrDeTPDcekfPDaAbb1JfYtZJZZse4LOBtk7/Pi8t3shVQkFwvwF0lU9znoN5E34adFU2CG3jCfnTIy1+6Rg6vlvWpd/StvpBMn/HnZ5SBNHD6BDDmWVHLIA16xaAOrJnTKMrpIDRRHq0g6cG6W+q15RS8RbXv8h1spR6crJOLP2u03Cv6lbJMMpQLvjremRKcN7cfNoO7ot8X0LUMOssKxjGpaIt6qIx/6DbQJ+b3Wx5j+DH1DUo/Z+pcLyb+lBFGkVr44AS3vb8c5eE4qP/lgzSS+nkfIQ4/x/vDkWc3jjnMseCpN7BQLRL26eOm3ApvFbHoQJpC5KC4eQnYzrWjQqgQilFIldR5xtkLfArzOaD+8V18lNWGlKWwHAeedHO7iaRebJJm0R2wqRMMfnfc6cZBqjE20Vp2R9D67GnZactxlbyA3No=");
     }
@@ -99,7 +102,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     public void setup() {
         super.setup();
 
-//        arbiTracker();
+        arbiTracker();
 
     }
 
@@ -260,7 +263,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
 
         // Create a node to be used as the target.
-        ARImageNode targetNode = new ARImageNode("Cow Target.png");
+        ARImageNode targetNode = new ARImageNode("cow_target.png");
 
         // Add it to the Gyro Placement Manager's world so that it moves with the device's Gyroscope.
         gyroPlaceManager.getWorld().addChild(targetNode);
@@ -275,7 +278,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
         arbiTrack.setTargetNode(targetNode);
 
         // Create a node to be tracked.
-        ARImageNode trackingNode = new ARImageNode("Cow Tracking.png");
+        ARImageNode trackingNode = new ARImageNode("cow_tracking.png");
 
         // Rotate the node to ensure it is displayed correctly.
         trackingNode.rotateByDegrees(90.0f, 1.0f, 0.0f, 0.0f);
@@ -287,8 +290,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     }
 
 
-    @Override
-/
+
 
     public boolean checkPermissions() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
@@ -333,31 +335,6 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     }
 
 
-    @Override
-    public boolean onDown(MotionEvent e) {
-        return false;
-    }
-
-    @Override
-    public void onShowPress(MotionEvent e) {
-
-    }
-
-
-    @Override
-    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-        return false;
-    }
-
-    @Override
-    public void onLongPress(MotionEvent e) {
-
-    }
-
-    @Override
-    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        return false;
-    }
 
     @Override
     public void onLocationChanged(Location location) {
@@ -382,6 +359,65 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        gestureDetect.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent e)
+    {
+        ARArbiTrack arbiTrack = ARArbiTrack.getInstance();
+        Toast.makeText(this, "Error al autentificar con Google", Toast.LENGTH_LONG).show();
+
+        // If arbitrack is tracking, stop tracking so that its world is no longer rendered, and make the target node visible.
+        if (arbiTrack.getIsTracking())
+        {
+            arbiTrack.stop();
+            arbiTrack.getTargetNode().setVisible(true);
+        }
+
+        // If it's not tracking, start tracking and hide the target node.
+        else
+        {
+            arbiTrack.start();
+            arbiTrack.getTargetNode().setVisible(false);
+        }
+
+        return false;
+    }
+
+    // We also need to implement the other overrides of the GestureDetector, though we don't need them for this sample.
+    @Override
+    public boolean onDown(MotionEvent e)
+    {
+        return false;
+    }
+
+    @Override
+    public void onShowPress(MotionEvent e)
+    {
+    }
+
+    @Override
+    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY)
+    {
+        return false;
+    }
+
+    @Override
+    public void onLongPress(MotionEvent e)
+    {
+    }
+
+    @Override
+    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY)
+    {
+        return false;
     }
 
 

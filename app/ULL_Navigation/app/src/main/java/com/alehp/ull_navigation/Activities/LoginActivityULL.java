@@ -29,6 +29,7 @@ public class LoginActivityULL extends AppCompatActivity implements View.OnClickL
 
     private GoogleApiClient googleApiClient;
     Button loginButton;
+    Button noLoginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +53,11 @@ public class LoginActivityULL extends AppCompatActivity implements View.OnClickL
         //settings
 
         loginButton = findViewById(R.id.loginButton);
+        noLoginButton = findViewById(R.id.noLoginButton);
+
 
         loginButton.setOnClickListener(this);
+        noLoginButton.setOnClickListener(this);
     }
 
 
@@ -62,6 +66,13 @@ public class LoginActivityULL extends AppCompatActivity implements View.OnClickL
         if (v.getId() == loginButton.getId()) {
             Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
             startActivityForResult(intent, 777);
+
+        }else if(v.getId() == noLoginButton.getId()){
+
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.putExtra("firstStart", true);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
 
     }
@@ -109,7 +120,7 @@ public class LoginActivityULL extends AppCompatActivity implements View.OnClickL
             @Override
             public void onResult(@NonNull Status status) {
                 if(status.isSuccess()){
-                    Toast.makeText(LoginActivityULL.this, "Necesitas registrarte con tu cuenta 'alu' de la Universidad de La Laguna", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivityULL.this, "Necesitas autentificarte con una cuenta '@ull.edu.es' de la Universidad de La Laguna", Toast.LENGTH_LONG).show();
                 }
             }
         });

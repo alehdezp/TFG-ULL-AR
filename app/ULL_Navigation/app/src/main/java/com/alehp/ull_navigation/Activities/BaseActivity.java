@@ -145,7 +145,7 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.O
             @Override
             public void onResult(@NonNull Status status) {
                 if(status.isSuccess()){
-                    Toast.makeText(BaseActivity.this, "Necesitas registrarte con tu cuenta de la Universidad de La Laguna", Toast.LENGTH_LONG);
+                    Toast.makeText(BaseActivity.this, "Has cerrado sesion", Toast.LENGTH_LONG);
                 }
             }
         });
