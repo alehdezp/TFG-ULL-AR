@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Navegacioin de la aplicación"
+        android:key="pref_key_storage_settings"/>
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="showRadius"
+        android:title="Mostrar sitios dentro de un rango"
+        android:summary="Selecciona el radio minimo y maximo de los circulos en metros para mostrar sitios de la ULL partiendo desde su ubicación"/>
+    <EditTextPreference
+        android:defaultValue="max"
+        android:inputType="number"
+        android:key="maxRadius"
+        android:singleLine="true"
+        android:title="Selecciona radio círculo mayor (metros)"
+        android:enabled="false"
+
+        />
+    <EditTextPreference
+        android:defaultValue="min"
+        android:inputType="number"
+        android:key="minRadius"
+        android:singleLine="true"
+        android:title="Selecciona radío círculo menor (metros)"
+        android:enabled="false"/>
+
+</PreferenceScreen>
+
+
+    <!--<SeekBarPreference-->
+    <!--android:key="seekBarRadiusMin"-->
+    <!--android:title="Radio minimo: "-->
+    <!--android:summary="Selecciona el radio minimo y maximo en km. a partir de su ubicacion para mostrar las ubicaciones de ULL"-->
+    <!--android:max="1000"-->
+    <!--android:defaultValue="0"-->
+    <!--/>-->
+    <!--<SeekBarPreference-->
+    <!--android:id="@+id/radiusMax"-->
+    <!--android:key="seekBarRadiusMax"-->
+    <!--android:title="Radio maximo: "-->
+    <!--android:summary=""-->
+    <!--android:max="100"-->
+    <!--android:defaultValue="0" />-->

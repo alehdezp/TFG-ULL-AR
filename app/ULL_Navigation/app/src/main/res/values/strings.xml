@@ -4,6 +4,8 @@
     <string name="ok">OK</string>
     <string name="title_location_permission">Permisos Localización</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="aplicationId">com.alehp.ull_navigation</string>
+    <string name="preference_file_key">com.alehp.ull_navigation</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -102,4 +104,8 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+
+        <string name="grid_sectioned_recyclerview">Grid Sectioned RecyclerView</string>
+        <string name="show_all">Show All</string>
+
 </resources>

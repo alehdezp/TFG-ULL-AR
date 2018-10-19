@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -16,9 +17,11 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GestureDetectorCompat;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -29,6 +32,7 @@ import android.widget.Toast;
 
 import com.alehp.ull_navigation.Models.GetData;
 import com.alehp.ull_navigation.Models.Navigation;
+import com.alehp.ull_navigation.Models.SitesArray;
 import com.alehp.ull_navigation.Models.ULLSite;
 import com.alehp.ull_navigation.R;
 import com.google.android.gms.maps.model.LatLng;
@@ -49,7 +53,7 @@ import eu.kudan.kudan.ARImageTrackable;
 import eu.kudan.kudan.ARImageTracker;
 
 
-public class ARNavigation extends ARActivity implements GestureDetector.OnGestureListener, LocationListener, SensorEventListener {
+public class ARNavigation extends ARActivity implements GestureDetector.OnGestureListener, LocationListener, SensorEventListener, View.OnClickListener {
 
     private Navigation navULL;
 
@@ -61,9 +65,14 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     private Location currentLocation;
     private Boolean locationEnable = false;
 
+    private ArrayList<ULLSite> allResultsSites;
+    private ArrayList<ULLSite> moreResultsSites;
+
     private TextView topRightText;
     private Button moreSitesButton;
 
+    private SharedPreferences sharedPref;
+    private SharedPreferences settingsPref;
 
     private GestureDetectorCompat gestureDetect;
 
@@ -76,25 +85,40 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aractivity);
 
+        settingsPref = PreferenceManager.getDefaultSharedPreferences(getContext());
+        sharedPref = this.getPreferences(Context.MODE_PRIVATE);
 
-        gestureDetect = new GestureDetectorCompat(this, this);
+        getSites();
+        getRadius();
+        
+        bindUI();
         if (checkPermissions()) {
             mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
             Sensor compass = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
             mSensorManager.registerListener(this, compass, SensorManager.SENSOR_DELAY_NORMAL);
-
-            topRightText = findViewById(R.id.ullSiteText);
-            moreSitesButton = findViewById(R.id.moreSitesButton);
             isGPSEnabled();
-            getSites();
-
-
         }
 
-
-
+        gestureDetect = new GestureDetectorCompat(this, this);
         ARAPIKey key = ARAPIKey.getInstance();
         key.setAPIKey("Y8/NRauyJ4RvhIsPcHHd7xhYLwiBZsn3+cqswOaTTIMlmRpw9Sw4OJM78CIarRJ3ysRFdFVJDtIcmyfyypN8lAkNA4+ZZt5QVLaty7BFleng3YmPs7QA19WwLWM7x7ZVy/N44Anjf89OBk/zIhcVS+38bN9FNvJvVwsfFKmPLnmqYYJYHvG0DSVOVATME3BwWU9ulJXYyLAJ4jt1tO9CzGr6Z0oaKkZh4zeW3AyCQiq7VB4oxnYV2hBsrDeTPDcekfPDaAbb1JfYtZJZZse4LOBtk7/Pi8t3shVQkFwvwF0lU9znoN5E34adFU2CG3jCfnTIy1+6Rg6vlvWpd/StvpBMn/HnZ5SBNHD6BDDmWVHLIA16xaAOrJnTKMrpIDRRHq0g6cG6W+q15RS8RbXv8h1spR6crJOLP2u03Cv6lbJMMpQLvjremRKcN7cfNoO7ot8X0LUMOssKxjGpaIt6qIx/6DbQJ+b3Wx5j+DH1DUo/Z+pcLyb+lBFGkVr44AS3vb8c5eE4qP/lgzSS+nkfIQ4/x/vDkWc3jjnMseCpN7BQLRL26eOm3ApvFbHoQJpC5KC4eQnYzrWjQqgQilFIldR5xtkLfArzOaD+8V18lNWGlKWwHAeedHO7iaRebJJm0R2wqRMMfnfc6cZBqjE20Vp2R9D67GnZactxlbyA3No=");
+    }
+
+    private void getRadius() {
+        try {
+            String auxMaxRadius = settingsPref.getString("maxRadius", "null");
+            String auxMinRadius = settingsPref.getString("minRadius", "null");
+            navULL.setMaxDist(Integer.parseInt(auxMaxRadius));
+            navULL.setMinDist(Integer.parseInt(auxMinRadius));
+        }catch (Exception e){
+            Log.e("Error radio", "error al parsear los radios de las circunferencias");
+        }
+    }
+
+    private void bindUI() {
+        topRightText = findViewById(R.id.ullSiteText);
+        moreSitesButton = findViewById(R.id.moreSitesButton);
+        moreSitesButton.setOnClickListener(this);
     }
 
 
@@ -102,24 +126,59 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     public void setup() {
         super.setup();
 
-        arbiTracker();
+       // arbiTracker();
 
     }
 
+
     public void getSites(){
-        GetData getSites = new GetData();
+
+        if(!dataSitesExist(sharedPref)) {        //Si los datos existen entra en if
+            getSitesFromShared();               //Lee de los shared preferences
+        }else{
+            getSitesFromDB();                   //Lee de la base de datos los sitios
+        }
+    }
+
+    private void getSitesFromDB() {
+
+        SharedPreferences.Editor editor = sharedPref.edit();
 
         try {
+            GetData getSites = new GetData();
             String sites = getSites.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
+            editor.putString("allSites", sites);
+            editor.commit();
             JSONArray array = new JSONArray(sites);
             navULL = new Navigation(array);
+            Log.d("json", sites);
+        } catch (JSONException e) {
+            e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void getSitesFromShared(){
+        Toast.makeText(this, "Cargando desde sharedPreferences", Toast.LENGTH_SHORT).show();
+        String auxSites = sharedPref.getString("allSites", "");
+
+        try {
+            JSONArray array = new JSONArray(auxSites);
+            navULL = new Navigation(array);
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+
+    private boolean dataSitesExist(SharedPreferences sharedPref) {
+
+        if(null == sharedPref.getString("allSites", null)) //Si los datos no existen devuelve falso
+            return false;
+        return true;
     }
 
     @SuppressLint("SetTextI18n")
@@ -130,16 +189,17 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
             radians = radians - 360;
         radians = Math.toRadians(radians);
 
-        ArrayList<ULLSite> allResults = null;
         ULLSite nearResult = null;
-        if (getCurrentPos() != null) {
-            allResults = navULL.whatCanSee(getCurrentPos(), radians);
+        if (getCurrentPos() != null) {//**
+            allResultsSites = navULL.whatCanSee(getCurrentPos(), radians);
+//            allResultsSites = navULL.getAllSites();
+
         }
-        if (allResults != null) {
-            nearResult = allResults.get(0);
+        if (allResultsSites != null) {
+            nearResult = allResultsSites.get(0);
             String AuxCanFound = "";
-            for(int i = 0; i < nearResult.getCanFound().size(); i++){
-                AuxCanFound += nearResult.getCanFound().get(i).first + "\n";
+            for(int i = 0; i < nearResult.getInterestPoints().size(); i++){
+                AuxCanFound += nearResult.getInterestPoints().get(i) + "\n";
             }
 
             int brujula = Math.round(event.values[0]);
@@ -149,13 +209,15 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
             topRightText.setText("Lugar: " + nearResult.getId() + "\nBrújula: " + brujula + "º"
                     + "\nDireccion objetivo: " + objetivoDir + "º" + "\nDistancia: " + distanceDir + "m."
-                    + "\nValor del cono: " + coneValue + "º" + "\nAquí se encuentra:\n" + AuxCanFound );
-            if(allResults.size() > 2) {
+                    + "\nValor del cono: " + coneValue + "º" +"\nMaxDist: " + navULL.getMaxDist() + "\nMinDist: " + navULL.getMinDist()+ "\nAquí se encuentra:\n" + AuxCanFound );
+            if(allResultsSites.size() > 2) {
 
-                moreSitesButton.setText("Encontradas " + (allResults.size() - 2) + " ubicacion(es) más en esta dirección");
+                moreSitesButton.setText("Encontrada/s " + (allResultsSites.size() - 2) + " ubicacion(es) más en esta dirección");
                 moreSitesButton.setVisibility(View.VISIBLE);
+                moreResultsSites = allResultsSites;
             }
         } else {
+
             topRightText.setText("Apunte a algun centro universitario para mostrar su informacion");
             moreSitesButton.setVisibility(View.GONE);
         }
@@ -371,23 +433,23 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     @Override
     public boolean onSingleTapUp(MotionEvent e)
     {
-        ARArbiTrack arbiTrack = ARArbiTrack.getInstance();
-        Toast.makeText(this, "Error al autentificar con Google", Toast.LENGTH_LONG).show();
-
-        // If arbitrack is tracking, stop tracking so that its world is no longer rendered, and make the target node visible.
-        if (arbiTrack.getIsTracking())
-        {
-            arbiTrack.stop();
-            arbiTrack.getTargetNode().setVisible(true);
-        }
-
-        // If it's not tracking, start tracking and hide the target node.
-        else
-        {
-            arbiTrack.start();
-            arbiTrack.getTargetNode().setVisible(false);
-        }
-
+//        ARArbiTrack arbiTrack = ARArbiTrack.getInstance();
+//
+//
+//        // If arbitrack is tracking, stop tracking so that its world is no longer rendered, and make the target node visible.
+//        if (arbiTrack.getIsTracking())
+//        {
+//            arbiTrack.stop();
+//            arbiTrack.getTargetNode().setVisible(true);
+//        }
+//
+//        // If it's not tracking, start tracking and hide the target node.
+//        else
+//        {
+//            arbiTrack.start();
+//            arbiTrack.getTargetNode().setVisible(false);
+//        }
+//
         return false;
     }
 
@@ -421,4 +483,16 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     }
 
 
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == moreSitesButton.getId()){
+            Intent intent = new Intent(this, SitesInfoActivity.class);
+            ArrayList aux = (ArrayList) moreResultsSites.subList(1, moreResultsSites.size()-1);
+            SitesArray sitesArray = new SitesArray(aux);
+
+            intent.putExtra("sitesToShow", sitesArray);
+            startActivity(intent);
+        }
+
+    }
 }

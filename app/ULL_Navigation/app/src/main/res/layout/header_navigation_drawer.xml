@@ -9,9 +9,11 @@
         android:src="@drawable/ull_drawable_home"/>
     
     <TextView
+        android:id="@+id/usernameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alejandro Hernández"
+        android:text=""
+        android:textSize="14dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         android:textColor="#FFF"

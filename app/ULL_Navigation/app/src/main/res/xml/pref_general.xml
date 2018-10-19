@@ -29,5 +29,18 @@
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
         android:title="@string/pref_title_add_friends_to_messages" />
+    <SeekBarPreference
+        android:key="seekBarRadiusMin"
+        android:title="Radio minimo: "
+        android:summary="Selecciona el radio minimo en km. a partir de su ubicacion para mostrar las ubicaciones de ULL"
+        android:max="1000"
+        android:defaultValue="0"
+        />
+    <SeekBarPreference
+        android:key="seekBarRadiusMax"
+        android:title="Radio maximo: "
+        android:summary="Selecciona el radio minimo a partir de su ubicacion para mostrar las ubicaciones de ULL"
+        android:max="100"
+        android:defaultValue="0" />
 
 </PreferenceScreen>

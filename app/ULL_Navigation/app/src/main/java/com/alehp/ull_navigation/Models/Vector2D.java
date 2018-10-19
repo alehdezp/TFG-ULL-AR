@@ -1,6 +1,9 @@
 package com.alehp.ull_navigation.Models;
 
-public class Vector2D {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Vector2D implements Serializable {
 
     private double x;
 

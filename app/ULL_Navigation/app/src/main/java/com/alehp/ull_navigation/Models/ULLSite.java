@@ -9,17 +9,22 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ULLSite {
+@SuppressWarnings("serial")
+public class ULLSite implements Serializable {
 
     private String id;
     private String name;
     private LatLng mapPoint;
     private Vector2D point;
-    private String desc;
-    private ArrayList<Pair<String,String>> canFound;
 
+    private String desc;
+    private ArrayList<String> interestPoints;
+
+
+    private ArrayList<String> interestPointsLink;
 
 
     private double coneValue = 0;
@@ -30,7 +35,8 @@ public class ULLSite {
 
     public ULLSite(JSONObject object){
 
-        canFound = new ArrayList<>();
+        interestPoints = new ArrayList<>();
+        interestPointsLink = new ArrayList<>();
 
         try {
             id = object.getString("id");
@@ -42,10 +48,8 @@ public class ULLSite {
             desc = object.getString("desc");
             JSONArray aux = object.getJSONArray("canFind");
             for(int i = 0; i < aux.length(); i++){
-                Pair<String, String> pair;
-                pair = new Pair<>(aux.getJSONObject(i).getString("id")
-                        ,aux.getJSONObject(i).getString("link"));
-                canFound.add(pair);
+               interestPoints.add(aux.getJSONObject(i).getString("id"));
+               interestPointsLink.add(aux.getJSONObject(i).getString("link"));
             }
 
             Log.d("ullsite", id);
@@ -80,21 +84,29 @@ public class ULLSite {
         this.desc = desc;
     }
 
-    public ArrayList<Pair<String, String>> getCanFound() {
-        return canFound;
-    }
-
-    public void setCanFound(ArrayList<Pair<String, String>> canFound) {
-        this.canFound = canFound;
-    }
-
-
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id;
+    }
+
+
+    public ArrayList<String> getInterestPoints() {
+        return interestPoints;
+    }
+
+    public void setInterestPoints(ArrayList<String> interestPoints) {
+        this.interestPoints = interestPoints;
+    }
+
+    public ArrayList<String> getInterestPointsLink() {
+        return interestPointsLink;
+    }
+
+    public void setInterestPointsLink(ArrayList<String> interestPointsLink) {
+        this.interestPointsLink = interestPointsLink;
     }
 
 

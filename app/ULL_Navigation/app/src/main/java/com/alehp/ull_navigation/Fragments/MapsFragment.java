@@ -6,17 +6,22 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.preference.Preference;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +42,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -51,38 +58,58 @@ import java.util.concurrent.ExecutionException;
  * A simple {@link Fragment} subclass.
  */
 public class MapsFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnMapClickListener,
-        View.OnClickListener, LocationListener {
+        View.OnClickListener, LocationListener, SharedPreferences.OnSharedPreferenceChangeListener{
 
+
+
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+    private static final String SHOW_RADIUS_STRING = "showRadius";
+    private static final String MAX_RADIUS_STRING = "maxRadius";
+    private static final String MIN_RADIUS_STRING = "minRadius";
 
     private View rootView;
     private MapView mapView;
     private GoogleMap goMap;
     private FloatingActionButton buttonCurrentPos;
     private Marker actualPosMarker;
-
-    private String test;
-
+    private Circle circleMax;
+    private Circle circleMin;
 
     private Button buttonARStart;
 
     private LocationManager locationManager;
     private Location currentLocation;
     private Boolean locationEnable = false;
+    private LatLng currentPosition;
 
     private LatLng ull = new LatLng( 28.481857638227176, -16.316877139026133);
     private LatLng myHome = new LatLng(28.46749041, -16.27173752);
 
+    private int maxRadius;
+    private int minRadius;
+    private boolean showRadius;
 
     private ArrayList<ULLSite> allSites= new ArrayList<ULLSite>();
+    private ArrayList<Marker> allMarkers = new ArrayList<Marker>();
+
+    private SharedPreferences sharedPref;
+    private SharedPreferences settingsPref;
+
 
     public MapsFragment() {
+
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Required empty public constructor
+
+        sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        settingsPref = PreferenceManager.getDefaultSharedPreferences(getContext());
+        settingsPref.registerOnSharedPreferenceChangeListener(this);
+
+        getRadius();
         getSites();
 
         rootView = inflater.inflate(R.layout.fragment_maps, container, false);
@@ -94,20 +121,9 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
         buttonARStart.setOnClickListener(this);
         checkLocationPermission();
 
-        GetData testGet = new GetData();
-
-        try {
-            test = testGet.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
-            Toast.makeText(getContext(), test, Toast.LENGTH_LONG);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
-
-
         return rootView;
     }
+
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -119,118 +135,104 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
             mapView.onResume();
             mapView.getMapAsync(this);
         }
-
-
     }
-
-
-
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         goMap = googleMap;
         goMap.getUiSettings().setCompassEnabled(true);
 
+
         //Necesita permisos de localizacion
         if (checkLocationPermission()) {
             enableLocation();
         }
-
         goMap.getUiSettings().setZoomControlsEnabled(true);
-
         //Zoom minimo de la app
         goMap.setMinZoomPreference(13);
 
         LatLng currentPos = getCurrentPos();
-        if (currentPos != null)
+        if (currentPos != null) {
             actualPosMarker = goMap.addMarker(new MarkerOptions().position(currentPos).title("Im Here!"));
-
-
-        goMap.moveCamera(CameraUpdateFactory.newLatLng(ull));
+            goMap.moveCamera(CameraUpdateFactory.newLatLng(currentPos));
+        }else{
+            goMap.moveCamera(CameraUpdateFactory.newLatLng(ull));
+        }
         goMap.setOnMapClickListener(this);
 
         drawAllSites();
-
+        showSitesOnRadius(getCurrentPos());
     }
 
-
-
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
 
     public void getSites(){
-        GetData getSites = new GetData();
+
+        if(dataSitesExist(sharedPref)) {        //Si los datos existen entra en if
+            getSitesFromShared();               //Lee de los shared preferences
+
+        }else{
+            getSitesFromDB();                   //Lee de la base de datos los sitios
+        }
+    }
+
+    private void getSitesFromDB() {
+
+        SharedPreferences.Editor editor = sharedPref.edit();
 
         try {
+            GetData getSites = new GetData();
             String sites = getSites.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
+            editor.putString("allSites", sites);
+            editor.commit();
             JSONArray array = new JSONArray(sites);
             allSites = new Navigation(array).getAllSites();
+
+        } catch (JSONException e) {
+            e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void getSitesFromShared(){
+        //Toast.makeText(getContext(), "Cargando desde sharedPreferences", Toast.LENGTH_SHORT).show();
+        String auxSites = sharedPref.getString("allSites", "");
+
+        try {
+            JSONArray array = new JSONArray(auxSites);
+            allSites = new Navigation(array).getAllSites();
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
 
+    private boolean dataSitesExist(SharedPreferences sharedPref) {
+        if(null == sharedPref.getString("allSites", null)) //Si los datos no existen devuelve falso
+            return false;
+        return true;
 
-    private void drawAllSites() {
-        for (int i = 0; i < allSites.size(); i++) {
-            goMap.addMarker(new MarkerOptions().position(getAllSites().get(i).getMapPoint()).title(allSites.get(i).getName()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+    }
+
+    private void getRadius() {
+        try {
+            String auxMaxRadius = settingsPref.getString(MAX_RADIUS_STRING, "null");
+            String auxMinRadius = settingsPref.getString(MIN_RADIUS_STRING, "null");
+            showRadius = settingsPref.getBoolean(SHOW_RADIUS_STRING, false);
+
+            maxRadius = Integer.parseInt(auxMaxRadius);
+            minRadius = Integer.parseInt(auxMinRadius);
+
+        }catch (Exception e){
+            Log.e("Error radio", "error al parsear los radios de las circunferencias");
         }
     }
 
-
-    @Override
-    public void onMapClick(LatLng latLng) {
-
-    }
-
-
-    @Override
-    public void onClick(View v) {
-
-        switch (v.getId()){
-            case R.id.buttonARStart:
-                startARNavigation();
-                break;
-            case R.id.buttonCurrentPos:
-                centerMaps();
-                break;
-
-        }
-    }
-
-    private void startARNavigation(){
-        Intent myIntent = new Intent(getActivity(), ARNavigation.class);
-        getActivity().startActivity(myIntent);
-    }
-
-    private LatLng getCurrentPos(){
-        if (!isGPSEnabled()) {
-            this.enableGPSAlert();
-        }
-        if (this.checkLocationPermission() && enableLocation()) {
-            try {
-                currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                LatLng currentPos = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
-                return currentPos;
-            } catch (Exception e) {
-                Toast.makeText(getContext(), "Asegurate de que tienes el GPS activado" +
-                        " o que se ha establecido tu ubicacion", Toast.LENGTH_LONG).show();
-            }
-        }
-        return null;
-    }
-
-    private void drawActualPos(){
-        LatLng currentPos = getCurrentPos();
-        if(currentPos != null) {
-            if (actualPosMarker == null)
-                actualPosMarker = goMap.addMarker(new MarkerOptions().position(currentPos).title("Im Here!"));
-
-            actualPosMarker.setPosition(currentPos);
-        }
-    }
 
     private void centerMaps() {
 
@@ -242,21 +244,103 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
         }
     }
 
+    private void startARNavigation(){
+        Intent myIntent = new Intent(getActivity(), ARNavigation.class);
+        getActivity().startActivity(myIntent);
+    }
 
-    public boolean isGPSEnabled(){
-        try {
-            if(getActivity() != null) {
-                int gpsSignal = Settings.Secure.getInt(getActivity().getContentResolver(), Settings.Secure.LOCATION_MODE);
-                if (gpsSignal == 0) {
-                    return false;
-                } else
-                    return true;
-            }else{
-                return false;
+    private LatLng getCurrentPos(){
+        if (!isGPSEnabled())
+            this.enableGPSAlert();
+
+        if (this.checkLocationPermission() && enableLocation()) {
+            try {
+                currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                currentPosition = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+                return currentPosition;
+
+            } catch (Exception e) {
+                Toast.makeText(getContext(), "Asegurate de que tienes el GPS activado" +
+                        " o que se ha establecido tu ubicacion", Toast.LENGTH_LONG).show();
             }
-        } catch (Settings.SettingNotFoundException e) {
-            e.printStackTrace();
-            return false;
+        }
+        return null;
+    }
+
+    private void drawAllSites() {
+        for (int i = 0; i < allSites.size(); i++) {
+            allMarkers.add(goMap.addMarker(new MarkerOptions().position(getAllSites().get(i).getMapPoint()).title(allSites.get(i).getName()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))));
+        }
+    }
+
+    private void drawActualPos(){
+        LatLng currentPos = getCurrentPos();
+        if(currentPos != null) {
+            if (actualPosMarker == null)
+                actualPosMarker = goMap.addMarker(new MarkerOptions().position(currentPos).title("Im Here!"));
+              actualPosMarker.setPosition(currentPos);
+        }
+    }
+
+    private void createCircles(LatLng position){
+        if(position != null) {
+            circleMin = goMap.addCircle(new CircleOptions()
+                    .center(position)
+                    .radius(minRadius)
+                    .strokeColor(Color.RED)
+                    .fillColor(R.color.colorWhiteTransparent)
+                    .visible(showRadius)
+            );
+
+            circleMax = goMap.addCircle(new CircleOptions()
+                    .center(position)
+                    .radius(maxRadius)
+                    .strokeColor(Color.BLUE)
+                    .fillColor(R.color.colorBlueTransparent)
+                    .visible(showRadius));
+        }
+    }
+
+    private void drawCircles(LatLng position) {
+        if(circleMax == null || circleMin == null){
+            createCircles(position);
+        }
+        if(position != null) {
+            circleMax.setCenter(position);
+            circleMax.setRadius(maxRadius);
+            circleMax.setVisible(showRadius);
+
+            circleMin.setCenter(position);
+            circleMin.setRadius(minRadius);
+            circleMin.setVisible(showRadius);
+        }
+    }
+
+
+
+    private void showSitesOnRadius(LatLng position){
+        Toast.makeText(getContext(), "showSites entrando", Toast.LENGTH_SHORT).show();
+        if(position != null && showRadius == true) {
+            double lat1 = position.latitude;
+            double long1 = position.longitude;
+            double lat2;
+            double long2;
+            double distance;
+            for (int i = 0; i < allSites.size(); i++) {
+                lat2 = allSites.get(i).getMapPoint().latitude;
+                long2 = allSites.get(i).getMapPoint().longitude;
+                distance = getDistanceBetween(lat1, long1, lat2, long2);
+                if(distance > minRadius && distance < maxRadius){
+                    allMarkers.get(i).setVisible(true);
+                }else{
+                    allMarkers.get(i).setVisible(false);
+                }
+
+            }
+        }else {
+            for (int i = 0; i < allSites.size(); i++) {
+                allMarkers.get(i).setVisible(true);
+            }
         }
     }
 
@@ -279,9 +363,60 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
         }
     }
 
+
+    public double getDistanceBetween(double lat1, double long1, double lat2, double long2) {
+        float result[] = new float[3];
+        Location.distanceBetween(lat1, long1, lat2, long2, result);
+        return result[0];
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()){
+            case R.id.buttonARStart:
+                startARNavigation();
+                break;
+            case R.id.buttonCurrentPos:
+                centerMaps();
+                break;
+        }
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        switch (key){
+            case SHOW_RADIUS_STRING:
+                showRadius = sharedPreferences.getBoolean(SHOW_RADIUS_STRING, false);
+                if(showRadius){         //Hacemos visibles los circulos
+                    getRadius();
+                    drawCircles(getCurrentPos());
+                    showSitesOnRadius(getCurrentPos());
+                }else{
+                    drawCircles(getCurrentPos());
+                    showSitesOnRadius(getCurrentPos());
+                }
+                break;
+            case MAX_RADIUS_STRING:
+                getRadius();
+                drawCircles(getCurrentPos());
+                showSitesOnRadius(getCurrentPos());
+                break;
+            case MIN_RADIUS_STRING:
+                getRadius();
+                drawCircles(getCurrentPos());
+                showSitesOnRadius(getCurrentPos());
+                break;
+        }
+    }
+
+
     @Override
     public void onLocationChanged(Location location) {
         drawActualPos();
+        LatLng position = getCurrentPos();
+        drawCircles(position);
+        showSitesOnRadius(position);
     }
 
     @Override
@@ -299,6 +434,28 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 
     }
 
+    @Override
+    public void onMapClick(LatLng latLng) {
+
+    }
+
+    public boolean isGPSEnabled(){
+        try {
+            if(getActivity() != null) {
+                int gpsSignal = Settings.Secure.getInt(getActivity().getContentResolver(), Settings.Secure.LOCATION_MODE);
+                if (gpsSignal == 0) {
+                    return false;
+                } else
+                    return true;
+            }else{
+                return false;
+            }
+        } catch (Settings.SettingNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     private void enableGPSAlert(){
 //        new AlertDialog.Builder(getContext())
 //                .setTitle("Señal GPS")
@@ -314,8 +471,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 //                .show();
     }
 
-
-    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
 
 
     public boolean checkLocationPermission() {
@@ -367,9 +522,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
                     }
                 } else {
 
-
                 }
-
             }
         }
     }
@@ -381,35 +534,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
     public void setAllSites(ArrayList<ULLSite> allSites) {
         this.allSites = allSites;
     }
+
+
+
 }
-
-//
-//    getAllSites().add(new ULLSite("Facultad de Fisica y Matemáticas", "nº 922222222",
-//        new Vector2D(-16.271370844238504,28.467337376756998)));
-//        getAllSites().add(new ULLSite("Facultad de Ingenieria Informatica", "nº 922222222",
-//        new Vector2D(-16.272370844238504,28.466337376756998)));
-//        getAllSites().add(new ULLSite("Parking ESIT", "nº 922222222",
-//        new Vector2D(-16.273370844238504,28.467337376756998)));
-//        getAllSites().add(new ULLSite("Facultad de Fisica y Matemáticas", "nº 922222222",
-//        new Vector2D(-16.320805, 28.481849 )));
-//        getAllSites().add(new ULLSite("ESIT, Facultad de Ingenieria Informatica", "nº 922222222",
-//        new Vector2D(-16.322039,28.483075)));
-//        getAllSites().add(new ULLSite("Parking ESIT", "nº 922222222",
-//        new Vector2D(-16.321946,28.481952)));
-//        getAllSites().add(new ULLSite("Parking Facultad", "Some info",
-//        new Vector2D(-16.320909,28.482755)));
-//
-//        getAllSites().add(new ULLSite("Edificio Fundacion de la Universidad de La Laguna", "Some info",
-//        new Vector2D(-16.317462,28.481930 )));
-//        getAllSites().add(new ULLSite("Edificio Central de la Universidad de La Laguna", "Some info",
-//        new Vector2D(-16.316690, 28.481753)));
-//        getAllSites().add(new ULLSite("Colegio Mayor San Fernando", "Some info",
-//        new Vector2D( -16.3157322, 28.481173)));
-//        getAllSites().add(new ULLSite("Parking de Estudiantes Universitarios", "Some info",
-//        new Vector2D(-16.315613, 28.481604)));
-//        getAllSites().add(new ULLSite("Campus Central - Torre Profesor Agustín Arévalo", "Some info",
-//        new Vector2D(-16.317531,28.481173)));
-//        getAllSites().add(new ULLSite("Deportes ULL", "Some info",
-//        new Vector2D(-16.316478,28.479994)));
-
-
