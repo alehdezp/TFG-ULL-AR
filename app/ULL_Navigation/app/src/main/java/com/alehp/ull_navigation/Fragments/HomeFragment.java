@@ -2,93 +2,96 @@ package com.alehp.ull_navigation.Fragments;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.alehp.ull_navigation.Activities.ARNavigation;
-import com.alehp.ull_navigation.Activities.MapsActivity;
-import com.alehp.ull_navigation.Models.GetData;
-import com.alehp.ull_navigation.Models.SectionModel;
-import com.alehp.ull_navigation.Models.SectionRecyclerViewAdapter;
+import com.alehp.ull_navigation.Models.Adapters.ItemHomeAdapter;
+import com.alehp.ull_navigation.Models.ItemHome;
 import com.alehp.ull_navigation.R;
 
 import java.util.ArrayList;
-import java.util.concurrent.ExecutionException;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
-    protected static final String RECYCLER_VIEW_TYPE = "recycler_view_type";
-    private RecyclerView recyclerView;
-
-    private Button startMapsButton;
-
-    private Button startRAButton;
     private View view;
+    private List<ItemHome> itemsHome;
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter homeAdapter;
+    private RecyclerView.LayoutManager homeLayoutManager;
+
 
     public HomeFragment() {
         // Required empty public constructor
     }
 
-    private void setUpRecyclerView() {
-        recyclerView = (RecyclerView) view.findViewById(R.id.sectioned_recycler_view);
-        recyclerView.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(linearLayoutManager);
-    }
-    //populate recycler view
-    private void populateRecyclerView() {
-        ArrayList<SectionModel> sectionModelArrayList = new ArrayList<>();
-        //for loop for sections
-        ArrayList<String> itemArrayList = new ArrayList<>();
-        //for loop for items
-        for (int j = 1; j <= 10; j++) {
-            itemArrayList.add("Item " + j);
-        }
-        sectionModelArrayList.add(new SectionModel("Section " + 1, itemArrayList));
-        SectionRecyclerViewAdapter adapter = new SectionRecyclerViewAdapter(getContext(), sectionModelArrayList);
-        recyclerView.setAdapter(adapter);
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        setAllItems();
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-//        startMapsButton = view.findViewById(R.id.home_button_maps);
-//        startRAButton = view.findViewById(R.id.home_button_RA);
-        this.view = view;
-        setUpRecyclerView();
-        populateRecyclerView();
 
-//        startMapsButton.setOnClickListener(this);
-//        startRAButton.setOnClickListener(this);
+        this.view = view;
+        recyclerView =getActivity().findViewById(R.id.recyclerView_Home);
+        homeLayoutManager = new LinearLayoutManager(getContext());
+        homeAdapter = new ItemHomeAdapter(itemsHome, R.layout.adapter_home_item, new ItemHomeAdapter.OnItemClickListener(){
+            @Override
+            public void onItemClick(ItemHome item, int position){
+                    switch (position) {
+                        case 0:
+                            Intent intent = new Intent(getContext().getApplicationContext(), ARNavigation.class);
+                            startActivity(intent);
+                            break;
+                        case 1:
+                           getFragmentManager().beginTransaction().add(R.id.content_frame, new MapsFragment()).addToBackStack("fragBack").commit();
+                           break;
+                        default:
+                            String url = item.getLink();
+                            Intent i = new Intent(Intent.ACTION_VIEW);
+                            i.setData(Uri.parse("http://" + url));
+                            startActivity(i);
+                            break;
+                    }
+
+            }
+        });
+
+        recyclerView.setLayoutManager(homeLayoutManager);
+        recyclerView.setAdapter(homeAdapter);
+
     }
 
+    private void setAllItems(){
+        ArrayList<ItemHome> auxItems = new ArrayList<ItemHome>();
+        auxItems.add(new ItemHome("ARNavigation", "home_ar", false, null));
+        auxItems.add(new ItemHome("Maps ULL", "home_maps", false, null));
+        auxItems.add(new ItemHome("Pagina oficial de la ULL", "home_ull", true, "www.ull.es"));
+        auxItems.add(new ItemHome("Centros de la ULL", "home_donde_ull", true, "donde.ull.es"));
+
+        itemsHome = (List) auxItems;
+
+    }
 
     @Override
     public void onClick(View v) {
-//        switch (v.getId()){
-//            case R.id.home_button_maps:
-//                getFragmentManager().beginTransaction().add(R.id.content_frame, new MapsFragment()).addToBackStack("fragBack").commit();
-//                break;
-//            case R.id.home_button_RA:
-//                startActivity(new Intent(getContext(), ARNavigation.class));
-//                break;
-//        }
+
     }
 
 

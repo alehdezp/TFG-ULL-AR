@@ -319,7 +319,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 
 
     private void showSitesOnRadius(LatLng position){
-        Toast.makeText(getContext(), "showSites entrando", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getContext(), "showSites entrando", Toast.LENGTH_SHORT).show();
         if(position != null && showRadius == true) {
             double lat1 = position.latitude;
             double long1 = position.longitude;
@@ -396,7 +396,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
                     drawCircles(getCurrentPos());
                     showSitesOnRadius(getCurrentPos());
                 }
-                break;
+
+
             case MAX_RADIUS_STRING:
                 getRadius();
                 drawCircles(getCurrentPos());

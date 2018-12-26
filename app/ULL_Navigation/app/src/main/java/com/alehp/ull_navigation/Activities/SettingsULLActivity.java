@@ -4,7 +4,6 @@ import android.annotation.TargetApi;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.preference.EditTextPreference;
-import android.preference.Preference;
 
 import android.preference.PreferenceManager;
 import android.preference.SwitchPreference;
@@ -15,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.alehp.ull_navigation.R;
+import com.alehp.ull_navigation.Utils.AppCompatPreferenceActivity;
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class SettingsULLActivity extends AppCompatPreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {

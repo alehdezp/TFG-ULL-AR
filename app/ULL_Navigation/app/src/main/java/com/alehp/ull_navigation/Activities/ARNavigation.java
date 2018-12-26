@@ -52,7 +52,12 @@ import eu.kudan.kudan.ARImageNode;
 import eu.kudan.kudan.ARImageTrackable;
 import eu.kudan.kudan.ARImageTracker;
 
-
+/**
+ * Clase que contiene el funcionamiento del AR de nuestro programa
+ *  Muestra al usuario información sobre los centros de la ULL que se
+ *  encuentran cerca mediante la pantalla y el lugar al que apunte
+ *
+ */
 public class ARNavigation extends ARActivity implements GestureDetector.OnGestureListener, LocationListener, SensorEventListener, View.OnClickListener {
 
     private Navigation navULL;
@@ -162,7 +167,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     }
 
     private void getSitesFromShared(){
-        Toast.makeText(this, "Cargando desde sharedPreferences", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Cargando desde sharedPreferences", Toast.LENGTH_SHORT).show();
         String auxSites = sharedPref.getString("allSites", "");
 
         try {

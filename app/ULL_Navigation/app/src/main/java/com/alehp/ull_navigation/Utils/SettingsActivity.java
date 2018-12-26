@@ -1,4 +1,4 @@
-package com.alehp.ull_navigation.Activities;
+package com.alehp.ull_navigation.Utils;
 
 import android.annotation.TargetApi;
 import android.content.Context;

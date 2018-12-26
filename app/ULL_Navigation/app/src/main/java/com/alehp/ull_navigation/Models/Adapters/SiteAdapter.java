@@ -1,4 +1,4 @@
-package com.alehp.ull_navigation.Models;
+package com.alehp.ull_navigation.Models.Adapters;
 
 import android.content.Context;
 import android.text.Layout;
@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.alehp.ull_navigation.Activities.BaseActivity;
+import com.alehp.ull_navigation.Models.SitesArray;
 import com.alehp.ull_navigation.R;
 
 import java.util.ArrayList;

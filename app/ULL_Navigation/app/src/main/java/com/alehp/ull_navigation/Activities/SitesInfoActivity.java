@@ -3,13 +3,10 @@ package com.alehp.ull_navigation.Activities;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import com.alehp.ull_navigation.Models.Navigation;
-import com.alehp.ull_navigation.Models.SiteAdapter;
+import com.alehp.ull_navigation.Models.Adapters.SiteAdapter;
 import com.alehp.ull_navigation.Models.SitesArray;
 import com.alehp.ull_navigation.Models.ULLSite;
 import com.alehp.ull_navigation.R;
@@ -18,7 +15,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.ArrayList;
-import com.alehp.ull_navigation.R.id;
+
 public class SitesInfoActivity extends AppCompatActivity {
 
     private SitesArray sitesToShow;

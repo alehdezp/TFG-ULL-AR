@@ -22,7 +22,6 @@ public class ULLSiteSerializable implements Serializable {
         this.desc = desc;
         this.interestPoints = interestPoints;
         this.interestPointsLink = interestPointsLink;
-
     }
 
     public String getId() {

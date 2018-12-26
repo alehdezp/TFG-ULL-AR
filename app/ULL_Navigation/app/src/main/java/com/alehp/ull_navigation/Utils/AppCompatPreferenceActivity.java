@@ -1,4 +1,4 @@
-package com.alehp.ull_navigation.Activities;
+package com.alehp.ull_navigation.Utils;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

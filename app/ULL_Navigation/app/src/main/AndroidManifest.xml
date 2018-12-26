@@ -41,7 +41,7 @@
         <activity android:name=".Activities.BaseActivity" />
         <activity android:name=".Activities.MainActivity" />
         <activity
-            android:name=".Activities.SettingsActivity"
+            android:name=".Utils.SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity android:name=".Activities.MapsActivity" />
         <activity android:name=".Activities.SitesInfoActivity" />
