@@ -13,8 +13,7 @@ public class SitesArray implements Serializable {
         if(ullSites != null){
             ullSiteSerializables = new ArrayList<ULLSiteSerializable>();
             for (int i = 0; i < ullSites.size(); i++) {
-                ULLSite auxSite = ullSites.get(i);
-                ullSiteSerializables.add(new ULLSiteSerializable(auxSite.getId(), auxSite.getName(), auxSite.getPoint(), auxSite.getDesc(), auxSite.getInterestPoints(), auxSite.getInterestPointsLink()));
+                ullSiteSerializables.add(new ULLSiteSerializable(ullSites.get(i)));
             }
         }
     }
@@ -25,6 +24,10 @@ public class SitesArray implements Serializable {
 
     public void setUllSiteSerializables(ArrayList<ULLSiteSerializable> ullSiteSerializables) {
         this.ullSiteSerializables = ullSiteSerializables;
+    }
+
+    public ULLSiteSerializable get(int i){
+        return this.ullSiteSerializables.get(i);
     }
 
 

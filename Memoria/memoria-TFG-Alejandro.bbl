@@ -72,22 +72,24 @@
   [\href{http://www.samsung.com/es/apps/mobile/galaxyapps/} [Disponible
   electrónicamente. Último acceso, julio de 2018]].
 
-\bibitem{URL::GoogleGlass}
-\textbf{{Google
-  Glass}}\urlprefix\url{[https://es.wikipedia.org/wiki/Google_Glass]}.
-  [\href{https://es.wikipedia.org/wiki/Google_Glass} [Disponible
-  electrónicamente. Último acceso, julio de 2018]].
-
-\bibitem{URL::gps}
-\textbf{{Sistema de Posicionamiento
-  global}}\urlprefix\url{[https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global]}.
-  [\href{https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global}
-  [Disponible electrónicamente. Último acceso, julio de 2018]].
-
 \bibitem{URL::ImageRegister}
 \textbf{{Registro de
   Imagenes}}\urlprefix\url{[https://es.wikipedia.org/wiki/Registro_de_la_imagen]}.
   [\href{https://es.wikipedia.org/wiki/Registro_de_la_imagen } [Disponible
+  electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::CodigoQR}
+\textbf{{CodigoQR}}. \emph{[\url{ https://es.wikipedia.org/wiki/Codigo_QR}]}.
+  [[Disponible electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::VR}
+\textbf{{Realidad Virtual}}. \emph{[\url{
+  https://es.wikipedia.org/wiki/Realidad_virtual}]}. [[Disponible
+  electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::RM}
+\textbf{{Relidad Mixta}}. \emph{[\url{
+  https://es.wikipedia.org/wiki/Realidad_mixta}]}. [[Disponible
   electrónicamente. Último acceso, julio de 2018]].
 
 \end{thebibliography}
@@ -210,24 +212,28 @@
 </bibl>
 
 <bibl id="B13">
-  <title><p>{Google Glass}</p></title>
-  <url>https://es.wikipedia.org/wiki/Google_Glass</url>
-  <note>\href{https://es.wikipedia.org/wiki/Google_Glass} [Disponible
-  electrónicamente. Último acceso, julio de 2018]</note>
-</bibl>
-
-<bibl id="B14">
-  <title><p>{Sistema de Posicionamiento global}</p></title>
-  <url>https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global</url>
-  <note>\href{https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global}
-  [Disponible electrónicamente. Último acceso, julio de 2018]</note>
-</bibl>
-
-<bibl id="B15">
   <title><p>{Registro de Imagenes}</p></title>
   <url>https://es.wikipedia.org/wiki/Registro_de_la_imagen</url>
   <note>\href{https://es.wikipedia.org/wiki/Registro_de_la_imagen } [Disponible
   electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B14">
+  <title><p>{CodigoQR}</p></title>
+  <source>[\url{ https://es.wikipedia.org/wiki/Codigo_QR}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B15">
+  <title><p>{Realidad Virtual}</p></title>
+  <source>[\url{ https://es.wikipedia.org/wiki/Realidad_virtual}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B16">
+  <title><p>{Relidad Mixta}</p></title>
+  <source>[\url{ https://es.wikipedia.org/wiki/Realidad_mixta}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
 </bibl>
 
 </refgrp>

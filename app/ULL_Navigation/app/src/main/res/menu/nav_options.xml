@@ -15,6 +15,10 @@
             android:icon="@android:drawable/ic_menu_camera"
             android:title="Modo RA" />
         <item
+            android:id="@+id/menu_sitios"
+            android:icon="@drawable/list_sites"
+            android:title="Todos los sitios" />
+        <item
             android:id="@+id/menu_settings"
             android:icon="@android:drawable/ic_menu_set_as"
             android:title="Configuración" />

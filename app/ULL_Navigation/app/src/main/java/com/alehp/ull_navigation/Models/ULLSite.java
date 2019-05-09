@@ -21,9 +21,8 @@ public class ULLSite implements Serializable {
     private Vector2D point;
 
     private String desc;
+    private String imageLink;
     private ArrayList<String> interestPoints;
-
-
     private ArrayList<String> interestPointsLink;
 
 
@@ -46,11 +45,13 @@ public class ULLSite implements Serializable {
             mapPoint = new LatLng(lat, lng);
             point = new Vector2D(lng, lat);
             desc = object.getString("desc");
+            imageLink = object.getString("imageLink");
             JSONArray aux = object.getJSONArray("canFind");
             for(int i = 0; i < aux.length(); i++){
                interestPoints.add(aux.getJSONObject(i).getString("id"));
                interestPointsLink.add(aux.getJSONObject(i).getString("link"));
             }
+
 
             Log.d("ullsite", id);
 
@@ -110,6 +111,13 @@ public class ULLSite implements Serializable {
     }
 
 
+    public String getImageLink() {
+        return imageLink;
+    }
+
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
+    }
 
     public Vector2D getPoint() {
         return point;

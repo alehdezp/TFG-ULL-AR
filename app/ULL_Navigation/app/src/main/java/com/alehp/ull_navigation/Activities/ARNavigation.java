@@ -26,20 +26,20 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import com.alehp.ull_navigation.Models.GetData;
 import com.alehp.ull_navigation.Models.Navigation;
 import com.alehp.ull_navigation.Models.SitesArray;
 import com.alehp.ull_navigation.Models.ULLSite;
+import com.alehp.ull_navigation.Models.ULLSiteSerializable;
 import com.alehp.ull_navigation.R;
 import com.google.android.gms.maps.model.LatLng;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
@@ -72,8 +72,16 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
     private ArrayList<ULLSite> allResultsSites;
     private ArrayList<ULLSite> moreResultsSites;
+    private ULLSite nearSiteResult;
 
-    private TextView topRightText;
+//    private TextView topGradesText;
+    private TextView seenText;
+    private TextView ullSiteText;
+    private TextView notSeenText;
+    private TextView moreInfoText;
+    private ImageView moreInfoImage;
+    private ImageView moreInfoBack;
+    private Button moreInfoButton;
     private Button moreSitesButton;
 
     private SharedPreferences sharedPref;
@@ -90,13 +98,15 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aractivity);
 
+
+
         settingsPref = PreferenceManager.getDefaultSharedPreferences(getContext());
         sharedPref = this.getPreferences(Context.MODE_PRIVATE);
 
         getSites();
         getRadius();
-        
         bindUI();
+
         if (checkPermissions()) {
             mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
             Sensor compass = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
@@ -121,9 +131,22 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     }
 
     private void bindUI() {
-        topRightText = findViewById(R.id.ullSiteText);
+//        topGradesText = findViewById(R.id.topGradesText);
+        seenText = findViewById(R.id.seenText);
+        ullSiteText = findViewById(R.id.ullSiteText);
+        notSeenText = findViewById(R.id.notSeenText);
+        moreInfoText = findViewById(R.id.moreInfoText);
+        moreInfoImage = findViewById(R.id.moreInfoImage);
+        moreInfoBack = findViewById(R.id.moreInfoBack);
+        moreInfoButton = findViewById(R.id.moreInfoButton);
         moreSitesButton = findViewById(R.id.moreSitesButton);
+        moreInfoButton.setOnClickListener(this);
         moreSitesButton.setOnClickListener(this);
+        showHideUIMore(false);
+        alternateUIInfo(false, "");
+        setMoreSites(false, null);
+
+
     }
 
 
@@ -138,11 +161,11 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
     public void getSites(){
 
-        if(!dataSitesExist(sharedPref)) {        //Si los datos existen entra en if
-            getSitesFromShared();               //Lee de los shared preferences
-        }else{
+//        if(!dataSitesExist(sharedPref)) {        //Si los datos existen entra en if
+//            getSitesFromShared();               //Lee de los shared preferences
+//        }else{
             getSitesFromDB();                   //Lee de la base de datos los sitios
-        }
+//        }
     }
 
     private void getSitesFromDB() {
@@ -189,41 +212,109 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     @SuppressLint("SetTextI18n")
     @Override
     public void onSensorChanged(SensorEvent event) {
-        double radians = event.values[0];
+
+        double radians = event.values[0]; //Calculamos el valor de orientacion de la brujula del dispositivo
         if (radians >= 360)
             radians = radians - 360;
         radians = Math.toRadians(radians);
 
-        ULLSite nearResult = null;
-        if (getCurrentPos() != null) {//**
-            allResultsSites = navULL.whatCanSee(getCurrentPos(), radians);
-//            allResultsSites = navULL.getAllSites();
+//        int brujula = Math.round(event.values[0]); //Valor de la brujula
+//        topGradesText.setText(brujula + "º");
 
+
+        LatLng auxpos = getCurrentPos();
+        if (auxpos != null) {
+            allResultsSites = navULL.whatCanSee(auxpos, radians);
         }
         if (allResultsSites != null) {
-            nearResult = allResultsSites.get(0);
-            String AuxCanFound = "";
-            for(int i = 0; i < nearResult.getInterestPoints().size(); i++){
-                AuxCanFound += nearResult.getInterestPoints().get(i) + "\n";
-            }
+            nearSiteResult = allResultsSites.get(0);
+            alternateUIInfo(true, nearSiteResult.getName());
+            showHideUIMore(true);
+//            String AuxCanFound = "";
+//            for(int i = 0; i < nearSiteResult.getInterestPoints().size(); i++){
+//                AuxCanFound += nearSiteResult.getInterestPoints().get(i) + "\n";
+//            }
 
-            int brujula = Math.round(event.values[0]);
-            int objetivoDir = Math.round(Math.round(Math.toDegrees(nearResult.getDirToSite())));
-            int distanceDir = Math.round((float)nearResult.getDistToSite());
-            int coneValue = Math.round((float)Math.toDegrees(nearResult.getConeValue()));
 
-            topRightText.setText("Lugar: " + nearResult.getId() + "\nBrújula: " + brujula + "º"
-                    + "\nDireccion objetivo: " + objetivoDir + "º" + "\nDistancia: " + distanceDir + "m."
-                    + "\nValor del cono: " + coneValue + "º" +"\nMaxDist: " + navULL.getMaxDist() + "\nMinDist: " + navULL.getMinDist()+ "\nAquí se encuentra:\n" + AuxCanFound );
+//            int objetivoDir = Math.round(Math.round(Math.toDegrees(nearSiteResult.getDirToSite())));
+//            int distanceDir = Math.round((float)nearSiteResult.getDistToSite());
+//            int coneValue = Math.round((float)Math.toDegrees(nearSiteResult.getConeValue()));
+
+//            topGradesText.setText("Lugar: " + nearSiteResult.getId() + "\nBrújula: " + brujula + "º"
+//                    + "\nDireccion objetivo: " + objetivoDir + "º" + "\nDistancia: " + distanceDir + "m."
+//                    + "\nValor del cono: " + coneValue + "º" +"\nMaxDist: " + navULL.getMaxDist() + "\nMinDist: " + navULL.getMinDist()+ "\nAquí se encuentra:\n" + AuxCanFound );
             if(allResultsSites.size() > 2) {
-
-                moreSitesButton.setText("Encontrada/s " + (allResultsSites.size() - 2) + " ubicacion(es) más en esta dirección");
-                moreSitesButton.setVisibility(View.VISIBLE);
-                moreResultsSites = allResultsSites;
+                setMoreSites(true, allResultsSites);
             }
         } else {
+            alternateUIInfo(false, "");
+            showHideUIMore(false);
+            setMoreSites(false, null);
+        }
 
-            topRightText.setText("Apunte a algun centro universitario para mostrar su informacion");
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == moreSitesButton.getId()){
+            Intent intent = new Intent(this, SitesListActivity.class);
+            ArrayList aux = new ArrayList(moreResultsSites.subList(1, moreResultsSites.size()-1));
+            SitesArray sitesArray = new SitesArray(aux);
+            intent.putExtra("sitesToShow", sitesArray);
+            startActivity(intent);
+        }
+        if(v.getId() == moreInfoButton.getId()){
+            Intent intent = new Intent(getApplicationContext(), SiteDescriptionActivity.class);
+            ULLSiteSerializable actualULLSite = new ULLSiteSerializable(nearSiteResult);
+            intent.putExtra("actualULLSite", actualULLSite);
+            startActivity(intent);
+        }
+
+    }
+
+    private void showHideUIMore(boolean showUI){
+        if(showUI == true){
+            moreInfoText.setVisibility(View.VISIBLE);
+            moreInfoImage.setVisibility(View.VISIBLE);
+            moreInfoButton.setVisibility(View.VISIBLE);
+            moreInfoBack.setVisibility(View.VISIBLE);
+        }else{
+            moreInfoText.setVisibility(View.INVISIBLE);
+            moreInfoImage.setVisibility(View.INVISIBLE);
+            moreInfoButton.setVisibility(View.GONE);
+            moreInfoBack.setVisibility(View.INVISIBLE);
+        }
+
+    }
+
+    private void alternateUIInfo(boolean showInfo, String siteName){
+        if(showInfo == true){
+            ullSiteText.setText(siteName);
+            ullSiteText.setVisibility(View.VISIBLE);
+            seenText.setVisibility(View.VISIBLE);
+            notSeenText.setVisibility(View.INVISIBLE);
+        }else{
+            ullSiteText.setVisibility(View.INVISIBLE);
+            seenText.setVisibility(View.INVISIBLE);
+            notSeenText.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void setMoreSites(boolean show, ArrayList<ULLSite> allSeenResults){
+
+        if(show == true) {
+            String found = "Encontrada";
+            String localizations = "localizacion";
+            if(allSeenResults.size() > 3){
+                found += "s";
+                localizations += "es";
+            }
+            moreSitesButton.setVisibility(View.VISIBLE);
+            moreResultsSites = allSeenResults;
+            moreSitesButton.setText(found + " " + (allResultsSites.size() - 2) + " " +localizations + "más en esta dirección");
+
+        }else {
             moreSitesButton.setVisibility(View.GONE);
         }
     }
@@ -488,16 +579,4 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     }
 
 
-    @Override
-    public void onClick(View v) {
-        if(v.getId() == moreSitesButton.getId()){
-            Intent intent = new Intent(this, SitesInfoActivity.class);
-            ArrayList aux = (ArrayList) moreResultsSites.subList(1, moreResultsSites.size()-1);
-            SitesArray sitesArray = new SitesArray(aux);
-
-            intent.putExtra("sitesToShow", sitesArray);
-            startActivity(intent);
-        }
-
-    }
 }

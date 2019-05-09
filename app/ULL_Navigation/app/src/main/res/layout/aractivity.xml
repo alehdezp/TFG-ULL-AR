@@ -13,7 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.4" />
+        android:visibility="gone"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Guideline
         android:id="@+id/hor_guideline"
@@ -22,21 +24,193 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5"/>
 
+    <ImageView
+        android:id="@+id/backgroundAR"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ar_back_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/moreInfoBack"
+        android:layout_width="160dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="600dp"
+        android:background="@drawable/ar_back_more_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/seenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Viendo actualmente"
+        android:textColor="#FFFF"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/backgroundAR"
+        app:layout_constraintTop_toTopOf="@+id/backgroundAR"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/ullSiteText"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_text"
-        android:text="Info "
-        android:textColor="@android:color/background_light"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:paddingLeft="9dp"
-        android:paddingTop="3dp"
-        android:paddingBottom="3dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:padding="1dp"
+        android:text="Facultad de Ciencias: Secciones de Fisica y Matematicas"
+        android:textColor="#dc82ff"
+        android:textSize="21sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundAR"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundAR"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seenText"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <TextView
+        android:id="@+id/notSeenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Apunte a una localizacion de la universidad a identificar"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundAR"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundAR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seenText"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <TextView
+        android:id="@+id/moreInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Más información"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/moreInfoBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/ver_guideline"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/moreInfoImage"
+        android:layout_width="37dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/arrow_transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/moreInfoBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/moreInfoBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seenText"
+        app:layout_constraintVertical_bias="0.961" />
+
+    <Button
+        android:id="@+id/moreInfoButton"
+        android:layout_width="174dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Button"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/moreInfoBack"
+        app:layout_constraintEnd_toEndOf="@+id/moreInfoBack"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="@+id/moreInfoBack"
+        app:layout_constraintTop_toTopOf="@+id/moreInfoBack"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/notchAR"
+        android:layout_width="146dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/circle_black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/topGradesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="180º"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/AR-NavigationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/ar_violet_back"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="AR-Navigation"
+        android:textColor="#FFFF"
+        android:textSize="19dp"
+        android:textStyle="normal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundAR"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundAR"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundAR"
+        app:layout_constraintVertical_bias="0.0" />
+
+
 
     <Button
         android:id="@+id/moreSitesButton"

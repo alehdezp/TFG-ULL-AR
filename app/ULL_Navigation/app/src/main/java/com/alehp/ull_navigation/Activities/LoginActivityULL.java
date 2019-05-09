@@ -101,7 +101,7 @@ public class LoginActivityULL extends AppCompatActivity implements View.OnClickL
                 logout();
             }
         }else{
-            Toast.makeText(this, "Error al autentificar con Google", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Error al autentificar con Google " + result.getStatus(), Toast.LENGTH_LONG).show();
         }
     }
 

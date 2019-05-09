@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.alehp.ull_navigation.Models.ItemHome;
 import com.alehp.ull_navigation.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -60,8 +61,9 @@ public class ItemHomeAdapter extends RecyclerView.Adapter<ItemHomeAdapter.ViewHo
         public void bind(final ItemHome itemHome, final OnItemClickListener listener){
 
             this.itemName.setText(itemHome.getName());
-//            int imageID = context.getResources().getIdentifier(itemHome.getImage(), null, context.getPackageName());
-//            this.itemImage.setImageDrawable(context.getResources().getDrawable(imageID));
+
+            int imageID = context.getResources().getIdentifier(itemHome.getImage(), "drawable", context.getPackageName());
+            this.itemImage.setImageResource(imageID);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

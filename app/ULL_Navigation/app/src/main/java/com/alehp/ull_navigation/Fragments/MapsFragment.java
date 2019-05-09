@@ -171,23 +171,15 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 
     public void getSites(){
 
-        if(dataSitesExist(sharedPref)) {        //Si los datos existen entra en if
-            getSitesFromShared();               //Lee de los shared preferences
-
-        }else{
             getSitesFromDB();                   //Lee de la base de datos los sitios
-        }
+
     }
 
     private void getSitesFromDB() {
 
-        SharedPreferences.Editor editor = sharedPref.edit();
-
         try {
             GetData getSites = new GetData();
             String sites = getSites.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
-            editor.putString("allSites", sites);
-            editor.commit();
             JSONArray array = new JSONArray(sites);
             allSites = new Navigation(array).getAllSites();
 
@@ -200,24 +192,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
         }
     }
 
-    private void getSitesFromShared(){
-        //Toast.makeText(getContext(), "Cargando desde sharedPreferences", Toast.LENGTH_SHORT).show();
-        String auxSites = sharedPref.getString("allSites", "");
 
-        try {
-            JSONArray array = new JSONArray(auxSites);
-            allSites = new Navigation(array).getAllSites();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private boolean dataSitesExist(SharedPreferences sharedPref) {
-        if(null == sharedPref.getString("allSites", null)) //Si los datos no existen devuelve falso
-            return false;
-        return true;
-
-    }
 
     private void getRadius() {
         try {
@@ -269,7 +244,11 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 
     private void drawAllSites() {
         for (int i = 0; i < allSites.size(); i++) {
-            allMarkers.add(goMap.addMarker(new MarkerOptions().position(getAllSites().get(i).getMapPoint()).title(allSites.get(i).getName()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))));
+            if(allSites.get(i).getMapPoint() != null) {
+                allMarkers.add(goMap.addMarker(new MarkerOptions().position(getAllSites().get(i).getMapPoint()).title(allSites.get(i).getName()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))));
+            }else {
+                Toast.makeText(getContext(), i + " es nulo", Toast.LENGTH_LONG);
+            }
         }
     }
 
@@ -338,7 +317,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 
             }
         }else {
-            for (int i = 0; i < allSites.size(); i++) {
+            for (int i = 0; i < allMarkers.size(); i++) {
                 allMarkers.get(i).setVisible(true);
             }
         }

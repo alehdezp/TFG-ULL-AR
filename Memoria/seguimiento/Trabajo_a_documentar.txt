@@ -1,3 +1,19 @@
+//objetivos*** 
+añadir base de datos todas las localizaciones (Campus)
+añadir imagen url
+acabar la pestaña de los sition
+//Login goole
+	Creacion de credenciales, obtencion de la clave sha1 de mi ordenador para poder utilizar los servicios de google y codigo de la aplicacion
+//Logo 
+    Creado con un programa onlina a partir de la imagen de la universidad
+    agregada al manifiesto
+	
+//Configuracion del servidor
+    instalar nodejs y heroku en nuestra maquina
+    loguearnos en heroku
+    y hacer el clone del repo
+
+
 //Recuerda configurar API Maps y API google
 Seguimiento 4
 

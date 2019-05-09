@@ -1,5 +1,7 @@
 package com.alehp.ull_navigation.Models;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -12,16 +14,18 @@ public class ULLSiteSerializable implements Serializable {
 
 
     private String desc;
+    private String imageLink;
     private ArrayList<String> interestPoints;
     private ArrayList<String> interestPointsLink;
 
-    public ULLSiteSerializable(String id, String name, Vector2D point, String desc, ArrayList<String> interestPoints, ArrayList<String> interestPointsLink){
-        this.id = id;
-        this.name = name;
-        this.point =point;
-        this.desc = desc;
-        this.interestPoints = interestPoints;
-        this.interestPointsLink = interestPointsLink;
+    public ULLSiteSerializable(ULLSite ullSite){
+        this.id = ullSite.getId();
+        this.name = ullSite.getName();
+        this.point =ullSite.getPoint();
+        this.desc = ullSite.getDesc();
+        this.imageLink = ullSite.getImageLink();
+        this.interestPoints = ullSite.getInterestPoints();
+        this.interestPointsLink = ullSite.getInterestPointsLink();
     }
 
     public String getId() {
@@ -54,6 +58,15 @@ public class ULLSiteSerializable implements Serializable {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    public String getImageLink() {
+        return imageLink;
+    }
+
+
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
     }
 
     public ArrayList<String> getInterestPoints() {

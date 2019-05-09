@@ -1,6 +1,7 @@
 package com.alehp.ull_navigation.Activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -9,6 +10,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -17,6 +19,9 @@ import android.widget.Toast;
 import com.alehp.ull_navigation.Fragments.AboutFragment;
 import com.alehp.ull_navigation.Fragments.HomeFragment;
 import com.alehp.ull_navigation.Fragments.MapsFragment;
+import com.alehp.ull_navigation.Models.GetData;
+import com.alehp.ull_navigation.Models.Navigation;
+import com.alehp.ull_navigation.Models.SitesArray;
 import com.alehp.ull_navigation.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -31,6 +36,11 @@ import com.google.android.gms.common.api.Status;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.text.WordUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 public class BaseActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
@@ -80,6 +90,25 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.O
                         intent = new Intent(getApplicationContext(), ARNavigation.class);
                         startActivity(intent);
                         drawerLayout.closeDrawers();
+                        break;
+                    case R.id.menu_sitios:
+                        try {
+                            GetData getSites = new GetData();
+                            String sites = getSites.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
+                            JSONArray array = new JSONArray(sites);
+                            Navigation navULL = new Navigation(array);
+
+                            intent = new Intent(getApplicationContext(), SitesListActivity.class);
+                            SitesArray sitesArray = new SitesArray(navULL.getAllSites());
+                            intent.putExtra("sitesToShow", sitesArray);
+                            startActivity(intent);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        } catch (ExecutionException e) {
+                            e.printStackTrace();
+                        }
                         break;
                     case R.id.menu_settings:
                         intent = new Intent(getApplicationContext(), SettingsULLActivity.class);

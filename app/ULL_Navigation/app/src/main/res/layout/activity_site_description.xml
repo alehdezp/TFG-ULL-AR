@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SiteDescriptionActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.219" />
+
+
+        <ImageView
+            android:id="@+id/imageSiteDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/loading"
+            tools:layout_editor_absoluteX="8dp"
+            android:paddingTop="?android:attr/actionBarSize"/>
+
+        <TextView
+            android:id="@+id/nameTextSiteDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Facultad de Ciencias: Secciones de Fisica y Matematicas"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/colorULL"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageSiteDesc"
+            app:layout_constraintVertical_bias="0.005" />
+
+        <TextView
+            android:id="@+id/descHeadTextSiteDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+
+            android:layout_marginTop="2dp"
+            android:text="Descripción:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="#1852af"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/descTextSiteDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descHeadTextSiteDesc"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descTextSiteDesc"
+            app:layout_constraintVertical_bias="0.071"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <View
+            android:id="@+id/separator4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="4dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/canFindHeader"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <View
+            android:id="@+id/separator3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descHeadTextSiteDesc"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="4dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextSiteDesc"
+            app:layout_constraintVertical_bias="0.079"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <TextView
+            android:id="@+id/canFindHeader"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Instituciones y enlaces de interés:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="#1852af"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:drawSelectorOnTop="false"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/canFindHeader" />
+
+        <ImageView
+            android:id="@+id/sendMapsSiteDesc"
+            android:clickable="true"
+            android:layout_width="38dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/maps_icon_desc"
+            app:layout_constraintBottom_toBottomOf="@+id/imageSiteDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageSiteDesc"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
