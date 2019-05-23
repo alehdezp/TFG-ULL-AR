@@ -40,6 +40,8 @@ public class SitesListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sites_list);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         sitesToShow = (SitesArray) getIntent().getSerializableExtra("sitesToShow");
         showDinamicSites();
@@ -84,5 +86,15 @@ public class SitesListActivity extends AppCompatActivity {
             }
         });
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            finish(); // close this activity and return to preview activity (if there is any)
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

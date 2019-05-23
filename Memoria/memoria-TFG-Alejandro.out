@@ -8,14 +8,21 @@
 \BOOKMARK [1][-]{section.2.2}{Tecnolog\355as utilizadas}{chapter.2}% 8
 \BOOKMARK [2][-]{subsection.2.2.1}{El Sistema Operativo Android}{section.2.2}% 9
 \BOOKMARK [2][-]{subsection.2.2.2}{Realidad Aumentada}{section.2.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.3}{Nodejs}{section.2.2}% 11
-\BOOKMARK [2][-]{subsection.2.2.4}{Mongodb}{section.2.2}% 12
-\BOOKMARK [0][-]{chapter.3}{AR en entornos universitarios }{}% 13
-\BOOKMARK [1][-]{section.3.1}{Aplicaciones m\363viles en entornos universitarios}{chapter.3}% 14
-\BOOKMARK [2][-]{subsection.3.1.1}{Descarga autom\341tica de material}{section.3.1}% 15
-\BOOKMARK [0][-]{chapter.4}{La aplicaci\363n BulletPoint}{}% 16
-\BOOKMARK [0][-]{chapter.5}{Conclusiones y l\355neas de trabajo futuras}{}% 17
-\BOOKMARK [1][-]{subsection.5.0.1}{Conclusiones}{chapter.5}% 18
-\BOOKMARK [2][-]{subsection.5.0.2}{Conclusions}{subsection.5.0.1}% 19
-\BOOKMARK [2][-]{subsection.5.0.3}{L\355neas de trabajo futuras}{subsection.5.0.1}% 20
-\BOOKMARK [0][-]{subsection.5.0.3}{Bibliograf\355a}{}% 21
+\BOOKMARK [2][-]{subsection.2.2.3}{Node.js}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.4}{MongoDB}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.5}{ Heroku }{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.6}{ mLab }{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.7}{ Google Maps }{section.2.2}% 15
+\BOOKMARK [0][-]{chapter.3}{AR en entornos universitarios }{}% 16
+\BOOKMARK [1][-]{section.3.1}{Aplicaciones m\363viles en entornos universitarios}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.1.1}{Descarga autom\341tica de material}{section.3.1}% 18
+\BOOKMARK [0][-]{chapter.4}{La aplicaci\363n ULL-Navigation}{}% 19
+\BOOKMARK [1][-]{section.4.1}{Especificaci\363n de requisitos}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.2}{Especificaci\363n detallada de los requisitos}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.3}{Ventanas de la aplicaci\363n}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{Back-end}{}% 23
+\BOOKMARK [1][-]{section.5.1}{Base de datos}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.2}{Configuraci\363n del servidor}{chapter.5}% 25
+\BOOKMARK [2][-]{subsection.5.2.1}{Instalaci\363n}{section.5.2}% 26
+\BOOKMARK [2][-]{subsection.5.2.2}{Implementaci\363n}{section.5.2}% 27
+\BOOKMARK [0][-]{lstnumber.-13.3}{Bibliograf\355a}{}% 28

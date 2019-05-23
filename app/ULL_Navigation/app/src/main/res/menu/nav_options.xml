@@ -13,11 +13,11 @@
         <item
             android:id="@+id/menu_ar"
             android:icon="@android:drawable/ic_menu_camera"
-            android:title="Modo RA" />
+            android:title="Navegación en modo RA" />
         <item
             android:id="@+id/menu_sitios"
             android:icon="@drawable/list_sites"
-            android:title="Todos los sitios" />
+            android:title="Todos los centros ULL" />
         <item
             android:id="@+id/menu_settings"
             android:icon="@android:drawable/ic_menu_set_as"
@@ -25,7 +25,7 @@
         <item
             android:id="@+id/menu_logout"
             android:icon="@android:drawable/ic_menu_directions"
-            android:title="Log Out" />
+            android:title="Cerrar Cesión" />
         <item
             android:id="@+id/menu_about"
             android:icon="@android:drawable/ic_dialog_info"

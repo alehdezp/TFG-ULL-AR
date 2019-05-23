@@ -80,7 +80,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private void setAllItems(){
         ArrayList<ItemHome> auxItems = new ArrayList<ItemHome>();
-        auxItems.add(new ItemHome("AR Navigation", "home_ar_navigation", false, null));
+        auxItems.add(new ItemHome("Navegación en modo RA", "home_ar_inicio", false, null));
         auxItems.add(new ItemHome("Mapa ULL", "home_mapa_ull", false, null));
         auxItems.add(new ItemHome("Página oficial de la ULL", "home_ull_site", true, "www.ull.es"));
         auxItems.add(new ItemHome("Donde ULL", "home_donde_ull", true, "donde.ull.es"));

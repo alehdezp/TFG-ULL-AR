@@ -277,7 +277,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
         if(showUI == true){
             moreInfoText.setVisibility(View.VISIBLE);
             moreInfoImage.setVisibility(View.VISIBLE);
-            moreInfoButton.setVisibility(View.VISIBLE);
+            moreInfoButton.setVisibility(View.INVISIBLE);
             moreInfoBack.setVisibility(View.VISIBLE);
         }else{
             moreInfoText.setVisibility(View.INVISIBLE);

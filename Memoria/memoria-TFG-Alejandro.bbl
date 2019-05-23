@@ -26,6 +26,11 @@
   [\href{https://developer.android.com/studio/index.html} [Disponible
   electrónicamente. Último acceso, julio de 2018]].
 
+\bibitem{URL::IDE}
+\textbf{{IDE}}.
+  \emph{[\url{https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado}]}.
+  [[Disponible electrónicamente. Último acceso, julio de 2018]].
+
 \bibitem{URL::IntelliJIDEA}
 {IntelliJ IDEA}: \textbf{{IntelliJ IDEA}} 2001,
   \urlprefix\url{[https://www.jetbrains.com/idea/]}.
@@ -42,12 +47,6 @@
   \urlprefix\url{[https://marketplace.eclipse.org/content/android-development-tools-eclipse]}.
   [\href{https://marketplace.eclipse.org/content/android-development-tools-eclipse}
   [Disponible electrónicamente. Último acceso, julio de 2018]].
-
-\bibitem{URL::manualLatex}
-\textbf{{Manual de Latex en español}} 2004,
-  \urlprefix\url{[http://www.fing.edu.uy/~canale/latex.pdf]}.
-  [\href{http://www.fing.edu.uy/~canale/latex.pdf} [Disponible
-  electrónicamente. Último acceso, julio de 2018]].
 
 \bibitem{URL::repositorioAplicacion}
 \textbf{{Repositorio de la aplicación
@@ -91,6 +90,75 @@
 \textbf{{Relidad Mixta}}. \emph{[\url{
   https://es.wikipedia.org/wiki/Realidad_mixta}]}. [[Disponible
   electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::Pokemon-Go}
+\textbf{{Pokemón Go!}} \emph{[\url{ https://pokemongolive.com/es/}]}.
+  [[Disponible electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::Pokemon}
+\textbf{{Pokemón}}. \emph{[\url{ https://es.wikipedia.org/wiki/Pokemon}]}.
+  [[Disponible electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::Nodejs}
+\textbf{{Node.js}}. \emph{[\url{ https://nodejs.org/en/}]}. [[Disponible
+  electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::ChromeV8}
+\textbf{{Chrome V8}}. \emph{[\url{ https://es.wikipedia.org/wiki/Chrome_V8}]}.
+  [[Disponible electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::EventLoop}
+\textbf{{Event Loop}}. \emph{[\url{
+  https://nodejs.org/de/docs/guides/event-loop-timers-and-nexttick/}]}.
+  [[Disponible electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::MongoDB}
+\textbf{{MongoDB}}. \emph{[\url{
+  https://www.mongodb.com/what-is-mongodb?lang=es-es}]}. [[Disponible
+  electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::NoSQL}
+\textbf{{Tecnología
+  NoSQL}}\urlprefix\url{[https://es.wikipedia.org/wiki/NoSQL]}.
+  [\href{https://es.wikipedia.org/wiki/NoSQL} [Disponible electrónicamente.
+  Último acceso, julio de 2018]].
+
+\bibitem{URL::BSON}
+\textbf{{Formato BSON}}. \emph{[\url{
+  https://es.wikipedia.org/wiki/BSON?lang=es-es}]}. [[Disponible
+  electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::PaaS}
+\textbf{{PaaS}}.
+  \emph{[\url{https://en.wikipedia.org/wiki/Platform_as_a_service}]}.
+  [[Disponible electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::aws}
+\textbf{{Amazon Web Services}}. \emph{[\url{ https://aws.amazon.com/es/}]}.
+  [[Disponible electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::Azure}
+\textbf{{Azure}}. \emph{[\url{ https://azure.microsoft.com/es-es/}]}.
+  [[Disponible electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::GoogleCloud}
+\textbf{{Google Cloud}}. \emph{[\url{ https://cloud.google.com/?hl=es}]}.
+  [[Disponible electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::GoogleMapsApi}
+\textbf{{Google Maps API}}. \emph{[\url{https://developers.google.com/maps/
+  documentation/android-api}]}. [[Disponible electrónicamente. Último acceso,
+  julio de 2018]].
+
+\bibitem{URL::SplashScreen}
+\textbf{{Splash Screen}}.
+  \emph{[\url{https://en.wikipedia.org/wiki/Splash_screen}]}. [[Disponible
+  electrónicamente. Último acceso, julio de 2018]].
+
+\bibitem{URL::NavigationDraw}
+\textbf{{Navigation Drawer}}.
+  \emph{[\url{https://material.io/design/components/navigation-drawer.html}]}.
+  [[Disponible electrónicamente. Último acceso, julio de 2018]].
 
 \end{thebibliography}
 
@@ -145,6 +213,12 @@
 </bibl>
 
 <bibl id="B5">
+  <title><p>{IDE}</p></title>
+  <source>[\url{https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B6">
   <title><p>{IntelliJ IDEA}</p></title>
   <aug>
     <au><cnm>{IntelliJ IDEA}</cnm></au>
@@ -155,7 +229,7 @@
   Último acceso, julio de 2018]</note>
 </bibl>
 
-<bibl id="B6">
+<bibl id="B7">
   <title><p>{Gradle}</p></title>
   <pubdate>2007</pubdate>
   <url>http://gradle.org/</url>
@@ -163,7 +237,7 @@
   acceso, julio de 2018]</note>
 </bibl>
 
-<bibl id="B7">
+<bibl id="B8">
   <title><p>{Eclipse con ADT plugin}</p></title>
   <aug>
     <au><cnm>{Google, Inc.}</cnm></au>
@@ -172,14 +246,6 @@
   <url>https://marketplace.eclipse.org/content/android-development-tools-eclipse</url>
   <note>\href{https://marketplace.eclipse.org/content/android-development-tools-eclipse}
   [Disponible electrónicamente. Último acceso, julio de 2018]</note>
-</bibl>
-
-<bibl id="B8">
-  <title><p>{Manual de Latex en español}</p></title>
-  <pubdate>2004</pubdate>
-  <url>http://www.fing.edu.uy/~canale/latex.pdf</url>
-  <note>\href{http://www.fing.edu.uy/~canale/latex.pdf} [Disponible
-  electrónicamente. Último acceso, julio de 2018]</note>
 </bibl>
 
 <bibl id="B9">
@@ -233,6 +299,99 @@
 <bibl id="B16">
   <title><p>{Relidad Mixta}</p></title>
   <source>[\url{ https://es.wikipedia.org/wiki/Realidad_mixta}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B17">
+  <title><p>{Pokemón Go!}</p></title>
+  <source>[\url{ https://pokemongolive.com/es/}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B18">
+  <title><p>{Pokemón}</p></title>
+  <source>[\url{ https://es.wikipedia.org/wiki/Pokemon}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B19">
+  <title><p>{Node.js}</p></title>
+  <source>[\url{ https://nodejs.org/en/}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B20">
+  <title><p>{Chrome V8}</p></title>
+  <source>[\url{ https://es.wikipedia.org/wiki/Chrome_V8}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B21">
+  <title><p>{Event Loop}</p></title>
+  <source>[\url{
+  https://nodejs.org/de/docs/guides/event-loop-timers-and-nexttick/}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B22">
+  <title><p>{MongoDB}</p></title>
+  <source>[\url{ https://www.mongodb.com/what-is-mongodb?lang=es-es}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B23">
+  <title><p>{Tecnología NoSQL}</p></title>
+  <url>https://es.wikipedia.org/wiki/NoSQL</url>
+  <note>\href{https://es.wikipedia.org/wiki/NoSQL} [Disponible
+  electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B24">
+  <title><p>{Formato BSON}</p></title>
+  <source>[\url{ https://es.wikipedia.org/wiki/BSON?lang=es-es}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B25">
+  <title><p>{PaaS}</p></title>
+  <source>[\url{https://en.wikipedia.org/wiki/Platform_as_a_service}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B26">
+  <title><p>{Amazon Web Services}</p></title>
+  <source>[\url{ https://aws.amazon.com/es/}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B27">
+  <title><p>{Azure}</p></title>
+  <source>[\url{ https://azure.microsoft.com/es-es/}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B28">
+  <title><p>{Google Cloud}</p></title>
+  <source>[\url{ https://cloud.google.com/?hl=es}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B29">
+  <title><p>{Google Maps API}</p></title>
+  <source>[\url{https://developers.google.com/maps/
+  documentation/android-api}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B30">
+  <title><p>{Splash Screen}</p></title>
+  <source>[\url{https://en.wikipedia.org/wiki/Splash_screen}]</source>
+  <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
+</bibl>
+
+<bibl id="B31">
+  <title><p>{Navigation Drawer}</p></title>
+  <source>[\url{https://material.io/design/components/navigation-drawer.html}]</source>
   <note>[Disponible electrónicamente. Último acceso, julio de 2018]</note>
 </bibl>
 

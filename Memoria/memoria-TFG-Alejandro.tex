@@ -7,8 +7,9 @@
 % Fichero: main.tex
 %
 % ----------------------------------------------------
-%
+% 
 \documentclass[spanish,a4paper,12pt,oneside]{extreport}
+\usepackage{listingsutf8}
 %\documentclass[a4paper, twoside, 12pt]{book}
 \usepackage[a4paper]{geometry}
 \usepackage[spanish]{babel}
@@ -31,6 +32,7 @@
 \usepackage{algorithmic}
 \usepackage[pdftex=true,colorlinks=false,urlcolor=blue,plainpages=false,pagebackref=true,citecolor=red]{hyperref} %hiperenlaces y backcites 
 \usepackage{url}
+\usepackage{subcaption}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Comandos para escribir "siempre igual"
 \newcommand{\BulletP}{\texttt{ULL-Navigation.{ Tecnología de realidad virtual en entornos universitarios}}}
@@ -141,6 +143,16 @@
         captionpos=b
 }
 
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, const, let, async, await, if, in, while, do, else, case, break, from},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+
 %\renewcommand{\lstlistingname}{Listing} % Los títulos de los códigos insertados se denotan con Ejemplo...   
 
 % Otro formato más bonito para código fuente
@@ -165,7 +177,7 @@
 \vspace*{\stretch{0.5}}
 
 \begin{center}
-\includegraphics[scale=0.8]{images/logo_vertical}\\[10mm]
+\includegraphics[scale=1.1]{images/marca-universidad-de-la-laguna-original}\\[15mm]
 {\Huge Trabajo de Fin de Grado}
 \end{center}
 
@@ -357,7 +369,7 @@ Application for Android, Java, mobile devices, programming, Augmented Reality ..
 \include{Cap2_Technology}
 \include{Cap3_ARInStudentEnvironments}
 \include{Cap4_TheApplication}
-\include{Cap5_ConclusionsAndFutureLinesOfWork}
+\include{Cap6_Back-end}
 
 
 

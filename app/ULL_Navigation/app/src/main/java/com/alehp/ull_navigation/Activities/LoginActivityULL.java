@@ -91,7 +91,7 @@ public class LoginActivityULL extends AppCompatActivity implements View.OnClickL
             GoogleSignInAccount account = result.getSignInAccount();
             String userEmail = account.getEmail();
 //            revokeAccess();
-            if(userEmail.matches("(.*)@ull.edu.es")) {
+            if(userEmail.matches("(.*)@ull.edu.es") ) {
                 Intent intent = new Intent(this, MainActivity.class);
                 intent.putExtra("firstStart", true);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -101,7 +101,7 @@ public class LoginActivityULL extends AppCompatActivity implements View.OnClickL
                 logout();
             }
         }else{
-            Toast.makeText(this, "Error al autentificar con Google " + result.getStatus(), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Error al autentificar con Google " + result.getStatus(), Toast.LENGTH_LONG).show();
         }
     }
 

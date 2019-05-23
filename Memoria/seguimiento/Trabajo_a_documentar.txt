@@ -41,7 +41,7 @@ AR dentro de un layout
 
 Se ha probado las funcionalidades del sdk de kudan, no se ha encontrado nada de utilidad para el desarrollo de TFG
 
-La opcion de crear un modelo 3d de un centro universitario para que sea escaneado por algunos de los SDK 
+La opción de crear un modelo 3d de un centro universitario para que sea escaneado por algunos de los SDK 
 se ha descartado por la dificultad para crear este modelo en la actualidad
 
 La aplicacion funciona con gps y labrujula

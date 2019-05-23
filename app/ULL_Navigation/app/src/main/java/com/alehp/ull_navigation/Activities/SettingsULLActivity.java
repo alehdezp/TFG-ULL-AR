@@ -11,6 +11,9 @@ import android.os.Bundle;
 
 import android.support.v7.preference.SeekBarPreference;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
+import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.alehp.ull_navigation.R;
@@ -41,8 +44,9 @@ public class SettingsULLActivity extends AppCompatPreferenceActivity implements 
         editorPref = settingsPref.edit();
         addPreferencesFromResource(R.xml.pref_nav_settings);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        setTopActionBar();
+
 
         showRadiusPrefence = (SwitchPreference) findPreference(SHOW_RADIUS_STRING);
         maxRadiusPreference = (EditTextPreference) findPreference(MAX_RADIUS_STRING);
@@ -53,6 +57,21 @@ public class SettingsULLActivity extends AppCompatPreferenceActivity implements 
 
         maxRadiusPreference.setSummary(settingsPref.getString(MAX_RADIUS_STRING, null));
         minRadiusPreference.setSummary(settingsPref.getString(MIN_RADIUS_STRING, null));
+    }
+
+    private void setTopActionBar() {
+        getLayoutInflater().inflate(R.layout.toolbar, (ViewGroup)findViewById(android.R.id.content));
+        Toolbar toolbar = (Toolbar)findViewById(R.id.my_toolbar);
+        toolbar.setTitle("Configuración");
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        int horizontalMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, getResources().getDisplayMetrics());
+        int verticalMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, getResources().getDisplayMetrics());
+        int topMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, (int) getResources().getDimension(R.dimen.activity_vertical_margin) + 20, getResources().getDisplayMetrics());
+        getListView().setPadding(horizontalMargin, topMargin, horizontalMargin, verticalMargin);
+
     }
 
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
@@ -89,5 +108,16 @@ public class SettingsULLActivity extends AppCompatPreferenceActivity implements 
         super.onPause();
         getPreferenceScreen().getSharedPreferences()
                 .unregisterOnSharedPreferenceChangeListener(this);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            finish(); // close this activity and return to preview activity (if there is any)
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

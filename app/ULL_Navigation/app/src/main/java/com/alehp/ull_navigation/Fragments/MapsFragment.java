@@ -235,8 +235,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
                 return currentPosition;
 
             } catch (Exception e) {
-                Toast.makeText(getContext(), "Asegurate de que tienes el GPS activado" +
-                        " o que se ha establecido tu ubicacion", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getContext(), "Asegurate de que tienes el GPS activado" +
+//                        " o que se ha establecido tu ubicacion", Toast.LENGTH_LONG).show();
             }
         }
         return null;

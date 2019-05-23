@@ -1,0 +1,23 @@
+{
+    "_id": {
+        "$oid": "5b5a004efb6fc07c4c24a5aa"
+    },
+    "id": "esit",
+    "name": "Escuela Superior de Ingeniería y Tecnología",
+    "position": {
+        "lat": "28.482965",
+        "long": "-16.322003"
+    },
+    "desc": "La Escuela Superior de Ingeniería y Tecnología es el órgano encargado de la organización de las enseñanzas y los procesos académicos, administrativos y de gestión conducentes a la obtención de títulos de carácter oficial y validez en todo el territorio nacional que se impartan en ella y demás títulos que establezca la legislación vigente. Las titulaciones que se imparten en la Escuela corresponden al ámbito de la Ingeniería Informática y de la Ingeniería Industrial.",
+    "imageLink": "https://www.ull.es/donde/assets/img/facultades/esit.jpg",
+    "canFind": [
+        {
+            "id": "ESIT",
+            "link": "https://www.ull.es/centros/escuela-superior-de-ingenieria-y-tecnologia/"
+        },
+        {
+            "id": "Grado en Ingeniería Informática",
+            "link": "https://www.ull.es/estudios-docencia/grados/ingenieria-informatica"
+        }
+    ]
+}
