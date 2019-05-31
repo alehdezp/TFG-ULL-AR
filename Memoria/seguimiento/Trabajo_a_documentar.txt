@@ -17,7 +17,7 @@ acabar la pestaña de los sition
 //Recuerda configurar API Maps y API google
 Seguimiento 4
 
-Creacion del proyecto definitivo de ULL Navigation
+Creacion del proyecto definitivo de ULL AR
 
 Pasos seguidos para Maps
 Configuracion de un proyecto con Kudan, pasos a seguir y .jar

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = new express.Router();
 
-//modelo que maneja la peticion a la base de datos
+//Modelo que maneja la peticion a la base de datos
 var ullSites = require('../models/ullSites');
 
 //Seleccionamos los metodos que puede responder 

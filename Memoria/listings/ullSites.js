@@ -1,6 +1,7 @@
 //Declaramos el variable restful para manejar las peticiones
 var restful = require('node-restful');
-var mongoose = restful.mongoose; //Utilizamos mongoose para conectarnos a la BD
+ //Utilizamos mongoose para conectarnos a la BD
+var mongoose = restful.mongoose;
 
 //Estructura de los sitios de la ull contenidos en la base de datos
 var ullSitesSchema = new mongoose.Schema({

@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "server-ull-navigation",
+    "name": "server-ull-AR",
     "version": "0.0.1",
     "dependencies": {
       "body-parser": "^1.18.3",

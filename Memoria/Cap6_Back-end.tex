@@ -2,7 +2,7 @@
 %
 % Trabajo de Fin de Grado. 
 % Author: Alejandro Hernández Padrón. 
-% Capítulo: Conclusiones y lineas de trabajo futuras. 
+% Capítulo: Conclusiones y líneas de trabajo futuras. 
 % Fichero: Cap5_ConclusionsAndFutureLinesOfWork.tex
 %
 % ----------------------------------------------------
@@ -30,79 +30,26 @@
     captionpos=b
 }
   
-\chapter{Back-end} \label{chap:BackEnd} 
+\chapter{Back-end de ULL-AR} \label{chap:BackEnd} 
 
-Si recordamos en la capitulo \ref{chap:Tecnologias} se habló sobre las tecnologías de Node.js y MongoDB, como servidor y base de datos respectivamente. Para poder implementar estas tecnologías se decidió por utilizar servicios en la nube para gestionarlos, facilitar su despliegue y con motivos de profundizar y adquirir conocimiento sobre este tipo de plataformas. Estos servicios son Heroku como servidor Node.js de nuestra aplicación y mLab como base de datos NoSQL que utiliza la tecnología de MongoDB. Ambos ofrecen una forma sencilla, accesible y escalable, para poder ejecutar nuestra aplicación y estudiar las posibilidades y beneficios que ofrecen este tipo de servicios en la nube en la actualidad.
+Si recordamos en la capitulo \ref{chap:Tecnologias} se habló sobre las tecnologías de Node.js y MongoDB, como servidor y base de datos respectivamente. Para poder implementar estas tecnologías se decidió por utilizar servicios en la nube para gestionarlos, facilitar su despliegue y con motivos de profundizar y adquirir conocimiento sobre este tipo de plataformas. Estos servicios son Heroku como servidor de nuestra aplicación y mLab como base de datos. Ambos ofrecen una forma sencilla, accesible y escalable, para poder ejecutar nuestra aplicación y estudiar las posibilidades y beneficios que ofrecen este tipo de servicios en la nube en la actualidad.
 
 \section{Base de datos}
 
-Todo los datos necesarios para el funcionamiento de la aplicación estarán alojados en una base de datos en la nube. mLab será el proveedor de servicio escogido para alojar nuestra base de datos. Este proveedor nos ofrece bases de datos MongoDB.
+Todos los datos necesarios para el funcionamiento de la aplicación estarán alojados en una base de datos en la nube. mLab será el proveedor de servicio escogido para alojar nuestra base de datos. Este proveedor nos ofrece bases de datos NoSQL que utilizan la tecnología MongoDB.
 
-Crear nuestra base de datos es muy sencillo con mLab. Simplemente nos registramos y creamos nuestra base de datos. Lo primero que necesitamos es elegir un plan de datos. Como nuestra base de datos no es necesario mucho espacio de almacenamiento se optó por el plan gratuito que dispone de 500 megas. Posteriormente fijamos el nombre de nuestra base de datos que será ``bd-ull-navigation".
-
-
+Crear nuestra base de datos es muy sencillo con mLab. Simplemente nos registramos y creamos nuestra base de datos. Lo primero que necesitamos es elegir un plan de datos. Como en nuestra base de datos no es necesario mucho espacio de almacenamiento, se optó por el plan gratuito que dispone de 500 megas. Posteriormente fijamos el nombre de nuestra base de datos que será ``bd-ull-AR".
 
 \section{Configuración del servidor}
 
-Necesitamos configurar nuestro servidor de Node.js para poder desplegarlo en Heroku y que funcione correctamente.
-Como requisito previo se instalara GitHub en nuestra maquina para poder trabajar con el repositiorio de Heroku que contendrá nuestro servidor.
+Necesitamos configurar nuestro servidor de Node.js para poder desplegarlo en Heroku y que funcione correctamente. A continuación se explicarán los pasos seguidos para la implementación nuestro servidor explicando su funcionamiento y su conexión con la base de datos.
 
-\subsection{Instalación}
-Para toda la instalación se ha utilizado Linux como sistema operativo.
-\subsubsection{GitHub}
-Será necesario disponer de una cuenta en GitHub primero para poder trabajar con el gestor de versiones. Para instalar GitHub en Linux utilizaremos el siguiente comando:
-\begin{lstlisting}
-	$ sudo apt install git-all
-\end{lstlisting}
+\subsection{Requisitos previos}
+Para toda la instalación e implementación del servidor Node.js se ha utilizado Linux como sistema operativo.
 
-% Si queremos comprobar si esta correctamente instalado:
+Previo a la implementación necesitaremos crearnos cuentas en las plataformas de Heroku y mLab. A su vez, debemos tener instalado GitHub, Node.js y Heroku. Para poder ejecutar los comandos que nos permitan creación y despliegue del servidor en la nube.
 
-% \begin{lstlisting}
-% 	$ git --version
-% 	git version 2.11.0
-% \end{lstlisting}
-
-\subsubsection{Instalación de Node.js}
-
-Para instalar Node.js en nuestra máquina con linux deberemos ejecutar estos comando:
-
-\begin{lstlisting}
-	$ curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
-	$ sudo apt install -y nodejs
-\end{lstlisting}
-
-% Con esto añadimos las dependencias e instalamos Node.js. Para comprobar que todo esta instalado ejecutamos:
-
-% \begin{lstlisting}
-% 	$ node -v 
-% 	v11.15.0
-% \end{lstlisting}
-
-
-\subsubsection{Instalación de Heroku} 
-
-Necesitamos tener una cuenta en Heroku para poder tener acceso y gestionar nuestro servidor en la nube.
-
-Una vez hayamos entrado en nuestra cuenta. Creamos el repositorio en Heroku con el nombre de "server-ull-navigation". Este es el repositorio que Heroku desplegará con nuestro de servidor de Node.js en la nube.
-
-A continuación instalaremos Heroku. Para ello necesitaremos instalar snap:
-
-\begin{lstlisting}
-	$ sudo apt install snapd
-\end{lstlisting}
-
-Una vez instalado snap podremos instalar Heroku:
-
-\begin{lstlisting}
-	$ sudo snap install heroku --classic
-\end{lstlisting}
-
-Después ejecutamos el comando  el cual nos redireccionará a la página de Heroku en el navegador para que nos logueemos con nuestra cuenta y ya estará todo listo para empezar a configurar nuestra aplicación.
-
-\begin{lstlisting}
-	$ heroku login
-\end{lstlisting}
-
+Una vez hayamos entrado en nuestra cuenta de Heroku. Creamos un repositorio con el nombre de "server-ull-AR" que será el servidor de nuestra aplicación en la nube.
 
 \subsection{Implementación}
 
@@ -111,23 +58,24 @@ Una vez tengamos todo instalado podremos empezar a implementar nuestro servidor 
 Con el siguiente comando, ya tendremos preparado nuestro repositorio para empezar a trabajar:
 
 \begin{lstlisting}
-	$ git clone https://github.com/heroku/server-ull-navigation.git
+    $ git clone https://github.com/heroku/server-ull-AR.git
 \end{lstlisting}
 
 Una vez dentro del directorio de nuestro repositorio necesitaremos ejecutar el comando:
+
 \begin{lstlisting}
     $ npm init
 \end{lstlisting}
 
-Este comando resulta en la creación de un archivo llamado \textit{package.json}. Este fichero se utiliza para administrar los paquetes disponibles en el Node Package Mangager (npm) que se instalan localmente.
+Este comando resulta en la creación de un archivo llamado \textit{package.json}. Este fichero se utiliza para administrar los paquetes disponibles en el Node Package Manager que se instalan localmente.
 
-Ahora instalaremos los paquetes necesarios para el servidor:
+Ahora instalaremos los paquetes necesarios para el servidor, que son:
 
 \begin{itemize}
     \item \textbf{ExpressJS}: Express es una infraestructura de aplicaciones web Node.js mínima y flexible que proporciona un conjunto sólido de características para las aplicaciones web y móviles.
-    \item \textbf{mongoose}: Mongoose es un Object Data Modeling (ODM) librería para trabajar MongoDB y Node.js.
-    \item \textbf{body-parser}: Lo necesitamos para manejar las peticiones de JSON.
-    \item \textbf{node-restful}: Maneja las peticiones recibidas del servidor.
+    \item \textbf{mongoose}: Mongoose es una librería para trabajar MongoDB y Node.js.
+    \item \textbf{bodyparser}: Lo necesitamos para manejar las peticiones de JSON.
+    \item \textbf{node-restful}: Sirve para manejar las peticiones recibidas del servidor y conectarse con MongoDB.
 \end{itemize}
 
 Con un comando instalamos todos los paquetes y guardamos las dependencias utilizadas en \textit{package.json}:
@@ -139,15 +87,26 @@ Con un comando instalamos todos los paquetes y guardamos las dependencias utiliz
 El resultado del \textit{package.json} sería el siguiente:
 
 \lstset{numbers=left,  string=[s]{"}{"}, comment=[l]{:}, commentstyle=\color{black},}
-\lstinputlisting[stringstyle=\color{blue}, caption={Contenido del fichero \textit{package.json}.}, label={code:package.json}, ]{listings/package.json} %% LISTING
-
+\lstinputlisting[stringstyle=\color{blue}, caption={Contenido del fichero \textit{package.json}.}, label={package.json}, ]{listings/package.json} %% LISTING
 
 \subsubsection{Inicializamos el servidor}
 
-Una vez ya instalados todos los paquete creamos el fichero \textit{server.js}. En este sera el que inicie el servidor y tenga las variables que configuran el mismo. 
+Una vez ya instalados todos los paquetes creamos el fichero \textit{server.js}. En este sera el que inicie el servidor y tenga las variables que configuran el mismo (véase Listado \ref{lst:server.js}). 
 
-% \lstset{language: JavasScript,}
-\begin{lstlisting}[ caption={Configuración inicial del servidor.}, label={code:server.js}]
+\lstset{keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+keywordstyle=\color{blue}\bfseries,
+ndkeywords={class, export, boolean, throw, implements, import, this},
+ndkeywordstyle=\color{darkgray}\bfseries,
+identifierstyle=\color{black},
+sensitive=false,
+comment=[l]{//},
+morecomment=[s]{/*}{*/},
+commentstyle=\color{purple}\ttfamily,
+stringstyle=\color{red}\ttfamily,
+morestring=[b]',
+morestring=[b]"}
+
+\begin{lstlisting}[ caption={Configuración inicial del servidor.}, label={lst:server.js}]
     //Declaramos los paquetes que necesitamos
     var express = require('express');  
     var app = express();  //Iniciamos nuestra app
@@ -160,78 +119,71 @@ Una vez ya instalados todos los paquete creamos el fichero \textit{server.js}. E
 
 Para comprobar que todo funciona utilizaremos el siguiente comando, que correrá nuestro servidor en local en el puerto 3000.
 \begin{lstlisting}
-    $ node app.js
+    $ node server.js
 \end{lstlisting}
 
 Más adelante terminaremos de configurar este fichero. A continuación pasamos a explicar la estructura y organización de nuestro servidor.
 
 \subsubsection{Estructura de la aplicación}
 
-Dentro de las carpeta principal del repositorio creamos dos subdirectorios:
+Dentro de la carpeta principal del repositorio creamos dos subdirectorios:
 
 \begin{itemize}
-    \item \textbf{models}
-    \item \textbf{routes}
+    \item \textbf{models/}
+    \item \textbf{routes/}
 \end{itemize}
 
-
-A continuación crearemos el fichero \textit{ullSites.js} dentro de la carpeta de \textbf{models}. Este fichero contiene el modelo que conecta con la colección de nuestra base de datos y maneja las respuesta como veremos más adelante.   
+A continuación crearemos el fichero \textit{ullSites.js} dentro de la carpeta de \textit{models/}. Este fichero contiene el modelo que conecta con la colección de nuestra base de datos y maneja las respuestas como veremos más adelante.   
 
 \lstinputlisting[language=JavaScript, caption={Fichero \textit{ullSites.js}.}, label={code:ullSites.js},]{listings/ullSites.js} %% LISTING
 
-Necesitaremos una ruta por la cual nuestro servidor responderá con la información que se solicite de la base de datos. Para ello en la carpete \textbf{routes} crearemos el fichero \textit{api.js}. Este fichero manejará las peticiones que lleguen a la ruta \textit{/api}. 
+Necesitaremos una ruta por la cual nuestro servidor responderá con la información que se solicite de la base de datos. Para ello en la carpeta \textit{routes/} crearemos el fichero \textit{api.js} (véase Listado \ref{lst:api.js}). Este fichero manejará las peticiones que lleguen al servidor a través de la ruta \textit{/api/} y se encargará principalmente de conectarse con la base de datos para responder a estas peticiones.
 
-\lstinputlisting[language=JavaScript,caption={Fichero \textit{api.js}.}, label={code:api.js},]{listings/api.js} %% LISTING
+\lstinputlisting[language=JavaScript,caption={Fichero \textit{api.js}.}, label={lst:api.js},]{listings/api.js} %% LISTING
  
-En caso de acceder a la ruta ``''\textit{/api/ull-sites}'' de nuestra aplicación con una petición get, se enviara una respuesta al cliente con toda la información correspondiente de la base de datos.
+En caso de acceder a la ruta ``''\textit{/api/ull-sites}'' de nuestra aplicación con una petición get, se enviará una respuesta al cliente con toda la información correspondiente de la base de datos.
 
-\subsubsection{Conexion con mLab}
+\subsubsection{Conexión con mLab}
 
-
-
-Con nuestra cuenta de mLab y base datos ya creada en mLab solo vamos a necesitar una url para poder acceder a ella y poder consultar, añadir y borrar datos. Esta url esta disponible en la página principal de nuestra base de datos en mLab y tiene el siguiente formato:
+Con nuestra cuenta de mLab y base datos ya creada en mLab, solo vamos a necesitar una url para poder acceder a ella y poder consultar, añadir y borrar datos. Esta url está disponible en la página principal de nuestra base de datos en mLab y tiene el siguiente formato:
 
 \begin{lstlisting}
-    mongodb://<dbuser>:<dbpassword>@ds235181.mlab.com:35181/ull-navigation
+    mongodb://<dbuser>:<dbpassword>@ds235181.mlab.com:35181/ull-AR
 \end{lstlisting}
 
-Donde ``dbuser'' es el usuario que usamos para crear la base de datos y ``dbpassword'' la contraseña. Para evitar que el usuario y contraseña queden expuestos publicamente en el repositiorio vamos a utilizar variable de entorno. En nuestro caso vamos a configurar la variable de entorno para que funcione en Heroku. Para hacerlo necesitamos utilizar este comando en la terminal:
+Donde ``dbuser'' es el usuario que usamos para crear la base de datos y ``dbpassword'' la contraseña. Para evitar que el usuario y contraseña queden expuestos públicamente en el repositorio, vamos a utilizar variable de entorno. En nuestro caso vamos a configurar la variable de entorno para que funcione en Heroku. Para hacerlo necesitamos utilizar este comando en la terminal:
 
 \begin{lstlisting}
-    $heroku config:set PROD_MONGODB=mongodb://username:password@ds235181.mlab.com:35181/ull-navigation
+    $heroku config:set PROD_MONGODB=mongodb://username:password@ds235181.mlab.com:35181/ull-AR
 \end{lstlisting}
 
-Posteriormente la variable PROD\_MONGODB se utilizara para conectarse al base de datos una vez este desplegada en Heroku.
+Posteriormente la variable ``PROD\_MONGODB" se utilizará para conectarse al base de datos una vez este desplegada en Heroku.
 
-Solo vamos a necesitar crear una colección para el proyecto. Para ello accedemos a nuestra base de datos en el navegador y pinchamos en el botón de ``Add collection'' y la nombraremos ``\textbf{ull\_sites}''. Aquí tendremos la información de nuestros centros en instituciones de la ULL. 
-
-Cada centro de la ULL tendra el siguiente formato e información:
+Solo vamos a necesitar crear una colección para el proyecto. Para ello accedemos a nuestra base de datos en el navegador y pinchamos en el botón de ``Add collection'' y la nombraremos ``\textit{ull\_sites}''. Aquí tendremos la información de las instalaciones de la ULL. Los cuales añadiremos manualmente desde la página de mLab.
 
 \begin{figure}[h] 
-	\centering
-	\includegraphics[width=160mm,scale=1]{ull-site}
-	\caption{ull-site. Ejemplo de un centro de la ULL en la base de datos.}
-	\label{fig:ull-site}
+    \centering
+    \includegraphics[width=160mm,scale=1]{ull-site}
+    \caption{Ejemplo de una instalación de la ULL en la base de datos.}
+    \label{fig:ull-site}
 \end{figure}
 
 \subsubsection{Configuración final del servidor}
 
-Por último tenemos que acabar de configurar el fichero \textit{server.js} que creamos anteriormente. Tenemos que preparar el servidor con la url de la base de datos de mLab y de disponer que las rutas de nuestra aplicación esté bien configurada para responder a las solicitudes. 
+Por último tenemos que acabar de configurar el fichero \textit{server.js} que creamos anteriormente. Necesitaremos indicar al servidor la url de la base de datos de mLab y de disponer que las rutas de nuestra aplicación estén bien configuradas para responder a las solicitudes. 
 
 \lstinputlisting[language=JavaScript,caption={Configuración final del fichero \textit{server.js}. }, label={code:server.js},]{listings/server.js} %% LISTING
 
-
 \subsubsection{Despliegue en Heroku}
 
-Con nuestro servidor ya configurado su propósito ya podemos desplegarla en Heroku. Para ello necesitaremos primero crear un fichero \textit{Procfile} en la raíz del repositorio que le dirá a Heroku cual es el fichero que inicia el servidor.
+Con nuestro servidor ya configurado, podemos realizar el despliegue en Heroku. Para ello necesitaremos primero crear un fichero \textit{Procfile} en la raíz del repositorio, que le dirá a Heroku cuál es el fichero que inicia el servidor.
 
 \begin{lstlisting}
     web: node server.js
 \end{lstlisting}
 
-Este es el fichero que Heroku ejecutará para iniciar la aplicación.
 
-Para desplegar en Heroku necesitamos tres comandos:
+Para desplegarlo en Heroku necesitamos tres comandos:
 
 \begin{lstlisting}
     $ git add .
@@ -239,4 +191,7 @@ Para desplegar en Heroku necesitamos tres comandos:
     $ git push heroku master
 \end{lstlisting}
 
-Con estos pasos completados ya tendremos nuestro servidor desplegado y funcionando en la url: \href{https://server-ull-navigation.herokuapp.com}{https://server-ull-navigation.herokuapp.com}
+Con estos pasos completados ya tendremos nuestro servidor desplegado y funcionando en la url: \href{https://server-ull-AR.herokuapp.com}{https://server-ull-AR.herokuapp.com}
+
+
+
