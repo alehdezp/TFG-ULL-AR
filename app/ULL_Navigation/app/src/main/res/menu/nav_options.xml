@@ -17,7 +17,7 @@
         <item
             android:id="@+id/menu_sitios"
             android:icon="@drawable/list_sites"
-            android:title="Todos los centros ULL" />
+            android:title="Todas las instalaciones ULL" />
         <item
             android:id="@+id/menu_settings"
             android:icon="@android:drawable/ic_menu_set_as"

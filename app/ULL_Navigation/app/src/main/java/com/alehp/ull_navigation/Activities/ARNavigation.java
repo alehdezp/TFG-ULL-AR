@@ -305,10 +305,10 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
         if(show == true) {
             String found = "Encontrada";
-            String localizations = "localizacion";
+            String localizations = "instalación";
             if(allSeenResults.size() > 3){
                 found += "s";
-                localizations += "es";
+                localizations = "instalaciones";
             }
             moreSitesButton.setVisibility(View.VISIBLE);
             moreResultsSites = allSeenResults;

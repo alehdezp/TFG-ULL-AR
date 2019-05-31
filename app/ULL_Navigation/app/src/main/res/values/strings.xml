@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ULL-Navigation</string>
+    <string name="app_name">ULL-AR</string>
     <string name="text_location_permission">Necesitamos permisos para poder a acceder a tu ubicación</string>
     <string name="ok">OK</string>
     <string name="title_location_permission">Permisos Localización</string>
@@ -21,11 +21,11 @@
     </string>
 
     <!-- About screen-->
-    <string name="about_text">ULL Navigation</string>
-    <string name="about_autor">Autor: Alejandro Hernandez Padrón.</string>
+    <string name="about_text">ULL-AR</string>
+    <string name="about_autor">Autor: Alejandro Hernández Padrón.</string>
     <string name="about_version">Version: 1.0.0</string>
     <string name="about_email">Email: alu0100891836@ull.edu.es</string>
-    <string name="about_description">Esta app el resultado del Trabajo de Fin de Grado de su autor, consiste en un prototipo funcional, con el objetivo de estudiar posibilidades y diseñar una aplicación que permita a futuros alumnos ubicarse y moverse por los distintos centros de la Universidad de La Laguna.</string>
+    <string name="about_description">Esta app el resultado del Trabajo de Fin de Grado de su autor, consiste en un prototipo funcional, con el objetivo de estudiar posibilidades y diseñar una aplicación que permita a los alumnos ubicarse y moverse por las diferentes instalaciones de la Universidad de La Laguna.</string>
 
     <!-- About screen END-->
 

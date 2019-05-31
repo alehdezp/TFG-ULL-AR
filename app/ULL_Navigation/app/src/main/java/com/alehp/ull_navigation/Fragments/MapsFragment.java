@@ -94,7 +94,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 
     private SharedPreferences sharedPref;
     private SharedPreferences settingsPref;
-
+    private Context mContext;
 
     public MapsFragment() {
 
@@ -104,7 +104,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        mContext = getContext();
         sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
         settingsPref = PreferenceManager.getDefaultSharedPreferences(getContext());
         settingsPref.registerOnSharedPreferenceChangeListener(this);
@@ -179,7 +179,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 
         try {
             GetData getSites = new GetData();
-            String sites = getSites.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
+            String sites = getSites.execute("https://server-ull-ar.herokuapp.com/api/ull-sites").get();
             JSONArray array = new JSONArray(sites);
             allSites = new Navigation(array).getAllSites();
 
@@ -454,9 +454,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
 
 
     public boolean checkLocationPermission() {
-        if (ContextCompat.checkSelfPermission(getContext(),
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(mContext, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+        {
 
             // Should we show an explanation?
             if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),

@@ -94,7 +94,7 @@ public class BaseActivity extends AppCompatActivity implements GoogleApiClient.O
                     case R.id.menu_sitios:
                         try {
                             GetData getSites = new GetData();
-                            String sites = getSites.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
+                            String sites = getSites.execute("https://server-ull-ar.herokuapp.com/api/ull-sites").get();
                             JSONArray array = new JSONArray(sites);
                             Navigation navULL = new Navigation(array);
 
