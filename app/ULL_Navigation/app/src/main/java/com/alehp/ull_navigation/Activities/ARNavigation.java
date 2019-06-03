@@ -98,8 +98,6 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aractivity);
 
-
-
         settingsPref = PreferenceManager.getDefaultSharedPreferences(getContext());
         sharedPref = this.getPreferences(Context.MODE_PRIVATE);
 
@@ -146,7 +144,6 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
         alternateUIInfo(false, "");
         setMoreSites(false, null);
 
-
     }
 
 
@@ -174,7 +171,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
 
         try {
             GetData getSites = new GetData();
-            String sites = getSites.execute("https://server-ull-navigation.herokuapp.com/api/ull-sites").get();
+            String sites = getSites.execute("https://server-ull-ar.herokuapp.com/api/ull-sites").get();
             editor.putString("allSites", sites);
             editor.commit();
             JSONArray array = new JSONArray(sites);
@@ -213,14 +210,11 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
     @Override
     public void onSensorChanged(SensorEvent event) {
 
-        double radians = event.values[0]; //Calculamos el valor de orientacion de la brujula del dispositivo
-        if (radians >= 360)
-            radians = radians - 360;
-        radians = Math.toRadians(radians);
-
-//        int brujula = Math.round(event.values[0]); //Valor de la brujula
-//        topGradesText.setText(brujula + "º");
-
+        double grades = event.values[0]; //Calculamos el valor de orientacion de la brujula del dispositivo
+        if (grades >= 360) {
+            grades = grades- 360;
+        }
+        double radians = Math.toRadians(grades);
 
         LatLng auxpos = getCurrentPos();
         if (auxpos != null) {
@@ -230,19 +224,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
             nearSiteResult = allResultsSites.get(0);
             alternateUIInfo(true, nearSiteResult.getName());
             showHideUIMore(true);
-//            String AuxCanFound = "";
-//            for(int i = 0; i < nearSiteResult.getInterestPoints().size(); i++){
-//                AuxCanFound += nearSiteResult.getInterestPoints().get(i) + "\n";
-//            }
 
-
-//            int objetivoDir = Math.round(Math.round(Math.toDegrees(nearSiteResult.getDirToSite())));
-//            int distanceDir = Math.round((float)nearSiteResult.getDistToSite());
-//            int coneValue = Math.round((float)Math.toDegrees(nearSiteResult.getConeValue()));
-
-//            topGradesText.setText("Lugar: " + nearSiteResult.getId() + "\nBrújula: " + brujula + "º"
-//                    + "\nDireccion objetivo: " + objetivoDir + "º" + "\nDistancia: " + distanceDir + "m."
-//                    + "\nValor del cono: " + coneValue + "º" +"\nMaxDist: " + navULL.getMaxDist() + "\nMinDist: " + navULL.getMinDist()+ "\nAquí se encuentra:\n" + AuxCanFound );
             if(allResultsSites.size() > 2) {
                 setMoreSites(true, allResultsSites);
             }

@@ -30,7 +30,7 @@
     captionpos=b
 }
   
-\chapter{Back-end de ULL-AR} \label{chap:BackEnd} 
+\chapter{Back-end de la aplicación} \label{chap:BackEnd} 
 
 Si recordamos en la capitulo \ref{chap:Tecnologias} se habló sobre las tecnologías de Node.js y MongoDB, como servidor y base de datos respectivamente. Para poder implementar estas tecnologías se decidió por utilizar servicios en la nube para gestionarlos, facilitar su despliegue y con motivos de profundizar y adquirir conocimiento sobre este tipo de plataformas. Estos servicios son Heroku como servidor de nuestra aplicación y mLab como base de datos. Ambos ofrecen una forma sencilla, accesible y escalable, para poder ejecutar nuestra aplicación y estudiar las posibilidades y beneficios que ofrecen este tipo de servicios en la nube en la actualidad.
 
@@ -64,7 +64,7 @@ Con el siguiente comando, ya tendremos preparado nuestro repositorio para empeza
 Una vez dentro del directorio de nuestro repositorio necesitaremos ejecutar el comando:
 
 \begin{lstlisting}
-    $ npm init
+    $ npm init 
 \end{lstlisting}
 
 Este comando resulta en la creación de un archivo llamado \textit{package.json}. Este fichero se utiliza para administrar los paquetes disponibles en el Node Package Manager que se instalan localmente.
@@ -159,14 +159,9 @@ Donde ``dbuser'' es el usuario que usamos para crear la base de datos y ``dbpass
 
 Posteriormente la variable ``PROD\_MONGODB" se utilizará para conectarse al base de datos una vez este desplegada en Heroku.
 
-Solo vamos a necesitar crear una colección para el proyecto. Para ello accedemos a nuestra base de datos en el navegador y pinchamos en el botón de ``Add collection'' y la nombraremos ``\textit{ull\_sites}''. Aquí tendremos la información de las instalaciones de la ULL. Los cuales añadiremos manualmente desde la página de mLab.
+Solo vamos a necesitar crear una colección para el proyecto. Para ello accedemos a nuestra base de datos en el navegador y pinchamos en el botón de ``Add collection'' y la nombraremos ``\textit{ull\_sites}''. Aquí tendremos la información de las instalaciones de la ULL. Los cuales añadiremos manualmente desde la página de mLab (véase Figura \ref{fig:ull-site}).
 
-\begin{figure}[h] 
-    \centering
-    \includegraphics[width=160mm,scale=1]{ull-site}
-    \caption{Ejemplo de una instalación de la ULL en la base de datos.}
-    \label{fig:ull-site}
-\end{figure}
+
 
 \subsubsection{Configuración final del servidor}
 

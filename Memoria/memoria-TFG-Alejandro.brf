@@ -28,5 +28,13 @@
 \backcite {URL::GoogleCloud}{{16}{2.2.6}{subsection.2.2.6}}
 \backcite {URL::GoogleMapsApi}{{16}{2.2.7}{subsection.2.2.7}}
 \backcite {URL::AprendizajeUbicuo}{{18}{3}{chapter.3}}
-\backcite {URL::SplashScreen}{{23}{4.2}{section.4.2}}
-\backcite {URL::NavigationDraw}{{23}{4.2}{section.4.2}}
+\backcite {URL::SplashScreen}{{22}{4.1.1}{subsection.4.1.1}}
+\backcite {URL::NavigationDraw}{{23}{4.1.1}{subsection.4.1.1}}
+\backcite {URL::pixlr}{{28}{4.2.1}{subsection.4.2.1}}
+\backcite {URL::activity}{{29}{4.2.1}{subsection.4.2.1}}
+\backcite {URL::Firebase}{{30}{4.2.2}{section*.27}}
+\backcite {URL::layout}{{31}{4.2.2}{section*.28}}
+\backcite {URL::kudan}{{42}{4.3.4}{subsection.4.3.4}}
+\backcite {URL::fragment}{{44}{4.4}{section.4.4}}
+\backcite {URL::consoleGoogle}{{44}{4.4.1}{subsection.4.4.1}}
+\backcite {URL::recycler}{{46}{4.4.2}{subsection.4.4.2}}

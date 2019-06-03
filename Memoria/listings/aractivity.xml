@@ -1,0 +1,36 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="com.alehp.ull_navigation.Activities.ARNavigation"
+    ...>
+    <ImageView>
+    ...<!-- Imagenes de fondo de los TextView para facilitar su lectura -->
+
+    <!-- Texto informativo de que se ha encontrado una instalcion -->
+    <TextView
+        android:id="@+id/seenText"
+        android:text="Viendo actualmente"
+        .../>
+    <!-- Nombre de la instalacion encontrada -->
+    <TextView
+        android:id="@+id/ullSiteText"
+        android:text="Facultad de Ciencias: Secciones de Fisica y Matematicas"
+        .../>
+    <!-- Texto por defecto cuando no se apunta a ninguna instalcion -->
+    <TextView
+        android:id="@+id/notSeenText"
+        android:text="Apunte a una instalacion de la universidad a identificar"
+        ..../>
+    <!-- Texto del boton que permite mostrar mas informacion de la instalacion viendo actualmente -->
+    <TextView
+        android:id="@+id/moreInfoText"
+        android:text="Mas informacion"
+        .../>
+    <!-- Boton de mas informacion de la instalacion -->
+    <Button
+        android:id="@+id/moreInfoButton"
+        .../>
+    <!-- Boton que despliega la lista con el resto de instalaciones encontradas -->
+    <Button
+        android:id="@+id/moreSitesButton"
+        android:text="Encontradas X instalaciones mas en esta direccion"
+        .../>
+</android.support.constraint.ConstraintLayout>
