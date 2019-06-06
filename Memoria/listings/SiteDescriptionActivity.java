@@ -1,141 +1,47 @@
-package com.alehp.ull_navigation.Activities;
-
-import android.app.ActionBar;
-import android.app.ListActivity;
-import android.content.Intent;
-import android.graphics.Paint;
-import android.net.Uri;
-import android.os.Bundle;
-import android.widget.Toolbar;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-import com.alehp.ull_navigation.Models.ULLSiteSerializable;
-import com.alehp.ull_navigation.R;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.RequestBuilder;
-import com.bumptech.glide.RequestManager;
-import com.bumptech.glide.request.RequestOptions;
-import com.bumptech.glide.request.target.DrawableImageViewTarget;
-
-
-import java.util.ArrayList;
-
-
 public class SiteDescriptionActivity extends ListActivity {
-
-    ULLSiteSerializable actualULLSite;
-    ArrayList<String> listItems=new ArrayList<String>();
-    TextView nameText;
-    TextView descText;
-    ImageView imageSite;
-    ImageView imageMaps;
-    Toolbar toolbar;
-    //DEFINING A STRING ADAPTER WHICH WILL HANDLE THE DATA OF THE LISTVIEW
-    ArrayAdapter<String> adapter;
-
-    @Override
+    ULLSiteSerializable actualULLSite;  //Instalacion con su informacion
+    ... //Elementos de la interfaz a configurar
+    ArrayList<String> listItems=new ArrayList<String>(); //Lista de enlaces la instalacion 
+    ArrayAdapter<String> adapter;   //Adaptador con los enlaces
+    @Override //Metodo que inicia el activity
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_site_description);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.app_name);
-        setActionBar(toolbar);
-
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setDisplayShowHomeEnabled(true);
-
+        setContentView(R.layout.activity_site_description); //Layout con la vista
+        //Configuramos la barra superior de la ventana
         actualULLSite = (ULLSiteSerializable) getIntent().getSerializableExtra("actualULLSite");
         listItems = actualULLSite.getInterestPoints();
-        BindUI();
-        setListSites();
+        setUI();        //Introducimos los elementos visuales de layout
+        setListSites();     //Creamos el adaptador con los enlaces las instalaciones
     }
-
-
-    public void BindUI(){
-        nameText = findViewById(R.id.nameTextSiteDesc);
-        descText = findViewById(R.id.descTextSiteDesc);
-        imageSite = findViewById(R.id.imageSiteDesc);
-        imageMaps = findViewById(R.id.sendMapsSiteDesc);
-        imageMaps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    //Metodo que carga los textos, imagenes y enlaces de la instalacion a mostrar en la vista
+    public void setUI(){
+        ... //Introducimos el resto de elementos del layout 
+        imageMaps.setOnClickListener(new View.OnClickListener() { 
+            @Override //Comportamiento de boton que nos abre la ubicacion de Google Maps
+            public void onClick(View v) { //Le pasamos a la url de maps + las coordenadas
                 Uri gmmIntentUri = Uri.parse("http://maps.google.com/maps?daddr="+ actualULLSite.getPoint().getY() + "," + actualULLSite.getPoint().getX());
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                mapIntent.setPackage("com.google.android.apps.maps");
-                startActivity(mapIntent);
+                mapIntent.setPackage("com.google.android.apps.maps"); //Paquete de Google Maps
+                startActivity(mapIntent);   //Lanzamos el intent que nos abre la ubicacion
             }
         });
-        RequestManager requestManager = Glide.with(this);
-        RequestBuilder requestBuilder = requestManager.load(actualULLSite.getImageLink());
-        requestBuilder.into(imageSite);
-        nameText.setText(actualULLSite.getName());
-        descText.setText(actualULLSite.getDesc());
     }
-
-
+    //Este metodo crea una adapatador con los enlaces de la instalacion
     public void setListSites(){
-        adapter = new ArrayAdapter<String>(this,
-                R.layout.link_item, android.R.id.text1,
-                listItems) {
-            @Override
+        adapter = new ArrayAdapter<String>(this, R.layout.link_item, android.R.id.text1,
+                listItems) { //
+            @Override //Configuramos la vista de cada enlace
             public View getView(int position, View convertView, ViewGroup parent) {
-                View view = super.getView(position, convertView, parent);
-                TextView text1 = (TextView) view.findViewById(android.R.id.text1);
-                text1.setPaintFlags(text1.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-                return view;
-            }
+                ... //Indicamos que la vista esta contenida  en el fichero "link_item.xml"
+            }       //Introducimos el nombre del enlace
         };
-        setListAdapter(adapter);
+        setListAdapter(adapter); //Indicamos al ListView por defecto de Android su adaptador
         getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-                String url = actualULLSite.getInterestPointsLink().get(position);
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
+                ... //Lanzamos la url en el navegador externo
             }
         });
-        justifyListViewHeightBasedOnChildren(getListView());
+        justifyListViewHeightBasedOnChildren(getListView()); 
     }
-
-
-    public static void justifyListViewHeightBasedOnChildren (ListView listView) {
-
-        ListAdapter adapter = listView.getAdapter();
-
-        if (adapter == null) {
-            return;
-        }
-        ViewGroup vg = listView;
-        int totalHeight = 0;
-        for (int i = 0; i < adapter.getCount(); i++) {
-            View listItem = adapter.getView(i, null, vg);
-            listItem.measure(0, 0);
-            totalHeight += listItem.getMeasuredHeight() * 1.4;
-        }
-
-        ViewGroup.LayoutParams par = listView.getLayoutParams();
-        par.height = totalHeight + (listView.getDividerHeight() * (adapter.getCount() - 1));
-        listView.setLayoutParams(par);
-        listView.requestLayout();
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // handle arrow click here
-        if (item.getItemId() == android.R.id.home) {
-            finish(); // close this activity and return to preview activity (if there is any)
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-
+    //Metodo que recalcula las dimensiones del layout para poder hacer scroll horizontal
+    public static void justifyListViewHeightBasedOnChildren (ListView listView) { ... }
 }

@@ -12,58 +12,58 @@
 \contentsline {subsubsection}{Tipos de Realidad Aumentada}{6}{section*.7}
 \contentsline {subsubsection}{Diferencias entre Realidad Aumentada y Realidad Virtual}{8}{section*.9}
 \contentsline {subsubsection}{Realidad Mixta}{8}{section*.10}
-\contentsline {subsubsection}{Futuro y usos de la Realidad Aumentada}{8}{section*.11}
-\contentsline {subsubsection}{Android Studio y la RA}{11}{section*.13}
+\contentsline {subsubsection}{Futuro y usos de la Realidad Aumentada}{9}{section*.12}
+\contentsline {subsubsection}{Android Studio y la RA}{11}{section*.14}
 \contentsline {subsection}{\numberline {2.2.3}Node.js}{12}{subsection.2.2.3}
-\contentsline {subsubsection}{\IeC {\textquestiondown }C\IeC {\'o}mo funciona?}{12}{section*.14}
-\contentsline {subsubsection}{\IeC {\textquestiondown }Porqu\IeC {\'e} Node.js?}{12}{section*.16}
-\contentsline {subsection}{\numberline {2.2.4}MongoDB}{14}{subsection.2.2.4}
-\contentsline {subsubsection}{ Descripci\IeC {\'o}n }{14}{section*.18}
-\contentsline {subsubsection}{ \IeC {\textquestiondown }C\IeC {\'o}mo funciona? }{14}{section*.19}
-\contentsline {subsubsection}{ Ventajas de MongoDB }{14}{section*.20}
+\contentsline {subsubsection}{\IeC {\textquestiondown }C\IeC {\'o}mo funciona?}{12}{section*.15}
+\contentsline {subsubsection}{\IeC {\textquestiondown }Porqu\IeC {\'e} Node.js?}{13}{section*.17}
+\contentsline {subsection}{\numberline {2.2.4}MongoDB}{13}{subsection.2.2.4}
+\contentsline {subsubsection}{ Descripci\IeC {\'o}n }{13}{section*.19}
+\contentsline {subsubsection}{ \IeC {\textquestiondown }C\IeC {\'o}mo funciona? }{14}{section*.20}
+\contentsline {subsubsection}{ Ventajas de MongoDB }{14}{section*.21}
 \contentsline {subsection}{\numberline {2.2.5} Heroku }{15}{subsection.2.2.5}
 \contentsline {subsection}{\numberline {2.2.6} mLab }{16}{subsection.2.2.6}
 \contentsline {subsection}{\numberline {2.2.7} Google Maps }{16}{subsection.2.2.7}
 \contentsline {chapter}{\numberline {3}RA en entornos universitarios }{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Posibles aplicaciones}{18}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Pr\IeC {\'a}cticas en laboratorios}{18}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Trabajos de campo}{19}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Eventos}{19}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Libros}{19}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Visitas}{19}{subsection.3.1.5}
-\contentsline {subsection}{\numberline {3.1.6}Aprendizajes experimentales}{20}{subsection.3.1.6}
-\contentsline {subsection}{\numberline {3.1.7}ejemplos}{20}{subsection.3.1.7}
-\contentsline {section}{\numberline {3.2}Aplicaciones m\IeC {\'o}viles en entornos universitarios}{21}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Descarga autom\IeC {\'a}tica de material}{21}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.1}Aplicaciones en entornos universitarios}{18}{section.3.1}
+\contentsline {subsubsection}{Pr\IeC {\'a}cticas en laboratorios}{18}{section*.23}
+\contentsline {subsubsection}{Practicas de campo y visitas}{19}{section*.24}
+\contentsline {subsubsection}{Libros}{19}{section*.25}
+\contentsline {subsubsection}{Informaci\IeC {\'o}n sobre la universidad}{19}{section*.26}
+\contentsline {section}{\numberline {3.2}Ejemplos de uso de la RA}{19}{section.3.2}
+\contentsline {subsubsection}{Fabricaci\IeC {\'o}n de un autom\IeC {\'o}vil de carreras}{19}{section*.27}
+\contentsline {subsubsection}{AR Sandbox}{20}{section*.29}
 \contentsline {chapter}{\numberline {4}La aplicaci\IeC {\'o}n ULL-AR}{22}{chapter.4}
 \contentsline {section}{\numberline {4.1}Requisitos y ventanas de la aplicaci\IeC {\'o}n}{22}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Especificaci\IeC {\'o}n detallada de los requisitos}{22}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Ventanas de la aplicaci\IeC {\'o}n}{24}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Inicio de la aplicaci\IeC {\'o}n}{27}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Ventana inicial}{28}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.2}Inicio de la aplicaci\IeC {\'o}n}{28}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Ventana inicial}{29}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Ventana de \textit {Login} }{30}{subsection.4.2.2}
-\contentsline {subsubsection}{ Requisitos }{30}{section*.27}
-\contentsline {subsubsection}{ Implementaci\IeC {\'o}n }{31}{section*.28}
+\contentsline {subsubsection}{ Requisitos }{30}{section*.36}
+\contentsline {subsubsection}{ Implementaci\IeC {\'o}n }{31}{section*.37}
 \contentsline {section}{\numberline {4.3}Modo de Realidad Aumentada}{32}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Acceso a los sensores}{32}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}Acceso a los sensores}{33}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Modelos encargados de la navegaci\IeC {\'o}n}{35}{subsection.4.3.2}
-\contentsline {subsubsection}{ULLSite.java}{35}{section*.30}
-\contentsline {subsubsection}{Navigation.java}{36}{section*.33}
+\contentsline {subsubsection}{ULLSite.java}{35}{section*.39}
+\contentsline {subsubsection}{Navigation.java}{36}{section*.42}
 \contentsline {subsection}{\numberline {4.3.3}Obtenci\IeC {\'o}n de la informaci\IeC {\'o}n}{40}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Visualizaci\IeC {\'o}n}{41}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.4}Visualizaci\IeC {\'o}n}{42}{subsection.4.3.4}
 \contentsline {section}{\numberline {4.4}Fragmentos}{44}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}MapsFragment}{44}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}HomeFragment}{46}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}AboutFragment}{49}{subsection.4.4.3}
 \contentsline {section}{\numberline {4.5}Men\IeC {\'u}}{49}{section.4.5}
-\contentsline {chapter}{\numberline {5}Back-end de la aplicaci\IeC {\'o}n}{52}{chapter.5}
-\contentsline {section}{\numberline {5.1}Base de datos}{52}{section.5.1}
-\contentsline {section}{\numberline {5.2}Configuraci\IeC {\'o}n del servidor}{52}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Requisitos previos}{53}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Implementaci\IeC {\'o}n}{53}{subsection.5.2.2}
-\contentsline {subsubsection}{Inicializamos el servidor}{54}{section*.34}
-\contentsline {subsubsection}{Estructura de la aplicaci\IeC {\'o}n}{54}{section*.35}
-\contentsline {subsubsection}{Conexi\IeC {\'o}n con mLab}{56}{section*.36}
-\contentsline {subsubsection}{Configuraci\IeC {\'o}n final del servidor}{56}{section*.37}
-\contentsline {subsubsection}{Despliegue en Heroku}{57}{section*.38}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{58}{lstnumber.-12.3}
+\contentsline {section}{\numberline {4.6}Instalaciones}{52}{section.4.6}
+\contentsline {section}{\numberline {4.7}Preferencias del usuario}{56}{section.4.7}
+\contentsline {chapter}{\numberline {5}Back-end de la aplicaci\IeC {\'o}n}{58}{chapter.5}
+\contentsline {section}{\numberline {5.1}Base de datos}{58}{section.5.1}
+\contentsline {section}{\numberline {5.2}Configuraci\IeC {\'o}n del servidor}{58}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Requisitos previos}{59}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Implementaci\IeC {\'o}n}{59}{subsection.5.2.2}
+\contentsline {subsubsection}{Inicializamos el servidor}{60}{section*.44}
+\contentsline {subsubsection}{Estructura de la aplicaci\IeC {\'o}n}{60}{section*.45}
+\contentsline {subsubsection}{Conexi\IeC {\'o}n con mLab}{62}{section*.46}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n final del servidor}{62}{section*.47}
+\contentsline {subsubsection}{Despliegue en Heroku}{63}{section*.48}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{64}{lstnumber.-12.3}

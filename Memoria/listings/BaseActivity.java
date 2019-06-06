@@ -27,12 +27,16 @@
                 //Para todas las opciones del menu 
                 switch (item.getItemId()) {
                     //Transicion al fragmento HomeFragment
-                    case R.id.menu_home:
+                    case R.id.menu_home: //Opcion "Inicio"
                         tx = getSupportFragmentManager().beginTransaction();
                         //Cambiamos el fragmento
                         tx.replace(R.id.content_frame, new HomeFragment()); 
                         drawerLayout.closeDrawers(); //Cerramos el menu
                         break; 
+                    case R.id.menu_logout: //Opcion "Cerrar sesion" del menu
+                        logout();  //Mediante la API de Google salimos de la cuenta
+                        goToLogin();    //Regresamos a la ventana de Login
+                        break;
                     ... //Resto de opciones del menu
                 } 
             });

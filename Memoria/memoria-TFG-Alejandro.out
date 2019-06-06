@@ -13,36 +13,30 @@
 \BOOKMARK [2][-]{subsection.2.2.6}{ mLab }{section.2.2}% 13
 \BOOKMARK [2][-]{subsection.2.2.7}{ Google Maps }{section.2.2}% 14
 \BOOKMARK [0][-]{chapter.3}{RA en entornos universitarios }{}% 15
-\BOOKMARK [1][-]{section.3.1}{Posibles aplicaciones}{chapter.3}% 16
-\BOOKMARK [2][-]{subsection.3.1.1}{Pr\341cticas en laboratorios}{section.3.1}% 17
-\BOOKMARK [2][-]{subsection.3.1.2}{Trabajos de campo}{section.3.1}% 18
-\BOOKMARK [2][-]{subsection.3.1.3}{Eventos}{section.3.1}% 19
-\BOOKMARK [2][-]{subsection.3.1.4}{Libros}{section.3.1}% 20
-\BOOKMARK [2][-]{subsection.3.1.5}{Visitas}{section.3.1}% 21
-\BOOKMARK [2][-]{subsection.3.1.6}{Aprendizajes experimentales}{section.3.1}% 22
-\BOOKMARK [2][-]{subsection.3.1.7}{ejemplos}{section.3.1}% 23
-\BOOKMARK [1][-]{section.3.2}{Aplicaciones m\363viles en entornos universitarios}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.2.1}{Descarga autom\341tica de material}{section.3.2}% 25
-\BOOKMARK [0][-]{chapter.4}{La aplicaci\363n ULL-AR}{}% 26
-\BOOKMARK [1][-]{section.4.1}{Requisitos y ventanas de la aplicaci\363n}{chapter.4}% 27
-\BOOKMARK [2][-]{subsection.4.1.1}{Especificaci\363n detallada de los requisitos}{section.4.1}% 28
-\BOOKMARK [2][-]{subsection.4.1.2}{Ventanas de la aplicaci\363n}{section.4.1}% 29
-\BOOKMARK [1][-]{section.4.2}{Inicio de la aplicaci\363n}{chapter.4}% 30
-\BOOKMARK [2][-]{subsection.4.2.1}{Ventana inicial}{section.4.2}% 31
-\BOOKMARK [2][-]{subsection.4.2.2}{Ventana de Login }{section.4.2}% 32
-\BOOKMARK [1][-]{section.4.3}{Modo de Realidad Aumentada}{chapter.4}% 33
-\BOOKMARK [2][-]{subsection.4.3.1}{Acceso a los sensores}{section.4.3}% 34
-\BOOKMARK [2][-]{subsection.4.3.2}{Modelos encargados de la navegaci\363n}{section.4.3}% 35
-\BOOKMARK [2][-]{subsection.4.3.3}{Obtenci\363n de la informaci\363n}{section.4.3}% 36
-\BOOKMARK [2][-]{subsection.4.3.4}{Visualizaci\363n}{section.4.3}% 37
-\BOOKMARK [1][-]{section.4.4}{Fragmentos}{chapter.4}% 38
-\BOOKMARK [2][-]{subsection.4.4.1}{MapsFragment}{section.4.4}% 39
-\BOOKMARK [2][-]{subsection.4.4.2}{HomeFragment}{section.4.4}% 40
-\BOOKMARK [2][-]{subsection.4.4.3}{AboutFragment}{section.4.4}% 41
-\BOOKMARK [1][-]{section.4.5}{Men\372}{chapter.4}% 42
-\BOOKMARK [0][-]{chapter.5}{Back-end de la aplicaci\363n}{}% 43
-\BOOKMARK [1][-]{section.5.1}{Base de datos}{chapter.5}% 44
-\BOOKMARK [1][-]{section.5.2}{Configuraci\363n del servidor}{chapter.5}% 45
-\BOOKMARK [2][-]{subsection.5.2.1}{Requisitos previos}{section.5.2}% 46
-\BOOKMARK [2][-]{subsection.5.2.2}{Implementaci\363n}{section.5.2}% 47
-\BOOKMARK [0][-]{lstnumber.-12.3}{Bibliograf\355a}{}% 48
+\BOOKMARK [1][-]{section.3.1}{Aplicaciones en entornos universitarios}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Ejemplos de uso de la RA}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{La aplicaci\363n ULL-AR}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Requisitos y ventanas de la aplicaci\363n}{chapter.4}% 19
+\BOOKMARK [2][-]{subsection.4.1.1}{Especificaci\363n detallada de los requisitos}{section.4.1}% 20
+\BOOKMARK [2][-]{subsection.4.1.2}{Ventanas de la aplicaci\363n}{section.4.1}% 21
+\BOOKMARK [1][-]{section.4.2}{Inicio de la aplicaci\363n}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.2.1}{Ventana inicial}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.2}{Ventana de Login }{section.4.2}% 24
+\BOOKMARK [1][-]{section.4.3}{Modo de Realidad Aumentada}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.3.1}{Acceso a los sensores}{section.4.3}% 26
+\BOOKMARK [2][-]{subsection.4.3.2}{Modelos encargados de la navegaci\363n}{section.4.3}% 27
+\BOOKMARK [2][-]{subsection.4.3.3}{Obtenci\363n de la informaci\363n}{section.4.3}% 28
+\BOOKMARK [2][-]{subsection.4.3.4}{Visualizaci\363n}{section.4.3}% 29
+\BOOKMARK [1][-]{section.4.4}{Fragmentos}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.4.1}{MapsFragment}{section.4.4}% 31
+\BOOKMARK [2][-]{subsection.4.4.2}{HomeFragment}{section.4.4}% 32
+\BOOKMARK [2][-]{subsection.4.4.3}{AboutFragment}{section.4.4}% 33
+\BOOKMARK [1][-]{section.4.5}{Men\372}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.6}{Instalaciones}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.7}{Preferencias del usuario}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{Back-end de la aplicaci\363n}{}% 37
+\BOOKMARK [1][-]{section.5.1}{Base de datos}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.2}{Configuraci\363n del servidor}{chapter.5}% 39
+\BOOKMARK [2][-]{subsection.5.2.1}{Requisitos previos}{section.5.2}% 40
+\BOOKMARK [2][-]{subsection.5.2.2}{Implementaci\363n}{section.5.2}% 41
+\BOOKMARK [0][-]{lstnumber.-12.3}{Bibliograf\355a}{}% 42

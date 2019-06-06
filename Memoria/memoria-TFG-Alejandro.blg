@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2016/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: memoria-TFG-Alejandro.aux
+A level-1 auxiliary file: Preface.aux
 A level-1 auxiliary file: Cap1_Goals.aux
 A level-1 auxiliary file: Cap2_Technology.aux
 A level-1 auxiliary file: Cap3_ARInStudentEnvironments.aux
@@ -14,44 +15,44 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliografia.bib
-You've used 39 entries,
+You've used 43 entries,
             3603 wiz_defined-function locations,
-            879 strings with 9661 characters,
-and the built_in function-call counts, 29847 in all, are:
-= -- 2991
-> -- 54
+            896 strings with 10239 characters,
+and the built_in function-call counts, 34691 in all, are:
+= -- 3477
+> -- 58
 < -- 10
-+ -- 98
++ -- 106
 - -- 5
-* -- 2385
-:= -- 5043
-add.period$ -- 109
-call.type$ -- 39
-change.case$ -- 122
+* -- 2803
+:= -- 5923
+add.period$ -- 121
+call.type$ -- 43
+change.case$ -- 134
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 2714
-empty$ -- 1729
+cite$ -- 43
+duplicate$ -- 2982
+empty$ -- 2087
 format.name$ -- 20
-if$ -- 6335
+if$ -- 7343
 int.to.chr$ -- 0
-int.to.str$ -- 78
-missing$ -- 1532
-newline$ -- 389
+int.to.str$ -- 86
+missing$ -- 1688
+newline$ -- 425
 num.names$ -- 10
-pop$ -- 1657
+pop$ -- 1829
 preamble$ -- 1
 purify$ -- 0
-quote$ -- 78
-skip$ -- 1143
+quote$ -- 86
+skip$ -- 1263
 stack$ -- 0
-substring$ -- 1946
-swap$ -- 637
-text.length$ -- 39
+substring$ -- 2704
+swap$ -- 701
+text.length$ -- 43
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 16
 warning$ -- 0
-while$ -- 60
-width$ -- 41
-write$ -- 527
+while$ -- 64
+width$ -- 45
+write$ -- 575

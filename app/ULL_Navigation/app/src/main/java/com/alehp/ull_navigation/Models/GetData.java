@@ -31,8 +31,12 @@ public class GetData extends AsyncTask<String, Void, String> {
             String line;
             while((line = buffereReader.readLine()) != null){
                 result.append(line).append("\n");
+
             }
+
             return result.toString();
+
+
         }catch (IOException e){
             e.printStackTrace();
         }

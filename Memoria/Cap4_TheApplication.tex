@@ -34,7 +34,7 @@ La aplicación se iniciará una Splash Screen \cite{URL::SplashScreen} o pantall
 
 Para poder utilizar la aplicación, el usuario ha de ser alumno de la Universidad de La Laguna y poseer su respectiva cuenta de Google con el correo institucional de la ULL. Este correo ha de tener el siguiente formato: ``\textit{aluxxxxxxxxxx@ull.edu.es}''. Sin ella no se podrá acceder a la aplicación. Además, se podrá cerrar la sesión de esta cuenta.
 
-Una vez logueado accederemos a una ventana de \textit{Inicio} en la que aparecerá un acceso directo a las ventanas de \textit{Mapa ULL} y \textit{Navegación en modo RA} que explicaremos más adelante. A su vez, dispondrá de los accesos directos a enlaces de interés de Universidad de La Laguna que se abrirán en un navegador externo.
+Una vez logueado accederemos a una ventana de \textit{Inicio} en la que aparecerá un acceso directo a las ventanas de \textit{Mapa ULL} y \textit{Navegación en modo RA} que explicaremos más adelante. A su vez, dispondrá de los accesos directos a enlaces de interés de Universidad de La Laguna que se abrirán en un navegador externo. 
 
 Una vez dentro de la aplicación, tendremos un menú para movernos por las diferentes ventanas. Se utilizará un menú deslizante lateral o \textit{Navigation Drawer} \cite{URL::NavigationDraw} ubicado en la parte superior izquierda de la aplicación. Este menú deberá ser simple e intuitivo.
 
@@ -50,7 +50,7 @@ Como accesos en este menú disponemos de las siguientes ventanas:
     \item Info. Información de aplicación así como de su autor.
 \end{itemize}
 
-Cada instalación de la universidad tendrá una ficha de información que será accesible desde una ventana de la aplicación con la siguiente información:
+Una instalación de la ULL corresonde a un centro, edificio, facultad, instituto, polideportivo, etc. Cada instalación de la universidad tendrá una ficha de información que será accesible desde una ventana de la aplicación con la siguiente información:
 
 \begin{itemize}
     \item \textbf{Id}: campo para identificar la instalación.
@@ -116,9 +116,9 @@ Si nos movemos a la ventana de \textit{Mapa ULL} (véase Figura \ref{fig:mapsApp
     \label{fig:mapsApp}
 \end{figure}
 
-En la ventana de \textit{Navegación en modo RA} se nos mostrará la vista de la cámara de nuestro dispositivo 
+En la ventana de \textit{Navegación en modo RA} se nos mostrará la imagen obtenidad de la cámara del dispositivo, con ella el usuario podrá ver en la pantalla la instalación a la que se apunte. Encima de esta imagen se mostrará un texto en el que nos aparecerán dos mensajes: uno para indicar a usuario que apunte a alguna instalación de la ULL, y una vez que se el usuario se encuentre apuntando a una instalación, el mensaje anterior se cambiará por el nombre de la instalación y, al mismo tiempo, aparecerá un pequeño boton debajo del texto que nos llevará a la ventana de \textit{Información de la instalación} (véase Figura \ref{fig:siteInfoApp}), con la información de la instalación. Por último en la parte de abajo se nos mostrará un botón que nos indicará si se han encontrado más instalaciones a parte de la que se nos muestra en la parte de arriba. Esté botón nos llevará a una ventana con una lista de estas instalaciones.
 
-XXX
+
 
 % \begin{figure}[h]
 %     \hspace*{\fill}%
@@ -200,17 +200,13 @@ En esta ventana encontraremos el logotipo de la aplicación en el centro de la p
 En un principio la velocidad de carga y transición la siguiente ventana de aplicación se hacia de forma inmediata. Esto se produce por que los recursos necesarios para el inicio de la aplicación son escasos y no tardan en cargarse. Por lo tanto para poder visualizarla correctamente se utilizo un temporizador de tres segundos, para que posteriormente se lance la siguiente ventana, que corresponde a la ventana de \textit{Login}.
 
 Para la implementación de esta ventana hemos indicado en el archivo \textit{AndroidManifest.xml} (Este fichero proporciona información esencial sobre tu aplicación al sistema Android, información que el sistema debe tener para poder ejecutar el código de la app) la ventana o ``activity'' \cite{URL::activity} que inicia la aplicación (véase Listado \ref{lst:manifestInicio}). En esta ventana se le indica el tema del activity que contendrá el logotipo de la aplicación en el centro de la pantalla.
-\bigskip
-\bigskip
-\bigskip
-\bigskip
 
-\begin{lstlisting}[caption={Fichero \textit{AndroidManifest.xml}, activity que inicia la aplicación}, label={lst:manifestInicio}]
+\begin{lstlisting}[language=XML,caption={Fichero \textit{AndroidManifest.xml}, activity que inicia la aplicación.}, label={lst:manifestInicio}]
     ...
     <activity
         android:name=".Activities.SplashActivity"
         android:theme="@style/SplashScreen">
-        <intent-filter>
+        <intent-filter> 
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
@@ -220,7 +216,7 @@ Para la implementación de esta ventana hemos indicado en el archivo \textit{And
 
 Al mismo tiempo en el archivo \textit{styles.xml} (véase Listado \ref{lst:styleSplash}) indicamos el archivo \textit{splash\_ull.xml} (véase Listado \ref{lst:splashull}) que se encargara de colocar el color del fondo y el logotipo de la aplicación. 
 
-\begin{lstlisting}[ caption={Fichero \textit{styles.xml}, estilo de la \textit{Splash Screen}}, label={lst:styleSplash}]
+\begin{lstlisting}[language=XML,caption={Fichero \textit{styles.xml}, estilo de la \textit{Splash Screen}.}, label={lst:styleSplash}]
     ...
     <style name="SplashScreen" parent="Theme.AppCompat.NoActionBar">
       <item name="android:windowBackground">@drawable/splash_ull</item>
@@ -228,19 +224,13 @@ Al mismo tiempo en el archivo \textit{styles.xml} (véase Listado \ref{lst:style
     ...
 \end{lstlisting}
 
-
-
-
-
-\begin{lstlisting}[caption={Fichero  \textit{splash\_ull.xml}, xml con el color de fondo y el logotipo de la aplicación }, label={lst:splashull}]
-<?xml version="1.0" encoding="utf-8"?>
+\begin{lstlisting}[language=XML,caption={Fichero  \textit{splash\_ull.xml}, xml con el color de fondo y el logotipo de la aplicación. }, label={lst:splashull}]
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/colorULL"/>
     <item>
         <bitmap
             android:src="@drawable/splash_icon"
-            android:gravity="center"
-            />
+            android:gravity="center"/>
     </item>
 </layer-list>
 \end{lstlisting}
@@ -380,7 +370,7 @@ Un dispositivo Android dispone de 3 ejes: x, y, z. Estos ejes se disponen como e
                     //direccion 
             }
         } else { ... }
-    }
+    } 
 \end{lstlisting}
 
 \begin{figure}[h]
@@ -738,9 +728,39 @@ En cuanto al menú del Navigation Drawer, tenemos una cabecera (véase Listado \
 
 
 \lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \textit{header\_navigation\_drawer.xml}. Cabecera del Navigation Drawer.}, label={code:header_navigation_drawer.xml},]{listings/header_navigation_drawer.xml}
-
+   
 
 \lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \textit{nav\_options.xml}. Opciones del menu Navigation Drawer.}, label={lst:nav_options.xml},]{listings/nav_options.xml}
+        
+\section{Instalaciones}
+
+En la base de datos nos encontramos con la gran mayoría de las instalaciones de la ULL. Recordamos que todas estas instalaciones constan de su nombre, posicion, una breve descripción del mismo y una lista de enlaces a los servicios, grados, departamentos, etc. Toda esta información es accesible por el usuario, mediante la ventana de \textit{Todas las instalaciones} (véase Figura \ref{fig:allSitesApp}). Esta ventana permite al usuario buscar la facultad, edificio o centro, que se encuentre en la base de datos, para posteriormente permitirle acceder a la ficha de información de la instalación (véase Figura \ref{fig:siteInfoApp}). En esta ficha se encontrará el resto de la información con respecto a es instalación.
+
+En la ventana de \textit{Todas las instalaciones} nos aparecerá una lista con todas las instalaciones con: su imagen a la izquierda y su nombre y descripción a la derecha. Para la creación de los items de la lista se opto por el uso de adaptadores al igual que en el fragmento ``HomeFragment'', pero sin la necesidad de una vista RecyclerView. La clase encargada de representar las instalaciones es ``SiteAdapter'', la cual hereda de la clase ``BaseAdapter'' de Android y, además, implementa la interfaz ``Filterable'' que permite aplicar, de forma dinámica, un filtro de busqueda sobre la lista de las instalaciones (véase Listado \ref{lst:SiteAdapter.java}). 
 
 
 
+\lstinputlisting[language=java, caption={Fichero \textit{SiteAdapter.java}.}, label={lst:SiteAdapter.java},]{listings/adapters/SiteAdapter.java}
+
+Para la lista con los objetos a representar, se ha utilizado la clase ``ULLSiteSerializable'' que es una copia la clase  ``ULLSite'' (véase Listado \ref{lst:ULLSite}) pero que implementa la interfaz ``Serializable'' para permitir el paso de este objeto entre activities. 
+
+El activity ``SiteListActivity'' se encargará de instanciar el adaptador con la lista de instalaciones que reciba del anterior activity y, dispondrá en la barra superior de la aplicación la barra de busqueda. Esta barra de busqueda le dirá al adaptador el filtro que tiene aplicar cada vez que se escriba en ella o cuando el usuario le de al botón de buscar. Cuando una instalación de la lista sea seleccionada se lanzará el activity ``SiteDescriptionActivity'' y se le pasará el objeto que contiene la instalación seleccionada.
+
+\lstinputlisting[language=java, caption={Fichero \textit{SiteListActivity.java}.}, label={lst:SiteListActivity.java},]{listings/SitesListActivity.java}
+    
+
+La activity ``SiteDescriptionActivity'' muestra toda la información de la instalación contenida en el objeto ``ULLSiteSerializable'' que envió activity que lo ejecuto o lanzo a este. Es una ventana que dispondrá: de la imagen de la instalación junto con botón en la parte inferior que abrirá la ruta de la aplicación en Google Maps, el nombre de la instalación, su descripción y una serie de enlaces relacionados con esta. Cuando uno de los enlaces es seleccionado, se abrirá el navegador externo del dispositivo móvil.
+
+ 
+\lstinputlisting[language=java, caption={Fichero \textit{SiteListActivity.java}.}, label={lst:SiteListActivity.java},]{listings/SiteDescriptionActivity.java}
+ 
+    
+\section{Preferencias del usuario}
+
+Necitamos un lugar donde el usuario pudiera editar los ajustes de la aplicación. Se ha utilizado la clase ``PrefenceActivity'' que nos ofrece Android para diseñar la ventana. El fichero \textit{pref\_nav\_setting.xml} (véase Listado \ref{lst:pref_nav_setting.xml} contendrá la lista con los ajustes. Estos ajustes nos permitiran decidir si queremos encontrar las instalaciones, en el mapa o en el modo realidad aumentada, dentros de dos circunferencias y la dimensiones en metros de ambos radios. 
+
+\lstinputlisting[language=XML, caption={Fichero \textit{pref\_nav\_setting.xml}.}, label={lst:pref_nav_setting.xml},]{listings/pref_nav_settings.xml}
+
+Esta ventana de preferencias que nos ofrece Android nos permite trabajar con las Shared Preferences para guardar los ajustes y poder acceder a ellos en otras ventanas de la aplicación. En la clase ``SettingsULLActivity'' insertamos la vista con nuestras preferencias.
+
+\lstinputlisting[float,floatplacement=H,language=java, caption={Fichero \textit{SettingsULLActivity.java}.}, label={lst:SettingsULLActivity.java},]{listings/SettingsULLActivity.java}

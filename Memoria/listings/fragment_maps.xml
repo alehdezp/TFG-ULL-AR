@@ -3,14 +3,11 @@
     <!-- Vista del mapa de Google Maps -->
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
-        android:name="com.google.android.gms.maps.MapFragment"
-        ..>
+        android:name="com.google.android.gms.maps.MapFragment" ...>
     </com.google.android.gms.maps.MapView>
     <!-- Boton que lanza la ventana de realidad aumentada -->
     <Button
         android:id="@+id/buttonARStart"
-        android:text="AR Mode" 
-        .../>
+        android:text="AR Mode" .../>
     ...
-
 </FrameLayout>

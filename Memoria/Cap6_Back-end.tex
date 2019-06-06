@@ -8,27 +8,27 @@
 % ----------------------------------------------------
 %  
   
-\lstset{
-    emphstyle=\textbf,
-    %basicstyle=\ttfamily\tiny,
-    basicstyle=\ttfamily\scriptsize,
-    identifierstyle=\color{colIdentifier},
-    keywordstyle=\color{colKeys}, 
-    stringstyle=\color{colString},
-    commentstyle=\color[rgb]{0.133,0.545,0.133},
-    columns=flexible,
-    tabsize=4,
-    frame=single,
-    extendedchars=true,
-    showspaces=false,
-    showstringspaces=false,
-    numbers=left,
-    numberstyle=\tiny,
-    breaklines=true,
-    backgroundcolor=\color{lightlightgray},
-    breakautoindent=true,
-    captionpos=b
-}
+% \lstset{
+%     emphstyle=\textbf,
+%     %basicstyle=\ttfamily\tiny,
+%     basicstyle=\ttfamily\scriptsize,
+%     identifierstyle=\color{colIdentifier},
+%     keywordstyle=\color{colKeys}, 
+%     stringstyle=\color{purple},
+%     commentstyle=\color[rgb]{0.133,0.545,0.133},
+%     columns=flexible,
+%     tabsize=4,
+%     frame=single,
+%     extendedchars=true,
+%     showspaces=false,
+%     showstringspaces=false,
+%     numbers=left,
+%     numberstyle=\tiny,
+%     breaklines=true,
+%     backgroundcolor=\color{lightlightgray},
+%     breakautoindent=true,
+%     captionpos=b
+% }
   
 \chapter{Back-end de la aplicación} \label{chap:BackEnd} 
 
@@ -101,8 +101,8 @@ identifierstyle=\color{black},
 sensitive=false,
 comment=[l]{//},
 morecomment=[s]{/*}{*/},
-commentstyle=\color{purple}\ttfamily,
-stringstyle=\color{red}\ttfamily,
+commentstyle=\color{colString}\ttfamily,
+stringstyle=\color{purple}\ttfamily,
 morestring=[b]',
 morestring=[b]"}
 
@@ -182,7 +182,7 @@ Para desplegarlo en Heroku necesitamos tres comandos:
 
 \begin{lstlisting}
     $ git add .
-    $ git commit -m "Servidor final"
+    $ git commit -m "Despliegue del servidor"
     $ git push heroku master
 \end{lstlisting}
 

@@ -25,9 +25,12 @@ public class ULLSite implements Serializable {
     private ArrayList<String> interestPoints;
     private ArrayList<String> interestPointsLink;
 
+
     private double coneValue = 0;
     private double distToSite = -1;
     private double dirToSite = -1;
+
+
 
     public ULLSite(JSONObject object){
 
@@ -48,6 +51,10 @@ public class ULLSite implements Serializable {
                interestPoints.add(aux.getJSONObject(i).getString("id"));
                interestPointsLink.add(aux.getJSONObject(i).getString("link"));
             }
+
+
+            Log.d("ullsite", id);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }

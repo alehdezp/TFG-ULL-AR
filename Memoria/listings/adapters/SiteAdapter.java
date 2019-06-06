@@ -1,122 +1,54 @@
-package com.alehp.ull_navigation.Models.Adapters;
-
-import android.content.Context;
-import android.text.Layout;
-import android.util.Pair;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Filter;
-import android.widget.Filterable;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.alehp.ull_navigation.Activities.BaseActivity;
-import com.alehp.ull_navigation.Models.SitesArray;
-import com.alehp.ull_navigation.Models.ULLSite;
-import com.alehp.ull_navigation.Models.ULLSiteSerializable;
-import com.alehp.ull_navigation.R;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.RequestBuilder;
-import com.bumptech.glide.RequestManager;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class SiteAdapter extends BaseAdapter implements Filterable {
-
-    Context context;
-    int layout;
-    private SitesArray sitesULL;
-    private ArrayList<ULLSiteSerializable> allSites;
-    private ArrayList<ULLSiteSerializable> filteredSites;
-
-    private ImageView imageSite;
-    private TextView nameText;
-    private TextView descText;
-
+    ... //layout, context y elementos de la vista
+    private ArrayList<ULLSiteSerializable> allSites;  //Todas las instalaciones
+    //Instalaciones a mostrar con el filtro de busqueda aplicado
+    private ArrayList<ULLSiteSerializable> filteredSites; 
+    //Constructor
     public SiteAdapter(Context context, int layout, SitesArray sitesULL){
-        this.context= context;
-        this.layout = layout;
-        this.sitesULL = sitesULL;
-        allSites = sitesULL.getUllSiteSerializables();
-        filteredSites = allSites;
+        ... //layout y context
+        allSites = sitesULL.getUllSiteSerializables(); //Guardamos el array con todas las instalaciones
+        filteredSites = allSites;  //Instalaciones a mostrar en un inicio
     }
-
-    @Override
-    public int getCount() {
-        return filteredSites.size();
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return filteredSites.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-
-    @Override
+    ... //@Override Metodos a implementar de la clase "BaseAdapter"
+    //Creamos la vista de cada item
     public View getView(int position, View convertView, ViewGroup parent) {
-        View v = convertView;
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-        v = layoutInflater.inflate(R.layout.site_item, null);
-
-        nameText = v.findViewById(R.id.nameTextSiteList);
-        descText = v.findViewById(R.id.descTextSiteList);
-        imageSite = v.findViewById(R.id.imageSiteList);
+        View v = convertView;  //vista 
+        LayoutInflater layoutInflater = LayoutInflater.from(context); 
+        //Inflamos la vista con el layout de la instalacion "site_item.xml"
+        v = layoutInflater.inflate(R.layout.site_item, null); 
+        ... //Enlazamos en la vista el nombre, imagen y descripcion de la instalacion
+        //La libreria Glide nos permite cargar imagenes de enlaces de la web
         RequestManager requestManager = Glide.with(v.getContext());
-        RequestBuilder requestBuilder = requestManager.load(filteredSites.get(position).getImageLink());
-        requestBuilder.into(imageSite);
-
-        nameText.setText(filteredSites.get(position).getName());
-        descText.setText(filteredSites.get(position).getDesc());
-
-        return v;
+        RequestBuilder requestBuilder = requestManager.load(filteredSites.get(position).getImageLink()); //Obtenemos la url de la imagen de la instalacion
+        requestBuilder.into(imageSite); //Cargamos la imagen en la vista
+        return v; //Devolvemos la vista
     }
-
-
-
-    @Override
     public Filter getFilter() {
-        return new Filter() {
-            @Override
+        return new Filter() { //Instanciamos un objete "Filter"
+            @Override //Metodo que aplica el filtro en funcion de los caracteres que se le pasen
             protected FilterResults performFiltering(CharSequence charSequence) {
-                String charString = charSequence.toString();
-                if (charString.isEmpty()) {
-                    filteredSites = allSites;
-                } else {
+                String charString = charSequence.toString();  //String con el filtro
+                if (charString.isEmpty()) {      //Si esta vacio
+                    filteredSites = allSites;   //No hay filtro y se muestran todas las instalaciones
+                } else { //Si no
                     ArrayList<ULLSiteSerializable> auxFilteredList = new ArrayList<>();
-                    for (ULLSiteSerializable site : allSites) {
-
-                        if (site.getName().toLowerCase().contains(charString.toLowerCase())) {
-                            auxFilteredList.add(site);
-                        }
+                    for (ULLSiteSerializable site : allSites) { //Para todas las instalaciones 
+                        //Comprobamos si el nombre la filtro coincide con la instalacion
+                        if (site.getName().toLowerCase().contains(charString.toLowerCase())) 
+                            auxFilteredList.add(site); //Si coincide los agregammos a la lista
+                                                           // auxiliar
                     }
-                    filteredSites = auxFilteredList;
-                }
+                    filteredSites = auxFilteredList; //La lista auxiliar es igual a la de 
+                }                                       //las instalaciones filtradas a mostrar
                 FilterResults filterResults = new FilterResults();
                 filterResults.values = filteredSites;
-                return filterResults;
+                return filterResults; //Devolvemos el resultado del filtro
             }
-
-            @Override
+            @Override //Metodo que se ejecuta cuando se aplica el filtro
             protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-                filteredSites = (ArrayList<ULLSiteSerializable>) filterResults.values;
-//                filterResults = filterResults.values;
-                notifyDataSetChanged();
-            }
+                filteredSites = (ArrayList<ULLSite...>) filterResults.values; 
+                notifyDataSetChanged(); //Le decimos a adaptador que el array con las instalaciones
+            }                             //ha sido modificado
         };
-    }
-
-    public ArrayList<ULLSiteSerializable> getFilteredSites() {
-        return filteredSites;
-    }
-
-    public void setFilteredSites(ArrayList<ULLSiteSerializable> filteredSites) {
-        this.filteredSites = filteredSites;
     }
 }

@@ -1,4 +1,4 @@
-public class ULLSite implements Serializable {
+public class ULLSite  {
 
     private String id; //ID de la instalacion
     private String name; //Nombre

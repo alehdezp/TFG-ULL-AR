@@ -33,9 +33,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private RecyclerView.Adapter homeAdapter;
     private RecyclerView.LayoutManager homeLayoutManager;
 
+
     public HomeFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -82,6 +84,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         auxItems.add(new ItemHome("Mapa ULL", "home_mapa_ull", false, null));
         auxItems.add(new ItemHome("Página oficial de la ULL", "home_ull_site", true, "www.ull.es"));
         auxItems.add(new ItemHome("Donde ULL", "home_donde_ull", true, "donde.ull.es"));
+
         itemsHome = (List) auxItems;
 
     }

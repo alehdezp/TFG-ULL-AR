@@ -60,6 +60,8 @@ import java.util.concurrent.ExecutionException;
 public class MapsFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnMapClickListener,
         View.OnClickListener, LocationListener, SharedPreferences.OnSharedPreferenceChangeListener{
 
+
+
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     private static final String SHOW_RADIUS_STRING = "showRadius";
     private static final String MAX_RADIUS_STRING = "maxRadius";

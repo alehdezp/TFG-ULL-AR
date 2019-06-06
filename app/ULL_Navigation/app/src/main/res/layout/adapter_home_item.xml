@@ -26,4 +26,7 @@
         android:textColor="@android:color/black"
         android:background="@drawable/back_text"
        />
+
+
+
 </LinearLayout>
