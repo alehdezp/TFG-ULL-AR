@@ -19,9 +19,9 @@
 \BOOKMARK [1][-]{section.4.1}{Requisitos y ventanas de la aplicaci\363n}{chapter.4}% 19
 \BOOKMARK [2][-]{subsection.4.1.1}{Especificaci\363n detallada de los requisitos}{section.4.1}% 20
 \BOOKMARK [2][-]{subsection.4.1.2}{Ventanas de la aplicaci\363n}{section.4.1}% 21
-\BOOKMARK [1][-]{section.4.2}{Inicio de la aplicaci\363n}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{Inicio de ULL-AR}{chapter.4}% 22
 \BOOKMARK [2][-]{subsection.4.2.1}{Ventana inicial}{section.4.2}% 23
-\BOOKMARK [2][-]{subsection.4.2.2}{Ventana de Login }{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.2}{Ventana de Inicio de Sesi\363n }{section.4.2}% 24
 \BOOKMARK [1][-]{section.4.3}{Modo de Realidad Aumentada}{chapter.4}% 25
 \BOOKMARK [2][-]{subsection.4.3.1}{Acceso a los sensores}{section.4.3}% 26
 \BOOKMARK [2][-]{subsection.4.3.2}{Modelos encargados de la navegaci\363n}{section.4.3}% 27
@@ -32,7 +32,7 @@
 \BOOKMARK [2][-]{subsection.4.4.2}{HomeFragment}{section.4.4}% 32
 \BOOKMARK [2][-]{subsection.4.4.3}{AboutFragment}{section.4.4}% 33
 \BOOKMARK [1][-]{section.4.5}{Men\372}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.6}{Instalaciones}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.6}{Instalaciones de la ULL}{chapter.4}% 35
 \BOOKMARK [1][-]{section.4.7}{Preferencias del usuario}{chapter.4}% 36
 \BOOKMARK [0][-]{chapter.5}{Back-end de la aplicaci\363n}{}% 37
 \BOOKMARK [1][-]{section.5.1}{Base de datos}{chapter.5}% 38

@@ -22,40 +22,24 @@ public class Navigation implements Serializable {
     private ArrayList<ULLSite> allSites = new ArrayList<>();  //Todas las instalaciones
     //Instalaciones que se encuentran dentro del rango de maxDist y minDist
     private ArrayList<ULLSite> destSites = new ArrayList<>();   
-
     //Construimos el array de allSites con todas las instalaciones a partir de un JSON
-    public Navigation(JSONArray jsonULLSitesAux) {
-        ...
-    }
+    public Navigation(JSONArray jsonULLSitesAux) { ... }
     //Realizamos los calculos que nos permiten indentificar las instalaciones
-    public ArrayList<ULLSite> whatCanSee(LatLng currentPosAux, double actualDir) {
-        ... 
+    public ArrayList<ULLSite> whatCanSee(LatLng currentPosAux, double actualDir) {      ... 
     }
     //Calcula la distancia entre dos ubicaciones geograficas
-    public double getDistanceBetween(Vector2D v1, Vector2D v2) {
-        ....
-    }
+    public double getDistanceBetween(Vector2D v1, Vector2D v2) { ... }
     //Comprobamos si la direccion del dispositivo se encuentra dentro de su cono de
     //identificacion
-    private boolean isInCone(double directionToSite, double coneValue) {
-        ...
-    }
+    private boolean isInCone(double directionToSite, double coneValue) { ... }
     //Sirve para reorientar a nuestro norte magnetico el angulo dado por el 
     //Vector2D.getAngleRad(Vector2D v)
-    private double recalculeAngVector2D(double angleRad) {
-        ...
-    }
+    private double recalculeAngVector2D(double angleRad) { ... }
     //Invertimos el angulo
-    public double invertAng(double rad) {
-        ...
-    }
+    public double invertAng(double rad) { ... }
     //Rotamos -90 el angulo
-    public double rotateRad(double rad) {
-        ...
-    }
+    public double rotateRad(double rad) { ... }
     //Calculamos el valor del cono
-    public double calculateCone(double dist) {
-        ...
-    }
+    public double calculateCone(double dist) { ... }
     ... //Metodos set() y get() de las variables
 }

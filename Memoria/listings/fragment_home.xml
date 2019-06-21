@@ -1,4 +1,4 @@
-<LinearLayout ...>  <!-- Layout principal -->
-<!-- RecyclerView, contenedor en el que iran la vista de cada item de la clase ItemHome -->
-    <android.support.v7.widget.RecyclerView android:id="@+id/recyclerView_Home" ... />
+<LinearLayout ...> 
+    <!-- RecyclerView, contenedor en el que iran la vista de cada item de la clase ItemHome -->
+    <android.support.v7.widget.RecyclerView  android:id="@+id/recyclerView_Home" ... />
 </LinearLayout>

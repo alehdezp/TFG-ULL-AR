@@ -1,21 +1,15 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/drawer_layout"
-    ...>
+    android:id="@+id/drawer_layout" ... >
     <!-- Contenido principal de la vista-->
-    <LinearLayout
-        ...>
+    <LinearLayout ... >
         <include
-            android:id="@+id/toolbar"
-            .../>
+            android:id="@+id/toolbar" ... />
         <!-- Fragmento con el contenido principal de la vista -->
-        <FrameLayout
-            android:id="@+id/content_frame"
-            ... />
+        <FrameLayout android:id="@+id/content_frame" ... />
     </LinearLayout>
     <!-- Vista del menu lateral, con la cabecera y las opciones -->
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
         app:headerLayout="@layout/header_navigation_drawer" 
-        app:menu="@menu/nav_options"
-        .../>
+        app:menu="@menu/nav_options" ... />
 </android.support.v4.widget.DrawerLayout>

@@ -35,7 +35,7 @@
                         break; 
                     case R.id.menu_logout: //Opcion "Cerrar sesion" del menu
                         logout();  //Mediante la API de Google salimos de la cuenta
-                        goToLogin();    //Regresamos a la ventana de Login
+                        goToLogin(); //Regresamos a la ventana de "Inicio de Sesion"
                         break;
                     ... //Resto de opciones del menu
                 } 

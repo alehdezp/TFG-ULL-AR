@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:context=".Fragments.AboutFragment" ... >
+<FrameLayout  tools:context=".Fragments.AboutFragment" ... >
+    <!-- Todos los TextView con la informacion de la aplicacion -->
     <LinearLayout ... >
         <!-- Nombre la aplicacion -->
         <TextView android:id="@+id/aboutText" ... />
-        <!-- Nombre del autor -->
-        <TextView android:id="@+id/aboutTextAutor" ... />
-        <!-- Version de la aplicacion -->
-        <TextView android:id="@+id/aboutTextVersion" .../>
-        <!-- Email del autor -->
-        <TextView android:id="@+id/aboutTextEmail" .../>
-        <!-- Descripcion -->
-        <TextView android:id="@+id/aboutTextDescription" ... />
+        <!-- Nombre del autor --> ...
+        <!-- Version de la aplicacion --> ...
+        <!-- Email del autor --> ...
+        <!-- Descripcion --> ...
     </LinearLayout>
 </FrameLayout>

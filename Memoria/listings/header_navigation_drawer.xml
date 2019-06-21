@@ -1,11 +1,6 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    ...>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" ...>
     <!-- Imagen del Segai -->
-    <ImageView
-        android:src="@drawable/segaiull"
-        .../>
+    <ImageView android:src="@drawable/segaiull" .../>
     <!-- Nombre del usuario de la aplicacion -->
-    <TextView
-        android:id="@+id/usernameText"
-        .../> 
+    <TextView android:id="@+id/usernameText" .../> 
 </FrameLayout>

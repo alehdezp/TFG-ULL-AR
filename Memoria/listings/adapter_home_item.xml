@@ -1,4 +1,3 @@
-
 <LinearLayout ...>     <!-- Vista de cada objeto de la clase ItemHome -->
     <!-- Imagen del item ubicada en la parte de arriba -->
     <ImageView android:id="@+id/imageView_home_item" ... />
