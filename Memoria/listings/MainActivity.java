@@ -18,8 +18,8 @@ public class MainActivity extends BaseActivity {
             tx.replace(R.id.content_frame, new HomeFragment());
             tx.commit();
         }
-//
-//        FrameLayout contentFrameLayout = (FrameLayout) findViewById(R.id.content_frame); //Remember this is the FrameLayout area within your activity_main.xml
+// 
+//        FrameLayout contentFrameLayout = (FrameLayout) findViewById(R.id.content_frame); // Remember this is the FrameLayout area within your activity_main.xml
 //        getLayoutInflater().inflate(R.layout.activity_home, contentFrameLayout);
     }
 

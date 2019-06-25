@@ -21,14 +21,14 @@ import java.util.Iterator;
 public class Navigation implements Serializable {
 
     private static double PI = Math.PI;
-    private static final double MAX_CONE_GRADS_NEAR = Math.PI / 2; //
-    private static final double MAX_CONE_GRADS_FAR = Math.PI / 8; //
+    private static final double MAX_CONE_GRADS_NEAR = Math.PI / 2; // 
+    private static final double MAX_CONE_GRADS_FAR = Math.PI / 8; // 
     private static final double MIN_CONE_GRADS = Math.PI / 20;
-    private static final double SCALE_CONE_NEAR = 0.0078; //relacion (pi/2)/200
-    private static final double SCALE_CONE_FAR = 0.00078; //relacion (pi/2)/2000
-    private static final double NEAR_VALUE = 150; //Valor a partir del cual se empieza tomar la distancia como lejana
-    //En funcion del escalado del cono se empieza a restar el angulo del cono en funcion
-    //de su distancia
+    private static final double SCALE_CONE_NEAR = 0.0078; // relacion (pi/2)/200
+    private static final double SCALE_CONE_FAR = 0.00078; // relacion (pi/2)/2000
+    private static final double NEAR_VALUE = 150; // Valor a partir del cual se empieza tomar la distancia como lejana
+    // En funcion del escalado del cono se empieza a restar el angulo del cono en funcion
+    // de su distancia
     private double maxDist = 200;
     private double minDist = 0;
 
@@ -44,7 +44,7 @@ public class Navigation implements Serializable {
 
 
     public Navigation(JSONArray jsonULLSitesAux) {
-        //Construimos el array de allSites a partir JSON
+        // Se construye el array de allSites a partir JSON
     }
 
     public ArrayList<ULLSite> whatCanSee(LatLng currentPosAux, double actualDir) {

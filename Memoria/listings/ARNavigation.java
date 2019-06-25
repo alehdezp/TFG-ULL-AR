@@ -1,6 +1,6 @@
 
 /**
- * Clase que contiene el funcionamiento del AR de nuestro programa
+ * Clase que contiene el funcionamiento del AR del programa
  *  Muestra al usuario informacion sobre los centros de la ULL que se
  *  encuentran cerca mediante la pantalla y el lugar al que apunte
  *
@@ -43,7 +43,7 @@ public class ARNavigation extends ARActivity {
     }
 
     private void getRadius() {
-        // Obtenemos los radios de los ajustes de configuracion de la aplicacion
+        // Se obtienen los radios de los ajustes de configuracion de la aplicacion
     }
 
     private void bindUI() { ...}
@@ -60,7 +60,7 @@ public class ARNavigation extends ARActivity {
     }
 
     public void onSensorChanged(SensorEvent event) {
-        double radians = event.values[0]; //Calculamos el valor de orientacion de la brujula del dispositivo
+        double radians = event.values[0]; // Se calcula el valor de orientacion de la brujula del dispositivo
         if (radians >= 360)
             radians = radians - 360;
         radians = Math.toRadians(radians);

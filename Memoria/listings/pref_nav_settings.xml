@@ -2,7 +2,7 @@
     <PreferenceCategory android:title="Preferencias de las instalaciones" .../>
     <!-- Activar o no los radios de busqueda -->
     <SwitchPreference android:key="showRadius"
-        android:title="Mostrar sitios dentro de un rango" .../>
+        android:title="Mostrar instalaciones dentro de un rango" .../>
     <!-- Radio del circulo mayor -->
     <EditTextPreference
         android:defaultValue="max"

@@ -27,7 +27,7 @@ Este capítulo tiene como objetivo presentar las distintas herramientas software
 
 \subsection{Android Studio}
 
-Android Studio \cite{URL::AndroidStudio} es el IDE  \cite{URL::IDE} (Entorno de Desarrollo Integrado) oficial para el desarrollo de aplicaciones en Android, basado en IntelliJ IDEA \cite{URL::IntelliJIDEA}. Android Studio ofrece una serie de funcionalidades que han facilitado al desarrollador numerosas tareas, entre las cuales podemos destacar:
+Android Studio \cite{URL::AndroidStudio} es el IDE  \cite{URL::IDE} (Entorno de Desarrollo Integrado) oficial para el desarrollo de aplicaciones en Android, basado en IntelliJ IDEA \cite{URL::IntelliJIDEA}. Android Studio ofrece una serie de funcionalidades que han facilitado al desarrollador numerosas tareas, entre las cuales se pueden destacar:
 
 \begin{itemize}
 \item Un sistema de compilación basado en Gradle \cite{URL::Gradle} que ha simplificado tanto la inserción de dependencias de las distintas librerías que se han tenido que utilizar, como la compilación de la aplicación.
@@ -63,7 +63,7 @@ Se ha decidido crear un repositorio \cite{URL::repositorioAplicacion} en esta pl
 
 Mediante el uso de este repositorio, el alumno ha conseguido ampliar sus conocimientos en Git y familiarizarse con la interfaz de GitHub.
 
-Para instalar GitHub en Linux utilizaremos el siguiente comando:
+Para instalar GitHub en Linux se utiliza el siguiente comando:
 \begin{lstlisting}
     $ sudo apt install git-all
 \end{lstlisting}
@@ -82,12 +82,12 @@ Este SO fue diseñado principalmente para dispositivos móviles con pantalla tá
 
 \subsection{Realidad Aumentada}
 
-La Realidad Aumentada (RA) \cite{URL::RealidadAumentada} o Augmented Reality (AR) en inglés, es el término que se usa para definir la visión de un entorno físico del mundo real, a través de un dispositivo tecnológico. Este dispositivo, nos permite expandir el mundo físico añadiendo capas de información digital generadas por un computador, como pueden ser imágenes, sonidos y vídeos a nuestra visión del entorno en tiempo real. 
+La Realidad Aumentada (RA) \cite{URL::RealidadAumentada} o Augmented Reality (AR) en inglés, es el término que se usa para definir la visión de un entorno físico del mundo real, a través de un dispositivo tecnológico. Este dispositivo, permite expandir el mundo físico añadiendo capas de información digital generadas por un computador, como pueden ser imágenes, sonidos y vídeos a la visión del entorno en tiempo real. 
 
 La RA está cambiando la manera en la que sus usuarios pueden ver el mundo. Actualmente es una tecnología que se encuentra en auge debido a su enorme potencial. Empresas de numerosos sectores ya han estado invirtiendo en su desarrollo debido a que los beneficios que traerá esta tecnología y las posibles aplicaciones por descubrir son prometedoras.
 
 
-En un futuro la RA estará integrada en el día a día y formará parte de la vida cotidiana. Sus posibles aplicaciones no tienen límites, pueden llegar desde reconocer plantas e incluso monumentos y mostrar información sobre lo que se está viendo, hasta añadir información en tiempo real en una operación a un paciente, comprobar cómo queda un mueble en tu salón o sus aplicaciones para realizar videojuegos, como podemos comprobar con el reciente éxito de Pokemón Go!. 
+En un futuro la RA estará integrada en el día a día y formará parte de la vida cotidiana. Sus posibles aplicaciones no tienen límites, pueden llegar desde reconocer plantas e incluso monumentos y mostrar información sobre lo que se está viendo, hasta añadir información en tiempo real en una operación a un paciente, comprobar cómo queda un mueble en tu salón o sus aplicaciones para realizar videojuegos, como se puede comprobar con el reciente éxito de Pokemón Go!. 
 
 \begin{figure}[h]
     \centering
@@ -109,11 +109,11 @@ A continuación, se explicará en detalle:
 \subsubsection{¿Cómo funciona esta tecnología?}
 La RA necesita de un dispositivo de visualización en el que mostrar esta unión del entorno real junto con la información digital. Esta unión puede ser visualizado en múltiples dispositivos: pantallas, gafas, dispositivos portátiles, dispositivos móviles, etc.
  
-Además de estos sistemas de visualización, necesitaríamos de un sistema de computación que realice los cálculos y reciba los datos provenientes de múltiples sensores, es decir: una CPU, una GPU, RAM, GPS, WIFI, bluetooth, acelerómetro, giroscopio, cámara, etc. Gracias a estos elementos el sistema puede reconocer el entorno real.
+Además de estos sistemas de visualización, se necesita de un sistema de computación que realice los cálculos y reciba los datos provenientes de múltiples sensores, es decir: una CPU, una GPU, RAM, GPS, WIFI, bluetooth, acelerómetro, giroscopio, cámara, etc. Gracias a estos elementos el sistema puede reconocer el entorno real.
 
 Todo esto necesita una parte software. El software en una primera parte deberá de reconocer el terreno, ubicaciones, objetos e imágenes, mediante los datos de los sensores y la cámara. Este proceso de transformación de diferentes conjuntos de datos a un sistema de coordenadas se llama registro de la imagen \cite{URL::ImageRegister}. 
 
-Posteriormente el software deberá reestructurar el mundo real en función del registro de imágenes, añadiendo y combinando la información correspondiente al entorno para generar nuestra imagen de RA. Existen múltiples maneras en las que se puede reestructurar este mundo. 
+Posteriormente el software deberá reestructurar el mundo real en función del registro de imágenes, añadiendo y combinando la información correspondiente al entorno para generar la imagen de RA. Existen múltiples maneras en las que se puede reestructurar este mundo. 
 
 \begin{figure}[h]
     \centering
@@ -139,7 +139,7 @@ Existen hoy en día cuatro tipos de RA:
     \bigskip
     \bigskip
 
-    \item Markerless AR. Corresponde a la RA que recoge los datos de su posición y orientación para mostrar la información correspondiente a esa área. Estos sistemas utilizan los datos obtenidos de la cámara, GPS, brújula, giroscopio y acelerómetro para establecer la ubicación del usuario en el entorno. Utiliza técnicas para reconocer terreno o ambientes para calcular la posición y orientación de la cámara. Con este tipo de tecnología podemos probar un mueble en un salón antes de llegar a comprarlo.
+    \item Markerless AR. Corresponde a la RA que recoge los datos de su posición y orientación para mostrar la información correspondiente a esa área. Estos sistemas utilizan los datos obtenidos de la cámara, GPS, brújula, giroscopio y acelerómetro para establecer la ubicación del usuario en el entorno. Utiliza técnicas para reconocer terreno o ambientes para calcular la posición y orientación de la cámara. Con este tipo de tecnología se puede probar un mueble en un salón antes de llegar a comprarlo.
 
  
     \item Pojection-based AR. Este modo de RA consiste en la proyección de luz en superficies y objetos en el mundo real. Existen muchos usos interesantes de esta tecnología, como aplicaciones para el uso de teclados virtuales proyectados que reconozcan cuando una ``tecla" es pulsada. Esta proyección también se puede hacer en medio del aire con ayuda de la tecnología de láseres de plasma.
@@ -155,7 +155,7 @@ Aparte de los cuatro tipos de RA, existen subtipos dentro de cada uno de ellos.
 \subsubsection{Diferencias entre Realidad Aumentada y Realidad Virtual}
 En los últimos años la realidad virtual (RV) \cite{URL::VR} o virtual reality (VR) en inglés y la realidad aumentada han empezado a recibir mucha más atención. Llevando a desarrolladores realizar integraciones de ambas tecnologías en numerosas industrias.
 
-De acuerdo con un análisis de expertos, la RV iba tener el liderazgo en 2018 como tecnología pionera, sin embargo, la RA va a tener mucha más importancia y a largo plazo, llegará a formar parte de nuestro día a día.
+De acuerdo con un análisis de expertos, la RV iba tener el liderazgo en 2018 como tecnología pionera, sin embargo, la RA va a tener mucha más importancia y a largo plazo, llegará a formar parte del día a día.
 
 La realidad virtual es un entorno de escenas u objetos de apariencia real. Aleja al usuario del entorno real y le brinda la sensación de estar inmerso en él. Dicho entorno es contemplado por el usuario a través de un dispositivo conocido como gafas o casco de realidad virtual. Éste puede ir acompañado de otros dispositivos, como guantes o trajes especiales, que permiten una mayor interacción con el entorno, así como la percepción de diferentes estímulos que intensifican la sensación de realidad.
 
@@ -191,7 +191,7 @@ Los usos actuales de esta tecnología se acercan a todos los sectores conocidos:
         \label{fig:education-example}
     \end{figure}
     
-    \item Realidad Aumentada en los videojuegos. Sin duda uno de los sectores en lo que más interés se tiene para desarrollar esta tecnología y quizás donde más se haya avanzado en realidad aumentada. Todas las grandes empresas de este sector tienen ya potentes desarrollos y lanzamientos de videojuegos que combinan la realidad física con la virtual, con múltiples posibilidades de personalización dentro de cada juego. En un futuro esta tecnología revolucionará todo el sector de los videojuegos y cambiará la manera en la que interactuamos con ellos.   
+    \item Realidad Aumentada en los videojuegos. Sin duda uno de los sectores en lo que más interés se tiene para desarrollar esta tecnología y quizás donde más se haya avanzado en realidad aumentada. Todas las grandes empresas de este sector tienen ya potentes desarrollos y lanzamientos de videojuegos que combinan la realidad física con la virtual, con múltiples posibilidades de personalización dentro de cada juego. En un futuro esta tecnología revolucionará todo el sector de los videojuegos y cambiará la manera en la que se interactúa con ellos.   
     
     Un claro ejemplo del potencial de la RA en este sector, está en el éxito de Pokemón Go! \cite{URL::Pokemon-Go}. Una aplicación para dispositivos móviles que utiliza técnicas de RA basadas en la localización, la cual a través de la cámara del dispositivo y modelos 3D para representar a los personajes de la saga Pokemón \cite{URL::Pokemon}, los cuales se encuentran escondidos en ubicaciones del mundo real.  
     
@@ -275,7 +275,7 @@ Otro de sus puntos fuertes es su gestor de paquetes Node Package Manager  (NPM).
 \end{itemize}
 
 
-Para instalar Node.js en nuestra máquina con Linux deberemos ejecutar estos comandos:
+Para instalar Node.js en una máquina con Linux se deben ejecutar estos comandos:
 \begin{lstlisting}
     $ curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
     $ sudo apt install -y nodejs
@@ -344,7 +344,7 @@ A cada uno de estos dynos se le puede configurar más espacio o capacidad de pro
 
 Se ha optado por utilizar el dyno gratis que ofrece Heroku a cada repositorio. El cual tienen un límite de 1000 horas activas al mes y se pone en suspensión a los 30 minutos sin recibir tráfico. Una vez que vuelve a recibir tráfico se activa de nuevo.    
 
-Para instalar Heroku en un ordenador solo tenemos que seguir los pasos de la web \cite{URL::HerokuCLI}.
+Para instalar Heroku en un ordenador solo se tienen que seguir los pasos de la web \cite{URL::HerokuCLI}.
 
 
 \subsection{ mLab }

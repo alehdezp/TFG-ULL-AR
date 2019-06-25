@@ -2,10 +2,6 @@ package com.alehp.ull_navigation.Models;
 
 import java.io.Serializable;
 
-/**
- * Coordenada en el espacio sobre la que operamos;
- * Suponen la ubicacion en dos dimensiones de cada centro de la ULL
- */
 @SuppressWarnings("serial")
 public class Vector2D implements Serializable {
 

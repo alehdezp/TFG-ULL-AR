@@ -9,7 +9,7 @@ acabar la pestaña de los sition
     agregada al manifiesto
 	
 //Configuracion del servidor
-    instalar nodejs y heroku en nuestra maquina
+    instalar nodejs y heroku en la maquina
     loguearnos en heroku
     y hacer el clone del repo
 
