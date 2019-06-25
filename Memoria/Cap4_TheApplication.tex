@@ -9,41 +9,39 @@
 % ----------------------------------------------------
 %
 
-
 \lstset{stringstyle=\color{purple}}
 \chapter{La aplicación ULL-AR} \label{chap:LaAplicacion} 
 
-En este capítulo explicaremos la aplicación ULL-AR utilizando la especificación de requisitos de esta y explicando su funcionamiento.
+En este capítulo explicaremos la aplicación ULL-AR utilizando la especificación de requisitos de ésta y explicando su funcionamiento.
 
 \section{Requisitos y ventanas de la aplicación} % (fold)
 
-
-Se trata de una aplicación para móviles, más concretamente, a aquellos dispositivos que utilizan Android como sistema operativo. Es una aplicación diseñada para la comunidad de la Universidad de La Laguna, la cual les permita ubicarse, detectar y reconocer las instalaciones y edificios pertenecientes a la universidad, mediante técnicas de realidad aumentada basadas en la geolocalización.
+La aplicación ULL-AR consiste en una aplicación para móviles, más concretamente, a aquellos dispositivos que utilizan Android como sistema operativo. Es una aplicación diseñada para la comunidad de la Universidad de La Laguna, la cual permita a sus usuarios ubicarse, detectar y reconocer las instalaciones y edificios pertenecientes a la universidad, mediante técnicas de realidad aumentada basadas en la geolocalización.
 
 Los requisitos principales de ULL-AR son:
 \begin{itemize}
     \item La aplicación se desarrollará para dispositivos con Android. Se utilizará Android Studio como IDE para su desarrollo.
-    \item Se implementarán técnicas de realidad aumentada basadas en la geolocalización para mostrar al usuario la instalación de la ULL a la cual apunte con la cámara.
-    \item Las instalaciones, junto a su información correspondiente, estarán ubicadas en un base datos en la nube. El servidor que se conecte con esta base de datos también deberá estar en la nube.
+    \item Se implementarán técnicas de realidad aumentada basadas en la geolocalización para mostrar al usuario la instalación de la ULL a la cual apunte con la cámara del dispositivo.
+    \item Las instalaciones de la ULL, junto a su información correspondiente, estarán ubicadas en un base datos en la nube. El servidor que se conecte con esta base de datos también deberá estar en la nube.
 \end{itemize}
 
 \subsection{Especificación detallada de los requisitos} 
 
-La aplicación se iniciará una Splash Screen \cite{URL::SplashScreen} o pantalla de inicio con el logo de la Universidad de La Laguna. Esta pantalla dará paso a una ventana de \textit{Inicio de sesión}.
+La aplicación se iniciará una ``Splash Screen'' \cite{URL::SplashScreen} o pantalla de inicio con el logo de la Universidad de La Laguna. Esta pantalla dará paso a una ventana de \textit{Inicio de sesión}.
 
-Para poder utilizar ULL-AR, el usuario ha de tener una cuenta de correo institucional de la ULL. Este correo ha de tener el siguiente formato: ``\textit{aluxxxxxxxxxx@ull.edu.es}''. Sin ella no se podrá acceder a la aplicación. Además, se podrá cerrar la sesión de esta cuenta.
+Para poder utilizar ULL-AR, el usuario ha de poseer una cuenta de correo institucional de la ULL. Este correo ha de terminar con el formato: ``\textit{@ull.edu.es}''. Sin élla no se podrá acceder a la aplicación. Además, se podrá cerrar la sesión de esta cuenta.
 
-Una vez autentificado con éxito, se accederá a una ventana de \textit{Inicio} en la que aparecerá un acceso directo a las ventanas de \textit{Mapa ULL} y \textit{Navegación en modo RA} que explicaremos más adelante. A su vez, dispondrá de los accesos directos a enlaces de interés de Universidad de La Laguna que se abrirán en un navegador externo. 
+Una vez autentificado con éxito, se accederá a una ventana de \textit{Inicio} en la que aparecerá un acceso directo a las ventanas de \textit{Mapa ULL} y \textit{Navegación en modo RA} que explicaremos más adelante. A su vez, dispondrá de accesos a enlaces web de interés de la ULL que se abrirán en un navegador externo. 
 
-ULL-AR cuenta con un menú para moverse por las diferentes ventanas. Se implementará un menú deslizante lateral o \textit{Navigation Drawer} \cite{URL::NavigationDraw} ubicado en la parte superior izquierda de la aplicación. Este menú deberá ser simple e intuitivo.
+ULL-AR contará con un menú para moverse por las diferentes ventanas de la aplicación. Se implementará un menú deslizante lateral o \textit{Navigation Drawer} \cite{URL::NavigationDraw} ubicado en la parte superior izquierda de la aplicación. Este menú deberá ser simple e intuitivo.
 
-Como accesos en este menú se dispone de las siguientes ventanas:
+Como accesos en este menú se dispone de las siguientes ventanas o funcionalidades:
 
 \begin{itemize}
     \item Inicio: Ventana principal de la aplicación.
-    \item Mapa ULL: Esta ventana contendrá un mapa de la universidad con todas las instalaciones en la base de datos. 
-    \item Navegación en modo RA: En esta ventana, mediante el uso de la cámara, se identificarán las instalaciones universitarias a los que el usuario apunte y permitirá mostrar una pestaña con información detallada de las mismas.
-    \item Todas las instalaciones ULL: Contiene todas la ubicaciones e instalaciones de la Universidad de La Laguna y permitirá la búsqueda de estas. 
+    \item Mapa ULL: Esta ventana contendrá un mapa de la ULL con todas las instalaciones en la base de datos. 
+    \item Navegación en modo RA: En esta ventana, mediante el uso de la cámara, se identificarán las instalaciones de la ULL a los que el usuario apunte con el dispositivo y permitirá mostrar una ventana con información detallada de las mismas.
+    \item Todas las instalaciones ULL: Contiene todas la ubicaciones e instalaciones de la ULL y permitirá al usuario realizar una búsqueda de éstas. 
     \item Configuración: Permitirá acceder a los ajustes de la aplicación.
     \item Cerrar cesión: Cerrará la sesión actual y devolverá al usuario a la ventana de \textit{Inicio de sesión}.
     \item Info: Información de la aplicación y de su autor.
@@ -55,12 +53,12 @@ Una instalación de la ULL corresponde a un centro, edificio, facultad, institut
     \item \textbf{Id}: Campo para identificar la instalación.
     \item \textbf{Nombre}: Nombre oficial de la instalación.
     \item \textbf{Ubicación}: La ubicación exacta en la que se encuentra la instalación. 
-    \item \textbf{Descripción}: Descripción de la instalación con el objetivo y actividades que se desarrollan en él.
+    \item \textbf{Descripción}: Descripción de la instalación con el objetivo de la misma y actividades que se desarrollan en ella.
     \item \textbf{Imagen}: Imagen de la instalación.
-    \item \textbf{Lista de enlaces de interés}: Una lista con los enlaces a las instituciones, servicios, departamentos y grados que se imparten en esta instalación.
+    \item \textbf{Lista de enlaces de interés}: Una lista con los enlaces a las instituciones, servicios, departamentos y grados que se encuentran en esta instalación.
 \end{itemize}
 
-Esta información estará guardada en una base de datos en la nube. Para acceder a esta, se dispondrá de un servidor en la nube que conecte con la base de datos y envié la información a la aplicación.
+Esta información estará guardada en una base de datos en la nube. Para acceder a ésta, se dispondrá de un servidor en la nube que conecte con la base de datos y envié la información a la aplicación.
 
 \subsection{Ventanas de la aplicación}
 
@@ -83,10 +81,7 @@ Esta información estará guardada en una base de datos en la nube. Para acceder
 % \hspace*{\fill}%
 % \end{figure}
   
-% La primera ventana (véase Figura \ref{fig:splashApp}) es la pantalla de inicio o Splash Screen que aparece cuando ejecutamos la aplicación. Tras unos segundos, se carga la ventana de \textit{Login} (véase Figura \ref{fig:loginApp}). Para poder loguearnos deberemos tener una cuenta de Google de la ULL. Una vez que presionamos en el botón del medio, se nos abrirá una ventana de diálogo para que pongamos nuestra cuenta.
-
-Al iniciar la aplicación ULL-AR, la primera ventana que aparece es la pantalla de inicio o Splash Screen. Tras unos segundos, se carga la ventana de \textit{Inicio de sesión}. Para poder auntificarse el usuario debe poseer una cuenta de correo institucional de la ULL.
-Se dispondrá de un botón en el centro de la pantalla, que abrirá un cuadro de diálogo en el que poder introducir el correo y contraseña de esta cuenta.
+Al iniciar la aplicación ULL-AR, la primera ventana que aparece es la pantalla de inicio o Splash Screen. Tras unos segundos, se carga la ventana de \textit{Inicio de sesión}. Para poder autentificarse el usuario debe poseer una cuenta de correo institucional de la ULL. Se dispondrá de un botón en el centro de la pantalla, que abrirá un cuadro de diálogo en el que poder introducir el correo y contraseña de esta cuenta.
   
 \begin{figure}[h]
     \hspace*{\fill}%
@@ -100,16 +95,16 @@ Se dispondrá de un botón en el centro de la pantalla, que abrirá un cuadro de
     \includegraphics[width=\linewidth]{menuApp}
     \caption{Menu. Navigation Drawer.}
     \label{fig:menuApp}
-    \end{subfigure}%
+    \end{subfigure}
     \caption{Ventana \textit{Inicio} y el \textit{Menú} de \textit{ULL-AR}.}
-    \hspace*{\fill}%
+    \hspace*{\fill}
 \end{figure}
 
 Cuando el usuario consiga autentificarse con éxito, se abrirá la ventana de \textit{Inicio} (véase Figura \ref{fig:homeApp}). En ésta aparecerá una lista de accesos directos a las funcionalidades principales de ULL-AR, como son \textit{Navegación en modo RA} y \textit{Mapa ULL}, y una serie de enlaces a sitios web relacionados con la ULL.
 
 En la esquina superior izquierda de ULL-AR se encuentra situado el botón de acceso al menú \textit{Navigation Drawer}. Si se presiona se desplegará el menú que permite al usuario moverse por las distintas ventanas de la aplicación (véase Figura \ref{fig:menuApp}).
 
-Si el usuario se desplaza a la ventana de \textit{Mapa ULL} (véase Figura \ref{fig:mapsApp}) encontrará el mapa generado por la API de Google Maps. En este mapa aparecerá en pines azules las instalaciones de la ULL que están guardadas en la base de datos. Cuando el GPS del dispositivo encuentre la ubicación actual, aparecerá un pin rojo que indicará su posición en el mapa. En la parte inferior y en el centro de la ventana, se dispone de un botón llamado ``AR Mode'' que permite acceder a la ventana de \textit{Navegación en modo RA}.
+Si el usuario se desplaza a la ventana de \textit{Mapa ULL} (véase Figura \ref{fig:mapsApp}) encontrará el mapa generado por la API de Google Maps. En este mapa aparecerán con pines azules las instalaciones de la ULL que están guardadas en la base de datos. Cuando el GPS del dispositivo encuentre la ubicación actual, aparecerá un pin rojo que indicará su posición en el mapa. En la parte inferior y en el centro de la ventana, se dispone de un botón llamado ``AR Mode'' que permite acceder a la ventana de \textit{Navegación en modo RA}.
   
 \begin{figure}[h]
     \hspace*{\fill}%
@@ -135,7 +130,7 @@ Si el usuario se desplaza a la ventana de \textit{Mapa ULL} (véase Figura \ref{
 %     \label{fig:mapsApp}
 % \end{figure}
 
-En la ventana de \textit{Navegación en modo RA} se mostrará la imagen obtenidad de la cámara del dispositivo, con ella el usuario podrá ver en la pantalla la instalación a la que se apunte. Encima de esta imagen se mostrará un texto en el que aparecerán dos mensajes: uno informativo para indicar a usuario que apunte a alguna instalación de la ULL y una vez que se el usuario se encuentre apuntando a una instalación, el mensaje anterior se cambiará por el nombre de la instalación y, al mismo tiempo, aparecerá un pequeño boton debajo del texto que llevará al usuario a la ventana de \textit{Información de la instalación} (véase Figura \ref{fig:siteInfoApp}), con la información de dicha instalación. Por último, en la parte inferior se mostrará un botón que indicará si se han encontrado más instalaciones a parte de la que se muestra en la parte superior. Esté botón ejecutará una ventana con una lista de estas instalaciones.
+En la ventana de \textit{Navegación en modo RA} se mostrará la imagen obtenida de la cámara del dispositivo, con ella el usuario podrá ver en la pantalla la instalación a la que apunte con el dispositivo. Encima de esta imagen se mostrará un texto en el que aparecerán dos mensajes: uno informativo para indicar al usuario que apunte a alguna instalación de la ULL y una vez que se el usuario se encuentre apuntando a una instalación, el mensaje anterior se cambiará por el nombre de la instalación y, al mismo tiempo, aparecerá un pequeño botón debajo del texto que llevará al usuario a la ventana de \textit{Información de la instalación} (véase Figura \ref{fig:siteInfoApp}), con la información de dicha instalación. Por último, en la parte inferior se mostrará un botón que indicará si se han encontrado más instalaciones a parte de la que se muestra en la parte superior. Esté botón ejecutará una ventana con una lista de estas instalaciones.
 
  
 \begin{figure}[h]
@@ -154,22 +149,18 @@ En la ventana de \textit{Navegación en modo RA} se mostrará la imagen obtenida
     \caption{Ventanas de \textit{Todas las instalaciones ULL} e \textit{Información de la instalación} de \textit{ULL-AR}.}
     \hspace*{\fill}%
 \end{figure}
-
-\vskip 0.9in
+\bigskip
 
 A través del menú de la aplicación se puede acceder a la ventana de \textit{Todas las instalaciones ULL} (véase Figura \ref{fig:allSitesApp}). Aquí se mostrarán todas las instalaciones de la ULL que se encuentran en la base de datos. Además, se podrá hacer una búsqueda de cualquier instalación en la barra superior de la aplicación. Si se presiona cualquiera de estas instalaciones se  desplegará una ventana con la información detallada de la instalación.
 
 
+La ventana \textit{Información de la instalación} (véase Figura \ref{fig:siteInfoApp}) se dispondrá la información perteneciente a cada instalación. Aquí se  mostrará una imagen de ésta, nombre y descripción de la instalación y una lista de enlaces con los servicios, secretarias, grados y departamentos que podemos encontrar. Se dispone de un botón en la parte inferior de la imagen de la instalación, que  abrirá la ruta a su ubicación en la aplicación de Google Maps para permitir al usuario llegar a ella.  
 
-La ventana \textit{Información de la instalación} (véase Figura \ref{fig:siteInfoApp}) se dispondrá la información perteneciente a cada instalación. Aquí se  mostrará una imagen de ésta, nombre y descripción de la instalación y una lista de enlaces con los servicios, secretarias, grados y departamentos que podemos encontrar. Disponemos de un botón en la parte inferior de la imagen de la instalación, que  abrirá la ruta a su ubicación en la aplicación de Google Maps para poder llegar a ella.  
+Por último, desde el menú se podrá acceder a las dos últimas ventanas de la aplicación. Estas son la ventana \textit{Configuración} y la ventana \textit{Información}.
 
+En la ventana de \textit{Configuración} (véase Figura \ref{fig:settingsApp}) se encuentran los ajustes de la aplicación. En ella se permite al usuario decidir si desea realizar una busqueda, en la ventana de \textit{Mapas} y de \textit{Navegación en modo RA}, de las instalaciones que se encuentran en el área entre dos circunferencias. El centro de estas circunferencias será la ubicación actual del dispositivo.
 
-
-Por último, desde el menú se puede acceder a las ventanas de \textit{Configuración} e \textit{Información}.
-
-En la ventana de \textit{Configuración} (véase Figura \ref{fig:settingsApp}) se encuentran los ajustes de la aplicación. En ella tenemos la opción para poder configurar si queremos encontrar las instalaciones que se encuentran en el área entre dos circunferencias.
-
-La ventana \textit{Info} (véase Figura \ref{fig:infoApp})  muestra información básica de la aplicación como el nombre, versión, correo de contacto, autor y objetivo e información del desarrollo de la aplicación \textit{ULL-AR}.  
+La ventana \textit{Información} (véase Figura \ref{fig:infoApp})  muestra información básica de la aplicación como el nombre, versión, correo de contacto, autor y objetivo e información del desarrollo de la aplicación \textit{ULL-AR}.  
 
 \begin{figure}[h]
     \hspace*{\fill}%
@@ -184,24 +175,23 @@ La ventana \textit{Info} (véase Figura \ref{fig:infoApp})  muestra información
     \caption{Información.}
     \label{fig:infoApp}
     \end{subfigure}%
-    \caption{Ventanas de \textit{Configuración} e \textit{Info} de \textit{ULL-AR}.}
+    \caption{Ventanas de \textit{Configuración} e \textit{Información} de \textit{ULL-AR}.}
     \hspace*{\fill}%
 \end{figure}
-
 
 \vskip 1.9in
 
 \section{Inicio de ULL-AR} \label{chap:StartApplication} 
 
-Para comenzar a desarrollar aplicación, primero, necesitamos crear un proyecto nuevo en Android Studio. Este proyecto lo nombramos con el nombre de nuestra aplicación ``ULL-AR'' y seguiremos los pasos del IDE para acabar de crear nuestro proyecto. 
+Para comenzar a desarrollar aplicación, primero, se necesita crear un proyecto nuevo en Android Studio. Este proyecto se nombra con el nombre de la aplicación ``ULL-AR'' y se siguen los pasos del IDE para acabar de crear el proyecto. 
 
-A continuación, explicaremos en detalle el funcionamiento e implementación de las primeras ventanas que aparecen cuando se inicia la aplicación. 
+A continuación, se explicarán en detalle el funcionamiento e implementación de las primeras ventanas que aparecen cuando se inicia la aplicación. 
 
 \subsection{Ventana inicial}
 
-La primera ventana que aparece en la aplicación es la \textit{Splash Screen}. El objetivo de esta ventana es dar una mejor apariencia a la aplicación e informar al usuario que la aplicación se esta inciando y cargando. 
+La primera ventana que aparece en la aplicación es la \textit{Splash Screen}. El objetivo de esta ventana es dar una mejor apariencia a la aplicación e informar al usuario que la aplicación se está iniciando y cargando. 
 
-En esta ventana encontraremos el logotipo de ULL-AR (véase Figura \ref{fig:logoApp}) en el centro de la pantalla. Este logo se ha diseñado por medio del editor de imagenes online Pixlr \cite{URL::pixlr}. Gracias a este programa hemos podido crear un logotipo simple combinando el icono de la marca de la ULL y el nombre de la aplicación.
+En esta ventana se encuentra el logotipo de ULL-AR (véase Figura \ref{fig:logoApp}) en el centro de la pantalla. Este logo se ha diseñado por medio del editor de imágenes online Pixlr \cite{URL::pixlr}. Gracias a este editor se ha podido crear un logotipo simple combinando el icono de la marca de la ULL y el nombre de la aplicación.
  
 \begin{figure}[h]
     \centering
@@ -211,9 +201,9 @@ En esta ventana encontraremos el logotipo de ULL-AR (véase Figura \ref{fig:logo
 \end{figure}    
  
 
-En un principio la velocidad de carga y transición a la siguiente ventana de la aplicación se hacía de forma inmediata. Esto se produce por que los recursos necesarios para el inicio de la aplicación son escasos y no tardan en cargarse. Por lo tanto, para poder visualizarla correctamente se utilizó un temporizador de tres segundos, para que posteriormente, se lance la siguiente ventana, que corresponde a la ventana de \textit{Inicio de sesión}.
+En un principio la velocidad de carga y transición a la siguiente ventana de la aplicación se hacía de forma inmediata, debido a que los recursos necesarios para el inicio de la aplicación son escasos y no tardan en cargarse. Por lo tanto, para poder visualizarla correctamente se utilizó un temporizador de tres segundos, para que posteriormente, se lance la siguiente ventana, la cual corresponde a la ventana de \textit{Inicio de sesión}.
 
-Para la implementación de esta ventana se ha de configurar primero el archivo \texttt{AndroidManifest.xml}, este fichero proporciona información esencial sobre tu aplicación al sistema Android, información que el sistema debe tener para poder ejecutar el código de la aplicación. Aquí le indicamos al sistema Android la ventana o ``activity'' \cite{URL::activity} que se inicia la aplicación (véase Listado \ref{lst:manifestInicio}). Además, a esta ventana se le indica el tema del activity que contendrá el logotipo de ULL-AR en el centro de la pantalla.
+Para la implementación de esta ventana \textit{Splash Screen} se ha de configurar primero el fichero \texttt{AndroidManifest.xml}. Este fichero proporciona información esencial sobre la aplicación al sistema Android, información que el sistema debe tener para poder ejecutar el código de la aplicación. Aquí se le indica al sistema Android la ventana o ``activity'' \cite{URL::activity} que inicia la aplicación (véase Listado \ref{lst:manifestInicio}). Además, a esta ventana se le indica el tema del activity que contendrá el logotipo de ULL-AR en el centro de la pantalla.
 
 \begin{lstlisting}[language=XML,caption={Fichero \texttt{AndroidManifest.xml}, activity que inicia la aplicación.}, label={lst:manifestInicio}]
     ...
@@ -228,7 +218,7 @@ Para la implementación de esta ventana se ha de configurar primero el archivo \
     ...
 \end{lstlisting}
 
-Al mismo tiempo en el archivo \texttt{styles.xml} (véase Listado \ref{lst:styleSplash}) indicamos el archivo \textit{splash\_ull.xml} (véase Listado \ref{lst:splashull}) que se encargará de colocar el color del fondo y el logotipo de la aplicación. 
+Al mismo tiempo en el archivo \texttt{styles.xml} (véase Listado \ref{lst:styleSplash}), se le indica que el archivo \textit{splash\_ull.xml} (véase Listado \ref{lst:splashull}) se encargará de colocar el color del fondo y el logotipo de la aplicación en el fondo de la pantalla. 
 
 \begin{lstlisting}[language=XML,caption={Fichero \textit{styles.xml}, estilo de la \textit{Splash Screen}.}, label={lst:styleSplash}]
     ...
@@ -251,19 +241,19 @@ Al mismo tiempo en el archivo \texttt{styles.xml} (véase Listado \ref{lst:style
 
 \subsection{Ventana de \textit{Inicio de Sesión} }
 
-Esta es la ventana que al usuario permitira autentificarse con su correo institucional de la ULL. Para ello, dado que las cuentas de la ULL son cuentas de Google, se ha utilizado la API de Google para poder realizar la autenticación de forma sencilla y segura.
+Esta es la ventana que permitirá al usuario autentificarse con su correo institucional de la ULL. Para ello, dado que las cuentas de la ULL son cuentas de Google, se ha utilizado la API de Google para poder realizar la autenticación de forma sencilla y segura.
 
 \subsubsection{ Requisitos }  
 
-Para poder integrar la API de Google se necesita integrar los ``Servicios de Google'' en la aplicación. Para ello hay que entrar en la consola de Firebase \cite{URL::Firebase} y crear un proyecto con el nombre de nuestra aplicación. Una vez dentro de nuestro proyecto, seleccionaremos que queremos integrar Firebase a una aplicación Android. A continuación, se  pedirá el nombre del paquete de nuestra aplicación y la clave ``SHA1". Para obtener esta clave, ejecutamos en la consola de Android Studio el siguiente comando: 
+Para poder integrar la API de Google se necesita integrar los ``Servicios de Google'' en la aplicación. Para ello se ha de entrar en la consola de Firebase \cite{URL::Firebase} y crear un proyecto con el nombre de ULL-AR. Una vez dentro del proyecto, se seleccionará que queremos integrar Firebase a una aplicación Android. A continuación, se pedirá el nombre del paquete de la aplicación y la clave ``SHA1". Para obtener esta clave, se ha de ejecutar en la consola de Android Studio el siguiente comando: 
  
 \begin{lstlisting}[ caption={Comando que obtiene la clave SHA1.}, label={lst:SHA1}]
     $ keytool -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore
 \end{lstlisting} 
 
-Con el nombre del paquete y la clave SHA1, se descargará un fichero  con la configuración de los Servicios de Google llamado \texttt{google-services.json}. Este fichero hay que colocarlo en la carpeta \textit{app/} de nuestro proyecto.
+Con el nombre del paquete y la clave SHA1, se descargará un fichero con la configuración de los Servicios de Google llamado \texttt{google-services.json}. Este fichero se ha colocar en la carpeta \textit{app/} de el proyecto.
  
-Por ultimo para poder utilizar los Servicios de Google en la aplicación ULL-AR, tenemos que decirle al fichero \texttt{build.gradle} del proyecto en las dependencias (véase Listado \ref{lst:googleSd}) y al fichero \texttt{build.gradle} de la aplicación (véase Listado \ref{lst:googlepluggin}) que queremos utilizar  los Servicios de Google.
+Por último para poder utilizar los Servicios de Google en la aplicación ULL-AR, se tiene que indicar al fichero \texttt{build.gradle} del proyecto en las dependencias (véase Listado \ref{lst:googleSd}) y al fichero \texttt{build.gradle} de la aplicación (véase Listado \ref{lst:googlepluggin}) que se quiere utilizar  los Servicios de Google.
 
 \begin{lstlisting}[caption={Fichero \texttt{build.gradle} del proyecto, dependencias para utilizar los Servicios de Google.}, label={lst:googleSd}]
 ...
@@ -286,33 +276,33 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'
 \end{lstlisting}
 
+Con estos requisitos ya se puede comenzar a implementar la ventana que realiza la autentificación con una cuenta Google. 
+
 \subsubsection{ Implementación }
 
-Con estos requisitos ya podremos comenzar a implementar nuestra ventana para realizar la autentificación con una cuenta Google. 
 
-Empezamos creando un nuevo activity y lo llamaremos \textit{LoginActivityULL}. Esto  generará un fichero \texttt{LoginActivityULL.java} que tendrá asociado fichero \texttt{login\_ull\_activity.xml} con un layout \cite{URL::layout}. Este layout será la vista del activity, con el logotipo de la aplicación y un botón para realizar el inicio de sesión con una cuenta de Google. El fichero Java se encargará de conectarse con los Servicios de Google para realizar una autentificación con una cuenta de correo de la ULL.
+Se empieza creando un nuevo activity y se nombra \textit{LoginActivityULL}. Esto  generará un fichero \texttt{LoginActivityULL.java} que tendrá asociado fichero \texttt{login\_ull\_activity.xml} con un layout \cite{URL::layout}. Este layout será la vista del activity, con el logotipo de la aplicación y un botón para realizar el inicio de sesión con una cuenta de Google. El fichero Java se encargará de conectarse con los Servicios de Google para realizar una autentificación con una cuenta de correo de la ULL.
 \bigskip
 \bigskip
-\lstinputlisting[language=java, caption={Fichero \texttt{LoginActivityULL.java}. Código que se encarga de realizar el inicio de sesión del usuario ccon su correo electrónico.}, label={code:loginUll.java},]{listings/LoginActivityULL.java} %% LISTING
+\lstinputlisting[language=java, caption={Fichero \texttt{LoginActivityULL.java}, código que se encarga de realizar el inicio de sesión del usuario con su correo electrónico.}, label={code:loginUll.java},]{listings/LoginActivityULL.java} %% LISTING
  
 En el Listado \ref{code:loginUll.java} tenemos todos los métodos y conexiones de la API de Google para poder autentificarse. Cuando se presione el botón ``Autentifícate con una cuenta de la Universidad'' se abrirá un cuadro de dialogo de la API de Google que permitirá al usuario seleccionar la cuenta con la que desee entrar en la aplicación. 
 
-En caso de que la cuenta no pertenezca a la ULL, es decir, una cuenta que no tenga el formato del dominio de las cuentas de correo de la ULL terminadas en ``@ull.edu.es'', se cerrara la sesión de esta cuenta y se mostrará un mensaje con el tipo de cuenta necesaria para utilizar la aplicación ULL-AR.
+En caso de que la cuenta no pertenezca a la ULL, es decir, una cuenta que no tenga el formato del dominio de las cuentas de correo de la ULL terminadas en ``@ull.edu.es'', se cerrará la sesión de esta cuenta y se mostrará un mensaje con el tipo de cuenta necesaria para utilizar la aplicación ULL-AR.
 
  
  
 \section{Modo de Realidad Aumentada}
 
-La técnica de realidad aumentada que se ha implementado en la aplicación, es la de realidad aumentada basada en geolocalización. Es decir, a partir de la ubicación y la orientación del dispositivo, se combinan la información correspondiente a esos datos y la imagen que se obtiene de la cámara del dispositivo, para mostrar el resultado por la pantalla. Con estos datos de orientación y ubicación del dispositivo, junto con las ubicaciones de las instalaciones de la ULL, podremos hacer los cálculos para identificar a que instalación el usuario se encuentra apuntando con la cámara del dispositivo.
-
+La técnica de realidad aumentada que se ha implementado en la aplicación es la de realidad aumentada basada en geolocalización. Es decir, a partir de la ubicación y la orientación de un dispositivo, se combinan la información correspondiente a esos datos y la imagen que se obtiene de la cámara del dispositivo, para mostrar el resultado por la pantalla. Con estos datos de orientación y ubicación del dispositivo, junto con las ubicaciones de las instalaciones de la ULL, se podrán hacer los cálculos para identificar a que instalación el usuario se encuentra apuntando con la cámara del dispositivo móvil.
 
 El fichero \texttt{ARNavigation.java} contiene el activity encargado de: la recogida de los datos de los sensores, conexión con el servidor de la aplicación, manejo de los objetos requeridos para la identificación de las instalaciones y de la visualización de la técnica de realidad aumentada implementada.
 
 \subsection{Acceso a los sensores}
 
-Necesitamos obtener acceso a los sensores del GPS, el accelerometro y el magnetómetro del dispositivo móvil, para poder ubicar y orientar al dispositivo dentro del mundo.
+Se necesita obtener acceso a los sensores del GPS, el acelerómetro y el magnetómetro del dispositivo móvil, para poder ubicar y orientar al dispositivo dentro del mundo.
 
-Para obtener acceso al GPS, vamos a tener que solicitar los permisos a través del archivo \texttt{AndroidManifest.xml} (véase Listado \ref{lst:permisionL}) y, a su vez, preguntar al usuario si da permiso para acceder al GPS del dispositivo móvil con la aplicación ULL-AR  (véase Listado \ref{lst:gpsP}).
+Para obtener acceso al GPS, se tienen que solicitar los permisos necesarios a través del archivo \texttt{AndroidManifest.xml} (véase Listado \ref{lst:permisionL}) y, a su vez, preguntar al usuario si concede su permiso para acceder al GPS del dispositivo móvil con la aplicación ULL-AR  (véase Listado \ref{lst:gpsP}).
 
 \begin{lstlisting}[caption={Fichero \texttt{AndroidManifest.xml} del proyecto, permisos para acceder a la ubicación del dispositivo.}, label={lst:permisionL}]
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -321,13 +311,18 @@ Para obtener acceso al GPS, vamos a tener que solicitar los permisos a través d
 \end{lstlisting}
 
 \begin{lstlisting}[caption={Código para que el usuario conceda permiso para acceder a la ubicacion del dispositivo.}, label={lst:gpsP}]
+    //Si el usuario no ha concedido los permiso para utilizar el GPS en la aplicacion
     if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-        != PackageManager.PERMISSION_GRANTED) {
-        requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},                  MY_PERMISSIONS_REQUEST_LOCATION);   
+        != PackageManager.PERMISSION_GRANTED) { 
+        //Solicitamos el permiso para acceder a los datos de GPS de dispositivo 
+        requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},                  MY_PERMISSIONS_REQUEST_LOCATION);  
     }
 \end{lstlisting}
 
 Con los permisos concedidos, bastará con el código mostrado en el Listado \ref{lst:activarL} para empezar a requerir los datos del GPS.
+
+\bigskip
+\bigskip
 
 \begin{lstlisting}[caption={Código para activar el GPS del dispositivo.}, label={lst:activarL}]
     locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
@@ -335,15 +330,13 @@ Con los permisos concedidos, bastará con el código mostrado en el Listado \ref
     locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 3000, 5, this);
 \end{lstlisting}
 
-Para acceder a la última coordenada registrada por el GPS y así poder ubicar al usuario en el mundo, utilizaremos la siguiente linea código:
+Para acceder a la última coordenada registrada por el GPS y así poder ubicar al usuario en el mundo, utilizaremos la siguiente línea código:
 
 \begin{lstlisting}[caption={Código para acceder a la última ubicación registrada del GPS.}, label={lst:ubicacionL}]
     currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 \end{lstlisting}
 
-
-Ahora que tenemos todo los necesario para poder utilizar el GPS del dispositivo, necesitamos conocer su orientación. Para ello haremos uso de la matriz de rotación que Android calcula a partir del acelorómetro y el magnetómetro. Con esta matriz calcularemos el valor de la brújula magnética del dispositivo, es decir, su orientación con respecto al norte magnético. Este valor será el que utilizaremos para identificar hacía donde esta orientado el dispositivo en el mundo.
-
+Ahora que se tiene todo los necesario para poder utilizar el GPS del dispositivo, se necesita conocer su orientación. Para ello se hará uso de la matriz de rotación que Android calcula a partir del acelerómetro y el magnetómetro. Con esta matriz se obtendrá el valor de la brújula magnética del dispositivo, es decir, su orientación con respecto al norte magnético. Este valor será el que se utilizará para identificar hacía donde está orientado el dispositivo en el mundo.
 
 \begin{lstlisting}[caption={Código para acceder a la última ubicación registrada del GPS.}, label={lst:ubicacionL}]
     //Accedemos a los sensores del dispositivo
@@ -354,11 +347,9 @@ Ahora que tenemos todo los necesario para poder utilizar el GPS del dispositivo,
     mSensorManager.registerListener(this, compass, SensorManager.SENSOR_DELAY_NORMAL);    
 \end{lstlisting}
  
-Un dispositivo Android dispone de 3 ejes: x, y, z. Estos ejes se disponen como en la Figura \ref{fig:xyz}. La variable ``compass'' esta formada por un array de tres valores. El primero es denominado acimut y se refiere al ángulo de la orientación sobre la superficie de una esfera. Este valor representa el angulo entre el eje ``y'' del dispositivo y el norte magnético en grados. Cuando miramos el norte el valor del ángulo es 0, al sur es 180º, al este es 90º y al oeste 270º. Para poder trabajar con estos valores lo convertiremos a radianes.  El rango de valores es desde $0$ a $2\pi$.
+Un dispositivo Android dispone de 3 ejes: x, y, z. Estos ejes se disponen como en la Figura \ref{fig:xyz}. La variable ``compass'' está formada por un array de tres valores. El primero es denominado acimut y se refiere al ángulo de la orientación sobre la superficie de una esfera. Este valor representa el angulo entre el eje ``y'' del dispositivo y el norte magnético en grados. Cuando miramos el norte el valor del ángulo es 0, al sur es 180º, al este es 90º y al oeste 270º. Para poder trabajar con estos valores se convertiran a radianes.  El rango de valores es desde $0$ a $2\pi$.
 
-Para reconocer la instalaciones que tenemos en frente, escucharemos los cambios de los valores brújula o ``compass'' del dispositivo para actualizar la nueva orientación y realizar los cálculos que permiten identificar las instalaciones(véase Listado \ref{lst:orientacionL}). El objeto ```navULL''' de la clase ``Navigation'' será el encargado realizar estos cálculos, los cuales explicaremos a continuación.
-
-
+Para reconocer las instalaciones que se encuentran en frente al dispositivo móvil, se escucharán los cambios de los valores brújula o ``compass'' del dispositivo para actualizar la nueva orientación y realizar los cálculos que permiten identificar las instalaciones (véase Listado \ref{lst:orientacionL}). El objeto ```navULL''' de la clase ``Navigation'' será el encargado realizar estos cálculos, los cuales explicaremos a continuación.
 
 
 \begin{figure}[h]
@@ -369,7 +360,7 @@ Para reconocer la instalaciones que tenemos en frente, escucharemos los cambios 
 \end{figure}    
 
 \begin{minipage}{\linewidth}
-\begin{lstlisting}[caption={Código que se ejecuta cada vez que se registra un cambio en el sensor que calcula la orientacion.}, label={lst:orientacionL}]
+\begin{lstlisting}[caption={Código que se ejecuta cada vez que se registra un cambio en el sensor que calcula la orientación.}, label={lst:orientacionL}]
     //Escuchamos los cambios en el sensor y hacemos los calculos
     public void onSensorChanged(SensorEvent event) {
         //Valor del sensor en grados
@@ -379,7 +370,7 @@ Para reconocer la instalaciones que tenemos en frente, escucharemos los cambios 
         //Obtenemos la ultima posicion registrada del GPS
         LatLng lastPosition = getCurrentPos();
         if (auxpos != null) { //Si la posicion no es nula
-            //Le preguntamos a objeto de la clase ``Navigation'' las instalaciones 
+            //Le preguntamos al objeto de la clase ``Navigation'' las instalaciones 
             //que se encuentran en esa direccion
             allResultsSites = navULL.whatCanSee(lastPosition, radians);
         }
@@ -401,13 +392,13 @@ Para reconocer la instalaciones que tenemos en frente, escucharemos los cambios 
 
 \subsection{Modelos encargados de la navegación}
 
-A continuación, pasaremos a explicar la clases que intervienen en el proceso de reconocimiento de las instalaciones de la ULL que se encuentran delante del dispositvo móvil.
+A continuación, se explicarán las clases que intervienen en el proceso de reconocimiento de las instalaciones de la ULL que se encuentran delante del dispositivo móvil.
 
 \subsubsection{ULLSite.java}
 
-Cada instalacion de ULL se obtiene de una base de datos en formato JSON. Una instalacion se representa con un objeto de la clase ``ULLSite''. Ésta contiene toda su información y los atributos y funciones necesarias para poder trabajar con ella (véase Listado \ref{lst:ULLSite}). El objeto en formato JSON a partir de cual se creara el objeto de cada instalación se puede ver en la Figura \ref{fig:ull-site}.
+Cada instalación de ULL se obtiene de una base de datos en formato JSON. Una instalación se representa con un objeto de la clase ``ULLSite''. Ésta contiene toda su información y los atributos y funciones necesarias para poder trabajar con ella (véase Listado \ref{lst:ULLSite}). El objeto en formato JSON a partir de cual se creará el objeto de cada instalación se puede ver en la Figura \ref{fig:ull-site}.
 
-\lstinputlisting[language=java, caption={Fichero \texttt{BaseActivity.java}. Código que se encarga de configurar la vista del Navigation Drawer.}, label={lst:ULLSite},]{listings/models/ULLSite.java}
+\lstinputlisting[language=java, caption={Fichero \texttt{BaseActivity.java}, código que se encarga de configurar la vista del Navigation Drawer.}, label={lst:ULLSite},]{listings/models/ULLSite.java}
 
 \begin{figure}[h] 
     \centering
@@ -416,7 +407,7 @@ Cada instalacion de ULL se obtiene de una base de datos en formato JSON. Una ins
     \label{fig:ull-site}
 \end{figure}
 
-En la clase ULLSite.java encontramos los atributos necesarios para guardar toda la información de cada instalación. Los tres útlimos atributos:  ``distToSite'' corresponde a la distancia entre el dispositivo y la instalacion, ``dirToSite'' corresponde con la dirección en la que se encuentra la instalación en el mundo con respecto al dispositivo y ``coneValue'' reprenta un rango de amplitud  con respecto a ``dirToSite'' a partir del cual se considerará que el dispositivo esta apuntando a la instalación, el valor de esta variable vendra dado por la distancia del dispositivo a la instalación. Estas variables junto con el objeto ``point'' de la clase ``Vector2D'', que contiene la ubicación en un plano coordenadas de dos dimensiones (``x'' e ``y''), permitirá realizar los cálculos para identificar si el dispositivo se encuentra en frente de esta instalación o no. En la Figura \ref{fig:dirSite} se explican los valores de estas variables.
+En la clase \texttt{ULLSite.java} encontramos los atributos necesarios para guardar toda la información de cada instalación. Los tres últimos atributos:  ``distToSite'' corresponde a la distancia entre el dispositivo y la instalación, ``dirToSite'' corresponde con la dirección en la que se encuentra la instalación en el mundo con respecto al dispositivo y ``coneValue'' representa un rango de amplitud  con respecto a ``dirToSite'' a partir del cual se considerará que el dispositivo se encuentra apuntando a la instalación, el valor de esta variable vendrá dado por la distancia del dispositivo a la instalación. Estas variables, que se calculan en tiempo de ejecución, junto con el objeto ``point'' de la clase ``Vector2D'', que contiene la ubicación en un plano coordenadas de dos dimensiones (``x'' e ``y''), permitirá realizar los cálculos para identificar si el dispositivo se encuentra apuntando a una instalación o no. En la Figura \ref{fig:dirSite} se explican la utilidad de estas variables en los cálculos a realizar.
 
 \begin{figure}[h] 
     \centering
@@ -428,15 +419,19 @@ En la clase ULLSite.java encontramos los atributos necesarios para guardar toda 
   
 \subsubsection{Navigation.java}
 
-La clase ``Navigation'' es la clase principal encargada de  ejecutar todos métodos y realizar todos los calculos que permiten identificar las instalaciones. A partir de los datos obtenidos de los sensores y de las ubicaciones de las instalaciones permite identificar el centro más cercano que se encuentra en la dirección del dispositivo y también el resto de centros en esta misma dirección. En el Listado \ref{lst:NavigationResumen} podemos ver las variables y métodos de la clase.
+La clase ``Navigation'' es la clase principal encargada de  ejecutar todos métodos y realizar todos los cálculos que permiten identificar las instalaciones. A partir de los datos obtenidos de los sensores y de las ubicaciones de las instalaciones permite identificar el centro más cercano que se encuentra en la dirección del dispositivo y también el resto de los centros en esta misma dirección. En el Listado \ref{lst:NavigationResumen} podemos ver las variables y métodos de la clase.
 
 \bigskip
 
-\lstinputlisting[language=java, caption={Fichero \texttt{Navigation.java}. Clase ``Navigation'' que contiene las variables y métodos para los cálculos de las instalaciones.}, label={lst:NavigationResumen},]{listings/NavigationResumen.java}
+\lstinputlisting[language=java, caption={Fichero \texttt{Navigation.java}, clase ``Navigation'' que contiene las variables y métodos para los cálculos de las instalaciones.}, label={lst:NavigationResumen},]{listings/NavigationResumen.java}
 
-A continuación se explicara de forma detallada la implementación de los métodos principales de esta clase.
+A continuación se explicará de forma detallada la implementación de los métodos principales de esta clase.
 
 En Listado \ref{lst:calculateCone} encontramos el método que calcula el tamaño de la variable ``coneValue'' de una instalación. El valor de ésta se calcula de modo que cuanto más cerca se encuentre el dispositivo de una instalación, mayor sea el rango con el que poder decidir si se encuentra delante de ella o no y, por el contrario, que este valor sea menor cuando se encuentre lejos de la instalación.
+\bigskip
+
+\bigskip
+
 \bigskip
 \begin{lstlisting}[caption={Código para calcular el \textit{coneValue} de identificación de cada instalación.}, label={lst:calculateCone}]
     public double calculateCone(double dist) {
@@ -456,18 +451,18 @@ En Listado \ref{lst:calculateCone} encontramos el método que calcula el tamaño
     }
 \end{lstlisting}
 
-El cálculo del ángulo formado pos dos puntos geográficos lo realizamos con el método ``Vector2D.getAngleRad(Vector2D v2)'', como podemos ver en el Listado \ref{lst:angle}.
+El cálculo del ángulo formado por dos puntos geográficos lo realizamos con el método ``Vector2D.getAngleRad(Vector2D v2)'', como podemos ver en el Listado \ref{lst:angle}.
 
-\begin{lstlisting}[caption={Metodo que cálcula el ángulo formado por dos puntos.}, label={lst:angle}]
+\begin{lstlisting}[caption={Método que calcula el ángulo formado por dos puntos.}, label={lst:angle}]
     public double getAngleRad(Vector2D v2) {
-        double dx = v2.getX() - getX(); //Caculamos las distancias en el eje x e y
+        double dx = v2.getX() - getX(); //Calculamos las distancias en el eje x e y
         double dy = v2.getY() - getY();
-        double radian = Math.atan2(dy, dx); //Relizamos la arcotangente para calcular el angulo
+        double radian = Math.atan2(dy, dx); //Realizamos la arcotangente para calcular el angulo
         return radian; //Devolvemos el resultado
     }
 \end{lstlisting}
 
-A este valor calculado, hay que aplicarle unas transformaciones para que se ajuste a la orientacion del norte magnético como el inicio de la rotación (norte magnético = 0º), para ello, el método ``Navigation.recalculeAng(double angleRad)'' se encarga de la correcta reorientación (véase Listado \ref{lst:reca}). 
+A este valor calculado, hay que aplicarle unas transformaciones para que se ajuste a la orientación del norte magnético como el inicio de la rotación (norte magnético = 0º), para ello, el método ``Navigation.recalculeAng(double angleRad)'' se encarga de la correcta reorientación (véase Listado \ref{lst:reca}). 
 
 \begin{lstlisting}[caption={Método que recalcula en ángulo para orientarlo en función del norte magnético.}, label={lst:reca}]
     private double recalculeAng(double angleRad) {
@@ -477,17 +472,17 @@ A este valor calculado, hay que aplicarle unas transformaciones para que se ajus
 }   
 \end{lstlisting}
 
-El método ``whatCanSee'' \ref{lst:whatCanSee} es el metodo principal que se encargara, a partir de los datos de ubicación y direccion del dispositivo, de indentificar que instalaciones se encuentran en frente del dispositivo y cual es la más cercana. Para ello, en un primer paso, calculamos las distancias de las  instalaciones y las que se encuentran a una distancia mayor que ``maxDist'' y menor que ``minDist'' serán descartadas, para poder reducir el número de instalaciones a identificar. A continuación, para cada instalación anterior calculamos su dirección, posición y el valor del cono, con respecto a la ubicación del dispositivo. Si la instalacion se encuentra orientado dentro del cono que se forma en la dirección de la instalación, esta instalación se considerará como un posible resultado y se añadirá a la variable con una lista de estos resultados, ``result''. De los posibles resultados, la instalación más cercana al dispositivo será la instalación ante la que teoricamente se encuentra el dispositivo y guardará ésta el principio de esta lista.
+El método ``whatCanSee'' \ref{lst:whatCanSee} es el método principal que se encargará, a partir de los datos de ubicación y dirección del dispositivo, de identificar que instalaciones se encuentran en frente del dispositivo y cuál es la más cercana. Para ello, en un primer paso, calculamos las distancias de las  instalaciones y las que se encuentran a una distancia mayor que ``maxDist'' y menor que ``minDist'' serán descartadas, para poder reducir el número de instalaciones a identificar. A continuación, para cada instalación anterior calculamos su dirección, posición y el valor del cono, con respecto a la ubicación del dispositivo. Si la instalación se encuentra orientado dentro del cono que se forma en la dirección de la instalación, esta instalación se considerará como un posible resultado y se añadirá a la variable con una lista de estos resultados, ``result''. De los posibles resultados, la instalación más cercana al dispositivo será la instalación ante la que teóricamente se encuentra el dispositivo y guardará ésta en el principio de esta lista.
  
-\begin{lstlisting}[caption={Metodo principal que realiza el cálculo que permite reconocer las instalaciones en frente al dispositivo móvil.}, label={lst:whatCanSee}]
+\begin{lstlisting}[caption={Método principal que realiza el cálculo que permite reconocer las instalaciones en frente al dispositivo móvil.}, label={lst:whatCanSee}]
     //Metodo principal que se encarga identificar las instalaciones en frente del dispositivo
     //Recibe la posicion y orientacion actual del dispositivo
     //Devuelve la lista de instalaciones en esa direccion indicando cual es la mas cercana 
     public ArrayList<ULLSite> whatCanSee(LatLng currentPosAux, double actualDir) {
         currentPos.set(actualPos.longitude, actualPos.latitude); //Posicion actual del dispositivo
         currentDir = actualDir;  //Orientacion del dispositivo
-        int id = -1;  //indice de la instalacion mas cercana en frente del dispositivo
-        double nearSiteDist = maxDist; //distancia maxima valida para identificar un instalacion
+        int id = -1;  //Indice de la instalacion mas cercana en frente del dispositivo
+        double nearSiteDist = maxDist; //Distancia maxima valida para identificar un instalacion
         //Array a devolver con las instalaciones encontradas
         ArrayList<ULLSite> result = new ArrayList<>(); 
         //Calculamos todos los sitios que se encuentran entre maxDist y minDist
@@ -497,7 +492,7 @@ El método ``whatCanSee'' \ref{lst:whatCanSee} es el metodo principal que se enc
                 destSites.add(allSites.get(i));
             }
         }
-        //Para cada los sitio dentro del rango anterior 
+        //Para cada los sitios dentro del rango anterior 
         for (int i = 0; i < destSites.size(); i++) {  
             //Calculamos la direccion, distancia y valor del cono de cada instalacion a partir 
             //de la actual ubicacion del dispositivo
@@ -519,7 +514,7 @@ El método ``whatCanSee'' \ref{lst:whatCanSee} es el metodo principal que se enc
             }
         }
         if (id != -1) {                        //Si hemos encontrado alguna instalacion
-            result.add(0, destSites.get(id));  //La instalacion mas cercana la guadamos la primera
+            result.add(0, destSites.get(id));  //La instalacion mas cercana la guardamos la primera
             return result;                     //Devolvemos las instalaciones                   
         } else
             return null;                        //Si no encontramos ninguna instalacion
@@ -527,16 +522,15 @@ El método ``whatCanSee'' \ref{lst:whatCanSee} es el metodo principal que se enc
 \end{lstlisting}
 
 
-
  
 
 \subsection{Obtención de la información}
 
-Como hemos comentado anteriormente, toda la información perteneciente a las instalaciones de la ULL estarán en una base de datos. Además, para comunicarse con ésta, se dispone de un servidor que atienda a las peticiones de la aplicación, se conecte con esta base de datos y  envié la información. Más adelante, en el capítulo \ref{chap:BackEnd}, explicaremos detalladamente como funciona esta base de datos y servidor. Por ahora nos centraremos en explicar como realizamos la conexión con el servidor y el tipo de respuesta que obtenemos.
+Como hemos comentado anteriormente, toda la información perteneciente a las instalaciones de la ULL estará en una base de datos. Además, para comunicarse con ésta, se dispone de un servidor que atienda a las peticiones de la aplicación, se conecte con esta base de datos y  envié la información. Más adelante, en el capítulo \ref{chap:BackEnd}, explicaremos detalladamente como funciona esta base de datos y servidor. Por ahora nos centraremos en explicar cómo realizamos la conexión con el servidor y el tipo de respuesta que obtenemos.
 
-Para poder realizar una petición al servidor utilizaremos la clase ``GetData''. Que formaliza la petición con la url que le pasemos como parámetro a la función ``doInBackground'' y devuelve un string con la respuesta del servidor. En el Listado Listado \ref{lst:getData} podemos ver como funciona esta función. 
+Para poder realizar una petición al servidor utilizaremos la clase ``GetData''. Esta clase formaliza una petición con la url que le pasemos como parámetro al metodo ``doInBackground'' y devuelve una cadena de caracteres con la respuesta del servidor. En el Listado \ref{lst:getData} podemos ver cómo funciona esta método. 
 
-\lstinputlisting[language=java, caption={Fichero \texttt{GetData.java}, Código encargado de la conexión con el servidor y manejar la respuesta.}, label={lst:getData},]{listings/models/GetData.java} 
+\lstinputlisting[language=java, caption={Fichero \texttt{GetData.java}, código encargado de la conexión con el servidor y manejar la respuesta.}, label={lst:getData},]{listings/models/GetData.java} 
 
 En el Listado \ref{lst:getSitesFromDB} encontramos el método ejecutado en la clase ``ARNavigation'' para realizar la conexión con el servidor para obtener la respuesta de la base de datos con todas las instalaciones de ULL. Posteriormente, se creará una instancia de la clase ``Navigation'' con todas las instalaciones de la base de datos en formato JSON. Este objeto lo denominaremos con el nombre de ``navULL'' y será el objeto encargado de identificar las instalaciones y trabajar con ellas.
 
@@ -551,19 +545,20 @@ En el Listado \ref{lst:getSitesFromDB} encontramos el método ejecutado en la cl
             GetData getSites = new GetData();
             String sites = getSites.execute("https://server-ull-ar.herokuapp.com/api/ull-sites").get();
             JSONArray array = new JSONArray(sites);
-            //Creamos una instancia del la clase "Navigation" con todas las instalaciones
+            //Creamos una instancia de la clase "Navigation" con todas las instalaciones
             //Este es el objeto encargado de encontrar las instalaciones
             navULL = new Navigation(array); 
         } catch (JSONException e) {...}
 }
 \end{lstlisting}
 
-Los últimos datos que se necesitan para trabajar con en el objeto ``navULL'' son los valores de ``maxRadius'' y ``minRadius'', los cuales el usuario puede editar en la ventana de \textit{Configuración} y que podemos acceder desde cualquier activity gracias a las ``Shared Preferences". Las Shared Preferences son un conjunto de datos accesible desde cualquier activity de la aplicación y que se utiliza para guardar los ajustes del usuario. En el método ``getRadius()'' del Listado \ref{lst:shared} vemos como se accede a estos datos.
+Los últimos datos que se necesitan para trabajar con en el objeto ``navULL'', son los valores de ``maxRadius'' y ``minRadius'', los cuales el usuario puede editar en la ventana de \textit{Configuración} y que podemos acceder desde cualquier activity gracias a las ``Shared Preferences". Las Shared Preferences son un conjunto de datos accesible desde cualquier activity de la aplicación y que se utiliza para guardar los ajustes del usuario. En el método ``getRadius()'' del Listado \ref{lst:shared} vemos como se accede a estos datos.
 
 \begin{lstlisting}[language=java, caption={Fichero \texttt{ARNavigation.java}, código que se encarga de guardar los valores de ``maxDist'' y ``minDist'' del objeto ``navULL''},  label={lst:shared}]
     private void getRadius() {
         try {
-            //Obtenemos los valores configurables "maxRadius" y "minRadius" en la ventana de "Configuracion"
+            //Obtenemos los valores configurables "maxRadius" y "minRadius" en la ventana de 
+            //"Configuracion"
             settingsPref = PreferenceManager.getDefaultSharedPreferences(getContext());
             String auxMaxRadius = settingsPref.getString("maxRadius", "null");
             String auxMinRadius = settingsPref.getString("minRadius", "null");
@@ -573,14 +568,13 @@ Los últimos datos que se necesitan para trabajar con en el objeto ``navULL'' so
     }
 \end{lstlisting}
 
-
 \subsection{Visualización}
 
-El activity ``ARNavigation'' será el encargado de mostrar la técnica de realidad aumentada por geolozación en la pantalla de dispositivo móvil. Este activity hereda de la clase ``ARActivity'' perteneciente al  SDK de Kudan para Android Studio. Este SDK permite el reconocimiento de objetos e imágenes a trávez de la camara del dispositivo y queda como recurso para una futura ampliación de la funcionalidad de la aplicación. El uso principal de esta clase es el acceso que otorga a cámara del dispositivo como vista principal del activity. Es decir, permite visualizar en la ventana lo que se esta observando con la cámara.
+El activity ``ARNavigation'' será el encargado de mostrar la técnica de realidad aumentada por geolocalización en la pantalla de dispositivo móvil. Este activity hereda de la clase ``ARActivity'' perteneciente al  SDK de Kudan para Android Studio. Este SDK permite el reconocimiento de objetos e imágenes a través de la cámara del dispositivo y queda como recurso para una futura ampliación de la funcionalidad de la aplicación. El uso principal de este SDK en la aplicación ULL-AR, es el acceso que otorga a cámara del dispositivo como vista principal del activity. Es decir, permite visualizar en la ventana lo que se está observando con la cámara.
 
 Para poder hacer uso del SDK de Kudan tenemos que descargar el SDK y configurar la ``ARAPIkey'' específica para nuestro proyecto. Ambos los podemos encontrar en la página oficial de Kudan \cite{URL::kudan}. 
 
-El archivo que contiene el SDK descargado, llamado \texttt{KudaAR.aar}, tenemos que pegarlo en la carpeta \textit{/app/libs/} de nuestro proyecto. A continuación tenemos de añadir la siguiente linea de código a las dependencias del fichero \texttt{build.gradle} de la aplicación:
+El archivo que contiene el SDK descargado, llamado \texttt{KudaAR.aar}, tenemos que pegarlo en la carpeta \textit{/app/libs/} de nuestro proyecto. A continuación tenemos de añadir la siguiente línea de código a las dependencias del fichero \texttt{build.gradle} de la aplicación:
 
 \begin{lstlisting}
     implementation(name: 'KudanAR', ext: 'aar')
@@ -600,9 +594,9 @@ El fichero \texttt{aractivity.xml} (véase Listado \ref{lst:aractivity.xml}) con
 
 \lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{aractivity.xml}, layout del activity ``ARNavigation''.}, label={lst:aractivity.xml},]{listings/aractivity.xml}
 
-Los elementos del layout se mostrarán o ocultarán en función de si el usuarios se  encuentra en frente de una instalación o no, como podemos ver en el Listado \ref{lst:orientacionL}, se muestra como y cuando se alterna la información del layout.
+Los elementos del layout se mostrarán u ocultarán en función de si el usuario se  encuentra en frente de una instalación o no. Como podemos ver en el Listado \ref{lst:orientacionL}, se muestra cómo y cuándo se alterna la información del layout.
 
-Por último tenemos que configurar el funcionamiento de los botones ``moreInfoButton'' y ``moreSitesButton'' (véase Listado \ref{lst:infobutton}), que mostrarán una ventana con la ficha de información de la instalación y una ventana con una lista que contiene las instalaciones que tambien se encuentran la dirección a la que estamos orientados respectivamente. 
+Por último, tenemos que configurar el funcionamiento de los botones ``moreInfoButton'' y ``moreSitesButton'' (véase Listado \ref{lst:infobutton}), que mostrarán, respectivamente, una ventana con la ficha de información de la instalación que se esta viendo actualmente y una ventana con una lista que contiene el resto de las instalaciones que se encuentran en la misma dirección. 
 
 \begin{lstlisting}[caption={Fichero \texttt{ARNavigation.java}, código para manejar los eventos de los botones.},  label={lst:infobutton}]
     public void onClick(View v) {
@@ -626,10 +620,9 @@ Por último tenemos que configurar el funcionamiento de los botones ``moreInfoBu
     }
 \end{lstlisting}
 
-
 \section{Fragmentos}
 
-Los fragmentos \cite{URL::fragment} actuan como una sección modular de un activity que tiene su ciclo de vida propio, es decir, recibe sus propios eventos de entrada y que se pueden agregar o quitar mientras el activity se esté ejecutando. Se han utilizados estos fragmentos para mostrar el contenido de ciertas ventanas de la aplicación. La principal ventaja que nos aportan los fragmentos, es la facilidad que se tiene para intercambiar fragmentos dentro de un mismo activity y la mejora de rendimiento que se obtiene con respecto a creación de un activity para cada ventana que queramos en nuestra aplicación.
+Los fragmentos \cite{URL::fragment} actúan como una sección modular de un activity que tiene su ciclo de vida propio, es decir, recibe sus propios eventos de entrada y que se pueden agregar o quitar mientras el activity se esté ejecutando. Se han utilizados estos fragmentos para mostrar el contenido de ciertas ventanas de la aplicación. La principal ventaja que nos aportan los fragmentos es la facilidad que se tiene para intercambiar fragmentos dentro de un mismo activity y la mejora de rendimiento que se obtiene con respecto a creación de un activity para cada ventana que queramos en nuestra aplicación.
 
 \subsection{MapsFragment}
        
@@ -641,7 +634,7 @@ Este fragmento contiene el mapa generado por la API de Google Maps. Para poder u
 </resources>
 \end{lstlisting}
  
-A su vez, debemos añadir la siguiente linea a las dependencias de fichero \texttt{build.gradle} de la aplicación:
+A su vez, debemos añadir la siguiente línea a las dependencias de fichero \texttt{build.gradle} de la aplicación:
  
 \begin{lstlisting}
     implementation 'com.google.android.gms:play-services-maps:15.0.1'
@@ -651,24 +644,24 @@ Con esto ya podremos utilizar la API de Google Maps en nuestra aplicación. Ahor
 
 Crearemos un fragmento en Android Studio con el nombre de \textit{MapsFragment}. Se generará un fichero llamado \texttt{MapsFragment.java} y un layout asociado, \texttt{fragment\_maps.xml}.
 
-La clase ``MapsFragment'' (véase Listado \ref{lst:mapsF}) se encargará de: obtener la ubicación, dibujar en el mapa los marcadores las instalaciones de ULL, la ubicación del dispositivo y, si se activa en los ajustes, las dos circunferencias, cuyo centro es la ubicacion del dispositivo y que representaran un rango de busqueda de las instalaciones. Este rango funcionará a modo de que solo aparezcan las instalaciones que se encuentran en el espacio entre las dos circunferencias. En esta clase se harán uso de los métodos que ya vimos para obtener la ubicación GPS, las instalaciones de la base de datos y los datos necesarios guardados en las Shared Preferences.   
+La clase ``MapsFragment'' (véase Listado \ref{lst:mapsF}) se encargará de: obtener la ubicación, dibujar en el mapa los marcadores las instalaciones de ULL, la ubicación del dispositivo y, si se activa en los ajustes, las dos circunferencias, cuyo centro es la ubicacion del dispositivo y que representaran un rango de búsqueda de las instalaciones. Este rango funcionará a modo de que solo aparezcan las instalaciones que se encuentran en el espacio entre las dos circunferencias. En esta clase se harán uso de los métodos que ya vimos para obtener la ubicación GPS, las instalaciones de la base de datos y los datos necesarios guardados en las Shared Preferences.   
 
 \bigskip
 
 \lstinputlisting[caption={Fichero \texttt{MapsFragment.java}, métodos principales.}, label={lst:mapsF},]{listings/MapsFragment.java}
 
-El fichero \texttt{fragment\_maps.xml}(véase Listado \ref{lst:mapsL}) contiene la vista del mapa de Google Maps en el cual se dibujaran los marcadores y los circulos que hemos comentado. Además incorpora un botón con el nombre de ``AR Mode'' que lanzará la ventana de \textit{Navegación en modo AR} que contiene el modo de realidad aumentada.
+El fichero \texttt{fragment\_maps.xml}(véase Listado \ref{lst:mapsL}) contiene la vista del mapa de Google Maps en el cual se dibujarán los marcadores y los círculos que hemos comentado. Además incorpora un botón con el nombre de ``AR Mode'' que lanzará la ventana de \textit{Navegación en modo AR}.
 
-\lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{fragment\_maps.xml}.}, label={lst:mapsL},]{listings/fragment_maps.xml}
+\lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{fragment\_maps.xml}, vista del mapa de la API de Google Maps.}, label={lst:mapsL},]{listings/fragment_maps.xml}
     
 
 \subsection{HomeFragment}
 
-El fragmento ``HomeFragment'' es la primera vista que encontramos cuando iniciamos sesión con éxito en la aplicación. Para el diseño de este fragmento se decidio por utilizar el modelo de ``RecyclerView'' \cite{URL::recycler}. Este modelo nos permite la visualización de listas de elementos de una forma más flexible, permitiendo configurar el contenido de cada elemento mediante el uso de adaptadores. Un adaptador permite crear las vistas de cada item de la lista a partir del contenido de las variables de cada uno de ellos. Además, cada adaptador gestiona los eventos cuando un item es seleccionado.
+El fragmento ``HomeFragment'' es la primera vista que encontramos cuando iniciamos sesión con éxito en la aplicación. Para el diseño de este fragmento se decidió por utilizar el modelo de ``RecyclerView'' \cite{URL::recycler}. Este modelo nos permite la visualización de listas de elementos o items de una forma más flexible, permitiendo configurar la vista de cada item mediante el uso de adaptadores. Un adaptador permite crear las vistas de cada item de una lista a partir del contenido de las variables de cada uno de ellos. Además, cada adaptador gestiona los eventos de cuando un item es seleccionado.
 
-El contenido de cada item vendrá dada por la clase ``ItemHome'' (véase Listado \ref{lst:itemhom}). Los atributos de esta clase serán: una imagen, un nombre, una variable si indica si es o no un enlace externo del navegador y la url del enlace.
+El contenido de cada item vendrá dado por la clase ``ItemHome'' (véase Listado \ref{lst:itemhom}). Los atributos de esta clase serán: una imagen, un nombre, una variable que indica si es o no un enlace externo del navegador y la url del enlace.
 
-\begin{lstlisting}[caption={Fichero \texttt{ItemHome.java}.},  label={lst:itemhom}]
+\begin{lstlisting}[caption={Fichero \texttt{ItemHome.java}, clase de que contendrá  el contenido de cada item de la ventana de \textit{Inicio}.},  label={lst:itemhom}]
 public class ItemHome {
     private String name;        //Nombre
     private String image;       //Ruta de la imagen
@@ -676,22 +669,20 @@ public class ItemHome {
     private String link;        //Ruta del enlace
     //Constructor con los parametros
     public ItemHome(String name, String image, boolean isWebLink, String link){
-        this.name = name;
         ...
     }
-    ... //Get() y Set() metodos de los atributos
+    ... //Metodos Get() y Set() de los atributos
 }
 \end{lstlisting}
 
-Con una lista de estos items, nuestro adaptor construirá el layout de cada item y luego se incorporarán a la vista de RecyclerView. La clase encargada de este procedimiento se llamará ``ItemHomeAdapter'' y hereda del adaptador ``RecyclerView.Adapter'' (véase Fichero \ref{lst:adapterItem}). Los atributos de esta clase son: una lista de los items, el layout con el diseño de cada item y un objeto ``OnItemClickListener'' que manejará los eventos de cada item. Dentro de esta clase, tendremos una clase ``ViewHolder'' que hereda de ``RecyclerView.ViewHolder'' y se encargará de enlazar el contenido de cada item con su layout. El layout con la vista de cada item lo encontraremos en el fichero \texttt{adapter\_item\_home.xml} (véase Fichero \ref{lst:itemView}). Este layout contendrá la imagen del item en la parte superior y el nombre inferior.
+Con una lista de estos items, nuestro adaptador configurará la vista de cada item y luego se incorporarán a la vista de RecyclerView. La clase encargada de este procedimiento se llamará ``ItemHomeAdapter'' y hereda del adaptador ``RecyclerView.Adapter'' (véase Fichero \ref{lst:adapterItem}). Los atributos de esta clase son: una lista de los items, el layout con el diseño de cada item y un objeto ``OnItemClickListener'' que manejará los eventos de cada item. Dentro de esta clase, tendremos una clase ``ViewHolder'' que hereda de ``RecyclerView.ViewHolder'' y se encargará de enlazar el contenido de cada item con su layout. El layout con la vista de cada item lo encontraremos en el fichero \texttt{adapter\_item\_home.xml} (véase Fichero \ref{lst:itemView}). Este layout contendrá la imagen del item en la parte superior y el nombre inferior.
      
     
-\lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{adapter\_home\_item.xml}.}, label={lst:itemView},]{listings/adapter_home_item.xml}
+\lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{adapter\_home\_item.xml}, vista del adaptador de cada item de la ventana de \textit{Inicio}.}, label={lst:itemView},]{listings/adapter_home_item.xml}
 
 \bigskip
 
-
-\begin{lstlisting}[caption={Fichero \texttt{ItemHomeAdapter.java}, clase que contruye las vistas de los items.},  label={lst:adapterItem}]
+\begin{lstlisting}[caption={Fichero \texttt{ItemHomeAdapter.java}, clase que construye las vistas de los items.},  label={lst:adapterItem}]
 public class ItemHomeAdapter extends RecyclerView.Adapter<ItemHomeAdapter.ViewHolder> {
     private List<ItemHome> items;
     private int layout;
@@ -722,80 +713,83 @@ public class ItemHomeAdapter extends RecyclerView.Adapter<ItemHomeAdapter.ViewHo
         //Asignamos a cada vista el contenido de su item correspondiente 
         public void bind(final ItemHome itemHome, final OnItemClickListener listener){
             this.itemName.setText(itemHome.getName()); //Asignamos el texto
-            ... //Asingamos la ruta de la imagen
+            ... //Asignamos la ruta de la imagen
             itemView.setOnClickListener(new View.OnClickListener() { ... });//Listener del item
     }
 }
 \end{lstlisting}
 
-La clase ``HomeFragment''(véase Listado \ref{lst:homeF}) se encargará de instanciar los objetos de la clase ``ItemHome'' y el adaptador, ``ItemHomeAdapter'', para que se situén correctamente en la vista que contiene el RecyclerView (véase Listado \ref{lst:homeL}). 
+La clase ``HomeFragment''(véase Listado \ref{lst:homeF}) se encargará de instanciar los objetos de la clase ``ItemHome'' y el adaptador, ``ItemHomeAdapter'', para que se sitúen correctamente en la vista que contiene el RecyclerView (véase Listado \ref{lst:homeL}). 
 
-\lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{fragment\_home.xml}.}, label={lst:homeL},]{listings/fragment_home.xml}
+\lstinputlisting[caption={Fichero \texttt{HomeFragment.java}, activity de la ventana de \textit{Inicio}.}, label={lst:homeF},]{listings/HomeFragment.java}
+
+\lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{fragment\_home.xml}, vista principa de la ventana de \textit{Inicio}.}, label={lst:homeL},]{listings/fragment_home.xml}
   
-
-\lstinputlisting[caption={Fichero \texttt{HomeFragment.java}.}, label={lst:homeF},]{listings/HomeFragment.java}
 
 
 \subsection{AboutFragment}
 
-El fragmeto ``AboutFragment'' se encargar de mostar la ventana de la aplicación con la información general de la aplicación. Este consta simplemente de un fichero \texttt{Fragment.java} que muestra el layout que contiene esta información (véase Listado \ref{lst:aboutL}).
+El fragmento ``AboutFragment'' se encargar de mostrar la ventana de \textit{Información} la aplicación con la información general de la aplicación. Este consta simplemente de un fichero \texttt{Fragment.java} que muestra el layout que contiene esta información (véase Listado \ref{lst:aboutL}).
 
-\lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{fragment\_about.xml}.}, label={lst:aboutL},]{listings/fragment_about.xml}
-
+\lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{fragment\_about.xml}, vista de la ventana de \textit{Información}.}, label={lst:aboutL},]{listings/fragment_about.xml}
 
 \section{Menú}
 
-El menú de la aplicación constituye el elemento principal por el que el usuario navegará por la misma. Por ello se optado por incorporar un menú lateral deslizante llamado \textit{Navigation Drawer}. Este ha sido implementado por Google y lo encontramos en sus principales aplicaciones como ``Gmail'' y ``Google Play''. Un menú Navigation Drawer es un layout que incorpora dentro del mismo la vista de otras ventanas que se encuentren formato de fragmentos  y facilita que el cambio entre los fragmentos sea fluido y rápido. Este menú (véase Figura \ref{fig:menuApp}) se desplegará pulsando en la esquina superior izquierda de la aplicación.
+El menú de la aplicación constituye el elemento principal por el que el usuario navegará por la misma. Por ello se optado por incorporar un menú lateral deslizante llamado \textit{Navigation Drawer}. Éste es un menú que ha sido implementado por Google, se encuentra en sus principales aplicaciones como ``Gmail'' y ``Google Play''. Un menú Navigation Drawer es un layout que incorpora dentro del mismo la vista de otras ventanas que se encuentren formato de fragmentos y facilita que el cambio entre los fragmentos sea fluido y rápido. Este menú (véase Figura \ref{fig:menuApp}) se desplegará pulsando en la esquina superior izquierda de la aplicación.
    
-El fichero \texttt{navigation\_draw.xml} contiene la vista del Navigation Draw. Aqui contamos con layout para el contenido principal a mostrar en la aplicación, la barra superior de la aplicación la que ira el nombre de \textit{ULL-AR}, un ``FrameLayout'' en el que ira el fragmento actual a mostrar y un ``NavigationView'' que será la vista del menú que un inicio estará sin desplegar.
+El fichero \texttt{navigation\_draw.xml} contiene la vista del Navigation Draw. Aquí contamos con un layout que muestra: la barra superior de la aplicación en la que irá el nombre de la aplicación ``ULL-AR'', un ``FrameLayout'' en el que irá el fragmento actual a mostrar y un ``NavigationView'' que será la vista del menú Navigation Drawer y que al inicio de la aplicación estará sin desplegar.
 
-\lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{navigation\_draw.xml}. Layout del Navigation Drawer.}, label={code:navigation_draw.xml},]{listings/navigation_draw.xml}
+\lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{navigation\_draw.xml}, layout del Navigation Drawer.}, label={code:navigation_draw.xml},]{listings/navigation_draw.xml}
 
-En cuanto al menú del Navigation Drawer, tenemos una cabecera (véase Listado \ref{code:header_navigation_drawer.xml}) con una imagen de la ULL y el debajo el nombre del usuario. Debajo de la cabecera tenemos las opciones del menú que vienen dadas por el fichero \texttt{nav\_options.xml} (véase Listado \ref{lst:nav_options.xml}). Cada uno de los items de opciones tiene un id, icono asociado y nombre.
+En cuanto al contenido del menú del Navigation Drawer, se encuentra una cabecera en la parte superior del menú con una imagen de la ULL y el nombre del usuario (véase Listado \ref{code:header_navigation_drawer.xml}). Después de la cabecera se encuentran las opciones del menú que vienen dadas por el fichero \texttt{nav\_options.xml} (véase Listado \ref{lst:nav_options.xml}). Cada uno de los items del menu de opciones, tiene: un identificador, un icono asociado y un nombre.
 
-
-\lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{header\_navigation\_drawer.xml}. Cabecera del Navigation Drawer.}, label={code:header_navigation_drawer.xml},]{listings/header_navigation_drawer.xml}
+\lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{header\_navigation\_drawer.xml}, cabecera del Navigation Drawer.}, label={code:header_navigation_drawer.xml},]{listings/header_navigation_drawer.xml}
    
+\bigskip
 
-\lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{nav\_options.xml}. Opciones del menu Navigation Drawer.}, label={lst:nav_options.xml},]{listings/nav_options.xml}
+\lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{nav\_options.xml}, opciones del menú Navigation Drawer.}, label={lst:nav_options.xml},]{listings/nav_options.xml}
 
-Para la implementación del menú se utilizado una clase heredable llamada \texttt{BaseActivity.java} la cual incorpora la vista del Navigation Drawer, gestionará las opciones de el menú, cambiará los fragmentos y lanzará los activities principales de ULL-AR. 
+Para la implementación del menú se utilizado una clase heredable llamada \texttt{BaseActivity.java} la cual incorpora la vista del Navigation Drawer, gestionará las opciones del menú, cambiará los fragmentos y lanzará los activities principales de ULL-AR. 
 
+\lstinputlisting[language=java, caption={Fichero \texttt{BaseActivity.java}, código que se encarga de configurar la vista del Navigation Drawer.}, label={BaseActivity.java},]{listings/BaseActivity.java}
 
-\lstinputlisting[language=java, caption={Fichero \texttt{BaseActivity.java}. Código que se encarga de configurar la vista del Navigation Drawer.}, label={BaseActivity.java},]{listings/BaseActivity.java}
-
-
+Con esta clase cualquier activity que quiera incorporar el menú Navigation Drawer  solo tiene que heredar de ésta mediante la palabra reservada en Java ``extends'' y el nombre de la clase ``BaseActivity''.
 
         
 \section{Instalaciones de la ULL}
 
-En la base de datos se encuentran con la gran mayoría de las instalaciones de la ULL. Recordamos que todas estas instalaciones constan de su nombre, posicion, una breve descripción del mismo y una lista de enlaces a los servicios, grados, departamentos, etc. Toda esta información es accesible por el usuario, mediante la ventana de \textit{Todas las instalaciones} (véase Figura \ref{fig:allSitesApp}). Esta ventana permite al usuario buscar la facultad, edificio o centro, que se encuentre en la base de datos, para posteriormente permitirle acceder a la ficha de información de la instalación (véase Figura \ref{fig:siteInfoApp}). En esta ficha se encontrará el resto de la información con respecto a es instalación.
+En la base de datos se encuentran con la gran mayoría de las instalaciones de la ULL. Recordamos que todas estas instalaciones constan de su nombre, ubicación, una breve descripción de esta y una lista de enlaces a los servicios, grados, departamentos, etc. Toda esta información puede ser consultada por el usuario, mediante la ventana de \textit{Todas las instalaciones} (véase Figura \ref{fig:allSitesApp}). Esta ventana permite al usuario buscar la facultad, edificio o centro, que se encuentre en la base de datos, para posteriormente permitirle acceder a la ficha de información de la instalación (véase Figura \ref{fig:siteInfoApp}). En esta ficha se encontrará el resto de la información con respecto a esa instalación.
 
-En la ventana de \textit{Todas las instalaciones}  aparecerá una lista con todas las instalaciones con: su imagen a la izquierda y su nombre y descripción a la derecha. Para la creación de los items de la lista se opto por el uso de adaptadores al igual que en el fragmento ``HomeFragment'', pero sin la necesidad de una vista RecyclerView. La clase encargada de representar las instalaciones es ``SiteAdapter'', la cual hereda de la clase ``BaseAdapter'' de Android y, además, implementa la interfaz ``Filterable'' que permite aplicar, de forma dinámica, un filtro de busqueda sobre la lista de las instalaciones (véase Listado \ref{lst:SiteAdapter.java}). 
+En la ventana de \textit{Todas las instalaciones}  aparecerá una lista con todas las instalaciones con: su imagen a la izquierda y su nombre y descripción a la derecha. Para la creación de los items de la lista se optó por el uso de adaptadores al igual que en el fragmento ``HomeFragment'', pero sin la necesidad de una vista RecyclerView. La clase encargada de representar las instalaciones es ``SiteAdapter'', la cual hereda de la clase ``BaseAdapter'' de Android y, además, implementa la interfaz ``Filterable'' que permite aplicar, de forma dinámica, un filtro de búsqueda sobre la lista de las instalaciones (véase Listado \ref{lst:SiteAdapter.java}). El contenido a representar en cada vista vendrá dado por una lista de objetos de la clase ``ULLSiteSerializable''. Esta clase es una copia de la clase ``ULLSite'' (véase Listado \ref{lst:ULLSite})  pero que implementa la interfaz ``Serializable'' para permitir el paso de objetos de esta clase entre distintos activities. 
 
+\bigskip
+\bigskip
+\bigskip
 
+\lstinputlisting[language=java, caption={Fichero \texttt{SiteAdapter.java}, adaptador que configura la lista de instalaciones con su imagen, nombre y descripcion.}, label={lst:SiteAdapter.java},]{listings/adapters/SiteAdapter.java}
 
-\lstinputlisting[language=java, caption={Fichero \texttt{SiteAdapter.java}.}, label={lst:SiteAdapter.java},]{listings/adapters/SiteAdapter.java}
+\bigskip
+\bigskip
 
-Para la lista con los objetos a representar, se ha utilizado la clase ``ULLSiteSerializable'' que es una copia la clase  ``ULLSite'' (véase Listado \ref{lst:ULLSite}) pero que implementa la interfaz ``Serializable'' para permitir el paso de este objeto entre activities. 
-
-El activity ``SiteListActivity'' se encargará de instanciar el adaptador con la lista de instalaciones que reciba del anterior activity y, dispondrá en la barra superior de la aplicación la barra de busqueda. Esta barra de busqueda le dirá al adaptador el filtro que tiene aplicar cada vez que se escriba en ella o cuando el usuario le de al botón de buscar. Cuando una instalación de la lista sea seleccionada se lanzará el activity ``SiteDescriptionActivity'' y se le pasará el objeto que contiene la instalación seleccionada.
+El activity ``SiteListActivity'' (véase Listado \ref{lst:SiteListActivity.java}) se encargará de instanciar el adaptador ``SiteAdapter'' con la lista de objetos de instalaciones, las cuales recibe del activity anterior que lo ejecutó. Esté activity dispone de una barra de búsqueda la parte superior de la aplicación que permite al usuario buscar una instalación por su nombre. Ésta indicará al adaptador el filtro de búsqueda que tiene aplicar a los nombres de las instalaciones cada vez que se escriba en ella o cuando el usuario le dé al botón de buscar, de esta manera solo aparecerán una lista de instalaciones que coinciden con los caracteres de la barra de búsqueda. Cuando una instalación de la lista sea seleccionada, se lanzará el activity ``SiteDescriptionActivity'' y se le pasará el objeto que contiene la instalación seleccionada.
 
 \lstinputlisting[language=java, caption={Fichero \texttt{SiteListActivity.java}.}, label={lst:SiteListActivity.java},]{listings/SitesListActivity.java}
     
 
-La activity ``SiteDescriptionActivity'' muestra toda la información de la instalación contenida en el objeto ``ULLSiteSerializable'' que envió activity que lo ejecuto o lanzo a este. Es una ventana que dispondrá: de la imagen de la instalación junto con botón en la parte inferior que abrirá la ruta de la aplicación en Google Maps, el nombre de la instalación, su descripción y una serie de enlaces relacionados con esta. Cuando uno de los enlaces es seleccionado, se abrirá el navegador externo del dispositivo móvil.
+El activity ``SiteDescriptionActivity'' muestra toda la información de la instalación contenida en el objeto ``ULLSiteSerializable'' proveniente del activity que ejecutó o lanzo a éste. Este activity dispone de una ventana con: la imagen de la instalación junto con botón en la parte inferior que abrirá la ruta de la aplicación en Google Maps, el nombre de la instalación, su descripción y una serie de enlaces relacionados con ésta. Cuando uno de los enlaces es seleccionado, se abrirá el navegador externo del dispositivo móvil con la dirección web del enlace.
 
  
-\lstinputlisting[language=java, caption={Fichero \texttt{SiteListActivity.java}.}, label={lst:SiteListActivity.java},]{listings/SiteDescriptionActivity.java}
+\lstinputlisting[language=java, caption={Fichero \texttt{SiteDescriptionActivity.java}.}, label={lst:SiteDescriptionActivity.java},]{listings/SiteDescriptionActivity.java}
  
     
 \section{Preferencias del usuario}
 
-Necitamos un lugar donde el usuario pudiera editar los ajustes de la aplicación. Se ha utilizado la clase ``PrefenceActivity'' que ofrece Android para diseñar la ventana. El fichero \texttt{pref\_nav\_setting.xml} (véase Listado \ref{lst:pref_nav_setting.xml} contendrá la lista con los ajustes. Estos ajustes nos permitiran decidir si queremos encontrar las instalaciones, en el mapa o en el modo realidad aumentada, dentros de dos circunferencias y la dimensiones en metros de ambos radios. 
-
+Se necesita un lugar donde el usuario pueda editar los ajustes de la aplicación. Para ellos se ha utilizado la clase heredable ``PrefenceActivity'' que ofrece Android para diseñar una ventana en la que poder editar de forma rápida e intuitiva los ajustes de una aplicación Android. Desde Android Studio creamos un ``PrefenceActivity'' con el nombre de ``SettingsULLActivity''. A continuación, se generará un activity que hereda de ``PrefenceActivity'' en el cuál insertar la vista que contiene los ajustes de la aplicación. El fichero \texttt{pref\_nav\_setting.xml} (véase Listado \ref{lst:pref_nav_setting.xml}) contendrá la lista con los ajustes necesarios para la aplicación ULL-AR. Cada uno de estos ajustes se pueden disponer, en función del tipo ajuste que se cree, de un nombre, una descripción, una clave y un valor por defecto. Estos ajustes permitirán decidir al usuario si desea encontrar las instalaciones, en el mapa o en el modo realidad aumentada, dentro de dos circunferencias y la dimensiones en metros de ambos radios (véase Figura \ref{fig:settingsApp}).
+ 
 \lstinputlisting[language=XML, caption={Fichero \texttt{pref\_nav\_setting.xml}.}, label={lst:pref_nav_setting.xml},]{listings/pref_nav_settings.xml}
 
-Esta ventana de preferencias que ofrece Android nos permite trabajar con las Shared Preferences para guardar los ajustes y poder acceder a ellos en otras ventanas de la aplicación. En la clase ``SettingsULLActivity'' se inserta la vista con nuestras preferencias.
+Esta ventana para trabajar con los ajustes que ofrece Android permite trabajar con las Shared Preferences para guardar los ajustes y poder acceder a ellos en otras ventanas de la aplicación. Cuando editamos un valor en la ventana de la aplicación, este valor se guardará automáticamente en las Shared Preferences con el valor de la clave ``key''. Esta clave servirá para poder acceder al valor a través de las Shared Preferences en cualquier activity.
 
-\lstinputlisting[float,floatplacement=H,language=java, caption={Fichero \texttt{SettingsULLActivity.java}.}, label={lst:SettingsULLActivity.java},]{listings/SettingsULLActivity.java}
+% \lstinputlisting[language=java, caption={Fichero \texttt{SettingsULLActivity.java}.}, label={lst:SettingsULLActivity.java},]{listings/SettingsULLActivity.java}
+
+

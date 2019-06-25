@@ -1,6 +1,4 @@
 public class Navigation implements Serializable {
-
-    private static double PI = Math.PI; //Valor de PI
     //Distancia en metros a partir en la que una instalacion se considera con "cercana"
     private static final double NEAR_VALUE = 150; 
     //Cuando la distancia de una instalacion sea cercarna se utilizaran los valores
@@ -8,7 +6,7 @@ public class Navigation implements Serializable {
     private static final double MAX_CONE_GRADS_NEAR = Math.PI / 2; //Maximo valor del cono 
     private static final double MAX_CONE_GRADS_FAR = Math.PI / 8; //Maximo valor del cono
     private static final double MIN_CONE_GRADS = Math.PI / 20; //Minimo valor del cono
-    //Las variable SCALE_CONE son valores con los que al escalar el tamano de los conos la 
+    //Las variable SCALE_CONE son valores con los que al escalar las dimensiones de los conos la 
     //aplicacion reconocia las instalaciones de forma precisa
     private static final double SCALE_CONE_NEAR = 0.0078; //Variable que escala el cono
     private static final double SCALE_CONE_FAR = 0.00078; //Variable que escala el cono
@@ -25,8 +23,7 @@ public class Navigation implements Serializable {
     //Construimos el array de allSites con todas las instalaciones a partir de un JSON
     public Navigation(JSONArray jsonULLSitesAux) { ... }
     //Realizamos los calculos que nos permiten indentificar las instalaciones
-    public ArrayList<ULLSite> whatCanSee(LatLng currentPosAux, double actualDir) {      ... 
-    }
+    public ArrayList<ULLSite> whatCanSee(LatLng currentPosAux, double actualDir) { ... }
     //Calcula la distancia entre dos ubicaciones geograficas
     public double getDistanceBetween(Vector2D v1, Vector2D v2) { ... }
     //Comprobamos si la direccion del dispositivo se encuentra dentro de su cono de
@@ -41,5 +38,5 @@ public class Navigation implements Serializable {
     public double rotateRad(double rad) { ... }
     //Calculamos el valor del cono
     public double calculateCone(double dist) { ... }
-    ... //Metodos set() y get() de las variables
+    ... //Metodos Get() y Set() de las variables
 }

@@ -302,12 +302,12 @@ INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/fragment_maps.xml
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/adapter_home_item.xml
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/adapter_home_item.xml
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/adapter_home_item.xml
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/fragment_home.xml
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/fragment_home.xml
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/fragment_home.xml
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/HomeFragment.java
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/HomeFragment.java
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/HomeFragment.java
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/fragment_home.xml
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/fragment_home.xml
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/fragment_home.xml
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/fragment_about.xml
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/fragment_about.xml
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/fragment_about.xml
@@ -335,9 +335,6 @@ INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/SiteDescriptionActi
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/pref_nav_settings.xml
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/pref_nav_settings.xml
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/pref_nav_settings.xml
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/SettingsULLActivity.java
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/SettingsULLActivity.java
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/SettingsULLActivity.java
 OUTPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Back-end.aux
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Back-end.tex
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Back-end.tex

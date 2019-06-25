@@ -42,7 +42,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback ...{
     private void showSitesOnRadius(LatLng position){
         for (int i = 0; i < allSites.size(); i++) { //Para todas las instalaciones
             ... //Calculamos la distancia entre la instalacion y la ubicacion GPS
-            if(distance > minRadius && distance < maxRadius){ //Si la instalacion esta dentro del rango,
+            if(distance > minRadius && distance < maxRadius){ //Si la instalacion esta dentro del 
+                                                                    //rango
                 allMarkers.get(i).setVisible(true);  //mostramos su marcador 
             }else { ... } //Si no, lo ocultamos 
         }

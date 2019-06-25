@@ -1,20 +1,21 @@
 public class SiteDescriptionActivity extends ListActivity {
-    ULLSiteSerializable actualULLSite;  //Instalacion con su informacion
+    ULLSiteSerializable actualULLSite;  //Instalacion a mostrar con su informacion
     ... //Elementos de la interfaz a configurar
     ArrayList<String> listItems=new ArrayList<String>(); //Lista de enlaces la instalacion 
     ArrayAdapter<String> adapter;   //Adaptador con los enlaces
     @Override //Metodo que inicia el activity
     public void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_site_description); //Layout con la vista
-        //Configuramos la barra superior de la ventana
+        ... //Configuramos la barra superior de la ventana
+        //Obtenemos el objeto con la instalacion a mostrar
         actualULLSite = (ULLSiteSerializable) getIntent().getSerializableExtra("actualULLSite");
-        listItems = actualULLSite.getInterestPoints();
-        setUI();        //Introducimos los elementos visuales de layout
-        setListSites();     //Creamos el adaptador con los enlaces las instalaciones
+        listItems = actualULLSite.getInterestPoints(); //Obtenemos la lista de enlaces
+        setUI();        //Mostramos la informacion de las instalacion en la vista
+        setListSites();     //Creamos un adaptador con los enlaces las instalaciones
     }
     //Metodo que carga los textos, imagenes y enlaces de la instalacion a mostrar en la vista
-    public void setUI(){
-        ... //Introducimos el resto de elementos del layout 
+    public void setUI() {
+        ... //Introducimos la informacion del objeto de la instalacion en el layout 
         imageMaps.setOnClickListener(new View.OnClickListener() { 
             @Override //Comportamiento de boton que nos abre la ubicacion de Google Maps
             public void onClick(View v) { //Le pasamos a la url de maps + las coordenadas
@@ -26,9 +27,8 @@ public class SiteDescriptionActivity extends ListActivity {
         });
     }
     //Este metodo crea una adapatador con los enlaces de la instalacion
-    public void setListSites(){
-        adapter = new ArrayAdapter<String>(this, R.layout.link_item, android.R.id.text1,
-                listItems) { //
+    public void setListSites() {
+        adapter = new ArrayAdapter<String>(this, R.layout.link_item, android.R.id.text, listItems){
             @Override //Configuramos la vista de cada enlace
             public View getView(int position, View convertView, ViewGroup parent) {
                 ... //Indicamos que la vista esta contenida  en el fichero "link_item.xml"
@@ -40,8 +40,8 @@ public class SiteDescriptionActivity extends ListActivity {
                 ... //Lanzamos la url en el navegador externo
             }
         });
-        justifyListViewHeightBasedOnChildren(getListView()); 
-    }
+        justifyListViewHeightBasedOnChildren(getListView()); //Ajustamos las dimensiones de
+    }                                                              //la ventana
     //Metodo que recalcula las dimensiones del layout para poder hacer scroll horizontal
     public static void justifyListViewHeightBasedOnChildren (ListView listView) { ... }
 }

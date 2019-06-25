@@ -1,25 +1,15 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory
-        android:title="Preferencias de las instalaciones"
-        android:key="pref_key_storage_settings"/>
-    <SwitchPreference
-        android:defaultValue="false"
-        android:key="showRadius"
-        android:title="Mostrar sitios dentro de un rango"
-        android:summary="Selecciona el radio minimo y maximo de los circulos para mostrar instalaciones de la ULL partiendo desde su ubicacion"/>
+    <PreferenceCategory android:title="Preferencias de las instalaciones" .../>
+    <!-- Activar o no los radios de busqueda -->
+    <SwitchPreference android:key="showRadius"
+        android:title="Mostrar sitios dentro de un rango" .../>
+    <!-- Radio del circulo mayor -->
     <EditTextPreference
         android:defaultValue="max"
         android:inputType="number"
         android:key="maxRadius"
-        android:singleLine="true"
-        android:title="Selecciona radio circulo mayor (metros)"
-        android:enabled="false"/>
-    <EditTextPreference
-        android:defaultValue="min"
-        android:inputType="number"
-        android:key="minRadius"
-        android:singleLine="true"
-        android:title="Selecciona radio circulo menor (metros)"
-        android:enabled="false"/>
+        android:title="Selecciona radio circulo mayor (metros)" .../>
+    <!-- Radio del circulo menor -->
+    <EditTextPreference android:key="minRadius" ...>
 </PreferenceScreen>
 
