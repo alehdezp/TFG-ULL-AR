@@ -20,7 +20,7 @@ SRC      =                                                          \
 						Cap2_Technology.tex                         \
 						Cap3_ARInStudentEnvironments.tex	        \
 						Cap4_TheApplication.tex						\
-						Cap5_ConclusionsAndFutureLinesOfWork.tex	\
+						Cap6_Back-end.tex \
 
 						
 
