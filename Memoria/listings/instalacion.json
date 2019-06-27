@@ -1,0 +1,21 @@
+{
+    "id": "esit",
+    "name": "Escuela Superior de Ingenieria y Tecnologia",
+    "position": {
+        "lat": "28.482965",
+        "long": "-16.322003"
+    },
+    "desc": "La Escuela Superior de Ingenieria y Tecnologia es el organo ...",
+    "imageLink": "https://www.ull.es/donde/assets/img/facultades/esit.jpg",
+    "canFind": [
+        {
+            "id": "ESIT",
+            "link": "https://www.ull.es/centros/escuela-superior-de-ingenieria-y-tecnologia/"
+        },
+        {
+            "id": "Grado en Ingenieria Informatica",
+            "link": "https://www.ull.es/estudios-docencia/grados/ingenieria-informatica"
+        },
+        ...
+    ]
+}

@@ -38,5 +38,5 @@ public class Navigation implements Serializable {
     public double rotateRad(double rad) { ... }
     // Se calcula el valor del cono
     public double calculateCone(double dist) { ... }
-    ... // Metodos Get() y Set() de las variables
+    ... // Metodos Get() y Set() de los atributos
 }

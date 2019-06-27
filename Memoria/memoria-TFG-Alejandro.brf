@@ -41,11 +41,12 @@
 \backcite {URL::hololens}{{20}{3.2}{section*.25}}
 \backcite {URL::sandbox}{{20}{3.2}{section*.27}}
 \backcite {URL::SplashScreen}{{23}{4.1.1}{subsection.4.1.1}}
+\backcite {URL::gsuite}{{23}{4.1.1}{subsection.4.1.1}}
 \backcite {URL::NavigationDraw}{{23}{4.1.1}{subsection.4.1.1}}
 \backcite {URL::pixlr}{{28}{4.2.1}{subsection.4.2.1}}
-\backcite {URL::activity}{{29}{4.2.1}{figure.caption.33}}
-\backcite {URL::Firebase}{{30}{4.2.2}{section*.34}}
-\backcite {URL::layout}{{31}{4.2.2}{section*.35}}
+\backcite {URL::activity}{{28}{4.2.1}{subsection.4.2.1}}
+\backcite {URL::Firebase}{{29}{4.2.2}{section*.33}}
+\backcite {URL::layout}{{30}{4.2.2}{section*.34}}
 \backcite {URL::kudan}{{42}{4.3.4}{subsection.4.3.4}}
 \backcite {URL::fragment}{{43}{4.4}{section.4.4}}
 \backcite {URL::consoleGoogle}{{44}{4.4.1}{subsection.4.4.1}}
