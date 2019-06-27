@@ -29,8 +29,8 @@ public class Navigation implements Serializable {
     // Se comprueba si la direccion del dispositivo se encuentra dentro de su cono de
     // identificacion
     private boolean isInCone(double directionToSite, double coneValue) { ... }
-    // Sirve para reorientar a el norte magnetico el angulo dado por el 
-    // Vector2D.getAngleRad(Vector2D v)
+    // Sirve para reorientar al norte magnetico, como inicio de rotacion, el angulo dado por 
+    // el Vector2D.getAngleRad(Vector2D v)
     private double recalculeAngVector2D(double angleRad) { ... }
     // Se invierte el angulo
     public double invertAng(double rad) { ... }

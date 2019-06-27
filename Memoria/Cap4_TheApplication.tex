@@ -218,7 +218,7 @@ Para la implementación de esta ventana \textit{Splash Screen} se ha de configur
     ...
 \end{lstlisting}
 
-Al mismo tiempo en el archivo \texttt{styles.xml} (véase Listado \ref{lst:styleSplash}), se le indica que el archivo \textit{splash\_ull.xml} (véase Listado \ref{lst:splashull}) se encargará de colocar el color del fondo y el logotipo de la aplicación en el fondo de la pantalla. 
+Al mismo tiempo en el archivo \texttt{styles.xml} (véase Listado \ref{lst:styleSplash}), se le indica que el archivo \texttt{splash\_ull.xml} (véase Listado \ref{lst:splashull}) se encargará de colocar el color del fondo y el logotipo de la aplicación en el fondo de la pantalla. 
 
 \begin{lstlisting}[language=XML,caption={Fichero \texttt{styles.xml}, estilo de la \textit{Splash Screen}.}, label={lst:styleSplash}]
     ...
@@ -228,7 +228,7 @@ Al mismo tiempo en el archivo \texttt{styles.xml} (véase Listado \ref{lst:style
     ...
 \end{lstlisting}
 
-\begin{lstlisting}[language=XML,caption={Fichero  \textit{splash\_ull.xml}, configuración del color de fondo y el logotipo de la aplicación. }, label={lst:splashull}]
+\begin{lstlisting}[language=XML,caption={Fichero  \texttt{splash\_ull.xml}, configuración del color de fondo y el logotipo de la aplicación. }, label={lst:splashull}]
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/colorULL"/>
     <item>
@@ -349,7 +349,7 @@ Ahora que se tiene todo los necesario para poder utilizar el GPS del dispositivo
  
 Un dispositivo Android dispone de 3 ejes: x, y, z. Estos ejes se disponen como en la Figura \ref{fig:xyz}. La variable ``compass'' está formada por un lista de tres valores. El primero es denominado acimut y se refiere al ángulo de la orientación sobre la superficie de una esfera. Este valor representa el angulo entre el eje ``y'' del dispositivo y el norte magnético en grados. Cuando se mirá el norte el valor del ángulo es 0, al sur es 180º, al este es 90º y al oeste 270º. Para poder trabajar con estos valores se convertirán a radianes.  El rango de valores es desde $0$ a $2\pi$.
 
-Para reconocer las instalaciones que se encuentran en frente al dispositivo móvil, se escucharán los cambios de los valores brújula o ``compass'' del dispositivo para actualizar la nueva orientación y realizar los cálculos que permiten identificar las instalaciones (véase Listado \ref{lst:orientacionL}). El objeto ```navULL''' de la clase ``Navigation'' será el encargado realizar estos cálculos, los cuales se explicarán a continuación.
+Para reconocer las instalaciones que se encuentran en frente al dispositivo móvil, se escucharán los cambios de los valores brújula o ``compass'' del dispositivo para actualizar la nueva orientación y realizar los cálculos que permiten identificar las instalaciones (véase Listado \ref{lst:orientacionL}). El objeto ``navULL'' de la clase ``Navigation'' será el encargado realizar estos cálculos, los cuales se explicarán a continuación.
 
 
 \begin{figure}[h]
@@ -407,7 +407,7 @@ Cada instalación de ULL se obtiene de una base de datos en formato JSON. Una in
     \label{fig:ull-site}
 \end{figure}
 
-En la clase \texttt{ULLSite.java} se encuentran los atributos necesarios para guardar toda la información de cada instalación. Los tres últimos atributos:  ``distToSite'' corresponde a la distancia entre el dispositivo y la instalación, ``dirToSite'' corresponde con la dirección en la que se encuentra la instalación en el mundo con respecto al dispositivo y ``coneValue'' representa un rango de amplitud  con respecto a ``dirToSite'' a partir del cual se considerará que el dispositivo se encuentra apuntando a la instalación, el valor de esta variable vendrá dado por la distancia del dispositivo a la instalación. Estas variables, que se calculan en tiempo de ejecución, junto con el objeto ``point'' de la clase ``Vector2D'', que contiene la ubicación en un plano coordenadas de dos dimensiones (``x'' e ``y''), permitirá realizar los cálculos para identificar si el dispositivo se encuentra apuntando a una instalación o no. En la Figura \ref{fig:dirSite} se explican la utilidad de estas variables en los cálculos a realizar.
+En la clase ``ULLSite'' se encuentran los atributos necesarios para guardar toda la información de cada instalación. Los tres últimos atributos:  ``distToSite'' corresponde a la distancia entre el dispositivo y la instalación, ``dirToSite'' corresponde con la dirección en la que se encuentra la instalación en el mundo con respecto al dispositivo y ``coneValue'' representa un rango de amplitud  con respecto a ``dirToSite'' a partir del cual se considerará que el dispositivo se encuentra apuntando a la instalación, el valor de esta variable vendrá dado por la distancia del dispositivo a la instalación. Estas variables, que se calculan en tiempo de ejecución, junto con el objeto ``point'' de la clase ``Vector2D'', que contiene la ubicación en un plano coordenadas de dos dimensiones (``x'' e ``y''), permitirá realizar los cálculos para identificar si el dispositivo se encuentra apuntando a una instalación o no. En la Figura \ref{fig:dirSite} se explican la utilidad de estas variables en los cálculos a realizar.
 
 \begin{figure}[h] 
     \centering
@@ -749,7 +749,7 @@ En cuanto al contenido del menú del Navigation Drawer, se encuentra una cabecer
 
 \lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{nav\_options.xml}, opciones del menú Navigation Drawer.}, label={lst:nav_options.xml},]{listings/nav_options.xml}
 
-Para la implementación del menú se ha utilizado una clase heredable llamada \texttt{BaseActivity.java} la cual incorpora la vista del Navigation Drawer, gestionará las opciones del menú, cambiará los fragmentos y lanzará los activities principales de ULL-AR. 
+Para la implementación del menú se ha utilizado una clase heredable llamada ``BaseActivity'' la cual incorpora la vista del Navigation Drawer, gestionará las opciones del menú, cambiará los fragmentos y lanzará los activities principales de ULL-AR. 
 
 \lstinputlisting[language=java, caption={Fichero \texttt{BaseActivity.java}, código que se encarga de configurar la vista del Navigation Drawer.}, label={BaseActivity.java},]{listings/BaseActivity.java}
 
