@@ -35,24 +35,24 @@
 \contentsline {subsubsection}{AR Sandbox}{20}{section*.29}% 
 \contentsline {chapter}{\numberline {4}La aplicaci\IeC {\'o}n ULL-AR}{22}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Requisitos y ventanas de la aplicaci\IeC {\'o}n}{22}{section.4.1}% 
-\contentsline {subsection}{\numberline {4.1.1}Especificaci\IeC {\'o}n detallada de los requisitos}{22}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Especificaci\IeC {\'o}n detallada de los requisitos}{23}{subsection.4.1.1}% 
 \contentsline {subsection}{\numberline {4.1.2}Ventanas de la aplicaci\IeC {\'o}n}{24}{subsection.4.1.2}% 
-\contentsline {section}{\numberline {4.2}Inicio de ULL-AR}{28}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}Ventana inicial}{28}{subsection.4.2.1}% 
+\contentsline {section}{\numberline {4.2}Inicio de ULL-AR}{27}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Ventana inicial}{27}{subsection.4.2.1}% 
 \contentsline {subsection}{\numberline {4.2.2}Ventana de \textit {Inicio de Sesi\IeC {\'o}n} }{29}{subsection.4.2.2}% 
-\contentsline {subsubsection}{ Requisitos }{29}{section*.36}% 
-\contentsline {subsubsection}{ Implementaci\IeC {\'o}n }{30}{section*.37}% 
+\contentsline {subsubsection}{ Requisitos }{30}{section*.36}% 
+\contentsline {subsubsection}{ Implementaci\IeC {\'o}n }{31}{section*.37}% 
 \contentsline {section}{\numberline {4.3}Modo de Realidad Aumentada}{32}{section.4.3}% 
 \contentsline {subsection}{\numberline {4.3.1}Acceso a los sensores}{32}{subsection.4.3.1}% 
-\contentsline {subsection}{\numberline {4.3.2}Modelos encargados de la navegaci\IeC {\'o}n}{34}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.2}Modelos encargados de la navegaci\IeC {\'o}n}{35}{subsection.4.3.2}% 
 \contentsline {subsubsection}{ULLSite.java}{35}{section*.39}% 
 \contentsline {subsubsection}{Navigation.java}{36}{section*.42}% 
 \contentsline {subsection}{\numberline {4.3.3}Obtenci\IeC {\'o}n de la informaci\IeC {\'o}n}{40}{subsection.4.3.3}% 
 \contentsline {subsection}{\numberline {4.3.4}Visualizaci\IeC {\'o}n}{41}{subsection.4.3.4}% 
 \contentsline {section}{\numberline {4.4}Fragmentos}{43}{section.4.4}% 
-\contentsline {subsection}{\numberline {4.4.1}MapsFragment}{43}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.1}MapsFragment}{44}{subsection.4.4.1}% 
 \contentsline {subsection}{\numberline {4.4.2}HomeFragment}{46}{subsection.4.4.2}% 
-\contentsline {subsection}{\numberline {4.4.3}AboutFragment}{48}{subsection.4.4.3}% 
+\contentsline {subsection}{\numberline {4.4.3}AboutFragment}{49}{subsection.4.4.3}% 
 \contentsline {section}{\numberline {4.5}Men\IeC {\'u}}{49}{section.4.5}% 
 \contentsline {section}{\numberline {4.6}Instalaciones de la ULL}{51}{section.4.6}% 
 \contentsline {section}{\numberline {4.7}Preferencias del usuario}{55}{section.4.7}% 
