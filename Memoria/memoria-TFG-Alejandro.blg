@@ -16,45 +16,45 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliografia.bib
 Warning--I didn't find a database entry for "URL::json"
-You've used 43 entries,
+You've used 47 entries,
             3603 wiz_defined-function locations,
-            876 strings with 9641 characters,
-and the built_in function-call counts, 33664 in all, are:
-= -- 3382
-> -- 43
+            892 strings with 10022 characters,
+and the built_in function-call counts, 37028 in all, are:
+= -- 3720
+> -- 47
 < -- 0
-+ -- 86
++ -- 94
 - -- 0
-* -- 2647
-:= -- 5779
-add.period$ -- 127
-call.type$ -- 43
-change.case$ -- 129
+* -- 2917
+:= -- 6363
+add.period$ -- 139
+call.type$ -- 47
+change.case$ -- 141
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 2879
-empty$ -- 2001
+cite$ -- 47
+duplicate$ -- 3147
+empty$ -- 2211
 format.name$ -- 0
-if$ -- 7150
+if$ -- 7862
 int.to.chr$ -- 0
-int.to.str$ -- 86
-missing$ -- 1681
-newline$ -- 403
+int.to.str$ -- 94
+missing$ -- 1837
+newline$ -- 439
 num.names$ -- 0
-pop$ -- 1853
+pop$ -- 2025
 preamble$ -- 1
 purify$ -- 0
-quote$ -- 86
-skip$ -- 1291
+quote$ -- 94
+skip$ -- 1411
 stack$ -- 0
-substring$ -- 2609
-swap$ -- 684
-text.length$ -- 43
+substring$ -- 2923
+swap$ -- 748
+text.length$ -- 47
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 4
 warning$ -- 0
-while$ -- 43
-width$ -- 45
-write$ -- 526
+while$ -- 47
+width$ -- 49
+write$ -- 574
 (There was 1 warning)

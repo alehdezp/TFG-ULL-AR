@@ -4,7 +4,7 @@
 % Author: Alejandro Hernández Padrón. 
 % Capítulo: Tecnologías utilizadas en el Trabajo de Fin de Grado. 
 % Fichero: Cap2_Technology.tex
-%
+% 
 % ----------------------------------------------------
 %
 
@@ -51,7 +51,7 @@ LaTeX \cite{URL::LaTeX} es un sistema de composición de textos, orientado a la 
 
 LaTeX está formado por un gran conjunto de macros de TeX, escrito por Leslie Lamport en 1984, con la intención de facilitar el uso del lenguaje de composición tipográfica, creado por Donald Knuth. LaTeX es software libre bajo licencia LPPL.
 
-Se ha decidido usar esta herramienta debido a la calidad profesional de los documentos que genera. Otra de las ventajas de esta herramienta es que te permite separar el formato y el contenido del documento, esto permite concentrarte más en la creación del contenido sin tener que distraerte con su diseño.
+Se ha decidido usar esta herramienta debido a la calidad profesional de los documentos que genera. Otra de las ventajas de esta herramienta es que permite separar el formato y el contenido del documento, esto permite concentrar el esfuerzo en la creación del contenido sin tener que distraerse en el diseño. 
 
 \vskip 0.5in
 
@@ -68,6 +68,9 @@ Para instalar GitHub en Linux se utiliza el siguiente comando:
 \begin{lstlisting}
     $ sudo apt install git-all
 \end{lstlisting}
+
+En el repositorio del proyecto se encontrarán todos los fichero necesarios para la elaboración con LaTeX de esta memoria y el proyecto de Android Studio que contiene la aplicación Android \ULLAR{}. Este repositorio se encuentra en el siguiente enlace: \href{https://github.com/alehdezp/TFG-ULL-AR}{https://github.com/alehdezp/TFG-ULL-AR}.
+
 
 \section{Tecnologías utilizadas}
 
@@ -88,7 +91,7 @@ La Realidad Aumentada (RA) \cite{URL::RealidadAumentada} o Augmented Reality (AR
 La RA está cambiando la manera en la que sus usuarios pueden ver el mundo. Actualmente es una tecnología que se encuentra en auge debido a su enorme potencial. Empresas de numerosos sectores ya han estado invirtiendo en su desarrollo debido a que los beneficios que traerá esta tecnología y las posibles aplicaciones por descubrir son prometedoras.
 
 
-En un futuro la RA estará integrada en el día a día y formará parte de la vida cotidiana. Sus posibles aplicaciones no tienen límites, pueden llegar desde reconocer plantas e incluso monumentos y mostrar información sobre lo que se está viendo, hasta añadir información en tiempo real en una operación a un paciente, comprobar cómo queda un mueble en tu salón o sus aplicaciones para realizar videojuegos, como se puede comprobar con el reciente éxito de Pokemón Go!. 
+En un futuro la RA estará integrada en el día a día y formará parte de la vida cotidiana. Sus posibles aplicaciones no tienen límites, pueden llegar desde reconocer plantas e incluso monumentos y mostrar información sobre lo que se está viendo, hasta añadir información en tiempo real en una operación a un paciente, comprobar cómo queda un mueble en un salón o sus aplicaciones para realizar videojuegos, como se puede comprobar con el reciente éxito de Pokemón Go!. 
 
 \begin{figure}[h]
     \centering
@@ -129,7 +132,7 @@ Existen hoy en día cuatro tipos de RA:
 
 \begin{itemize}
     \item 
-    Marker-based AR. Se basa en el reconocimiento de imágenes conocidas como \textit{marker} o marcadores. Los marcadores son imágenes distintivas que son reconocidas por el dispositivo fácilmente, debido a que contienen puntos visuales únicos. Un buen ejemplo de este tipo de imágenes son los conocidos códigos QR \cite{URL::CodigoQR}. Una vez se ha reconocido un marcador, se puede agregar información virtual. Esta información puede ser la incorporación de animaciones o vídeos en una página de un libro de texto, simulaciones de objetos 3D o arquitecturas sin llegar a construirlas de forma física (véase Figura \ref{fig:markerAR}).
+    Marker-based AR. Se basa en el reconocimiento de imágenes conocidas como \textit{marker} o marcadores. Los marcadores son imágenes distintivas que son reconocidas por un dispositivo fácilmente, debido a que contienen puntos visuales únicos. Un buen ejemplo de este tipo de imágenes son los conocidos códigos QR \cite{URL::CodigoQR}. Una vez se ha reconocido un marcador, se puede agregar información virtual. Esta información puede ser la incorporación de animaciones o vídeos en una página de un libro de texto, simulaciones de objetos 3D o arquitecturas sin llegar a construirlas de forma física (véase Figura \ref{fig:markerAR}).
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.6\linewidth]{marker-ar}
@@ -137,10 +140,9 @@ Existen hoy en día cuatro tipos de RA:
         \label{fig:markerAR}
     \end{figure}
 
-    \bigskip
-    \bigskip
+   
 
-    \item Markerless AR. Corresponde a la RA que recoge los datos de su posición y orientación para mostrar la información correspondiente a esa área. Estos sistemas utilizan los datos obtenidos de la cámara, GPS, brújula, giroscopio y acelerómetro para establecer la ubicación del usuario en el entorno. Utiliza técnicas para reconocer terreno o ambientes para calcular la posición y orientación de la cámara. Con este tipo de tecnología se puede probar un mueble en un salón antes de llegar a comprarlo.
+    \item Markerless AR. Corresponde a la RA que recoge los datos de su posición y orientación para mostrar la información correspondiente a esa área. Estos sistemas utilizan los datos obtenidos de la cámara, GPS, brújula, giroscopio y acelerómetro para establecer la ubicación del usuario en el entorno. Utiliza técnicas para reconocer terreno o ambientes para calcular la posición y orientación de la cámara. Con este tipo de tecnología se puede probar un mueble en el salón antes de llegar a comprarlo.
 
  
     \item Pojection-based AR. Este modo de RA consiste en la proyección de luz en superficies y objetos en el mundo real. Existen muchos usos interesantes de esta tecnología, como aplicaciones para el uso de teclados virtuales proyectados que reconozcan cuando una ``tecla" es pulsada. Esta proyección también se puede hacer en medio del aire con ayuda de la tecnología de láseres de plasma.
@@ -150,7 +152,7 @@ Existen hoy en día cuatro tipos de RA:
 
 Aparte de los cuatro tipos de RA, existen subtipos dentro de cada uno de ellos.
 
-``Location-based AR" es un tipo de ``Markerless AR"  que se centra más en los cálculos de la orientación y geolocalización del dispositivo. Esta técnica RA puede proveer de ayuda viajeros que necesiten una mano para moverse por la ciudad, ya que mediante el reconocimiento de su ubicación y la orientación pueden mostrarles la ruta para llegar a su destino o mostrarle información de los puntos de interés que les rodean. Ésta será la técnica de RA implementada en la aplicación a desarrollar en este TFG. 
+``Location-based AR" es un tipo de ``Markerless AR"  que se centra más en los cálculos de la orientación y geolocalización del dispositivo. Esta técnica RA puede proveer de ayuda viajeros que necesiten una mano para moverse por la ciudad, ya que mediante el reconocimiento de su ubicación y la orientación pueden mostrarles la ruta para llegar a su destino o mostrarle información de los puntos de interés que les rodean. Esta será la técnica de RA implementada en la aplicación a desarrollar en este TFG. 
 
 
 \subsubsection{Diferencias entre Realidad Aumentada y Realidad Virtual}
@@ -158,7 +160,7 @@ En los últimos años la realidad virtual (RV) \cite{URL::VR} o virtual reality 
 
 De acuerdo con un análisis de expertos, la RV iba tener el liderazgo en 2018 como tecnología pionera, sin embargo, la RA va a tener mucha más importancia y a largo plazo, llegará a formar parte del día a día.
 
-La realidad virtual es un entorno de escenas u objetos de apariencia real. Aleja al usuario del entorno real y le brinda la sensación de estar inmerso en él. Dicho entorno es contemplado por el usuario a través de un dispositivo conocido como gafas o casco de realidad virtual. Éste puede ir acompañado de otros dispositivos, como guantes o trajes especiales, que permiten una mayor interacción con el entorno, así como la percepción de diferentes estímulos que intensifican la sensación de realidad.
+La realidad virtual es un entorno de escenas u objetos de apariencia real. Aleja al usuario del entorno real y le brinda la sensación de estar inmerso en él. Dicho entorno es contemplado por el usuario a través de un dispositivo conocido como gafas o casco de realidad virtual. Este puede ir acompañado de otros dispositivos, como guantes o trajes especiales, que permiten una mayor interacción con el entorno, así como la percepción de diferentes estímulos que intensifican la sensación de realidad.
 
 La realidad aumentada no aísla al usuario de mundo exterior, sino que traslada al mundo real objetos virtuales mediante la superposición de imágenes en tiempo real. 
 
@@ -176,7 +178,7 @@ Existe otro tipo de tecnología que nace de la unión de realidad aumentada y la
 En la RM se trata de llevar el mundo real al mundo virtual (véase Figura \ref{fig:realidadMixta}). La idea es generar un modelo 3D de la realidad y sobre él superponer información virtual. De esta forma, se podrán combinar ambas realidades para agregar contenido adicional de valor para el usuario de RM. La RM es mucho más inmersiva que la realidad aumentada y requiere de mucho más capacidad de procesamiento. 
 
 \subsubsection{Futuro y usos de la Realidad Aumentada}
-Actualmente la RA esta disponible más mano que en años anteriores. Dispositivos como los teléfonos móviles ya incorporan y enseñan las primeras muestras de esta tecnología, la cual está en sus primeros años de desarrollo, pero ya se puede ver el potencial y la enorme importancia que va a tener en un futuro.
+Actualmente la RA se encuentra más disponible a cualquier usuario, que en años anteriores. Dispositivos como los teléfonos móviles ya incorporan y enseñan las primeras muestras de esta tecnología, la cual está en sus primeros años de desarrollo, pero ya se puede ver el potencial y la enorme importancia que va a tener en un futuro.
 
 Los usos actuales de esta tecnología se acercan a todos los sectores conocidos:
 
@@ -203,7 +205,7 @@ Los usos actuales de esta tecnología se acercan a todos los sectores conocidos:
 
     \item Realidad Aumentada en turismo. El negocio turístico siempre ha intentado estar al día con la nueva tecnología para poder ofrecer nuevos servicios, formas de publicitarse, transporte y actividades de ocio. Por eso no es raro que la RA se haya hecho un hueco en este sector debido al potencial que tiene para mejorar la experiencia de los turistas. 
     
-    La RA es capaz de generar aplicaciones que permitan a los turistas realizar una visita guiada por las ciudadades que visiten, permitiendoles moverse sin problemas por la ciudad, señalando puntos de interés, datos históricos, restaurantes, hoteles, etc. El mismo concepto podría aplicarse en museos y zoos. Otro uso interesante sería el de romper la barrera del lenguaje gracias a la traducción inmediata de señales, textos y anuncios, al idioma del turista. Para los Juegos Olímpicos de Tokio 2020 se espera tener esta tecnología preparada para poder traducir a los visitantes en tiempo real todos los textos, señales y anuncios, a través de sus dispositivos móviles.   
+    La RA tiene la capacidad de generar aplicaciones que permitan a los turistas realizar una visita guiada por las ciudadades que visiten, permitiendoles moverse sin problemas por la ciudad, señalando puntos de interés, datos históricos, restaurantes, hoteles, etc. El mismo concepto podría aplicarse en museos y zoos. Otro uso interesante sería el de romper la barrera del lenguaje gracias a la traducción inmediata de señales, textos y anuncios, al idioma del turista. Para los Juegos Olímpicos de Tokio 2020 se espera tener esta tecnología preparada para poder traducir a los visitantes en tiempo real todos los textos, señales y anuncios, a través de sus dispositivos móviles.   
 
     
 
@@ -216,25 +218,31 @@ Los usos actuales de esta tecnología se acercan a todos los sectores conocidos:
 \subsubsection{Android Studio y la RA}
 
 
-Para la integracion de realidad aumentada en Android, se han probado y estudiado los kits de desarrollo de software (SDK \cite{URL::SDK}) de realidad aumentada disponibles para Android Studio. Estos son:
+Para la integracion de realidad aumentada en Android, se han probado y estudiado los kits de desarrollo de software (SDK \cite{URL::SDK}) de realidad aumentada disponibles para Android Studio. Los SDK que han sido evaluados son:
 
 
 
 \begin{itemize}
     
-    \item  \textbf{Vuforia} es un SDK de realidad aumentada que permite a los desarrolladores de aplicaciones crear rápidamente experiencias de RA inmersivas, de alta fidelidad y centradas en el móvil. El SDK de Vuforia aprovecha la tecnología de visión por computadora para identificar y rastrear imagenes y objetos 3D en tiempo real. Esta funcionalidad permite orientar y colocar objetos virtuales, incluidos modelos 3D y otros contenidos, en relación con el entorno del mundo real. Los modelos 3D y la información digital se pueden superponer sobre la escena del mundo real y verlos en relación con el entorno a través de un dispositivo móvil.
+    \item  \textbf{Vuforia} \cite{URL::vuforia} es un SDK de realidad aumentada que permite a los desarrolladores de aplicaciones crear rápidamente experiencias de RA inmersivas, de alta fidelidad y centradas en el móvil. El SDK de Vuforia aprovecha la tecnología de visión por computadora para identificar y rastrear imagenes y objetos 3D en tiempo real. Esta funcionalidad permite orientar y colocar objetos virtuales, incluidos modelos 3D y otros contenidos, en relación con el entorno del mundo real. Los modelos 3D y la información digital se pueden superponer sobre la escena del mundo real y verlos en relación con el entorno a través de un dispositivo móvil.
+    
+    Este SDK es uno de los mejores en el mercado con un gran soporte para aplicaciones multiplataforma. Un inconveniente de este SDK, es que está diseñado para desarrollar aplicaciones y juegos principalmente en plataformas como Unity \cite{URL::Unity}. En cuanto al SDK para Android Studio, la falta de soporte, de documentación y los númerosos problemas para instalarlo, lo convierten en un SDK con el que es casi imposible de trabajar. Por eso se ha decidido descartar el SDK para integración en la aplicación \ULLAR{}.
 
-    \item \textbf{Kudan AR SDK} es una plataforma diseñada para desarrolladores de RA como una plataforma preprada para admitir tanto en el reconocimiento basado en marcadores como sin marcadores y el seguimiento de ellos. El motor Kudan SDK principal, se desarrolla completamente en C++ y posee optimizaciones específicas de la arquitectura desarrolladas para proporcionar un rendimiento más rápido y sólido sin afectar negativamente el espacio de memoria.
+    \item \textbf{Kudan AR SDK} \cite{URL::kudan} es una plataforma diseñada para desarrolladores de RA como una plataforma preprada para admitir tanto en el reconocimiento basado en marcadores como sin marcadores y el seguimiento de ellos. El motor Kudan SDK principal, se desarrolla completamente en C++ y posee optimizaciones específicas de la arquitectura desarrolladas para proporcionar un rendimiento más rápido y sólido sin afectar negativamente el espacio de memoria. 
+    
+    La instalación de este SDK fue rápida y sencilla, debido a que Kudan dispone de la documentación necesaria para instalarlo en Android Studio. Además, dispone de una guía bien explicada para comenzar la implementación de sus funcionalidades. Se ha optado por la integración de este SDK debido a su sencillez y que ofrece los requisitos minimos para el objetivo de RA de la aplicación \ULLAR{}.
 
-    \item  \textbf{MaxST SDK} de realidad aumentada proporciona un motor RA integral multiplataforma equipado con todas las características requeridas por los desarrolladores para crear experiencias y aplicaciones de RA. El MaxST AR SDK proporciona las siguientes funcionalidades: seguimiento instantáneo, SLAM \cite{URL::SLAM} (utiliza la cámara del teléfono inteligente para crear un "mapa virtual" del área circundante), rastreo de objetos, reconocimiento de imágenes y de marcadores.
+    \item  \textbf{MaxST SDK} \cite{URL::maxst} de realidad aumentada proporciona un motor RA integral multiplataforma equipado con todas las características requeridas por los desarrolladores para crear experiencias y aplicaciones de RA. El MaxST AR SDK proporciona las siguientes funcionalidades: seguimiento instantáneo, SLAM \cite{URL::SLAM} (utiliza la cámara del teléfono inteligente para crear un "mapa virtual" del área circundante), rastreo de objetos y reconocimiento de imágenes y de marcadores.
+    
+    Kudan ofrece unos de los mejores soportes para la integración de un SDK de RA en Android Studio. Dispone de  tutoriales en su pagina web para la instalación del SDK, explicando el funcionamiento e implementación de cada una de las funcionalidades que ofrece. No se le ha encontrado ningún inconveniente para integrarlo en la aplicación, pero se ha preferido integrar Kudan AR SDK por su simplicidad.
 \end{itemize}
 
-Se ha optado por utilizar ``Kudan AR SDK" para el desarrollo de la aplicación de este TFG debido a problemas de compilación y flexibilidad en las opciones gratuitas de los otros dos SDK en Android Studio.  
+% Se ha optado por utilizar ``Kudan AR SDK" para el desarrollo de la aplicación de este TFG debido a problemas de compilación y flexibilidad en las opciones gratuitas de los otros dos SDK en Android Studio.  
 
 
 \subsection{Node.js}
 
-Node.js \cite{URL::Nodejs} es una librería y entorno de ejecución de E/S dirigida por eventos y por lo tanto asíncrona que se ejecuta sobre el intérprete de JavaScript creado por Google llamado Chrome V8 \cite{URL::ChromeV8}. Node.js es un entorno de JavaScript del lado del servidor, basado en eventos. Utilizar el motor de Chrome V8 permite a Node.js un entorno de ejecución que compila y ejecuta JavaScript a velocidades increíbles.
+Node.js \cite{URL::Nodejs} es una librería y entorno de ejecución de E/S dirigida por eventos y por lo tanto asíncrona que se ejecuta sobre el intérprete de JavaScript creado por Google llamado Chrome V8 \cite{URL::ChromeV8}. Node.js es un entorno de JavaScript del lado del servidor \cite{URL::serverside}, basado en eventos. Utilizar el motor de Chrome V8 permite a Node.js un entorno de ejecución que compila y ejecuta JavaScript a velocidades increíbles.
 
 \subsubsection{¿Cómo funciona?}
 
@@ -259,21 +267,24 @@ Node.js utiliza un E/S de tipo asíncrono. En los modelos de tipo asíncronos, l
 
 Otro de sus puntos fuertes es su gestor de paquetes Node Package Manager  (NPM). Gracias a este gestor se pueden instalar paquetes, módulos y agregar dependencias de manera simple.
 
-\subsubsection{¿Porqué Node.js?}
-\begin{itemize}
-    \item Fácil de integrar e instalar en cualquier servidor, sin importar el sistema operativo.
-    \item JavaScript como base. Un lenguaje conocido por cualquier programador.
-    \item Gran rendimiento, permite generar a su vez arquitecturas potentes y sólidas.
-    \item Su alta capacidad de escalabilidad. La creación de aplicaciones web con la capacidad de atender muchos miles de solicitudes en un único servidor de forma simultánea, sin la necesidad de tener que incrementar las infraestructuras de servidores.
-    \item Un proceso de desarrollo y programación de aplicaciones rápido y liviano.
-        
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=115mm,scale=1]{nodejsfunc}
-        \caption{Ventajas de Node.js.}
-        \label{fig:nodejsVentajas}
-    \end{figure}
-\end{itemize}
+Se optado por el uso de un servidor que implemente la tecnología Node.js como servidor de la aplicación \ULLAR{}. Debido la facilidad  para correr este servidor en cualquier tipo de sistema operativo y para su futura integración en la nube, gracias a la plataforma de Heroku de la que se hablará más adelante. Otras de las razones por las que se ha elegido es porqué el proceso de desarrollo y programación es rapido y sencillo y, además, se tenian conocimientos previos sobre está tecnología, lo que ha facilitado su implementación.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=115mm,scale=1]{nodejsfunc}
+\caption{Ventajas de Node.js.}
+\label{fig:nodejsVentajas}
+\end{figure}
+
+% \subsubsection{¿Porqué Node.js?}
+% \begin{itemize}
+%     \item Fácil de integrar e instalar en cualquier servidor, sin importar el sistema operativo.
+%     \item JavaScript como base. Un lenguaje conocido por cualquier programador.
+%     \item Gran rendimiento, permite generar a su vez arquitecturas potentes y sólidas.
+%     \item Su alta capacidad de escalabilidad. La creación de aplicaciones web con la capacidad de atender muchos miles de solicitudes en un único servidor de forma simultánea, sin la necesidad de tener que incrementar las infraestructuras de servidores.
+%     \item Un proceso de desarrollo y programación de aplicaciones rápido y liviano.
+% \end{itemize}
 
 
 Para instalar Node.js en una máquina con Linux se deben ejecutar estos comandos:
@@ -302,29 +313,35 @@ MongoDB  \cite{URL::MongoDB} es un sistema de base de datos multiplataforma NoSQ
 Un registro en MongoDB es un documento, cuya estructura de datos se compone por el par campo y valor. Utilizan un formato para guardar estas estructuras que se llama BSON  \cite{URL::BSON} también llamada JSON \cite{URL::json} Binario. Este formato tiene una ventaja pese a que puede ocupar más espacio de lo que lo haría el formato JSON. BSON guarda de forma explícita las longitudes de los campos, los índices de los arrays, y demás información útil para el escaneo de datos y así agilizar las búsquedas en estos documentos.
 
 Estos documentos, que a su vez incorporan una clave primaria como identificador, son la unidad básica de datos en MongoDB. Las colecciones en MongoDB contienen un conjunto de documentos y funciones equivalentes a las de las bases de datos relacionales.
+
+Debido a los requisitos de la aplicación, el uso de una base de datos de MongoDB
+permitía la creación de una base de datos de esquema libre, es decir, sin la preocupación de crear tablas de datos para guardar la información, que permitía guardar de forma simple toda la información necesaria para el funcionamiento de la aplicación. Además, las consultas a esta base de datos se facilitan con el uso de un servidor Node.js. Node.js ofrece un conjunto de librerias y paquetes preparados para realizar la comunicación con una base de datos de MongoDB.
+
 % La consola de mongo es una interfaz interactiva de JavaScript la cual permite a los usuarios de MongoDB consultar, actualizar y administrar estas bases de datos. Esta consola es un componente estándar de las distribuciones de Open Source.
 
-\subsubsection{ Ventajas de MongoDB }
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=150mm,scale=2]{mongodb-architecture}
+    \caption{ Ventajas de MongodDB. }
+    \label{fig:mongoDBarquitectura}
+\end{figure}
 
 
-\begin{itemize}
+% \subsubsection{ Ventajas de MongoDB }
+
+
+% \begin{itemize}
     
-    \item El hecho de que sea una base de datos NoSQL, significa que no necesita esquemas predefinidos y puede guardar cualquier tipo de datos. Esto otorga una increíble flexibilidad para crear cualquier tipo de campos que se necesiten en un documento, permitiendo mayor escalabilidad en MongoDB comparado a las bases de datos tradicionales.
+%     \item El hecho de que sea una base de datos NoSQL, significa que no necesita esquemas predefinidos y puede guardar cualquier tipo de datos. Esto otorga una gran flexibilidad para crear cualquier tipo de campos que se necesiten en un documento, permitiendo mayor escalabilidad en MongoDB comparado a las bases de datos tradicionales.
 
-    \item A su vez, el uso de documentos para guardar la información hace que sea mucho más fácil de mapear estos datos en los lenguajes nativos de programación.
+%     \item A su vez, el uso de documentos para guardar la información hace que sea mucho más fácil de mapear estos datos en los lenguajes nativos de programación.
 
-    \item Es fácil de acceder a los documentos si los indexamos. En MongoDB este indexado provee de rápidos tiempos de respuesta a las peticiones, esto le permite ser hasta 100 veces más rápido que los modelos de bases de datos relacionales.
+%     \item Es fácil  acceder a los documentos si se indexan. En MongoDB este indexado provee de rápidos tiempos de respuesta a las peticiones, esto le permite ser hasta 100 veces más rápido que los modelos de bases de datos relacionales.
 
-    \item MongoDB es una base de datos distribuida, por lo que es fácil de usar y proporciona una elevada disponibilidad, escalabilidad horizontal y distribución geográfica.
+%     \item MongoDB es una base de datos distribuida, por lo que es fácil de usar y proporciona una elevada disponibilidad, escalabilidad horizontal y distribución geográfica.
     
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=150mm,scale=2]{mongodb-architecture}
-        \caption{ Ventajas de MongodDB. }
-        \label{fig:mongoDBarquitectura}
-    \end{figure}
-
-\end{itemize}
+ 
+% \end{itemize}
 
 % Por otro lado existen una serie de inconvenientes y limitaciones:
 
@@ -341,18 +358,21 @@ Heroku es una plataforma como servicio de computación (PaaS \cite{URL::PaaS}) e
 
 Heroku es conocida por ejecutar las aplicaciones en ``dynos". Un dyno es simplemente un ordenador virtual que pueden ser encendido y/o apagado en función del tamaño y requisitos de la aplicación.
 
-A cada uno de estos dynos se le puede configurar más espacio o capacidad de procesamiento, o se pueden añadir más dynos si tu aplicación lo necesita. Heroku a cada mes realiza un cobro en función de los dynos que el usuario tenga contratados. 
+A cada uno de estos dynos se le puede configurar más espacio o capacidad de procesamiento, o se pueden añadir más dynos si la aplicación lo necesita. Heroku a cada mes realiza un cobro en función de los dynos que el usuario tenga contratados. 
 
-Se ha optado por utilizar el dyno gratis que ofrece Heroku a cada repositorio. El cual tienen un límite de 1000 horas activas al mes y se pone en suspensión a los 30 minutos sin recibir tráfico. Una vez que vuelve a recibir tráfico se activa de nuevo.    
+Se ha optado por utilizar el dyno gratis que ofrece Heroku a cada repositorio. El cual tienen un límite de 1000 horas activas al mes y se pone en suspensión a los 30 minutos sin recibir tráfico. Una vez que vuelve a recibir tráfico se activa de nuevo.   
+
+Se ha utilizado Heroku para albergar al servidor de la aplicación \ULLAR{}, ya que ofrece un servicio gratuito ideal para el diseño de pequeñas aplicaciones web en la nube, sin la complejidad de estar implementando un servidor físico. 
 
 Para instalar Heroku en un ordenador solo se tienen que seguir los pasos de la web \cite{URL::HerokuCLI}.
+
 
 
 \subsection{ mLab }
 
 mLab es un servicio de base de datos en la nube totalmente gestionado que ofrece aprovisionamiento y escalados automáticos de las bases de datos MongoDB, copia de seguridad y recuperación, monitoreo, herramientas de administración basadas en web y soporte experto. La plataforma de base de datos como servicio de mLab corre sus máquinas en proveedores de servicios en la nube como AWS \cite{URL::aws}, Azure \cite{URL::Azure} y Google Cloud \cite{URL::GoogleCloud}.
 
-En esta plataforma se ubicará la base de datos de ULL-AR. Dado las facilidades de acceso a ella e integración con el servidor de la aplicación en Node.js, es una opción simple, fácil de manejar y con posibilidad de escalar.
+En esta plataforma se ubicará la base de datos de \ULLAR{}. Dado las facilidades de acceso a ella e integración con el servidor de la aplicación en Node.js, es una opción simple, fácil de manejar y con posibilidad de escalar.
 
 \subsection{ Google Maps }
 
@@ -363,4 +383,4 @@ La API de Google Maps \cite{URL::GoogleMapsApi} fue publicada para Android en 20
     \item Ofrece la posibilidad de elegir el tipo de mapa: de carreteras, satélite, híbrido (fusión de carretera y satélite) y de terreno.
 \end{itemize}
 
-Esta API fácil de integrar y con soporte de Google, es la mejor opción para tener un mapa funcional y que permita ubicar al usuario de la aplicación ULL-AR.
+Esta API fácil de integrar y con soporte de Google, es la mejor opción para tener un mapa funcional y que permita ubicar al usuario de la aplicación \ULLAR{}.

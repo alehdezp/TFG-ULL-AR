@@ -3,16 +3,16 @@
 %
 % Trabajo de Fin de Grado. 
 % Author: Alejandro Hernández Padrón. 
-% Capítulo: La aplicación ULL-AR. 
+% Capítulo: La aplicación \ULLAR{}. 
 % Fichero: Cap4_TheApplication.tex
 %
 % ----------------------------------------------------
 %
 
 \lstset{stringstyle=\color{purple}}
-\chapter{La aplicación ULL-AR} \label{chap:LaAplicacion} 
+\chapter{La aplicación \ULLAR{}} \label{chap:LaAplicacion} 
 
-En este capítulo se explicará la aplicación ULL-AR utilizando la especificación de requisitos de esta y explicando su funcionamiento.
+En este capítulo se explicará la aplicación \ULLAR{} utilizando la especificación de requisitos de esta y explicando su funcionamiento.
 
 \section{Requisitos y ventanas de la aplicación} % (fold)
 
@@ -21,7 +21,7 @@ Se trata de una aplicación diseñada para la comunidad de la Universidad de La 
 La aplicación contempla diverso tipo de ubicaciones universitarias (facultades, bibliotecas, cafeterías,
 instalaciones deportivas, etc.). De forma genérica nos referiremos a las mismas como ``instalaciones''.
 
-Los requisitos principales de ULL-AR son:
+Los requisitos principales de \ULLAR{} son:
 \begin{itemize}
     \item La aplicación se desarrollará para dispositivos con Android. Se utilizará Android Studio como IDE para su desarrollo.
     \item Se implementarán técnicas de realidad aumentada basadas en la geolocalización para mostrar al usuario la instalación de la ULL a la cual apunte con la cámara del dispositivo.
@@ -32,11 +32,11 @@ Los requisitos principales de ULL-AR son:
 
 La aplicación se iniciará una ``Splash Screen'' \cite{URL::SplashScreen} o pantalla de inicio con el logo de la Universidad de La Laguna. Esta pantalla dará paso a una ventana de \textit{Inicio de sesión}.
 
-Para poder utilizar ULL-AR, el usuario ha de poseer una cuenta de correo institucional de la ULL. Este correo ha de terminar con el formato: ``\textit{@ull.edu.es}''. Sin ella no se podrá acceder a la aplicación. Además, se podrá cerrar la sesión de esta cuenta.
+Para poder utilizar \ULLAR{}, el usuario ha de poseer una cuenta de correo institucional de la ULL. Este correo ha de terminar con el formato: ``\textit{@ull.edu.es}''. Sin ella no se podrá acceder a la aplicación. Además, se podrá cerrar la sesión de esta cuenta.
 
 Una vez autentificado con éxito, se accederá a una ventana de \textit{Inicio} en la que aparecerá un acceso directo a las ventanas de \textit{Mapa ULL} y \textit{Navegación en modo RA} que se  explicará más adelante. A su vez, dispondrá de accesos a enlaces web de interés de la ULL que se abrirán en un navegador externo. 
 
-ULL-AR contará con un menú para moverse por las diferentes ventanas de la aplicación. Se implementará un menú deslizante lateral o \textit{Navigation Drawer} \cite{URL::NavigationDraw} ubicado en la parte superior izquierda de la aplicación. Este menú deberá ser simple e intuitivo.
+\ULLAR{} contará con un menú para moverse por las diferentes ventanas de la aplicación. Se implementará un menú deslizante lateral o \textit{Navigation Drawer} \cite{URL::NavigationDraw} ubicado en la parte superior izquierda de la aplicación. Este menú deberá ser simple e intuitivo.
 
 Como accesos en este menú se dispone de las siguientes ventanas o funcionalidades:
 
@@ -80,11 +80,11 @@ Esta información estará guardada en una base de datos en la nube. Para acceder
 % \caption{Login.}
 % \label{fig:loginApp} 
 % \end{subfigure}%
-% \caption{Ventanas de iniciales de \textit{ULL-AR}.}
+% \caption{Ventanas de iniciales de \textit{\ULLAR{}}.}
 % \hspace*{\fill}%
 % \end{figure}
   
-Al iniciar la aplicación ULL-AR, la primera ventana que aparece es la pantalla de inicio o Splash Screen. Tras unos segundos, se carga la ventana de \textit{Inicio de sesión}. Para poder autentificarse el usuario debe poseer una cuenta de correo institucional de la ULL. Se dispondrá de un botón en el centro de la pantalla, que abrirá un cuadro de diálogo en el que poder introducir el correo y contraseña de esta cuenta.
+Al iniciar la aplicación \ULLAR{}, la primera ventana que aparece es la pantalla de inicio o Splash Screen. Tras unos segundos, se carga la ventana de \textit{Inicio de sesión}. Para poder autentificarse el usuario debe poseer una cuenta de correo institucional de la ULL. Se dispondrá de un botón en el centro de la pantalla, que abrirá un cuadro de diálogo en el que poder introducir el correo y contraseña de esta cuenta.
   
 \begin{figure}[h]
     \hspace*{\fill}%
@@ -99,13 +99,13 @@ Al iniciar la aplicación ULL-AR, la primera ventana que aparece es la pantalla 
     \caption{Menu. Navigation Drawer.}
     \label{fig:menuApp}
     \end{subfigure}
-    \caption{Ventana \textit{Inicio} y el \textit{Menú} de \textit{ULL-AR}.}
+    \caption{Ventana \textit{Inicio} y el \textit{Menú} de \textit{\ULLAR{}}.}
     \hspace*{\fill}
 \end{figure}
 
-Cuando el usuario consiga autentificarse con éxito, se abrirá la ventana de \textit{Inicio} (véase Figura \ref{fig:homeApp}). En esta aparecerá una lista de accesos directos a las funcionalidades principales de ULL-AR, como son \textit{Navegación en modo RA} y \textit{Mapa ULL}, y una serie de enlaces a sitios web relacionados con la ULL.
+Cuando el usuario consiga autentificarse con éxito, se abrirá la ventana de \textit{Inicio} (véase Figura \ref{fig:homeApp}). En esta aparecerá una lista de accesos directos a las funcionalidades principales de \ULLAR{}, como son \textit{Navegación en modo RA} y \textit{Mapa ULL}, y una serie de enlaces a sitios web relacionados con la ULL.
 
-En la esquina superior izquierda de ULL-AR se encuentra situado el botón de acceso al menú \textit{Navigation Drawer}. Si se presiona se desplegará el menú que permite al usuario moverse por las distintas ventanas de la aplicación (véase Figura \ref{fig:menuApp}).
+En la esquina superior izquierda de \ULLAR{} se encuentra situado el botón de acceso al menú \textit{Navigation Drawer}. Si se presiona se desplegará el menú que permite al usuario moverse por las distintas ventanas de la aplicación (véase Figura \ref{fig:menuApp}).
 
 Si el usuario se desplaza a la ventana de \textit{Mapa ULL} (véase Figura \ref{fig:mapsApp}) encontrará el mapa generado por la API de Google Maps. En este mapa aparecerán con pines azules las instalaciones de la ULL que están guardadas en la base de datos. Cuando el GPS del dispositivo encuentre la ubicación actual, aparecerá un pin rojo que indicará su posición en el mapa. En la parte inferior y en el centro de la ventana, se dispone de un botón llamado ``AR Mode'' que permite acceder a la ventana de \textit{Navegación en modo RA}.
   
@@ -122,7 +122,7 @@ Si el usuario se desplaza a la ventana de \textit{Mapa ULL} (véase Figura \ref{
         \caption{Ventana de \textit{Inicio}}
         \label{fig:menussApp}
     \end{subfigure}%
-    \caption{Ventana Inicio y menú de \textit{ULL-AR}}
+    \caption{Ventana Inicio y menú de \textit{\ULLAR{}}}
     \hspace*{\fill}%
 \end{figure}
 
@@ -149,7 +149,7 @@ En la ventana de \textit{Navegación en modo RA} se mostrará la imagen obtenida
     \caption{Información de la instalación.}
     \label{fig:siteInfoApp}
     \end{subfigure}%
-    \caption{Ventanas de \textit{Todas las instalaciones ULL} e \textit{Información de la instalación} de \textit{ULL-AR}.}
+    \caption{Ventanas de \textit{Todas las instalaciones ULL} e \textit{Información de la instalación} de \textit{\ULLAR{}}.}
     \hspace*{\fill}%
 \end{figure}
 \bigskip
@@ -163,7 +163,7 @@ Por último, desde el menú se podrá acceder a las dos últimas ventanas de la 
 
 En la ventana de \textit{Configuración} (véase Figura \ref{fig:settingsApp}) se encuentran los ajustes de la aplicación. En ella se permite al usuario decidir si desea realizar una búsqueda, en la ventana de \textit{Mapas} y de \textit{Navegación en modo RA}, de las instalaciones que se encuentran en el área entre dos circunferencias. El centro de estas circunferencias será la ubicación actual del dispositivo.
 
-La ventana \textit{Información} (véase Figura \ref{fig:infoApp})  muestra información básica de la aplicación como el nombre, versión, correo de contacto, autor y objetivo e información del desarrollo de la aplicación \textit{ULL-AR}.  
+La ventana \textit{Información} (véase Figura \ref{fig:infoApp})  muestra información básica de la aplicación como el nombre, versión, correo de contacto, autor y objetivo e información del desarrollo de la aplicación \textit{\ULLAR{}}.  
 
 \begin{figure}[h]
     \hspace*{\fill}%
@@ -178,15 +178,15 @@ La ventana \textit{Información} (véase Figura \ref{fig:infoApp})  muestra info
     \caption{Información.}
     \label{fig:infoApp}
     \end{subfigure}%
-    \caption{Ventanas de \textit{Configuración} e \textit{Información} de \textit{ULL-AR}.}
+    \caption{Ventanas de \textit{Configuración} e \textit{Información} de \textit{\ULLAR{}}.}
     \hspace*{\fill}%
 \end{figure}
 
 \vskip 1.9in
 
-\section{Inicio de ULL-AR} \label{chap:StartApplication} 
+\section{Inicio de \ULLAR{}} \label{chap:StartApplication} 
 
-Para comenzar a desarrollar aplicación, primero, se necesita crear un proyecto nuevo en Android Studio. Este proyecto se nombra con el nombre de la aplicación ``ULL-AR'' y se siguen los pasos del IDE para acabar de crear el proyecto. 
+Para comenzar a desarrollar aplicación, primero, se necesita crear un proyecto nuevo en Android Studio. Este proyecto se nombra con el nombre de la aplicación ``\ULLAR{}'' y se siguen los pasos del IDE para acabar de crear el proyecto. 
 
 A continuación, se explicarán en detalle el funcionamiento e implementación de las primeras ventanas que aparecen cuando se inicia la aplicación. 
 
@@ -194,19 +194,19 @@ A continuación, se explicarán en detalle el funcionamiento e implementación d
 
 La primera ventana que aparece en la aplicación es la \textit{Splash Screen}. El objetivo de esta ventana es dar una mejor apariencia a la aplicación e informar al usuario que la aplicación se está iniciando y cargando. 
 
-En esta ventana se encuentra el logotipo de ULL-AR (véase Figura \ref{fig:logoApp}) en el centro de la pantalla. Este logo se ha diseñado por medio del editor de imágenes online Pixlr \cite{URL::pixlr}. Gracias a este editor se ha podido crear un logotipo simple combinando el icono de la marca de la ULL y el nombre de la aplicación.
+En esta ventana se encuentra el logotipo de \ULLAR{} (véase Figura \ref{fig:logoApp}) en el centro de la pantalla. Este logo se ha diseñado por medio del editor de imágenes online Pixlr \cite{URL::pixlr}. Gracias a este editor se ha podido crear un logotipo simple combinando el icono de la marca de la ULL y el nombre de la aplicación.
  
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\linewidth]{logoApp}
-    \caption{Logo de ULL-AR.}
+    \caption{Logo de \ULLAR{}.}
     \label{fig:logoApp}
 \end{figure}    
  
 
 En un principio la velocidad de carga y transición a la siguiente ventana de la aplicación se hacía de forma inmediata, debido a que los recursos necesarios para el inicio de la aplicación son escasos y no tardan en cargarse. Por lo tanto, para poder visualizarla correctamente se utilizó un temporizador de tres segundos, para que posteriormente, se lance la siguiente ventana, la cual corresponde a la ventana de \textit{Inicio de sesión}.
 
-Para la implementación de esta ventana \textit{Splash Screen} se ha de configurar primero el fichero \texttt{AndroidManifest.xml}. Este fichero proporciona información esencial sobre la aplicación al sistema Android, información que el sistema debe tener para poder ejecutar el código de la aplicación. Aquí se le indica al sistema Android la ventana o ``activity'' \cite{URL::activity} que inicia la aplicación (véase Listado \ref{lst:manifestInicio}). Además, a esta ventana se le indica el tema del activity que contendrá el logotipo de ULL-AR en el centro de la pantalla.
+Para la implementación de esta ventana \textit{Splash Screen} se ha de configurar primero el fichero \texttt{AndroidManifest.xml}. Este fichero proporciona información esencial sobre la aplicación al sistema Android, información que el sistema debe tener para poder ejecutar el código de la aplicación. Aquí se le indica al sistema Android la ventana o ``activity'' \cite{URL::activity} que inicia la aplicación (véase Listado \ref{lst:manifestInicio}). Además, a esta ventana se le indica el tema del activity que contendrá el logotipo de \ULLAR{} en el centro de la pantalla.
 
 \begin{lstlisting}[language=XML,caption={Fichero \texttt{AndroidManifest.xml}, activity que inicia la aplicación.}, label={lst:manifestInicio}]
     ...
@@ -248,7 +248,7 @@ Esta es la ventana que permitirá al usuario autentificarse con su correo instit
 
 \subsubsection{ Requisitos }  
 
-Para poder integrar la API de Google se necesita integrar los ``Servicios de Google'' en la aplicación. Para ello se ha de entrar en la consola de Firebase \cite{URL::Firebase} y crear un proyecto con el nombre de ULL-AR. Una vez dentro del proyecto, se seleccionará que se quiere integrar Firebase a una aplicación Android. A continuación, se pedirá el nombre del paquete de la aplicación y la clave ``SHA1". Para obtener esta clave, se ha de ejecutar en la consola de Android Studio el siguiente comando: 
+Para poder integrar la API de Google se necesita integrar los ``Servicios de Google'' en la aplicación. Para ello se ha de entrar en la consola de Firebase \cite{URL::Firebase} y crear un proyecto con el nombre de \ULLAR{}. Una vez dentro del proyecto, se seleccionará que se quiere integrar Firebase a una aplicación Android. A continuación, se pedirá el nombre del paquete de la aplicación y la clave ``SHA1". Para obtener esta clave, se ha de ejecutar en la consola de Android Studio el siguiente comando: 
  
 \begin{lstlisting}[ caption={Comando que obtiene la clave SHA1.}, label={lst:SHA1}]
     $ keytool -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore
@@ -256,7 +256,7 @@ Para poder integrar la API de Google se necesita integrar los ``Servicios de Goo
 
 Con el nombre del paquete y la clave SHA1, se descargará un fichero con la configuración de los Servicios de Google llamado \texttt{google-services.json}. Este fichero se ha de colocar en la carpeta \textit{app/} del proyecto.
  
-Por último para poder utilizar los Servicios de Google en la aplicación ULL-AR, se tiene que indicar al fichero \texttt{build.gradle} del proyecto en las dependencias (véase Listado \ref{lst:googleSd}) y al fichero \texttt{build.gradle} de la aplicación (véase Listado \ref{lst:googlepluggin}) que se quiere utilizar  los Servicios de Google.
+Por último para poder utilizar los Servicios de Google en la aplicación \ULLAR{}, se tiene que indicar al fichero \texttt{build.gradle} del proyecto en las dependencias (véase Listado \ref{lst:googleSd}) y al fichero \texttt{build.gradle} de la aplicación (véase Listado \ref{lst:googlepluggin}) que se quiere utilizar  los Servicios de Google.
 
 \begin{lstlisting}[caption={Fichero \texttt{build.gradle} del proyecto, dependencias para utilizar los Servicios de Google.}, label={lst:googleSd}]
 ...
@@ -291,7 +291,7 @@ Se empieza creando un nuevo activity y se nombra \textit{LoginActivityULL}. Esto
  
 En el Listado \ref{code:loginUll.java} se tienen todos los métodos y conexiones de la API de Google para poder autentificarse. Cuando se presione el botón ``Autentifícate con una cuenta de la Universidad'' se abrirá un cuadro de diálogo de la API de Google que permitirá al usuario seleccionar la cuenta con la que desee entrar en la aplicación. 
 
-En caso de que la cuenta no pertenezca a la ULL, es decir, una cuenta que no tenga el formato del dominio de las cuentas de correo de la ULL terminadas en ``@ull.edu.es'', se cerrará la sesión de esta cuenta y se mostrará un mensaje con el tipo de cuenta necesaria para utilizar la aplicación ULL-AR.
+En caso de que la cuenta no pertenezca a la ULL, es decir, una cuenta que no tenga el formato del dominio de las cuentas de correo de la ULL terminadas en ``@ull.edu.es'', se cerrará la sesión de esta cuenta y se mostrará un mensaje con el tipo de cuenta necesaria para utilizar la aplicación \ULLAR{}.
 
  
  
@@ -305,7 +305,7 @@ El fichero \texttt{ARNavigation.java} contiene el activity encargado de: la reco
 
 Se necesita obtener acceso a los sensores del GPS, el acelerómetro y el magnetómetro del dispositivo móvil, para poder ubicar y orientar al dispositivo dentro del mundo.
 
-Para obtener acceso al GPS, se tienen que solicitar los permisos necesarios a través del archivo \texttt{AndroidManifest.xml} (véase Listado \ref{lst:permisionL}) y, a su vez, preguntar al usuario si concede su permiso para acceder al GPS del dispositivo móvil con la aplicación ULL-AR  (véase Listado \ref{lst:gpsP}).
+Para obtener acceso al GPS, se tienen que solicitar los permisos necesarios a través del archivo \texttt{AndroidManifest.xml} (véase Listado \ref{lst:permisionL}) y, a su vez, preguntar al usuario si concede su permiso para acceder al GPS del dispositivo móvil con la aplicación \ULLAR{}  (véase Listado \ref{lst:gpsP}).
 
 \begin{lstlisting}[caption={Fichero \texttt{AndroidManifest.xml} del proyecto, permisos para acceder a la ubicación del dispositivo.}, label={lst:permisionL}]
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -573,7 +573,7 @@ Los últimos datos que se necesitan para trabajar con en el objeto ``navULL'', s
 
 \subsection{Visualización}
 
-El activity ``ARNavigation'' será el encargado de mostrar la técnica de realidad aumentada por geolocalización en la pantalla de dispositivo móvil. Este activity hereda de la clase ``ARActivity'' perteneciente al  SDK de Kudan para Android Studio. Este SDK permite el reconocimiento de objetos e imágenes a través de la cámara del dispositivo y queda como recurso para una futura ampliación de la funcionalidad de la aplicación. El uso principal de este SDK en la aplicación ULL-AR, es el acceso que otorga a cámara del dispositivo como vista principal del activity. Es decir, permite visualizar en la ventana lo que se está observando con la cámara.
+El activity ``ARNavigation'' será el encargado de mostrar la técnica de realidad aumentada por geolocalización en la pantalla de dispositivo móvil. Este activity hereda de la clase ``ARActivity'' perteneciente al  SDK de Kudan para Android Studio. Este SDK permite el reconocimiento de objetos e imágenes a través de la cámara del dispositivo y queda como recurso para una futura ampliación de la funcionalidad de la aplicación. El uso principal de este SDK en la aplicación \ULLAR{}, es el acceso que otorga a cámara del dispositivo como vista principal del activity. Es decir, permite visualizar en la ventana lo que se está observando con la cámara.
 
 Para poder hacer uso del SDK de Kudan se tiene que descargar el SDK y configurar la ``ARAPIkey'' específica para el proyecto. Ambos se pueden encontrar en la página oficial de Kudan \cite{URL::kudan}. 
 
@@ -629,7 +629,7 @@ Los fragmentos \cite{URL::fragment} actúan como una sección modular de un acti
 
 \subsection{MapsFragment}
        
-Este fragmento contiene el mapa generado por la API de Google Maps. Para poder utilizar esta API, se tiene que acceder a la consola de desarrolladores de Google \cite{URL::consoleGoogle}. En ella se tiene que crear un proyecto con el nombre de la aplicación ULL-AR, para después habilitar la API de ``Maps SDK for Android". Una vez habilitada se otorgará una clave que se encuentra en el fichero \texttt{app/res/values/google\_maps\_api.xml} (véase Listado \ref{lst:apiMaps}).
+Este fragmento contiene el mapa generado por la API de Google Maps. Para poder utilizar esta API, se tiene que acceder a la consola de desarrolladores de Google \cite{URL::consoleGoogle}. En ella se tiene que crear un proyecto con el nombre de la aplicación \ULLAR{}, para después habilitar la API de ``Maps SDK for Android". Una vez habilitada se otorgará una clave que se encuentra en el fichero \texttt{app/res/values/google\_maps\_api.xml} (véase Listado \ref{lst:apiMaps}).
 
 \begin{lstlisting}[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{google\_maps\_api.xml}.},  label={lst:apiMaps}]
 <resources>
@@ -740,7 +740,7 @@ El fragmento ``AboutFragment'' se encarga de mostrar la ventana de \textit{Infor
 
 El menú de la aplicación constituye el elemento principal por el que el usuario navegará por la misma. Por ello se ha optado por incorporar un menú lateral deslizante llamado \textit{Navigation Drawer}. Este es un menú que ha sido implementado por Google, se encuentra en sus principales aplicaciones como ``Gmail'' y ``Google Play''. Un menú Navigation Drawer es un layout que incorpora dentro del mismo la vista de otras ventanas que se encuentren formato de fragmentos y facilita que el cambio entre los fragmentos sea fluido y rápido. Este menú (véase Figura \ref{fig:menuApp}) se desplegará pulsando en la esquina superior izquierda de la aplicación.
    
-El fichero \texttt{navigation\_draw.xml} contiene la vista del Navigation Draw. Aquí se cuenta con un layout que muestra: la barra superior de la aplicación en la que irá el nombre de la aplicación ``ULL-AR'', un ``FrameLayout'' en el que irá el fragmento actual a mostrar y un ``NavigationView'' que será la vista del menú Navigation Drawer y que al inicio de la aplicación estará sin desplegar.
+El fichero \texttt{navigation\_draw.xml} contiene la vista del Navigation Draw. Aquí se cuenta con un layout que muestra: la barra superior de la aplicación en la que irá el nombre de la aplicación ``\ULLAR{}'', un ``FrameLayout'' en el que irá el fragmento actual a mostrar y un ``NavigationView'' que será la vista del menú Navigation Drawer y que al inicio de la aplicación estará sin desplegar.
 
 \lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{navigation\_draw.xml}, layout del Navigation Drawer.}, label={code:navigation_draw.xml},]{listings/navigation_draw.xml}
 
@@ -752,7 +752,7 @@ En cuanto al contenido del menú del Navigation Drawer, se encuentra una cabecer
 
 \lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{nav\_options.xml}, opciones del menú Navigation Drawer.}, label={lst:nav_options.xml},]{listings/nav_options.xml}
 
-Para la implementación del menú se ha utilizado una clase heredable llamada ``BaseActivity'' la cual incorpora la vista del Navigation Drawer, gestionará las opciones del menú, cambiará los fragmentos y lanzará los activities principales de ULL-AR. 
+Para la implementación del menú se ha utilizado una clase heredable llamada ``BaseActivity'' la cual incorpora la vista del Navigation Drawer, gestionará las opciones del menú, cambiará los fragmentos y lanzará los activities principales de \ULLAR{}. 
 
 \lstinputlisting[language=java, caption={Fichero \texttt{BaseActivity.java}, código que se encarga de configurar la vista del Navigation Drawer.}, label={BaseActivity.java},]{listings/BaseActivity.java}
 
@@ -787,7 +787,7 @@ El activity ``SiteDescriptionActivity'' muestra toda la información de la insta
     
 \section{Preferencias del usuario}
 
-Se necesita un lugar donde el usuario pueda editar los ajustes de la aplicación. Para ellos se ha utilizado la clase heredable ``PrefenceActivity'' que ofrece Android para diseñar una ventana en la que poder editar de forma rápida e intuitiva los ajustes de una aplicación Android. Desde Android Studio se crea un ``PrefenceActivity'' con el nombre de ``SettingsULLActivity''. A continuación, se generará un activity que hereda de ``PrefenceActivity'' en el cual insertar la vista que contiene los ajustes de la aplicación. El fichero \texttt{pref\_nav\_setting.xml} (véase Listado \ref{lst:pref_nav_setting.xml}) contendrá la lista con los ajustes necesarios para la aplicación ULL-AR. Cada uno de estos ajustes se pueden disponer, en función del tipo ajuste que se cree, de un nombre, una descripción, una clave y un valor por defecto. Estos ajustes permitirán decidir al usuario si desea encontrar las instalaciones, en el mapa o en el modo realidad aumentada, dentro de dos circunferencias y la dimensiones en metros de ambos radios (véase Figura \ref{fig:settingsApp}).
+Se necesita un lugar donde el usuario pueda editar los ajustes de la aplicación. Para ellos se ha utilizado la clase heredable ``PrefenceActivity'' que ofrece Android para diseñar una ventana en la que poder editar de forma rápida e intuitiva los ajustes de una aplicación Android. Desde Android Studio se crea un ``PrefenceActivity'' con el nombre de ``SettingsULLActivity''. A continuación, se generará un activity que hereda de ``PrefenceActivity'' en el cual insertar la vista que contiene los ajustes de la aplicación. El fichero \texttt{pref\_nav\_setting.xml} (véase Listado \ref{lst:pref_nav_setting.xml}) contendrá la lista con los ajustes necesarios para la aplicación \ULLAR{}. Cada uno de estos ajustes se pueden disponer, en función del tipo ajuste que se cree, de un nombre, una descripción, una clave y un valor por defecto. Estos ajustes permitirán decidir al usuario si desea encontrar las instalaciones, en el mapa o en el modo realidad aumentada, dentro de dos circunferencias y la dimensiones en metros de ambos radios (véase Figura \ref{fig:settingsApp}).
  
 \lstinputlisting[language=XML, caption={Fichero \texttt{pref\_nav\_setting.xml}.}, label={lst:pref_nav_setting.xml},]{listings/pref_nav_settings.xml}
 

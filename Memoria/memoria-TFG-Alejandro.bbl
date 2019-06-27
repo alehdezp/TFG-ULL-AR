@@ -78,6 +78,23 @@
   \emph{[\url{https://es.wikipedia.org/wiki/Kit_de_desarrollo_de_software}]}.
   [[Disponible electrónicamente. Último acceso, junio de 2019]].
 
+\bibitem{URL::vuforia}
+\textbf{{Página web de Vuforia}}.
+  \emph{[\url{https://developer.vuforia.com/}]}. [[Disponible
+  electrónicamente. Último acceso, junio de 2019]].
+
+\bibitem{URL::Unity}
+\textbf{{Unity}}. \emph{[\url{https://unity.com/es}]}. [[Disponible
+  electrónicamente. Último acceso, junio de 2019]].
+
+\bibitem{URL::kudan}
+\textbf{{Kudan}}. \emph{[\url{https://www.kudan.io/}]}. [[Disponible
+  electrónicamente. Último acceso, junio de 2019]].
+
+\bibitem{URL::maxst}
+\textbf{{Página web de Maxst}}. \emph{[\url{https://developer.maxst.com/}]}.
+  [[Disponible electrónicamente. Último acceso, junio de 2019]].
+
 \bibitem{URL::SLAM}
 \textbf{{SLAM}}.
   \emph{[\url{https://es.wikipedia.org/wiki/Localización_y_modelado_simultáneos}]}.
@@ -89,6 +106,11 @@
 
 \bibitem{URL::ChromeV8}
 \textbf{{Chrome V8}}. \emph{[\url{ https://es.wikipedia.org/wiki/Chrome_V8}]}.
+  [[Disponible electrónicamente. Último acceso, junio de 2019]].
+
+\bibitem{URL::serverside}
+\textbf{{Lenguajes de programción del lado del servidor}}.
+  \emph{[\url{https://blog.michelletorres.mx/lenguajes-de-programacion-del-lado-servidor/}]}.
   [[Disponible electrónicamente. Último acceso, junio de 2019]].
 
 \bibitem{URL::MongoDB}
@@ -188,10 +210,6 @@
 \textbf{{Layout Android}}.
   \emph{[\url{https://developer.android.com/guide/topics/ui/declaring-layout?hl=es-419}]}.
   [[Disponible electrónicamente. Último acceso, junio de 2019]].
-
-\bibitem{URL::kudan}
-\textbf{{Kudan}}. \emph{[\url{https://www.kudan.io/}]}. [[Disponible
-  electrónicamente. Último acceso, junio de 2019]].
 
 \bibitem{URL::fragment}
 \textbf{{Fragmentos Android}}.
@@ -314,167 +332,191 @@
 </bibl>
 
 <bibl id="B17">
+  <title><p>{Página web de Vuforia}</p></title>
+  <source>[\url{https://developer.vuforia.com/}]</source>
+  <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
+</bibl>
+
+<bibl id="B18">
+  <title><p>{Unity}</p></title>
+  <source>[\url{https://unity.com/es}]</source>
+  <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
+</bibl>
+
+<bibl id="B19">
+  <title><p>{Kudan}</p></title>
+  <source>[\url{https://www.kudan.io/}]</source>
+  <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
+</bibl>
+
+<bibl id="B20">
+  <title><p>{Página web de Maxst}</p></title>
+  <source>[\url{https://developer.maxst.com/}]</source>
+  <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
+</bibl>
+
+<bibl id="B21">
   <title><p>{SLAM}</p></title>
   <source>[\url{https://es.wikipedia.org/wiki/Localización_y_modelado_simultáneos}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B18">
+<bibl id="B22">
   <title><p>{Node.js}</p></title>
   <source>[\url{ https://nodejs.org/en/}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B19">
+<bibl id="B23">
   <title><p>{Chrome V8}</p></title>
   <source>[\url{ https://es.wikipedia.org/wiki/Chrome_V8}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B20">
+<bibl id="B24">
+  <title><p>{Lenguajes de programción del lado del servidor}</p></title>
+  <source>[\url{https://blog.michelletorres.mx/lenguajes-de-programacion-del-lado-servidor/}]</source>
+  <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
+</bibl>
+
+<bibl id="B25">
   <title><p>{MongoDB}</p></title>
   <source>[\url{ https://www.mongodb.com/what-is-mongodb?lang=es-es}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B21">
+<bibl id="B26">
   <title><p>{Tecnología NoSQL}</p></title>
   <url>https://es.wikipedia.org/wiki/NoSQL</url>
   <note>\href{https://es.wikipedia.org/wiki/NoSQL} [Disponible
   electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B22">
+<bibl id="B27">
   <title><p>{Formato BSON}</p></title>
   <source>[\url{ https://es.wikipedia.org/wiki/BSON?lang=es-es}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B23">
+<bibl id="B28">
   <title><p>{PaaS}</p></title>
   <source>[\url{https://en.wikipedia.org/wiki/Platform_as_a_service}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B24">
+<bibl id="B29">
   <title><p>{Instalación Heroku}</p></title>
   <source>[\url{https://devcenter.heroku.com/articles/heroku-cli}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B25">
+<bibl id="B30">
   <title><p>{Amazon Web Services}</p></title>
   <source>[\url{ https://aws.amazon.com/es/}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B26">
+<bibl id="B31">
   <title><p>{Azure}</p></title>
   <source>[\url{ https://azure.microsoft.com/es-es/}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B27">
+<bibl id="B32">
   <title><p>{Google Cloud}</p></title>
   <source>[\url{ https://cloud.google.com/?hl=es}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B28">
+<bibl id="B33">
   <title><p>{Google Maps API}</p></title>
   <source>[\url{https://developers.google.com/maps/
   documentation/android-api}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B29">
+<bibl id="B34">
   <title><p>{Aprendizaje ubicuo}</p></title>
   <source>[\url{https://es.wikipedia.org/wiki/Aprendizaje_ubicuo}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B30">
+<bibl id="B35">
   <title><p>{Animating eco-education: To see, feel, and discover in an
   augmented reality-based experiential learning environment.}</p></title>
   <source>[\url{https://www.sciencedirect.com/science/article/pii/S0360131516300288}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B31">
+<bibl id="B36">
   <title><p>{Augmented Reality Trends in Education : A Systematic Review of
   Research and Applications.}</p></title>
   <source>[\url{http://disde.minedu.gob.pe/handle/123456789/5029}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B32">
+<bibl id="B37">
   <title><p>{Gafas de Microsoft Hololens}</p></title>
   <source>[\url{https://www.microsoft.com/es-es/hololens}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B33">
+<bibl id="B38">
   <title><p>{AR Sandbox}</p></title>
   <source>[\url{https://arsandbox.ucdavis.edu/}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B34">
+<bibl id="B39">
   <title><p>{Splash Screen}</p></title>
   <source>[\url{https://en.wikipedia.org/wiki/Splash_screen}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B35">
+<bibl id="B40">
   <title><p>{Navigation Drawer}</p></title>
   <source>[\url{https://material.io/design/components/navigation-drawer.html}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B36">
+<bibl id="B41">
   <title><p>{Pixlr}</p></title>
   <source>[\url{https://pixlr.com/}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B37">
+<bibl id="B42">
   <title><p>{Activity Android}</p></title>
   <source>[\url{https://developer.android.com/guide/components/activities.html?hl=ES}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B38">
+<bibl id="B43">
   <title><p>{Consola de Firebase}</p></title>
   <source>[\url{https://console.firebase.google.com/}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B39">
+<bibl id="B44">
   <title><p>{Layout Android}</p></title>
   <source>[\url{https://developer.android.com/guide/topics/ui/declaring-layout?hl=es-419}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B40">
-  <title><p>{Kudan}</p></title>
-  <source>[\url{https://www.kudan.io/}]</source>
-  <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
-</bibl>
-
-<bibl id="B41">
+<bibl id="B45">
   <title><p>{Fragmentos Android}</p></title>
   <source>[\url{https://developer.android.com/guide/components/fragments?hl=es-419
   }]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B42">
+<bibl id="B46">
   <title><p>{Consola de Google}</p></title>
   <source>[\url{https://console.developers.google.com/}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 
-<bibl id="B43">
+<bibl id="B47">
   <title><p>{RecyclerView}</p></title>
   <source>[\url{https://developer.android.com/guide/topics/ui/layout/recyclerview}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>

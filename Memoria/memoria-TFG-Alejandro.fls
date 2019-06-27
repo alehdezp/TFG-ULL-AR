@@ -178,6 +178,7 @@ INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/memoria-TFG-Alejandro.toc
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/memoria-TFG-Alejandro.toc
+INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 OUTPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/memoria-TFG-Alejandro.toc
 INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsl12.tfm
@@ -193,7 +194,6 @@ INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap1_Goals.tex
 OUTPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap2_Technology.aux
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap2_Technology.tex
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap2_Technology.tex
-INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/androidstudio.jpg
@@ -261,6 +261,7 @@ INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/settingsApp.png
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/infoApp.png
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/infoApp.png
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/infoApp.png
+INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/logoApp.png
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/logoApp.png
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/logoApp.png

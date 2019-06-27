@@ -6,20 +6,20 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Google Glass. Desmostraci\IeC {\'o}n del uso de RA en deportes.\relax }}{6}{figure.caption.6}% 
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Marker-bases AR. Demostraci\IeC {\'o}n de su funcionamiento.\relax }}{7}{figure.caption.8}% 
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Espacio de la Realidad Mixta. \relax }}{8}{figure.caption.11}% 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces RA Volc\IeC {\'a}n. Ejemplo de uso de RA en Educaci\IeC {\'o}n. \relax }}{9}{figure.caption.13}% 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces RA Volc\IeC {\'a}n. Ejemplo de uso de RA en Educaci\IeC {\'o}n. \relax }}{10}{figure.caption.13}% 
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Funcionamiento de Node.js.\relax }}{13}{figure.caption.16}% 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Ventajas de Node.js.\relax }}{14}{figure.caption.18}% 
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Ventajas de MongodDB. \relax }}{15}{figure.caption.22}% 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Ventajas de Node.js.\relax }}{14}{figure.caption.17}% 
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Ventajas de MongodDB. \relax }}{15}{figure.caption.20}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Construcci\IeC {\'o}n de un autom\IeC {\'o}vil de carreras gracias a la RA.\relax }}{20}{figure.caption.28}% 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Funcionamiento de AR Sandbox.\relax }}{21}{figure.caption.30}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Construcci\IeC {\'o}n de un autom\IeC {\'o}vil de carreras gracias a la RA.\relax }}{20}{figure.caption.26}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Funcionamiento de AR Sandbox.\relax }}{21}{figure.caption.28}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Ventana \textit {Inicio} y el \textit {Men\IeC {\'u}} de \textit {ULL-AR}.\relax }}{25}{figure.caption.31}% 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ventana Inicio y men\IeC {\'u} de \textit {ULL-AR}\relax }}{26}{figure.caption.32}% 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Ventanas de \textit {Todas las instalaciones ULL} e \textit {Informaci\IeC {\'o}n de la instalaci\IeC {\'o}n} de \textit {ULL-AR}.\relax }}{27}{figure.caption.33}% 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Ventanas de \textit {Configuraci\IeC {\'o}n} e \textit {Informaci\IeC {\'o}n} de \textit {ULL-AR}.\relax }}{28}{figure.caption.34}% 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Logo de ULL-AR.\relax }}{28}{figure.caption.35}% 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Disposici\IeC {\'o}n de los ejes de un dispositivo Android.\relax }}{34}{figure.caption.38}% 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Ejemplo de una instalaci\IeC {\'o}n de la ULL en la base de datos.\relax }}{36}{figure.caption.40}% 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Explicaci\IeC {\'o}n de las variables ``coneValue'' y ``dirToSite''.\relax }}{37}{figure.caption.41}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ventana \textit {Inicio} y el \textit {Men\IeC {\'u}} de \textit {\texttt {ULL-AR}{}{}}.\relax }}{25}{figure.caption.29}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ventana Inicio y men\IeC {\'u} de \textit {\texttt {ULL-AR}{}{}}\relax }}{26}{figure.caption.30}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ventanas de \textit {Todas las instalaciones ULL} e \textit {Informaci\IeC {\'o}n de la instalaci\IeC {\'o}n} de \textit {\texttt {ULL-AR}{}{}}.\relax }}{27}{figure.caption.31}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Ventanas de \textit {Configuraci\IeC {\'o}n} e \textit {Informaci\IeC {\'o}n} de \textit {\texttt {ULL-AR}{}{}}.\relax }}{28}{figure.caption.32}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Logo de \texttt {ULL-AR}{}{}.\relax }}{28}{figure.caption.33}% 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Disposici\IeC {\'o}n de los ejes de un dispositivo Android.\relax }}{34}{figure.caption.36}% 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Ejemplo de una instalaci\IeC {\'o}n de la ULL en la base de datos.\relax }}{36}{figure.caption.38}% 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Explicaci\IeC {\'o}n de las variables ``coneValue'' y ``dirToSite''.\relax }}{37}{figure.caption.39}% 
 \addvspace {10\p@ }
