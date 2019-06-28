@@ -36,7 +36,7 @@
   electrónicamente. Último acceso, junio de 2019]].
 
 \bibitem{URL::repositorioAplicacion}
-\textbf{{Repositorio Github}}.
+\textbf{{Repositorio Github del proyecto ULL-AR}}.
   \emph{[\url{https://github.com/alehdezp/TFG-ULL-AR}]}. [[Disponible
   electrónicamente. Último acceso, junio de 2019]].
 
@@ -110,7 +110,7 @@
 
 \bibitem{URL::serverside}
 \textbf{{Lenguajes de programación del lado del servidor}}.
-  \emph{[\url{https://blog.michelletorres.mx/lenguajes-de-programacion-del-lado-servidor/}]}.
+  \emph{[\url{https://es.wikipedia.org/wiki/Script_del_lado_del_servidor}]}.
   [[Disponible electrónicamente. Último acceso, junio de 2019]].
 
 \bibitem{URL::MongoDB}
@@ -281,7 +281,7 @@
 </bibl>
 
 <bibl id="B8">
-  <title><p>{Repositorio Github}</p></title>
+  <title><p>{Repositorio Github del proyecto ULL-AR}</p></title>
   <source>[\url{https://github.com/alehdezp/TFG-ULL-AR}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
@@ -379,7 +379,7 @@
 
 <bibl id="B24">
   <title><p>{Lenguajes de programación del lado del servidor}</p></title>
-  <source>[\url{https://blog.michelletorres.mx/lenguajes-de-programacion-del-lado-servidor/}]</source>
+  <source>[\url{https://es.wikipedia.org/wiki/Script_del_lado_del_servidor}]</source>
   <note>[Disponible electrónicamente. Último acceso, junio de 2019]</note>
 </bibl>
 

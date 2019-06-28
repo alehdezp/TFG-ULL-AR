@@ -155,7 +155,8 @@ En la ventana de \textit{Navegación en modo RA} se mostrará la imagen obtenida
 A través del menú de la aplicación se puede acceder a la ventana de \textit{Todas las instalaciones ULL} (véase Figura \ref{fig:allSitesApp}). Aquí se mostrarán todas las instalaciones de la ULL que se encuentran en la base de datos. Además, se podrá hacer una búsqueda de cualquier instalación en la barra superior de la aplicación. Si se selecciona cualquiera de estas instalaciones se  desplegará una ventana con la información detallada de la instalación.
 
 
-En la ventana \textit{Información de la instalación} (véase Figura \ref{fig:siteInfoApp}) se dispondrá la información perteneciente a cada instalación. Aquí se  mostrará una imagen de esta, nombre y descripción de la instalación y una lista de enlaces con los servicios, secretarías, titulaciones y departamentos asociadas con la misma. Se dispone de un botón en la parte inferior de la imagen de la instalación, que  abrirá la ruta a su ubicación en la aplicación de Google Maps para permitir al usuario llegar a ella.  
+En la ventana \textit{Información de la instalación} (véase Figura \ref{fig:siteInfoApp}) se dispondrá la información perteneciente a cada instalación. Aquí se  mostrará una imagen de ésta, nombre y descripción de la instalación y una lista de enlaces con los servicios, secretarías, titulaciones y departamentos asociadas con la misma. 
+Se dispone de un botón en la parte inferior de la imagen de la instalación, que  abrirá la ruta a su ubicación en la aplicación de Google Maps para permitir al usuario llegar a ella.  
 
 Por último, desde el menú se podrá acceder a las dos últimas ventanas de la aplicación. Estas son la ventana \textit{Configuración} y la ventana \textit{Información}.
 
@@ -299,9 +300,9 @@ El fichero \texttt{ARNavigation.java} contiene el activity encargado de: la reco
 
 \subsection{Acceso a los sensores}
 
-Se necesita obtener acceso a los sensores del GPS, el acelerómetro y el magnetómetro del dispositivo móvil, para poder ubicar y orientar el dispositivo dentro del mundo.
+Para ubicar y orientar el dispositivo móvil en el mundo físico, se necesita obtener acceso a diferentes sensores del mismo: GPS, acelerómetro y magnetómetro. 
 
-Para obtener acceso al GPS, se tienen que solicitar los permisos necesarios a través del archivo \texttt{AndroidManifest.xml} (véase Listado \ref{lst:permisionL}) y, a su vez, preguntar al usuario si concede su permiso para acceder al GPS del dispositivo móvil con la aplicación \ULLAR{}  (véase Listado \ref{lst:gpsP}).
+Para obtener acceso al GPS, se han de solicitar los permisos necesarios lo cual se refleja en el archivo \texttt{AndroidManifest.xml} (véase Listado \ref{lst:permisionL}) y a su vez requerir del usuario el permiso para acceder al GPS del dispositivo móvil con \ULLAR{}  (véase Listado \ref{lst:gpsP}).
 
 \begin{lstlisting}[caption={Fichero \texttt{AndroidManifest.xml} del proyecto, permisos para acceder a la ubicación del dispositivo.}, label={lst:permisionL}]
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -329,7 +330,7 @@ Con los permisos concedidos, bastará con el código mostrado en el Listado \ref
     locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 3000, 5, this);
 \end{lstlisting}
 
-Para acceder a la última coordenada registrada por el GPS y así poder ubicar al usuario en el mundo, se utilizará la siguiente línea código:
+Para acceder a la última coordenada registrada por el GPS y así poder ubicar al usuario en el mundo físico, se utilizará la siguiente línea código:
 
 \begin{lstlisting}[label={lst:ubicacionL}]
     currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);

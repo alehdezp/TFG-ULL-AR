@@ -4,40 +4,41 @@
 \BOOKMARK [2][-]{subsection.2.1.1}{Android Studio}{section.2.1}% 4
 \BOOKMARK [2][-]{subsection.2.1.2}{LaTex}{section.2.1}% 5
 \BOOKMARK [2][-]{subsection.2.1.3}{Github}{section.2.1}% 6
-\BOOKMARK [1][-]{section.2.2}{Tecnolog\355as utilizadas}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.1}{El Sistema Operativo Android}{section.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.2}{Realidad Aumentada}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.3}{Node.js}{section.2.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.4}{MongoDB}{section.2.2}% 11
-\BOOKMARK [2][-]{subsection.2.2.5}{ Heroku }{section.2.2}% 12
-\BOOKMARK [2][-]{subsection.2.2.6}{ mLab }{section.2.2}% 13
-\BOOKMARK [2][-]{subsection.2.2.7}{ Google Maps }{section.2.2}% 14
-\BOOKMARK [0][-]{chapter.3}{RA en entornos universitarios }{}% 15
-\BOOKMARK [1][-]{section.3.1}{Aplicaciones en entornos universitarios}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.2}{Ejemplos de uso de la RA}{chapter.3}% 17
-\BOOKMARK [0][-]{chapter.4}{La aplicaci\363n ULL-AR}{}% 18
-\BOOKMARK [1][-]{section.4.1}{Requisitos y ventanas de la aplicaci\363n}{chapter.4}% 19
-\BOOKMARK [2][-]{subsection.4.1.1}{Especificaci\363n detallada de los requisitos}{section.4.1}% 20
-\BOOKMARK [2][-]{subsection.4.1.2}{Ventanas de la aplicaci\363n}{section.4.1}% 21
-\BOOKMARK [1][-]{section.4.2}{Inicio de ULL-AR}{chapter.4}% 22
-\BOOKMARK [2][-]{subsection.4.2.1}{Ventana inicial}{section.4.2}% 23
-\BOOKMARK [2][-]{subsection.4.2.2}{Ventana de Inicio de Sesi\363n }{section.4.2}% 24
-\BOOKMARK [1][-]{section.4.3}{Modo de Realidad Aumentada}{chapter.4}% 25
-\BOOKMARK [2][-]{subsection.4.3.1}{Acceso a los sensores}{section.4.3}% 26
-\BOOKMARK [2][-]{subsection.4.3.2}{Modelos encargados de la navegaci\363n}{section.4.3}% 27
-\BOOKMARK [2][-]{subsection.4.3.3}{Obtenci\363n de la informaci\363n}{section.4.3}% 28
-\BOOKMARK [2][-]{subsection.4.3.4}{Visualizaci\363n}{section.4.3}% 29
-\BOOKMARK [1][-]{section.4.4}{Fragmentos}{chapter.4}% 30
-\BOOKMARK [2][-]{subsection.4.4.1}{MapsFragment}{section.4.4}% 31
-\BOOKMARK [2][-]{subsection.4.4.2}{HomeFragment}{section.4.4}% 32
-\BOOKMARK [2][-]{subsection.4.4.3}{AboutFragment}{section.4.4}% 33
-\BOOKMARK [1][-]{section.4.5}{Men\372}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.6}{Instalaciones de la ULL}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.7}{Preferencias del usuario}{chapter.4}% 36
-\BOOKMARK [0][-]{chapter.5}{Back-end de la aplicaci\363n}{}% 37
-\BOOKMARK [1][-]{section.5.1}{Base de datos}{chapter.5}% 38
-\BOOKMARK [1][-]{section.5.2}{Configuraci\363n del servidor}{chapter.5}% 39
-\BOOKMARK [2][-]{subsection.5.2.1}{Requisitos previos}{section.5.2}% 40
-\BOOKMARK [2][-]{subsection.5.2.2}{Implementaci\363n}{section.5.2}% 41
-\BOOKMARK [2][-]{subsection.5.2.3}{Despliegue en Heroku}{section.5.2}% 42
-\BOOKMARK [0][-]{lstnumber.-14.3}{Bibliograf\355a}{}% 43
+\BOOKMARK [2][-]{subsection.2.1.4}{Gu\355a de uso de estas tecnolog\355as en relaci\363n con el proyecto ULL-AR}{section.2.1}% 7
+\BOOKMARK [1][-]{section.2.2}{Tecnolog\355as utilizadas}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{El Sistema Operativo Android}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{Realidad Aumentada}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.3}{Node.js}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.4}{MongoDB}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.5}{ Heroku }{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.6}{ mLab }{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.7}{ Google Maps }{section.2.2}% 15
+\BOOKMARK [0][-]{chapter.3}{RA en entornos universitarios }{}% 16
+\BOOKMARK [1][-]{section.3.1}{Aplicaciones en entornos universitarios}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Ejemplos de uso de la RA}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{La aplicaci\363n ULL-AR}{}% 19
+\BOOKMARK [1][-]{section.4.1}{Requisitos y ventanas de la aplicaci\363n}{chapter.4}% 20
+\BOOKMARK [2][-]{subsection.4.1.1}{Especificaci\363n detallada de los requisitos}{section.4.1}% 21
+\BOOKMARK [2][-]{subsection.4.1.2}{Ventanas de la aplicaci\363n}{section.4.1}% 22
+\BOOKMARK [1][-]{section.4.2}{Inicio de ULL-AR}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.2.1}{Ventana inicial}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.2}{Ventana de Inicio de Sesi\363n }{section.4.2}% 25
+\BOOKMARK [1][-]{section.4.3}{Modo de Realidad Aumentada}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.3.1}{Acceso a los sensores}{section.4.3}% 27
+\BOOKMARK [2][-]{subsection.4.3.2}{Modelos encargados de la navegaci\363n}{section.4.3}% 28
+\BOOKMARK [2][-]{subsection.4.3.3}{Obtenci\363n de la informaci\363n}{section.4.3}% 29
+\BOOKMARK [2][-]{subsection.4.3.4}{Visualizaci\363n}{section.4.3}% 30
+\BOOKMARK [1][-]{section.4.4}{Fragmentos}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.4.1}{MapsFragment}{section.4.4}% 32
+\BOOKMARK [2][-]{subsection.4.4.2}{HomeFragment}{section.4.4}% 33
+\BOOKMARK [2][-]{subsection.4.4.3}{AboutFragment}{section.4.4}% 34
+\BOOKMARK [1][-]{section.4.5}{Men\372}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.6}{Instalaciones de la ULL}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.7}{Preferencias del usuario}{chapter.4}% 37
+\BOOKMARK [0][-]{chapter.5}{Back-end de la aplicaci\363n}{}% 38
+\BOOKMARK [1][-]{section.5.1}{Base de datos}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.2}{Configuraci\363n del servidor}{chapter.5}% 40
+\BOOKMARK [2][-]{subsection.5.2.1}{Requisitos previos}{section.5.2}% 41
+\BOOKMARK [2][-]{subsection.5.2.2}{Implementaci\363n}{section.5.2}% 42
+\BOOKMARK [2][-]{subsection.5.2.3}{Despliegue en Heroku}{section.5.2}% 43
+\BOOKMARK [0][-]{lstnumber.-14.3}{Bibliograf\355a}{}% 44
