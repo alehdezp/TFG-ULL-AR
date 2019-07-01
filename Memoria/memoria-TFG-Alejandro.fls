@@ -127,8 +127,10 @@ INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap3_ARInStudentEnvironments
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap3_ARInStudentEnvironments.aux
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap4_TheApplication.aux
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap4_TheApplication.aux
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Back-end.aux
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Back-end.aux
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap5_Conclussions.aux
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap5_Conclussions.aux
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Budget.aux
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Budget.aux
 OUTPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/memoria-TFG-Alejandro.aux
 INPUT c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -200,6 +202,7 @@ INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/androidstudio.jpg
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/androidstudio.jpg
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/androidstudio.jpg
 INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
+INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/imagenRAMantenimiento.jpg
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/imagenRAMantenimiento.jpg
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/images/imagenRAMantenimiento.jpg
@@ -333,9 +336,6 @@ INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/SiteDescriptionActi
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/pref_nav_settings.xml
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/pref_nav_settings.xml
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/pref_nav_settings.xml
-OUTPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Back-end.aux
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Back-end.tex
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Back-end.tex
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/package.json
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/package.json
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/package.json
@@ -348,6 +348,14 @@ INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/api.js
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/server.js
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/server.js
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/listings/server.js
+OUTPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap5_Conclussions.aux
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap5_Conclussions.tex
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap5_Conclussions.tex
+OUTPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Budget.aux
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Budget.tex
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Budget.tex
+INPUT c:/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+INPUT c:/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/memoria-TFG-Alejandro.bbl
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/memoria-TFG-Alejandro.bbl
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/memoria-TFG-Alejandro.brf
@@ -366,8 +374,10 @@ INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap3_ARInStudentEnvironments
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap3_ARInStudentEnvironments.aux
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap4_TheApplication.aux
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap4_TheApplication.aux
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Back-end.aux
-INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Back-end.aux
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap5_Conclussions.aux
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap5_Conclussions.aux
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Budget.aux
+INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/Cap6_Budget.aux
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/memoria-TFG-Alejandro.out
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/memoria-TFG-Alejandro.out
 INPUT c:/Users/alexh/TFG/TFG-ULL-NAVIGATION/Memoria/memoria-TFG-Alejandro.brf
@@ -383,6 +393,7 @@ INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb
+INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb

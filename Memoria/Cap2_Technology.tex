@@ -81,11 +81,44 @@ Para instalar GitHub en Linux se utiliza el siguiente comando:
 \subsection{Guía de uso de estas tecnologías en relación con el proyecto \ULLAR{}}
 En este apartado XXX se explica con cierto nivel de detalle los pasos a seguir para:
 \begin{itemize}
-\item Descargar desde su repositorio todo el código fuente, tanto de esta memoria como de la aplicación \ULLAR{}
-\item Compilar en Android Studio el proyecto \ULLAR{} para generar una aplicación para dispositivos móviles
-\item Compilar con Latex esta memoria para generar el corresponidente fichero en formato PDF
-\item 
+\item Descargar desde su repositorio todo el código fuente, tanto de esta memoria como de la aplicación \ULLAR{}.
+\item Compilar en Android Studio el proyecto \ULLAR{} para generar una aplicación para dispositivos móviles.
+\item Compilar con Latex esta memoria para generar el corresponidente fichero en formato PDF.
 \end{itemize}
+
+\subsubsection{Descargar repositorio de la aplicación}
+
+Para descargar el repositorio de \ULLAR{} se necesitará tener instalado en el ordenador el control de versiones de GitHub. Con GitHub ya instalado, se ejecuta el siguiente comando en consola para descargar el repositorio:
+
+\begin{lstlisting}
+    git clone https://github.com/alehdezp/TFG-ULL-AR 
+\end{lstlisting}
+
+En el caso de que no se tenga GitHub se puede descargar directamente desde el repositorio \cite{URL::repositorioAplicacion}, seleccionando el bóton ``Clone or download'' y luego se selecciona ``Download as ZIP''. Tras esto se descargará un archivo comprimido con todo el repositorio de \ULLAR{}.
+
+
+\subsubsection{Compilar el proyecto en Android Studio}
+
+Para compilar el proyecto es necesario tener instalado el IDE de Android Studio en el ordenador que se desee compilar el proyecto.
+
+Una vez iniciado Android Studio, se selecciona que se quiere abrir un proyecto y se busca en la carpeta en la que se encuentra el repositorio de \ULLAR{} y se abre el proyecto que se encuentra en la ruta \textit{``app/ULL\_Navigation''}. 
+
+La primera vez que se abre el proyecto, en el caso de que no se halla hecho automaticamente, se tiene  que seleccionar en la barra superior la opción de ``Build'' y luego ``Make Project''. Esto creára y configurar el proyecto para que se pueda empezar a trabajar con él.
+
+Para poder instalar la aplicación que genera el proyecto en un dispositivo Android hay dos opciones. La primera es generar el un archivo ``.apk'', para generar este archivo se tiene que seleccionar en la barra superior la opción de ``Build'', luego ``Build Bundle(s) / APK(s)'' y por último ``Build APK''. Esto generará un fichero \texttt{app-debug.apk} en la ruta \textit{``ULL\_Navigation/app/build/outputs/apk/debug''}, este fichero hay que colocarlo dentro del dispositvo Android en el que se quiera instalar la aplicación y se ejecuta.
+
+La seguna opción es ejecutar e instalar directamente la aplicación desde Android Studio. Para ello hay que tener activado en el dispositivo Android la opción de depuración por USB. Esta opción solo estará disponible cuando se tenga activado el modo desarrollador en el dispositivo Android, en función de la marcar y modelo del dispositivo la forma en la que se activa este modo varía. Con la opción activada solo hay que conectar el dispositivo al ordenador y seleccionar en el móvil el modo de ``Transeferencia de archivos'', a continuación en Android Studio se selecciona la opción de ``Run'' y luego ``Run 'app'''. Con estos pasos ya instalará la aplicación en el dispositivo y se pediran permisos en el dispositivo móvil para confiar en el desarrollador e instalar la aplicación \ULLAR{}. 
+
+
+\subsubsection{Compilar la memoria del proyecto}
+
+Para compilar el proyecto en LaTeX en un máquina con Linux es necesario instalar ``TeX Live'' y ``make''. Con el siguiente comando se instalarán ambos:
+\begin{lstlisting}
+    sudo apt install texlive-full make 
+\end{lstlisting}
+
+Dentro de la carpeta \textit{``Memoria/''} del repositorio, se abrirá una consola y se ejecutará el siguiente comando el cual genera el archivo con la presente memoria \texttt{memoria-TFG-Alejandro.pdf}.
+
 
 \section{Tecnologías utilizadas}
 
@@ -412,4 +445,4 @@ La API de Google Maps \cite{URL::GoogleMapsApi} fue publicada para Android en 20
     \item Ofrece la posibilidad de elegir el tipo de mapa: de carreteras, satélite, híbrido (fusión de carretera y satélite) y de terreno.
 \end{itemize}
 
-Esta API fácil de integrar y con soporte de Google, es la mejor opción para tener un mapa funcional y que permita ubicar al usuario de la aplicación \ULLAR{}.
+Esta API fácil de integrar y con soporte de Google, es la mejor opción para tener un mapa funcional y que permita ubicar al usuario de la aplicación.

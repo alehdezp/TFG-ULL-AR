@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :KudanAR:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b94b002fb8161bf6768076a05abbaec/jars/libs/cardboard.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b94b002fb8161bf6768076a05abbaec/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b94b002fb8161bf6768076a05abbaec/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

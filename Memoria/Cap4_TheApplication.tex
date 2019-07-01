@@ -55,7 +55,7 @@ Cada instalación de la universidad tendrá una ficha de información que será 
     \item \textbf{Nombre}: Nombre oficial de la instalación.
     \item \textbf{Ubicación}: La ubicación exacta en la que se encuentra la instalación. 
     \item \textbf{Descripción}: Descripción de la instalación con el objetivo de la misma y actividades que se desarrollan en ella.
-    \item \textbf{Imagen}: Imagen de la instalación.
+    \item \textbf{Imagen}: Enlace url de la imagen de la instalación.
     \item \textbf{Lista de enlaces de interés}: Una lista con los enlaces a las instituciones, servicios, departamentos y titulaciones asociadas con esta instalación.
 \end{itemize}
 
@@ -82,7 +82,7 @@ Esta información estará guardada en una base de datos en la nube. Para acceder
 % \hspace*{\fill}%
 % \end{figure}
   
-Al iniciar la aplicación \ULLAR{}, la primera ventana que aparece es la pantalla de inicio o Splash Screen. Tras unos segundos, se carga la ventana de \textit{Inicio de sesión}. Para poder autentificarse el usuario debe poseer una cuenta de correo institucional de la ULL. Se dispondrá de un botón en el centro de la pantalla, que abrirá un cuadro de diálogo en el que poder introducir el correo y contraseña de esta cuenta.
+Al iniciar \ULLAR{}, la primera ventana que aparece es la pantalla de inicio o Splash Screen. Tras unos segundos, se carga la ventana de \textit{Inicio de sesión}. Para poder autentificarse el usuario debe poseer una cuenta de correo institucional de la ULL. Se dispondrá de un botón en el centro de la pantalla, que abrirá un cuadro de diálogo en el que poder introducir el correo y contraseña de esta cuenta.
   
 \begin{figure}[h]
     \hspace*{\fill}%
@@ -185,7 +185,7 @@ La ventana \textit{Información} (véase Figura \ref{fig:infoApp})  muestra info
 
 \section{Inicio de \ULLAR{}} \label{chap:StartApplication} 
 
-Para comenzar a desarrollar aplicación, primero, se necesita crear un proyecto nuevo en Android Studio. Este proyecto se nombra con el nombre de la aplicación ``\ULLAR{}'' y se siguen los pasos del IDE para acabar de crear el proyecto. 
+Para comenzar a desarrollar aplicación, primero, se necesita crear un proyecto nuevo en Android Studio. Este proyecto se nombra con el nombre de ``ULL\_Navigation'' y se siguen los pasos del IDE para acabar de crear el proyecto. Este proyecto contendrá el código de la aplicación ``\ULLAR{}''.  
 
 A continuación, se explicarán en detalle el funcionamiento e implementación de las primeras ventanas que aparecen cuando se inicia la aplicación. 
 
@@ -248,7 +248,7 @@ Para poder integrar la API de Google se necesita integrar los ``Servicios de Goo
 
 Con el nombre del paquete y la clave SHA1, se descargará un fichero con la configuración de los Servicios de Google llamado \texttt{google-services.json}. Este fichero se ha de colocar en la carpeta \textit{app/} del proyecto.
  
-Por último para poder utilizar los Servicios de Google en la aplicación \ULLAR{}, se tiene que indicar al fichero \texttt{build.gradle} del proyecto en las dependencias (véase Listado \ref{lst:googleSd}) y al fichero \texttt{build.gradle} de la aplicación (véase Listado \ref{lst:googlepluggin}) que se quiere utilizar  los Servicios de Google.
+Por último para poder utilizar los Servicios de Google en \ULLAR{}, se tiene que indicar al fichero \texttt{build.gradle} del proyecto en las dependencias (véase Listado \ref{lst:googleSd}) y al fichero \texttt{build.gradle} de la aplicación (véase Listado \ref{lst:googlepluggin}) que se quiere utilizar  los Servicios de Google.
 
 \begin{lstlisting}[caption={Fichero \texttt{build.gradle} del proyecto, dependencias para utilizar los Servicios de Google.}, label={lst:googleSd}]
 ...
@@ -284,7 +284,7 @@ En el Listado \ref{code:loginUll.java} se muestran todos los métodos y conexion
 \bigskip
 \lstinputlisting[language=java, caption={Fichero \texttt{LoginActivityULL.java}, código que se encarga de realizar el inicio de sesión del usuario con su correo electrónico.}, label={code:loginUll.java},]{listings/LoginActivityULL.java} %% LISTING
 
-En caso de que la cuenta no pertenezca a la ULL, es decir, una cuenta que no tenga el formato del dominio de las cuentas de correo de la ULL terminadas en ``@ull.edu.es'', se cerrará la sesión de esta cuenta y se mostrará un mensaje con el tipo de cuenta necesaria para utilizar la aplicación \ULLAR{}.
+En caso de que la cuenta no pertenezca a la ULL, es decir, una cuenta que no tenga el formato del dominio de las cuentas de correo de la ULL terminadas en ``@ull.edu.es'', se cerrará la sesión de esta cuenta y se mostrará un mensaje con el tipo de cuenta necesaria para utilizar  \ULLAR{}.
 
 \bigskip
 \bigskip
@@ -410,7 +410,11 @@ Cada instalación de la ULL se obtiene de una base de datos en formato JSON. Una
     %     \label{fig:ull-site}
     % \end{figure}
 
-En la clase ``ULLSite'' se encuentran los atributos necesarios para guardar toda la información de cada instalación. Los tres últimos atributos:  ``distToSite'' corresponde a la distancia entre el dispositivo y la instalación, ``dirToSite'' corresponde con la dirección en la que se encuentra la instalación en el mundo con respecto al dispositivo y ``coneValue'' representa un rango de amplitud  con respecto a ``dirToSite'' a partir del cual se considerará que el dispositivo se encuentra apuntando a la instalación, el valor de este atributo vendrá dado por la distancia del dispositivo a la instalación. Estos atributos, que se calculan en tiempo de ejecución, junto con el objeto ``point'' de la clase ``Vector2D'', que contiene la ubicación en un plano coordenadas de dos dimensiones (``x'' e ``y''), permitirá realizar los cálculos para identificar si el dispositivo se encuentra apuntando a una instalación o no. En la Figura \ref{fig:dirSite} se explican la utilidad de estos atributos en los cálculos a realizar.
+En la clase ``ULLSite'' se encuentran los tres atributos principales para la identificación de las instalaciones: ``disToSite'', ``dirToSite'' y ``coneValue''. Estos atributos son calculados en tiempo de ejecución.
+
+El atributo ``disToSite'' representa la distancia, en metros, a la que se encuentra la instalación con respecto a la ubicación del dispositivo. El atributo ``dirToSite'' representa el valor de la brújula del dispositivo, en radianes, en la dirección en la que se encuentra la instalación, es decir, si la ubicación se encuentra hacía el norte con respecto al dispositivo el valor será 0 y si se encuentra hacía el este será $pi/2$.
+El atributo ``coneValue'' representa un cono de visión imaginario cuyo su centro es la dirección en la que se encuentra la instalación, este cono forma un rango de visión alrededor de la dirección instalación a partir de la cual si el dispositivo se encuentra apuntando dentro de este rango se considerará que éste está ``viendo'' la instalación. El valor del atributo ``coneValue'' variará en función de la distancia a la que se encuentre el dispositivo de la instalación.  Estos atributos junto con el objeto ``point'' de la clase ``Vector2D'', que contiene la ubicación en un plano coordenadas cartesianas, permitirán realizar los cálculos para identificar si el dispositivo se encuentra apuntando a una instalación o no.
+
 
 \begin{figure}[h] 
     \centering
@@ -418,7 +422,7 @@ En la clase ``ULLSite'' se encuentran los atributos necesarios para guardar toda
     \caption{Explicación de los atributos ``coneValue'' y ``dirToSite''.}
     \label{fig:dirSite}
 \end{figure}
-
+XXX
   
 \subsubsection{Navigation.java}
 
@@ -454,18 +458,21 @@ En Listado \ref{lst:calculateCone} se encuentran el método que calcula el tama�
     }
 \end{lstlisting}
 
-El cálculo del ángulo formado por dos puntos geográficos se realiza con el método ``Vector2D.getAngleRad(Vector2D v2)'', como se puede ver en el Listado \ref{lst:angle}.
+
+El cálculo del ángulo formado por dos puntos geográficos se realiza con el método ``Vector2D.getAngleRad(Vector2D v2)'', como se puede ver en el Listado \ref{lst:angle}. Este método calcula el ángulo que se obtiene al transformar el plano de coordenadas rectangulares (distancia en eje ``x'' y distancia en el eje ``y'') generado por la diferencia entre el punto con la ubicación geográfica del dispositivo ``v2'' y el punto con la ubicación geográfica de la instalación contenida en ``getX()'' y ``getY()'', a coordenadas polares. En las coordenadas polares un punto en el plano se determina por una distancia y un ángulo. Este ángulo que se obtiene será la dirección en la que se encuentra la instalación.
+
 
 \begin{lstlisting}[caption={Método que calcula el ángulo formado por dos puntos.}, label={lst:angle}]
+    // Metodo que calcula el angulo que se obtiene al transformar el rectangulo formado por este punto y el punto v2 a coordenadas polares
     public double getAngleRad(Vector2D v2) {
         double dx = v2.getX() - getX(); // Se calculan las distancias en el eje x e y
-        double dy = v2.getY() - getY();
-        double radian = Math.atan2(dy, dx); // Se realiza la arcotangente para calcular el angulo
+        double dy = v2.getY() - getY(); // se obtiene el rectangulo formado por estos dos puntos
+        double radian = Math.atan2(dy, dx); // Se realiza la arcotangente para calcular el angulo del rectangulo formado
         return radian; // Se devuelve el resultado
     }
 \end{lstlisting}
 
-A este valor calculado, hay que aplicarle unas transformaciones para que se ajuste a la orientación del norte magnético como el inicio de la rotación (norte magnético = 0º), para ello, el método ``Navigation.recalculeAng(double angleRad)'' se encarga de la correcta reorientación (véase Listado \ref{lst:reca}). 
+A este ángulo, hay que aplicarle unas transformaciones para que se ajuste a la orientación del norte magnético como el inicio de la rotación (norte magnético = 0º), para ello, el método ``Navigation.recalculeAng(double angleRad)'' se encarga de la correcta reorientación (véase Listado \ref{lst:reca}). 
 
 \begin{lstlisting}[caption={Método que recalcula en ángulo para orientarlo en función del norte magnético.}, label={lst:reca}]
     private double recalculeAng(double angleRad) {
@@ -475,7 +482,7 @@ A este valor calculado, hay que aplicarle unas transformaciones para que se ajus
 }   
 \end{lstlisting}
 
-El método ``whatCanSee'' \ref{lst:whatCanSee} es el método principal que se encargará, a partir de los datos de ubicación y dirección del dispositivo, de identificar que instalaciones se encuentran en frente del dispositivo y cuál es la más cercana. Para ello, en un primer paso, se calculan las distancias de las  instalaciones y las que se encuentran a una distancia mayor que ``maxDist'' y menor que ``minDist'' serán descartadas, para poder reducir el número de instalaciones a identificar. A continuación, para cada instalación anterior se calcula su dirección, posición y el valor del cono, con respecto a la ubicación del dispositivo. Si la instalación se encuentra orientado dentro del cono que se forma en la dirección de la instalación, esta instalación se considerará como un posible resultado y se añadirá a la variable con una lista de estos resultados, ``result''. De los posibles resultados, la instalación más cercana al dispositivo será la instalación ante la que teóricamente se encuentra el dispositivo y guardará esta en el principio de esta lista.
+El método ``whatCanSee'' \ref{lst:whatCanSee} es el método principal que se encargará, a partir de los datos de ubicación y dirección del dispositivo, de identificar qué instalaciones se encuentran en frente del dispositivo y cuál es la más cercana. Para ello, en un primer paso, se calculan las distancias de las  instalaciones y las que se encuentran a una distancia mayor que ``maxDist'' y menor que ``minDist'' serán descartadas, para poder reducir el número de instalaciones a identificar. A continuación, para cada instalación anterior se calcula su dirección, posición y el valor del cono, con respecto a la ubicación del dispositivo. Si la instalación se encuentra orientado dentro del cono que se forma en la dirección de la instalación, esta instalación se considerará como un posible resultado y se añadirá a la variable con una lista de estos resultados, ``result''. De los posibles resultados, la instalación más cercana al dispositivo será la instalación ante la que teóricamente se encuentra el dispositivo y guardará esta en el principio de esta lista.
  
 \begin{lstlisting}[caption={Método principal que realiza el cálculo que permite reconocer las instalaciones en frente al dispositivo móvil.}, label={lst:whatCanSee}]
     // Metodo principal que se encarga identificar las instalaciones en frente del dispositivo
@@ -573,7 +580,7 @@ Los últimos datos que se necesitan para trabajar con en el objeto ``navULL'', s
 
 \subsection{Visualización}
 
-El activity ``ARNavigation'' será el encargado de mostrar la técnica de realidad aumentada por geolocalización en la pantalla de dispositivo móvil. Este activity hereda de la clase ``ARActivity'' perteneciente al  SDK de Kudan para Android Studio. Este SDK permite el reconocimiento de objetos e imágenes a través de la cámara del dispositivo y queda como recurso para una futura ampliación de la funcionalidad de la aplicación. El uso principal de este SDK en la aplicación \ULLAR{}, es el acceso que otorga a cámara del dispositivo como vista principal del activity. Es decir, permite visualizar en la ventana lo que se está observando con la cámara.
+El activity ``ARNavigation'' será el encargado de mostrar la técnica de realidad aumentada por geolocalización en la pantalla de dispositivo móvil. Este activity hereda de la clase ``ARActivity'' perteneciente al  SDK de Kudan para Android Studio. Este SDK permite el reconocimiento de objetos e imágenes a través de la cámara del dispositivo y queda como recurso para una futura ampliación de la funcionalidad de la aplicación. El uso principal de este SDK en \ULLAR{}, es el acceso que otorga a cámara del dispositivo como vista principal del activity. Es decir, permite visualizar en la ventana lo que se está observando con la cámara.
 
 Para poder hacer uso del SDK de Kudan se tiene que descargar el SDK y configurar la ``ARAPIkey'' específica para el proyecto. Ambos se pueden encontrar en la página oficial de Kudan \cite{URL::kudan}. 
 
@@ -629,7 +636,7 @@ Los fragmentos \cite{URL::fragment} actúan como una sección modular de un acti
 
 \subsection{MapsFragment}
        
-Este fragmento contiene el mapa generado por la API de Google Maps. Para poder utilizar esta API, se tiene que acceder a la consola de desarrolladores de Google \cite{URL::consoleGoogle}. En ella se tiene que crear un proyecto con el nombre de la aplicación \ULLAR{}, para después habilitar la API de ``Maps SDK for Android". Una vez habilitada se otorgará una clave que se encuentra en el fichero \texttt{app/res/values/google\_maps\_api.xml} (véase Listado \ref{lst:apiMaps}).
+Este fragmento contiene el mapa generado por la API de Google Maps. Para poder utilizar esta API, se tiene que acceder a la consola de desarrolladores de Google \cite{URL::consoleGoogle}. En ella se tiene que crear un proyecto con el nombre de \ULLAR{}, para después habilitar la API de ``Maps SDK for Android". Una vez habilitada se otorgará una clave que se encuentra en el fichero \texttt{app/res/values/google\_maps\_api.xml} (véase Listado \ref{lst:apiMaps}).
 
 \begin{lstlisting}[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{google\_maps\_api.xml}.},  label={lst:apiMaps}]
 <resources>
@@ -787,12 +794,171 @@ El activity ``SiteDescriptionActivity'' muestra toda la información de la insta
     
 \section{Preferencias del usuario}
 
-Se necesita un lugar donde el usuario pueda editar los ajustes de la aplicación. Para ellos se ha utilizado la clase heredable ``PrefenceActivity'' que ofrece Android para diseñar una ventana en la que poder editar de forma rápida e intuitiva los ajustes de una aplicación Android. Desde Android Studio se crea un ``PrefenceActivity'' con el nombre de ``SettingsULLActivity''. A continuación, se generará un activity que hereda de ``PrefenceActivity'' en el cual insertar la vista que contiene los ajustes de la aplicación. El fichero \texttt{pref\_nav\_setting.xml} (véase Listado \ref{lst:pref_nav_setting.xml}) contendrá la lista con los ajustes necesarios para la aplicación \ULLAR{}. Cada uno de estos ajustes se pueden disponer, en función del tipo ajuste que se cree, de un nombre, una descripción, una clave y un valor por defecto. Estos ajustes permitirán decidir al usuario si desea encontrar las instalaciones, en el mapa o en el modo realidad aumentada, dentro de dos circunferencias y la dimensiones en metros de ambos radios (véase Figura \ref{fig:settingsApp}).
+Se necesita un lugar donde el usuario pueda editar los ajustes de la aplicación. Para ellos se ha utilizado la clase heredable ``PrefenceActivity'' que ofrece Android para diseñar una ventana en la que poder editar de forma rápida e intuitiva los ajustes de una aplicación Android. Desde Android Studio se crea un ``PrefenceActivity'' con el nombre de ``SettingsULLActivity''. A continuación, se generará un activity que hereda de ``PrefenceActivity'' en el cual insertar la vista que contiene los ajustes de la aplicación. El fichero \texttt{pref\_nav\_setting.xml} (véase Listado \ref{lst:pref_nav_setting.xml}) contendrá la lista con los ajustes necesarios para la aplicación. Cada uno de estos ajustes se pueden disponer, en función del tipo ajuste que se cree, de un nombre, una descripción, una clave y un valor por defecto. Estos ajustes permitirán decidir al usuario si desea encontrar las instalaciones, en el mapa o en el modo realidad aumentada, dentro de dos circunferencias y la dimensiones en metros de ambos radios (véase Figura \ref{fig:settingsApp}).
  
 \lstinputlisting[language=XML, caption={Fichero \texttt{pref\_nav\_setting.xml}.}, label={lst:pref_nav_setting.xml},]{listings/pref_nav_settings.xml}
 
 Esta ventana para trabajar con los ajustes que ofrece Android permite trabajar con las Shared Preferences para guardar los ajustes y poder acceder a ellos en otras ventanas de la aplicación. Cuando se edita un valor en la ventana de la aplicación, este valor se guardará automáticamente en las Shared Preferences con el valor de la clave ``key''. Esta clave servirá para poder acceder al valor a través de las Shared Preferences en cualquier activity.
 
 % \lstinputlisting[language=java, caption={Fichero \texttt{SettingsULLActivity.java}.}, label={lst:SettingsULLActivity.java},]{listings/SettingsULLActivity.java}
+
+
+\section{Back-end de la aplicación} \label{chap:BackEnd} 
+
+Si se recuerda, en el capítulo \ref{chap:Tecnologias} se comentó sobre el uso de las tecnologías de Node.js y MongoDB, como servidor y base de datos respectivamente. Para poder implementar estas tecnologías se decidió por utilizar servicios en la nube para gestionarlos, facilitar su despliegue y con motivos de profundizar y adquirir conocimiento sobre este tipo de plataformas. Estos servicios son Heroku como servidor de la aplicación y mLab como base de datos. Ambos ofrecen una forma sencilla, accesible y escalable, para poder ejecutar la aplicación y estudiar las posibilidades y beneficios que ofrecen este tipo de servicios en la nube en la actualidad.
+
+\subsection{Base de datos}
+
+Todos los datos necesarios para el funcionamiento de la aplicación estarán alojados en una base de datos en la nube. mLab será el proveedor de servicio escogido para alojar la base de datos. Este proveedor ofrece bases de datos NoSQL que utilizan la tecnología MongoDB.
+
+Crear la base de datos es muy sencillo con mLab. Simplemente hay que registrarse y crear una base de datos. Lo primero que se necesita es elegir un plan de datos. Como en la base de datos que se necesita no es necesario mucho espacio de almacenamiento, se optó por el plan gratuito que dispone de 500 megas. Posteriormente se fija el nombre de la base de datos que será ``bd-ull-AR".
+
+\subsection{Configuración del servidor}
+
+Se necesita configurar el servidor de Node.js para poder desplegarlo en Heroku y que funcione correctamente. A continuación, se explicarán los pasos seguidos para la implementación del servidor explicando su funcionamiento y su conexión con la base de datos.
+
+\subsubsection{Requisitos previos}
+Para toda la instalación e implementación del servidor Node.js se ha utilizado Linux como sistema operativo.
+
+Previo a la implementación se necesitará crearse una cuenta en la plataforma de Heroku y en la de mLab. A su vez, se debe tener instalado GitHub, Node.js y Heroku. Para poder ejecutar los comandos que permitan creación y despliegue del servidor en la nube.
+
+Dentro de la cuenta de Heroku, se crea un repositorio con el nombre de "server-ull-AR" que será el servidor de la aplicación en la nube.
+
+\subsubsection{Instalación de Node.js en el repositorio}
+
+Terminados de instalar todos los requisitos necesarios, ya se puede empezar a implementar el servidor de Node.js.
+
+Con el siguiente comando, ya se tiene preparado el repositorio para empezar a trabajar:
+
+\begin{lstlisting}
+    $ git clone https://github.com/heroku/server-ull-AR.git
+\end{lstlisting}
+
+Para empezar a trabajar con Node.js se necesita ejecutar el siguiente comando dentro del repositorio:
+
+\begin{lstlisting}
+    $ npm init 
+\end{lstlisting}
+
+Este comando resulta en la creación de un archivo llamado \texttt{package.json}. Este fichero se utiliza para administrar los paquetes disponibles en el ``Node Package Manager'' que se instalan localmente en el repositorio.
+
+A continuación, se instalarán los paquetes necesarios para funcionamiento del servidor Node.js. Estos son:
+
+\begin{itemize}
+    \item \textbf{ExpressJS}: Express es una infraestructura de aplicaciones web Node.js mínima y flexible que proporciona un conjunto sólido de características para las aplicaciones web y móviles.
+    \item \textbf{mongoose}: Mongoose es una librería para trabajar MongoDB y Node.js.
+    \item \textbf{bodyparser}: Se necesitará para manejar las peticiones de JSON.
+    \item \textbf{node-restful}: Sirve para manejar las peticiones recibidas del servidor y conectarse con una base de datos de MongoDB.
+\end{itemize}
+
+Con un comando se instalarán todos los paquetes y se guardan las dependencias utilizadas en el fichero \texttt{package.json}:
+
+\begin{lstlisting}
+    $ npm install --save express body-parser mongoose node-restful
+\end{lstlisting}
+
+El resultado del \texttt{package.json} sería el siguiente:
+
+\lstset{numbers=left,  string=[s]{"}{"}, comment=[l]{:}, commentstyle=\color{black},}
+\lstinputlisting[stringstyle=\color{blue}, caption={Contenido del fichero \texttt{package.json}.}, label={package.json}, ]{listings/package.json} %% LISTING
+
+\subsubsection{Inicialización del servidor}
+
+Una vez ya instalados todos los paquetes se crea el fichero \texttt{server.js}. Este fichero será el que inicie el servidor y contenga las variables que configuran el mismo (véase Listado \ref{lst:server.js}). 
+
+\lstset{keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+keywordstyle=\color{blue}\bfseries,
+ndkeywords={class, export, boolean, throw, implements, import, this},
+ndkeywordstyle=\color{darkgray}\bfseries,
+identifierstyle=\color{black},
+sensitive=false,
+comment=[l]{//},
+morecomment=[s]{/*}{*/},
+commentstyle=\color{colString}\ttfamily,
+stringstyle=\color{purple}\ttfamily,
+morestring=[b]',
+morestring=[b]"}
+
+\begin{lstlisting}[ caption={Fichero \texttt{server.js}, configuración inicial del servidor.}, label={lst:server.js}]
+    // Se declaran los paquetes que se necesitan
+    var express = require('express');  
+    var app = express();  // Se inicia la app
+    // Se pone en modo escucha la app
+    app.listen(3000, function(){
+        console.log("Express server listening on port 3000"
+      });
+
+\end{lstlisting}
+
+Para comprobar que todo funciona, se utilizará el siguiente comando, que correrá el servidor en local en el puerto 3000.
+\begin{lstlisting}
+    $ node server.js
+\end{lstlisting}
+
+Más adelante se terminará de configurar este fichero. A continuación se explicará la estructura y organización del servidor.
+
+\subsubsection{Estructura de la aplicación}
+
+Dentro de la carpeta principal del repositorio se han de crear dos subdirectorios:
+
+\begin{itemize}
+    \item \textbf{models/}
+    \item \textbf{routes/}
+\end{itemize}
+
+A continuación se creará el fichero \texttt{ullSites.js} dentro de la carpeta de \textit{models/}. Este fichero contiene el modelo que conecta con la colección de la base de datos y maneja las respuestas como se verán más adelante.   
+
+\lstinputlisting[language=JavaScript, caption={Fichero \texttt{ullSites.js}.}, label={code:ullSites.js},]{listings/ullSites.js} %% LISTING
+
+Se necesitará una ruta por la cual el servidor responderá con la información que se solicite de la base de datos. Para ello en la carpeta \textit{routes/} se creará el fichero \texttt{api.js} (véase Listado \ref{lst:api.js}). Este fichero manejará las peticiones que lleguen al servidor a través de la ruta ``\textit{https://server\_url/api/}'' y se encargará principalmente de conectarse con la base de datos para responder a estas peticiones.
+
+\lstinputlisting[language=JavaScript,caption={Fichero \texttt{api.js}.}, label={lst:api.js},]{listings/api.js} %% LISTING
+ 
+En el caso de que se acceda a la ruta ``\textit{/api/ull-sites}'' del servidor con una petición ``HTTP'' de tipo ``GET'', se enviará una respuesta al cliente con toda la información de las instalaciones que se encuentran en la base de datos.
+
+\subsubsection{Conexión con mLab}
+
+Con la cuenta de mLab y base datos ya creada en mLab, solo se va a necesitar una url para poder acceder a ella y poder consultar, añadir y borrar datos. Esta url está disponible en la página principal de la base de datos en mLab y tiene el siguiente formato:
+
+\begin{lstlisting}
+    mongodb://<dbuser>:<dbpassword>@ds235181.mlab.com:35181/ull-AR
+\end{lstlisting}
+
+Donde ``dbuser'' es el usuario que se usó para crear la base de datos y ``dbpassword'' la contraseña. Para evitar que el usuario y contraseña queden expuestos públicamente en el repositorio, se utiliza una variable de entorno. En este caso hay que configurar la variable de entorno para que funcione en Heroku. Para hacerlo se necesita utilizar este comando en la terminal:
+
+\begin{lstlisting}
+    $heroku config:set PROD_MONGODB=mongodb://username:password@ds235181.mlab.com:35181/ull-AR
+\end{lstlisting}
+
+Posteriormente la variable ``PROD\_MONGODB" se utilizará para conectarse al base de datos una vez este desplegada en Heroku.
+
+Solo se va a necesitar crear una colección para el proyecto. Para ello se accede a la base de datos en el navegador y se pincha en el botón de ``Add collection'' y se nombrará ``\textit{ull\_sites}''. Aquí se tiene la información de las instalaciones de la ULL. Los cuales se añadirán manualmente desde la página de mLab (véase Figura \ref{fig:ull-site}).
+
+
+\subsubsection{Configuración final del servidor}
+
+Por último, se tiene que terminar de configurar el fichero \texttt{server.js} que contiene el servidor. Se necesitará indicar al servidor la url de la base de datos de mLab y de disponer que las rutas de la aplicación estén bien configuradas para responder a las solicitudes. 
+
+\lstinputlisting[language=JavaScript,caption={Configuración final del fichero \texttt{server.js}. }, label={code:server.js},]{listings/server.js} %% LISTING
+
+\subsubsection{Despliegue en Heroku}
+
+Con el servidor ya configurado, se puede realizar el despliegue en Heroku. Para ello se necesitará crear un fichero \texttt{Procfile} en la raíz del repositorio, que le dirá a Heroku cuál es el fichero que inicia el servidor.
+
+\begin{lstlisting}
+    web: node server.js
+\end{lstlisting}
+
+Para desplegarlo en Heroku se necesitarán tres comandos:
+
+\begin{lstlisting}
+    $ git add .
+    $ git commit -m "Despliegue del servidor"
+    $ git push heroku master
+\end{lstlisting}
+
+Con estos pasos completados ya se tiene el servidor desplegado y funcionando en la url: \href{https://server-ull-AR.herokuapp.com}{https://server-ull-AR.herokuapp.com}.
+
+
 
 
