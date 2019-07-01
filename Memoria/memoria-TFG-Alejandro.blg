@@ -11,36 +11,36 @@ A level-1 auxiliary file: Cap6_Budget.aux
 The style file: ieeetr.bst
 Database file #1: bibliografia.bib
 Warning--I didn't find a database entry for "URL::json"
-You've used 50 entries,
+You've used 51 entries,
             1876 wiz_defined-function locations,
-            687 strings with 8561 characters,
-and the built_in function-call counts, 5624 in all, are:
-= -- 600
-> -- 50
+            691 strings with 8660 characters,
+and the built_in function-call counts, 5736 in all, are:
+= -- 612
+> -- 51
 < -- 0
-+ -- 50
++ -- 51
 - -- 0
-* -- 152
-:= -- 563
-add.period$ -- 100
-call.type$ -- 50
-change.case$ -- 50
+* -- 155
+:= -- 574
+add.period$ -- 102
+call.type$ -- 51
+change.case$ -- 51
 chr.to.int$ -- 0
-cite$ -- 50
-duplicate$ -- 200
-empty$ -- 901
+cite$ -- 51
+duplicate$ -- 204
+empty$ -- 919
 format.name$ -- 0
-if$ -- 1601
+if$ -- 1633
 int.to.chr$ -- 0
-int.to.str$ -- 50
+int.to.str$ -- 51
 missing$ -- 0
-newline$ -- 203
+newline$ -- 207
 num.names$ -- 0
-pop$ -- 400
+pop$ -- 408
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 149
+skip$ -- 152
 stack$ -- 0
 substring$ -- 0
 swap$ -- 0
@@ -50,6 +50,6 @@ top$ -- 0
 type$ -- 0
 warning$ -- 0
 while$ -- 0
-width$ -- 52
-write$ -- 402
+width$ -- 53
+write$ -- 410
 (There was 1 warning)
