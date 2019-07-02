@@ -21,7 +21,7 @@ SRC      =                                                          \
 						Cap3_ARInStudentEnvironments.tex	        \
 						Cap4_TheApplication.tex						\
 						Cap5_Conclussions.tex		\
-						Cap6_Back-end.tex \
+						Cap6_Budget.tex \
 
 						
 

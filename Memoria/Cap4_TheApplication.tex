@@ -12,7 +12,7 @@
 \lstset{stringstyle=\color{purple}}
 \chapter{La aplicación \ULLAR{}} \label{chap:LaAplicacion} 
 
-En este capítulo se explicará la aplicación \ULLAR{} utilizando su especificación de requisitos y explicando su funcionamiento.
+En este capítulo se explicará en detalle la aplicación \ULLAR{} utilizando su especificación de requisitos y explicando su funcionamiento.
 
 \section{Requisitos y ventanas de la aplicación} % (fold)
 
@@ -392,7 +392,7 @@ Para reconocer las instalaciones que se encuentran en frente del dispositivo mó
 
 \subsection{Modelos encargados de la navegación}
 
-A continuación, se explicarán las clases que intervienen en el proceso de reconocimiento de las instalaciones de la ULL que se encuentran delante del dispositivo móvil.
+A continuación, se explicarán las clases que intervienen en el proceso de reconocimiento de las instalaciones de la ULL que se encuentran frente al dispositivo móvil.
 
 \subsubsection{ULLSite.java}
 
@@ -413,7 +413,10 @@ Cada instalación de la ULL se obtiene de una base de datos en formato JSON. Una
 En la clase ``ULLSite'' se encuentran los tres atributos principales para la identificación de las instalaciones: ``disToSite'', ``dirToSite'' y ``coneValue''. Estos atributos son calculados en tiempo de ejecución.
 
 El atributo ``disToSite'' representa la distancia, en metros, a la que se encuentra la instalación con respecto a la ubicación del dispositivo. El atributo ``dirToSite'' representa el valor de la brújula del dispositivo, en radianes, en la dirección en la que se encuentra la instalación, es decir, si la ubicación se encuentra hacía el norte con respecto al dispositivo el valor será 0 y si se encuentra hacía el este será $pi/2$.
-El atributo ``coneValue'' representa un cono de visión imaginario cuyo su centro es la dirección en la que se encuentra la instalación, este cono forma un rango de visión alrededor de la dirección instalación a partir de la cual si el dispositivo se encuentra apuntando dentro de este rango se considerará que éste está ``viendo'' la instalación. El valor del atributo ``coneValue'' variará en función de la distancia a la que se encuentre el dispositivo de la instalación.  Estos atributos junto con el objeto ``point'' de la clase ``Vector2D'', que contiene la ubicación en un plano coordenadas cartesianas, permitirán realizar los cálculos para identificar si el dispositivo se encuentra apuntando a una instalación o no.
+El atributo ``coneValue'' representa un cono de visión imaginario cuyo centro es la dirección en la que se encuentra la instalación. 
+Este cono forma un rango de visión alrededor de la dirección de la instalación a partir de la cual si el dispositivo se encuentra apuntando dentro de este rango se considerará que éste está ``viendo'' la instalación. 
+El valor del atributo ``coneValue'' variará en función de la distancia a la que se encuentre el dispositivo de la instalación.  
+Estos atributos junto con el objeto ``point'' de la clase ``Vector2D'', que contiene la ubicación en un plano de coordenadas cartesianas, permitirán realizar los cálculos para identificar si el dispositivo se encuentra apuntando a una instalación o no.
 
 
 \begin{figure}[h] 
@@ -422,7 +425,6 @@ El atributo ``coneValue'' representa un cono de visión imaginario cuyo su centr
     \caption{Explicación de los atributos ``coneValue'' y ``dirToSite''.}
     \label{fig:dirSite}
 \end{figure}
-XXX
   
 \subsubsection{Navigation.java}
 
@@ -434,7 +436,8 @@ La clase ``Navigation'' es la clase principal encargada de  ejecutar todos méto
 
 A continuación se explicará de forma detallada la implementación de los métodos principales de esta clase.
 
-En Listado \ref{lst:calculateCone} se encuentran el método que calcula el tamaño del atributo ``coneValue'' de una instalación. El valor de esta se calcula de modo que cuanto más cerca se encuentre el dispositivo de una instalación, mayor sea el rango con el que poder decidir si se encuentra delante de ella o no y, por el contrario, que este valor sea menor cuando se encuentre lejos de la instalación.
+En Listado \ref{lst:calculateCone} se encuentra el método que calcula el valor del atributo ``coneValue'' para una instalación. 
+Este valor se calcula de modo que cuanto más cerca se encuentre el dispositivo de una instalación, mayor sea el rango con el que poder decidir si se encuentra delante de ella o no y, por el contrario, que este valor sea menor cuando se encuentre lejos de la instalación.
 \bigskip
 
 \bigskip
@@ -482,9 +485,12 @@ A este ángulo, hay que aplicarle unas transformaciones para que se ajuste a la 
 }   
 \end{lstlisting}
 
-El método ``whatCanSee'' \ref{lst:whatCanSee} es el método principal que se encargará, a partir de los datos de ubicación y dirección del dispositivo, de identificar qué instalaciones se encuentran en frente del dispositivo y cuál es la más cercana. Para ello, en un primer paso, se calculan las distancias de las  instalaciones y las que se encuentran a una distancia mayor que ``maxDist'' y menor que ``minDist'' serán descartadas, para poder reducir el número de instalaciones a identificar. A continuación, para cada instalación anterior se calcula su dirección, posición y el valor del cono, con respecto a la ubicación del dispositivo. Si la instalación se encuentra orientado dentro del cono que se forma en la dirección de la instalación, esta instalación se considerará como un posible resultado y se añadirá a la variable con una lista de estos resultados, ``result''. De los posibles resultados, la instalación más cercana al dispositivo será la instalación ante la que teóricamente se encuentra el dispositivo y guardará está en el principio de esta lista.
+El método ``whatCanSee'' (véase el Listado \ref{lst:whatCanSee}) es el método principal que se encargará, a partir de los datos de ubicación y dirección del dispositivo, de identificar qué instalaciones se encuentran en frente del dispositivo y cuál es la más cercana. 
+Para ello, en un primer paso, se calculan las distancias de las  instalaciones y las que se encuentran a una distancia mayor que ``maxDist'' y menor que ``minDist'' serán descartadas, para poder reducir el número de instalaciones a identificar. 
+A continuación, para cada instalación anterior se calcula su dirección, posición y el valor del cono, con respecto a la ubicación del dispositivo. Si la instalación se encuentra orientada dentro del cono que se forma en la dirección de la instalación, esta instalación se considerará como un posible resultado y se añadirá a la variable con una lista de estos resultados, ``result''. 
+De los posibles resultados, la instalación más cercana al dispositivo será la instalación ante la que teóricamente se encuentra el dispositivo y guardará ésta en el principio de esta lista.
  
-\begin{lstlisting}[caption={Método principal que realiza el cálculo que permite reconocer las instalaciones en frente al dispositivo móvil.}, label={lst:whatCanSee}]
+\begin{lstlisting}[caption={Método principal que realiza el cálculo que permite reconocer las instalaciones que se hallan frente al dispositivo móvil.}, label={lst:whatCanSee}]
     // Metodo principal que se encarga identificar las instalaciones en frente del dispositivo
     // Recibe la posicion y orientacion actual del dispositivo
     // Devuelve la lista de instalaciones en esa direccion indicando cual es la mas cercana 
@@ -532,15 +538,16 @@ El método ``whatCanSee'' \ref{lst:whatCanSee} es el método principal que se en
 \end{lstlisting}
 
 
- 
-
 \subsection{Obtención de la información}
 
-Como se ha comentado anteriormente, toda la información perteneciente a las instalaciones de la ULL estará en una base de datos. Además, para comunicarse con esta, se dispone de un servidor que atienda a las peticiones de la aplicación, se conecte con esta base de datos y  envié la información. Más adelante, en el capítulo \ref{chap:BackEnd}, se explicará detalladamente como funciona esta base de datos y servidor. Por ahora, se explicará cómo se realiza la conexión con el servidor y el tipo de respuesta que se obtiene.
+Como se ha comentado anteriormente, toda la información perteneciente a las instalaciones de la ULL estará en una base de datos. 
+Además, para comunicarse con ésta, se dispone de un servidor que atienda a las peticiones de la aplicación, se conecte con esta base de datos y  envie la información. 
+Más adelante, en la Sección \ref{chap:BackEnd}, se explicará detalladamente el funcionamiento de esta base de datos y servidor. Por ahora, se explicará cómo se realiza la conexión con el servidor y el tipo de respuesta que se obtiene.
 
-Para poder realizar una petición al servidor se utilizará la clase ``GetData''. Esta clase formaliza una petición con la url que se le pase como parámetro al método ``doInBackground'' y devuelve una cadena de caracteres con la respuesta del servidor. En el Listado \ref{lst:getData} se puede ver cómo funciona este método. 
+Para poder realizar una petición al servidor se utilizará la clase ``GetData''. 
+Esta clase formaliza una petición con la URL que se le pase como parámetro al método ``doInBackground'' y devuelve una cadena de caracteres con la respuesta del servidor. En el Listado \ref{lst:getData} se puede ver cómo funciona este método. 
 
-\lstinputlisting[language=java, caption={Fichero \texttt{GetData.java}, código encargado de la conexión con el servidor y manejar la respuesta.}, label={lst:getData},]{listings/models/GetData.java} 
+\lstinputlisting[language=java, caption={Fichero \texttt{GetData.java}, código encargado de la conexión con el servidor y manejo de la respuesta.}, label={lst:getData},]{listings/models/GetData.java} 
 
 En el Listado \ref{lst:getSitesFromDB} se encuentra el método ejecutado en la clase ``ARNavigation'' para realizar la conexión con el servidor para obtener la respuesta de la base de datos con todas las instalaciones de ULL. Posteriormente, se creará una instancia de la clase ``Navigation'' con todas las instalaciones de la base de datos en formato JSON. Este objeto se denominará con el nombre de ``navULL'' y será el objeto encargado de identificar las instalaciones y trabajar con ellas.
 
