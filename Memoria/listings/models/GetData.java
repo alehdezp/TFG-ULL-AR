@@ -8,15 +8,9 @@ public class GetData extends AsyncTask<String, Void, String> {
             urlConnection.setRequestMethod("GET");  // Metodo de la conexion
             urlConnection.setRequestProperty("Content-Type", "application/json"); // Contenido
             urlConnection.connect();                // Se realiza la conexion
-
-            InputStream inputStream = urlConnection.getInputStream(); // Cuando se recibe la respuesta
-            BufferedReader buffereReader = new BufferedReader(new InputStreamReader(inputStream));
-            String line;        
-            while((line = buffereReader.readLine()) != null){  // Se lee el buffer con la respuesta
-                result.append(line).append("\n");              // Se guarda en un string
-            }
-            return result.toString();                          // Se devuelve el string
-        }catch (IOException e){ ... }
+            ...  // Cuando se recibe la respuesta se lee, se crea y se devulve un string 
+                  // con su contenido
+        }catch (IOException e) { ... }
         return "Error";  // Si falla la conexion
     }
 };

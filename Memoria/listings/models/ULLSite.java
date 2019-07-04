@@ -13,7 +13,7 @@ public class ULLSite  {
     private double dirToSite = -1;  // Direccion en la que se encuentra
     private double coneValue = 0;  // Valor del cono
 
-    public ULLSite(JSONObject object){
+    public ULLSite(JSONObject object) {
         ... // Se construye el objeto con los atributos que se encuentran en el objeto JSON de la instalacion.
     }
     ... // Metodos set() y get() de las variables

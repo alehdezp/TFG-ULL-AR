@@ -29,7 +29,7 @@ public class Vector2D implements Serializable {
         return radian;
     }
 
-    public void set(double x1, double y1){
+    public void set(double x1, double y1) {
         setX(x1);
         setY(y1);
     }

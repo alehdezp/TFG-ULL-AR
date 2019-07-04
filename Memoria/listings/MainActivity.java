@@ -13,7 +13,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(getIntent().getExtras().getBoolean("firstStart")){
+        if(getIntent().getExtras().getBoolean("firstStart")) {
             FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
             tx.replace(R.id.content_frame, new HomeFragment());
             tx.commit();

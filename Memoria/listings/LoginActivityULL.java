@@ -18,14 +18,14 @@ public class LoginActivityULL extends AppCompatActivity implements ... {
     }
     // Metodo que obtiene el resultado de la autentificacion
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == 777){
+        if(requestCode == 777) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             handleSingInResult(result); // Se maneja el resultado de la autentificacion
         }
     }
     // Metodo que comprueba si ha sido correcta la autentificacion con Google
-    private void handleSingInResult(GoogleSignInResult result){
-        if(result.isSuccess()== true){ // Exito en el inicio de sesion con Google
+    private void handleSingInResult(GoogleSignInResult result) {
+        if(result.isSuccess()== true) { // Exito en el inicio de sesion con Google
             String userEmail = result.getSignInAccount().getEmail(); // Correo de la cuenta
             if(userEmail.matches("(.*)@ull.edu.es") ) { // Se comprueba si es un correo de la ULL
                 Intent intent = new Intent(this, MainActivity.class); // Se ejecuta la ventana 
@@ -34,8 +34,8 @@ public class LoginActivityULL extends AppCompatActivity implements ... {
         }else{ ... } // Fallo al conectar con Google
     }
     // Metodo que realiza el logout de la cuenta cuando la cuenta no pertenece a la ULL
-    private void logoutNotULLAcount(){
-        Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback( ... )>(){
+    private void logoutNotULLAcount() {
+        Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback( ... )>() {
                     ... // Mensaje que indica que el correo no es valido y el tipo de 
             }             // correo necesario "aluxxxxxxxxx@ull.edu.es"
         });

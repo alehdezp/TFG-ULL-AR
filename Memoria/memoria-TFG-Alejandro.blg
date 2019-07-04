@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2019/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: memoria-TFG-Alejandro.aux
 A level-1 auxiliary file: Preface.aux
 A level-1 auxiliary file: Cap1_Goals.aux
@@ -11,36 +11,36 @@ A level-1 auxiliary file: Cap6_Budget.aux
 The style file: ieeetr.bst
 Database file #1: bibliografia.bib
 Warning--I didn't find a database entry for "URL::json"
-You've used 51 entries,
+You've used 50 entries,
             1876 wiz_defined-function locations,
-            691 strings with 8660 characters,
-and the built_in function-call counts, 5736 in all, are:
-= -- 612
-> -- 51
+            687 strings with 8586 characters,
+and the built_in function-call counts, 5624 in all, are:
+= -- 600
+> -- 50
 < -- 0
-+ -- 51
++ -- 50
 - -- 0
-* -- 155
-:= -- 574
-add.period$ -- 102
-call.type$ -- 51
-change.case$ -- 51
+* -- 152
+:= -- 563
+add.period$ -- 100
+call.type$ -- 50
+change.case$ -- 50
 chr.to.int$ -- 0
-cite$ -- 51
-duplicate$ -- 204
-empty$ -- 919
+cite$ -- 50
+duplicate$ -- 200
+empty$ -- 901
 format.name$ -- 0
-if$ -- 1633
+if$ -- 1601
 int.to.chr$ -- 0
-int.to.str$ -- 51
+int.to.str$ -- 50
 missing$ -- 0
-newline$ -- 207
+newline$ -- 203
 num.names$ -- 0
-pop$ -- 408
+pop$ -- 400
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 152
+skip$ -- 149
 stack$ -- 0
 substring$ -- 0
 swap$ -- 0
@@ -50,6 +50,6 @@ top$ -- 0
 type$ -- 0
 warning$ -- 0
 while$ -- 0
-width$ -- 53
-write$ -- 410
+width$ -- 52
+write$ -- 402
 (There was 1 warning)

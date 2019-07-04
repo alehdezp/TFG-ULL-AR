@@ -8,7 +8,7 @@ public class ItemHome {
     private boolean isWebLink;
     private String link;
 
-    public ItemHome(String name, String image, boolean isWebLink, String link){
+    public ItemHome(String name, String image, boolean isWebLink, String link) {
         this.name = name;
         this.image = "@drawable/" + image;
         this.isWebLink = isWebLink;

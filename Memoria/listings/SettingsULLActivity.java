@@ -11,7 +11,7 @@ public class SettingsULLActivity extends AppCompatPreferenceActivity implements 
     }
     // Metodo que se lanza cuando las preferencias son editadas 
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        switch (key){
+        switch (key) {
             case SHOW_RADIUS_STRING: // Se activa o desactiva la edicion radios de forma manual
                 maxRadiusPreference.setEnabled(sharedPreferences.getBoolean(key, false));
                 minRadiusPreference.setEnabled(sharedPreferences.getBoolean(key, false));

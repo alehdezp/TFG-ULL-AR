@@ -9,7 +9,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         return inflater.inflate(R.layout.fragment_home, container, false); 
     }
     // Se instancia cada item con su nombre, imagen y si es un link externo y su url
-    private void setAllItems(){ 
+    private void setAllItems() { 
         ArrayList<ItemHome> auxItems = new ArrayList<ItemHome>();
         auxItems.add(new ItemHome("Navegacion en modo RA", "home_ar_inicio", false, null));
         auxItems.add(new ItemHome("Pagina de la ULL", "home_ull_site", true, "www.ull.es"));
@@ -21,9 +21,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         homeLayoutManager = new LinearLayoutManager(getContext()); // Se asigna un LinearLayout
         // Se instancia el objeto ItemHomeAdapter
         homeAdapter = new ItemHomeAdapter(itemsHome, R.layout.adapter_home_item, 
-        new ItemHomeAdapter.OnItemClickListener(){ 
+        new ItemHomeAdapter.OnItemClickListener() { 
             // Se indica el comportamiento cuando se selecciona un item
-            public void onItemClick(ItemHome item, int position){
+            public void onItemClick(ItemHome item, int position) {
                     switch (position) {
                         case 0: ... // Se lanzan los activities y fragments correspondientes
                         default: // Por defecto se considerara un enlace web externo

@@ -4,7 +4,7 @@ public class SiteAdapter extends BaseAdapter implements Filterable {
     // Instalaciones a mostrar con el filtro de busqueda aplicado
     private ArrayList<ULLSiteSerializable> filteredSites; 
     // Constructor
-    public SiteAdapter(Context context, int layout, SitesArray sitesULL){
+    public SiteAdapter(Context context, int layout, SitesArray sitesULL) {
         ... // layout y context
         allSites = sitesULL.getUllSiteSerializables(); // Se guarda el array con todas las instalaciones
         filteredSites = allSites;  // Instalaciones a mostrar en un inicio

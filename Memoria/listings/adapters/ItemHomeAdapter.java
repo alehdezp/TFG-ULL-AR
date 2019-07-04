@@ -22,7 +22,7 @@ public class ItemHomeAdapter extends RecyclerView.Adapter<ItemHomeAdapter.ViewHo
     private int layout;
     private OnItemClickListener itemClickListener;
 
-    public ItemHomeAdapter(List<ItemHome> items, int layout, OnItemClickListener listener){
+    public ItemHomeAdapter(List<ItemHome> items, int layout, OnItemClickListener listener) {
         this.items = items;
         this.layout = layout;
         this.itemClickListener = listener;
@@ -58,7 +58,7 @@ public class ItemHomeAdapter extends RecyclerView.Adapter<ItemHomeAdapter.ViewHo
             this.itemImage = itemView.findViewById(R.id.imageView_home_item);
         }
 
-        public void bind(final ItemHome itemHome, final OnItemClickListener listener){
+        public void bind(final ItemHome itemHome, final OnItemClickListener listener) {
 
             this.itemName.setText(itemHome.getName());
 

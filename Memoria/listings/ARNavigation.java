@@ -86,14 +86,14 @@ public class ARNavigation extends ARActivity {
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == moreSitesButton.getId()){
+        if(v.getId() == moreSitesButton.getId()) {
             Intent intent = new Intent(this, SitesListActivity.class);
             ArrayList aux = new ArrayList(moreResultsSites.subList(1, moreResultsSites.size()-1));
             SitesArray sitesArray = new SitesArray(aux);
             intent.putExtra("sitesToShow", sitesArray);
             startActivity(intent);
         }
-        if(v.getId() == moreInfoButton.getId()){
+        if(v.getId() == moreInfoButton.getId()) {
             Intent intent = new Intent(getApplicationContext(), SiteDescriptionActivity.class);
             startActivity(intent);
         }
@@ -101,12 +101,12 @@ public class ARNavigation extends ARActivity {
     }
 
 
-    private void setMoreSites(boolean show, ArrayList<ULLSite> allSeenResults){
+    private void setMoreSites(boolean show, ArrayList<ULLSite> allSeenResults) {
 
         if(show == true) {
             String found = "Encontrada";
             String localizations = "instalacion";
-            if(allSeenResults.size() > 3){
+            if(allSeenResults.size() > 3) {
                 found += "s";
                 localizations = "instalaciones";
             }

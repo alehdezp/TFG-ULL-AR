@@ -18,7 +18,7 @@ public class ULLSiteSerializable implements Serializable {
     private ArrayList<String> interestPoints;
     private ArrayList<String> interestPointsLink;
 
-    public ULLSiteSerializable(ULLSite ullSite){
+    public ULLSiteSerializable(ULLSite ullSite) {
         this.id = ullSite.getId();
         this.name = ullSite.getName();
         this.point =ullSite.getPoint();

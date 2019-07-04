@@ -1,7 +1,7 @@
 public class SiteDescriptionActivity extends ListActivity {
     ULLSiteSerializable actualULLSite;  // Instalacion a mostrar con su informacion
     ... // Elementos de la interfaz a configurar
-    ArrayList<String> listItems=new ArrayList<String>(); // Lista de enlaces la instalacion 
+    ArrayList<String> listItems = new ArrayList<String>(); // Lista de enlaces la instalacion 
     ArrayAdapter<String> adapter;   // Adaptador con los enlaces
     @Override // Metodo que inicia el activity
     public void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class SiteDescriptionActivity extends ListActivity {
     }
     // Este metodo crea una adapatador con los enlaces de la instalacion
     public void setListSites() {
-        adapter = new ArrayAdapter<String>(this, R.layout.link_item, android.R.id.text, listItems){
+        adapter = new ArrayAdapter<String>(this, R.layout.link_item, android.R.id.text, listItems) {
             @Override // Se configura la vista de cada enlace
             public View getView(int position, View convertView, ViewGroup parent) {
                 ... // Se indica que la vista esta contenida  en el fichero "link_item.xml"

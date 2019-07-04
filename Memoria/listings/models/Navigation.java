@@ -122,7 +122,7 @@ public class Navigation implements Serializable {
 
     public double calculateCone(double dist) {
 
-        if (dist <= NEAR_VALUE){
+        if (dist <= NEAR_VALUE) {
             double aux = MAX_CONE_GRADS_NEAR - dist * SCALE_CONE_NEAR;
             return MAX_CONE_GRADS_NEAR - dist * SCALE_CONE_NEAR;
         }else {

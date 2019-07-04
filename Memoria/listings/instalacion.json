@@ -11,11 +11,7 @@
         {
             "id": "ESIT",
             "link": "https://www.ull.es/centros/escuela-superior-de-ingenieria-y-tecnologia/"
-        },
-        {
-            "id": "Grado en Ingenieria Informatica",
-            "link": "https://www.ull.es/estudios-docencia/grados/ingenieria-informatica"
-        },
+        }, 
         ...
     ]
 }
