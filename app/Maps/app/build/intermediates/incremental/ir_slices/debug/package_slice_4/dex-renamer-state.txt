@@ -1,0 +1,4 @@
+#Thu May 17 19:46:38 BST 2018
+base.0=/home/alehp/TFG/TFG-ULL-NAVIGATION/app/Maps/app/build/intermediates/transforms/dexMerger/debug/5
+path.0=classes.dex
+renamed.0=classes.dex

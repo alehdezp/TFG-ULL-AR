@@ -12,7 +12,7 @@
 %   showstringspaces=false,
 %   commentstyle=\color{red},
 %   keywordstyle=\color{blue},
-%   numbers=none,
+%   numbers=none, 
 %   language=bash,
 %   caption={bash version},
 %   morekeywords={sudo, apt, curl, node}
@@ -75,7 +75,7 @@ Mediante el uso de este repositorio, el alumno ha conseguido ampliar sus conocim
 
 Para instalar GitHub en Linux se utiliza el siguiente comando:
 \begin{lstlisting}
-    sudo apt install git-all
+    $ sudo apt install git-all
 \end{lstlisting}
 
 \subsection{Guía de uso de estas tecnologías en relación con el proyecto \ULLAR{}}
@@ -91,7 +91,7 @@ En este apartado se explica con cierto nivel de detalle los pasos a seguir para:
 Para descargar el repositorio de \ULLAR{} se necesitará tener instalado GitHub. Con GitHub instalado, se ejecuta el siguiente comando en consola para descargar el repositorio:
 
 \begin{lstlisting}
-    git clone https://github.com/alehdezp/TFG-ULL-AR 
+    $ git clone https://github.com/alehdezp/TFG-ULL-AR 
 \end{lstlisting}
 
 En caso de que no se disponga de GitHub se puede descargar directamente desde el repositorio \cite{URL::repositorioAplicacion}, seleccionando el bóton ``Clone or download'' y luego se selecciona ``Download as ZIP''. Tras esto se descargará un archivo comprimido con todo el repositorio de \ULLAR{}.
@@ -121,14 +121,17 @@ Con estos pasos ya instalará la aplicación en el dispositivo y se solicitarán
 \subsubsection{Compilar la memoria del proyecto}
 Para compilar el proyecto en LaTeX en un máquina con Linux es necesario instalar ``TeX Live'' y ``make''. Con el siguiente comando se instalarán ambos:
 \begin{lstlisting}
-    sudo apt install texlive-full make 
+    $ sudo apt install texlive-full make 
 \end{lstlisting}
 
 Dentro de la carpeta \textit{``Memoria/''} del repositorio, se abrirá una consola y se ejecutará el siguiente comando el cual genera el archivo con la presente memoria \texttt{memoria-TFG-Alejandro.pdf}.
 \begin{lstlisting}
-    make
+    $ make
 \end{lstlisting}
 
+\bigskip
+\bigskip
+\bigskip
 
 \section{Tecnologías utilizadas}
 
@@ -150,13 +153,6 @@ La RA está cambiando la manera en la que sus usuarios pueden ver el mundo. Actu
 
 
 En un futuro la RA estará integrada en el día a día y formará parte de la vida cotidiana. Sus posibles aplicaciones no tienen límites, pueden llegar desde reconocer plantas e incluso monumentos y mostrar información sobre lo que se está viendo, hasta añadir información en tiempo real en una operación a un paciente, comprobar cómo queda un mueble en un salón o sus aplicaciones para realizar videojuegos, como se puede comprobar con el reciente éxito de Pokemón Go!. 
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\linewidth]{imagenRAMantenimiento}
-    \caption{Ejemplo de uso de la RA en servicios de mantenimiento.}
-    \label{fig:googleglass}
-\end{figure}
 
 A continuación, se explicará en detalle:
 \begin{itemize}

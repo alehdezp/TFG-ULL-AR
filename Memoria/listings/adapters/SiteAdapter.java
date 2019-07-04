@@ -1,15 +1,12 @@
-public class SiteAdapter extends BaseAdapter implements Filterable {
-    ... // layout, context y elementos de la vista
+public class SiteAdapter extends BaseAdapter implements Filterable { ...
     private ArrayList<ULLSiteSerializable> allSites;  // Todas las instalaciones
     // Instalaciones a mostrar con el filtro de busqueda aplicado
     private ArrayList<ULLSiteSerializable> filteredSites; 
-    // Constructor
-    public SiteAdapter(Context context, int layout, SitesArray sitesULL) {
+    public SiteAdapter(Context context, int layout, SitesArray sitesULL) {  // Constructor
         ... // layout y context
         allSites = sitesULL.getUllSiteSerializables(); // Se guarda el array con todas las instalaciones
         filteredSites = allSites;  // Instalaciones a mostrar en un inicio
     }
-    ... // @Override Metodos a implementar de la clase "BaseAdapter"
     // Se crea la vista de cada item
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = convertView;  // vista 
@@ -25,8 +22,7 @@ public class SiteAdapter extends BaseAdapter implements Filterable {
     }
     public Filter getFilter() {
         return new Filter() { // Se instancia un objeto "Filter"
-            @Override // Metodo que aplica el filtro en funcion de los caracteres que se le pasen
-            protected FilterResults performFiltering(CharSequence charSequence) {
+            FilterResults performFiltering(CharSequence charSequence) { // Aplicamos el filtro
                 String charString = charSequence.toString();  // String con el filtro
                 if (charString.isEmpty()) {      // Si esta vacio
                     filteredSites = allSites;   // No hay filtro y se muestran todas las instalaciones

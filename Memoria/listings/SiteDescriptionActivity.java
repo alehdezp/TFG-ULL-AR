@@ -1,12 +1,10 @@
-public class SiteDescriptionActivity extends ListActivity {
+public class SiteDescriptionActivity extends ListActivity { ...
     ULLSiteSerializable actualULLSite;  // Instalacion a mostrar con su informacion
-    ... // Elementos de la interfaz a configurar
     ArrayList<String> listItems = new ArrayList<String>(); // Lista de enlaces la instalacion 
     ArrayAdapter<String> adapter;   // Adaptador con los enlaces
     @Override // Metodo que inicia el activity
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) { ...
         setContentView(R.layout.activity_site_description); // Layout con la vista
-        ... // Se configura la barra superior de la ventana
         // Se obtiene el objeto con la instalacion a mostrar
         actualULLSite = (ULLSiteSerializable) getIntent().getSerializableExtra("actualULLSite");
         listItems = actualULLSite.getInterestPoints(); // Se obtiene la lista de enlaces

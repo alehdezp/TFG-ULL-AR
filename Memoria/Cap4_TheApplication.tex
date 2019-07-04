@@ -86,15 +86,15 @@ Al iniciar \ULLAR{}, la primera ventana que aparece es la pantalla de inicio o S
   
 \begin{figure}[h]
     \hspace*{\fill}%
-    \begin{subfigure}[h]{0.35\linewidth}
+    \begin{subfigure}[h]{0.32\linewidth}
     \includegraphics[width=\linewidth]{homeApp}
     \caption{Inicio.}
     \label{fig:homeApp}
     \end{subfigure} 
     \hfill%
-    \begin{subfigure}[h]{0.35\linewidth}
+    \begin{subfigure}[h]{0.31\linewidth}
     \includegraphics[width=\linewidth]{menuApp}
-    \caption{Menu. Navigation Drawer.}
+    \caption{Menu, Navigation Drawer.}
     \label{fig:menuApp}
     \end{subfigure}
     \caption{Ventana \textit{Inicio} y el \textit{Menú} de \textit{\ULLAR{}}.}
@@ -281,16 +281,11 @@ Se empieza creando un nuevo activity y se nombra \textit{LoginActivityULL}. Esto
 
 En el Listado \ref{code:loginUll.java} se muestran todos los métodos y conexiones de la API de Google para poder autentificarse. Cuando se presione el botón ``Autentifícate con una cuenta de la Universidad'' se abrirá un cuadro de diálogo de la API de Google que permitirá al usuario seleccionar la cuenta con la que desee entrar en la aplicación. 
 
-\bigskip
-\lstinputlisting[language=java, caption={Fichero \texttt{LoginActivityULL.java}, código que se encarga de realizar el inicio de sesión del usuario con su correo electrónico.}, label={code:loginUll.java},]{listings/LoginActivityULL.java} %% LISTING
-
 En caso de que la cuenta no pertenezca a la ULL, es decir, una cuenta que no tenga el formato del dominio de las cuentas de correo de la ULL terminadas en ``@ull.edu.es'', se cerrará la sesión de esta cuenta y se mostrará un mensaje con el tipo de cuenta necesaria para utilizar  \ULLAR{}.
 
-\bigskip
-\bigskip
-\bigskip
-\bigskip
- 
+\lstinputlisting[language=java, caption={Fichero \texttt{LoginActivityULL.java}, código que se encarga de realizar el inicio de sesión del usuario con su correo electrónico.}, label={code:loginUll.java},]{listings/LoginActivityULL.java} %% LISTING
+
+
  
 \section{Modo de Realidad Aumentada}
 
@@ -303,7 +298,7 @@ El fichero \texttt{ARNavigation.java} contiene el activity encargado de: la reco
 Para ubicar y orientar el dispositivo móvil en el mundo físico, se necesita obtener acceso a diferentes sensores de este: GPS, acelerómetro y magnetómetro. 
 
 Para obtener acceso al GPS, se han de solicitar los permisos necesarios lo cual se refleja en el archivo \texttt{AndroidManifest.xml} (véase Listado \ref{lst:permisionL}) y a su vez requerir del usuario el permiso para acceder al GPS del dispositivo móvil con \ULLAR{}  (véase Listado \ref{lst:gpsP}).
-
+ 
 \begin{lstlisting}[caption={Fichero \texttt{AndroidManifest.xml} del proyecto, permisos para acceder a la ubicación del dispositivo.}, label={lst:permisionL}]
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-feature android:name="android.permission.LOCATION_HARDWARE" />
@@ -321,8 +316,7 @@ Para obtener acceso al GPS, se han de solicitar los permisos necesarios lo cual 
 
 Con los permisos concedidos, bastará con el código mostrado en el Listado \ref{lst:activarL} para empezar a requerir los datos del GPS.
 
-\bigskip
-\bigskip
+
 
 \begin{lstlisting}[caption={Código para activar el GPS del dispositivo.}, label={lst:activarL}]
     locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
@@ -349,7 +343,7 @@ Ahora que se tiene acceso al GPS del dispositivo, se necesita conocer su orienta
  
 Un dispositivo Android dispone de 3 ejes: x, y, z. Estos ejes se disponen como se muestra en la Figura \ref{fig:xyz}. La variable ``compass'' está formada por una lista de tres valores. El primero es denominado acimut y se refiere al ángulo de la orientación sobre la superficie de una esfera. Este valor representa el ángulo entre el eje ``y'' del dispositivo y el norte magnético en grados. Cuando se apunta con el dispositivo hacia el norte el valor del ángulo es 0, al sur es 180º, al este es 90º y al oeste 270º. Para poder trabajar con estos valores se convertirán a radianes.  El rango de valores es desde $0$ a $2\pi$.
 
-Para reconocer las instalaciones que se encuentran en frente del dispositivo móvil, se escucharán los cambios de los valores brújula o ``compass'' del dispositivo para actualizar la nueva orientación y realizar los cálculos que permiten identificar las instalaciones (véase Listado \ref{lst:orientacionL}). El objeto ``navULL'' de la clase ``Navigation'' será el encargado realizar estos cálculos, los cuales se explicarán a continuación.
+Para reconocer las instalaciones que se encuentran en frente al dispositivo móvil, se escucharán los cambios de los valores brújula o ``compass'' del dispositivo para actualizar la nueva orientación y realizar los cálculos que permiten identificar las instalaciones (véase Listado \ref{lst:orientacionL}). El objeto ``navULL'' de la clase ``Navigation'' será el encargado realizar estos cálculos, los cuales se explicarán a continuación.
 
 
 \begin{figure}[h]
@@ -399,6 +393,12 @@ A continuación, se explicarán las clases que intervienen en el proceso de reco
 
 Cada instalación de la ULL se obtiene de una base de datos en formato JSON. Una instalación se representa con un objeto de la clase ``ULLSite''. Esta contiene toda su información y los atributos y funciones necesarias para poder trabajar con ella (véase Listado \ref{lst:ULLSite}). El objeto en formato JSON a partir de cual se creará el objeto de cada instalación se puede ver en el Listado \ref{lst:instalacion}.
 
+En la clase ``ULLSite'' se encuentran los tres atributos principales para la identificación de las instalaciones: ``disToSite'', ``dirToSite'' y ``coneValue''. Estos atributos son calculados en tiempo de ejecución.
+
+\bigskip
+\bigskip
+\bigskip
+
 \lstinputlisting[language=java, caption={Fichero \texttt{ULLSite.java}, clase que contiene los atributos de una instalación de la ULL.}, label={lst:ULLSite},]{listings/models/ULLSite.java}
 
 \lstinputlisting[ caption={Ejemplo de una instalación de la ULL en la base de datos.}, label={lst:instalacion},]{listings/instalacion.json}
@@ -411,7 +411,7 @@ Cada instalación de la ULL se obtiene de una base de datos en formato JSON. Una
     %     \label{fig:ull-site}
     % \end{figure}
 
-En la clase ``ULLSite'' se encuentran los tres atributos principales para la identificación de las instalaciones: ``disToSite'', ``dirToSite'' y ``coneValue''. Estos atributos son calculados en tiempo de ejecución.
+
 
 El atributo ``disToSite'' representa la distancia, en metros, a la que se encuentra la instalación con respecto a la ubicación del dispositivo. El atributo ``dirToSite'' representa el valor de la brújula del dispositivo, en radianes, en la dirección en la que se encuentra la instalación, es decir, si la ubicación se encuentra hacía el norte con respecto al dispositivo el valor será 0 y si se encuentra hacía el este será $pi/2$.
 El atributo ``coneValue'' representa un cono de visión imaginario cuyo centro es la dirección en la que se encuentra la instalación. 
@@ -431,19 +431,18 @@ Estos atributos junto con el objeto ``point'' de la clase ``Vector2D'', que cont
 
 La clase ``Navigation'' es la clase principal encargada de  ejecutar todos métodos y realizar  los cálculos que permiten identificar las instalaciones. A partir de los datos obtenidos de los sensores y de las ubicaciones de las instalaciones permite identificar la instalación más cercana que se encuentra en la dirección del dispositivo y también el resto de las instalaciones en esta misma dirección. En el Listado \ref{lst:NavigationResumen} se muestran los atributos y métodos de la clase.
 
+
+A continuación se explicará de forma detallada la implementación de los métodos principales de esta clase.
+
+En el Listado \ref{lst:calculateCone} se encuentra el método que calcula el valor del atributo ``coneValue'' para una instalación. 
+Este valor se calcula de modo que cuanto más cerca se encuentre el dispositivo de una instalación, mayor sea el rango con el que poder decidir si se encuentra en frente de ella o no y, por el contrario, que este valor sea menor cuando se encuentre lejos de la instalación.
+
+\bigskip
+\bigskip
 \bigskip
 
 \lstinputlisting[language=java, caption={Fichero \texttt{Navigation.java}, clase ``Navigation'' que contiene los atributos y métodos que nos permiten identificar las instalaciones de ULL.}, label={lst:NavigationResumen},]{listings/NavigationResumen.java}
 
-A continuación se explicará de forma detallada la implementación de los métodos principales de esta clase.
-
-En Listado \ref{lst:calculateCone} se encuentra el método que calcula el valor del atributo ``coneValue'' para una instalación. 
-Este valor se calcula de modo que cuanto más cerca se encuentre el dispositivo de una instalación, mayor sea el rango con el que poder decidir si se encuentra delante de ella o no y, por el contrario, que este valor sea menor cuando se encuentre lejos de la instalación.
-\bigskip
-
-\bigskip
-
-\bigskip
 \begin{lstlisting}[caption={Código para calcular el \textit{coneValue} de identificación de cada instalación.}, label={lst:calculateCone}]
     public double calculateCone(double dist) {
         // Si es una instalacion "cercana" del dispositivo
@@ -552,6 +551,10 @@ Esta clase formaliza una petición con la URL que se le pase como parámetro al 
 
 En el Listado \ref{lst:getSitesFromDB} se encuentra el método ejecutado en la clase ``ARNavigation'' para realizar la conexión con el servidor para obtener la respuesta de la base de datos con todas las instalaciones de ULL. Posteriormente, se creará una instancia de la clase ``Navigation'' con todas las instalaciones de la base de datos en formato JSON. Este objeto se denominará con el nombre de ``navULL'' y será el objeto encargado de identificar las instalaciones y trabajar con ellas.
 
+Los últimos datos que se necesitan para trabajar con en el objeto ``navULL'', son los valores de ``maxRadius'' y ``minRadius'', los cuales el usuario puede editar en la ventana de \textit{Configuración} y que se puede acceder desde cualquier activity gracias a las ``Shared Preferences". Las Shared Preferences son un conjunto de datos accesible desde cualquier activity de la aplicación y que se utiliza para guardar los ajustes del usuario. En el método ``getRadius()'' del Listado \ref{lst:shared} se puede ver como se accede a estos datos.
+
+\bigskip
+
 \begin{lstlisting}[caption={Método que conecta con el servidor y recibe la respuesta con todas las instalaciones de la base de datos.},  label={lst:getSitesFromDB}]
     private void getSitesFromDB() {
         try{
@@ -565,9 +568,8 @@ En el Listado \ref{lst:getSitesFromDB} se encuentra el método ejecutado en la c
 }
 \end{lstlisting}
 
-Los últimos datos que se necesitan para trabajar con en el objeto ``navULL'', son los valores de ``maxRadius'' y ``minRadius'', los cuales el usuario puede editar en la ventana de \textit{Configuración} y que se puede acceder desde cualquier activity gracias a las ``Shared Preferences". Las Shared Preferences son un conjunto de datos accesible desde cualquier activity de la aplicación y que se utiliza para guardar los ajustes del usuario. En el método ``getRadius()'' del Listado \ref{lst:shared} se puede ver como se accede a estos datos.
 
-\begin{lstlisting}[language=java, caption={Fichero \texttt{ARNavigation.java}, código que se encarga de obtener los valores de ``maxDist'' y ``minDist'' del objeto ``navULL''},  label={lst:shared}]
+\begin{lstlisting}[language=java, caption={Fichero \texttt{ARNavigation.java}, código que se encarga de obtener los valores de ``maxDist'' y ``minDist'' del objeto ``navULL''.},  label={lst:shared}]
     private void getRadius() {
         try {
             // Se obtiene los valores configurables "maxRadius" y "minRadius" en la ventana de 
@@ -603,7 +605,7 @@ Para poder hacer uso del SDK de Kudan se tiene que descargar el SDK y configurar
 %     }
 % \end{lstlisting}
  
-El fichero \texttt{aractivity.xml} (véase Listado \ref{lst:aractivity.xml}) contiene el layout con la información a mostrar al usuario cuando esté delante de una instalación. Este layout muestra al usuario en la parte superior de la ventana, el nombre de la instalación ante la que se encuentra y un botón que le permite acceder a una ventana con la ficha de información de la instalación. Además incorpora un botón en la parte inferior que le indica el número de instalaciones adicionales que se encuentran en la misma dirección. Al pulsar este botón se despliega una ventana con una lista de estas instalaciones.
+El fichero \texttt{aractivity.xml} (véase Listado \ref{lst:aractivity.xml}) contiene el layout con la información a mostrar al usuario cuando esté en frente de una instalación. Este layout muestra al usuario en la parte superior de la ventana, el nombre de la instalación ante la que se encuentra y un botón que le permite acceder a una ventana con la ficha de información de la instalación. Además incorpora un botón en la parte inferior que le indica el número de instalaciones adicionales que se encuentran en la misma dirección. Al pulsar este botón se despliega una ventana con una lista de estas instalaciones.
 
 \lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{aractivity.xml}, layout del activity ``ARNavigation''.}, label={lst:aractivity.xml},]{listings/aractivity.xml}
 
@@ -661,14 +663,14 @@ La clase ``MapsFragment'' (véase Listado \ref{lst:mapsF}) se encargará de: obt
 
 \lstinputlisting[caption={Fichero \texttt{MapsFragment.java}, métodos principales.}, label={lst:mapsF},]{listings/MapsFragment.java}
 
-El fichero \texttt{fragment\_maps.xml} contiene la vista del mapa de Google Maps en el cual se dibujarán los marcadores y los círculos que ya se han comentado. Además incorpora un botón con el nombre de ``AR Mode'' que lanzará la ventana de \textit{Navegación en modo AR}.
+El fichero \texttt{fragment\_maps.xml} contiene la vista del mapa de Google Maps en el cual se dibujarán los marcadores y los círculos que ya se han comentado. Además incorpora un botón con el nombre de ``AR Mode'' que ejecutará la ventana de \textit{Navegación en modo AR}.
 
 % \lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{fragment\_maps.xml}, vista del mapa de la API de Google Maps.}, label={lst:mapsL},]{listings/fragment_maps.xml}
     
 
 \subsection{HomeFragment}
 
-El fragmento ``HomeFragment'' es la primera vista que se encuentra cuando se inicia sesión con éxito en la aplicación. Para el diseño de este fragmento se decidió por utilizar el modelo de ``RecyclerView'' \cite{URL::recycler}. Este modelo permite la visualización de listas de elementos o ítems de una forma más flexible, permitiendo configurar la vista de cada ítem mediante el uso de adaptadores. Un adaptador permite crear las vistas de cada ítem de una lista a partir del contenido de los atributos de cada uno de ellos. Además, cada adaptador gestiona los eventos de cuando un ítem es seleccionado.
+El fragmento ``HomeFragment'' es la primera vista que se encuentra cuando se inicia sesión con éxito en la aplicación. Para el diseño de este fragmento se decidió por utilizar el modelo de ``RecyclerView'' \cite{URL::recycler}. Este modelo permite la visualización de listas de elementos o ítems de una forma más flexible, permitiendo configurar la vista de cada ítem mediante el uso de adaptadores. Un adaptador permite crear las vistas de cada ítem de una lista a partir del contenido de los atributos de cada uno de ellos.
 
 El contenido de cada ítem vendrá dado por la clase ``ItemHome''. Los atributos de esta clase serán: una imagen, un nombre, una variable que indica si es o no un enlace web del navegador y la URL del enlace.
 
@@ -685,13 +687,6 @@ El contenido de cada ítem vendrá dado por la clase ``ItemHome''. Los atributos
 %     ... // Metodos Get() y Set() de los atributos
 % }
 % \end{lstlisting}
-
-Con una lista de estos ítems, el adaptador configurará la vista de cada ítem y luego se incorporarán a la vista de RecyclerView. La clase encargada de este procedimiento se llamará ``ItemHomeAdapter'' y hereda del adaptador ``RecyclerView.Adapter'' (véase Fichero \ref{lst:adapterItem}). Los atributos de esta clase son: una lista de ítems, el layout con el diseño de cada ítem y un objeto ``OnItemClickListener'' que manejará los eventos de cada ítem. Dentro de esta clase, se tiene una clase ``ViewHolder'' que hereda de ``RecyclerView.ViewHolder'' y se encargará de enlazar el contenido de cada ítem con su layout. El layout con la vista de cada ítem se encuentra en el fichero \texttt{adapter\_item\_home.xml}. Este layout contendrá la imagen del ítem en la parte superior y el nombre inferior.
-     
-    
-% \lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{adapter\_home\_item.xml}, vista del adaptador de cada ítem de la ventana de \textit{Inicio}.}, label={lst:itemView},]{listings/adapter_home_item.xml}
-
-\bigskip
 
 \begin{lstlisting}[caption={Fichero \texttt{ItemHomeAdapter.java}, clase que construye las vistas de los ítems.},  label={lst:adapterItem}]
 public class ItemHomeAdapter extends RecyclerView.Adapter<ItemHomeAdapter.ViewHolder> {
@@ -729,10 +724,16 @@ public class ItemHomeAdapter extends RecyclerView.Adapter<ItemHomeAdapter.ViewHo
     }
 }
 \end{lstlisting}
+Con una lista de estos ítems, el adaptador configurará la vista de cada ítem y luego se incorporarán a la vista de RecyclerView. La clase encargada de este procedimiento se llamará ``ItemHomeAdapter'' y hereda del adaptador ``RecyclerView.Adapter'' (véase Fichero \ref{lst:adapterItem}). Los atributos de esta clase son: una lista de ítems, el layout con el diseño de cada ítem y un objeto ``OnItemClickListener'' que manejará los eventos de cada ítem. Dentro de esta clase, se tiene una clase ``ViewHolder'' que hereda de ``RecyclerView.ViewHolder'' y se encargará de enlazar el contenido de cada ítem con su layout. El layout con la vista de cada ítem se encuentra en el fichero \texttt{adapter\_item\_home.xml}. Este layout contendrá la imagen del ítem en la parte superior y el nombre inferior.
+     
+    
+% \lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{adapter\_home\_item.xml}, vista del adaptador de cada ítem de la ventana de \textit{Inicio}.}, label={lst:itemView},]{listings/adapter_home_item.xml}
 
-La clase ``HomeFragment''(véase Listado \ref{lst:homeF}) se encargará de crear una instancia de la clase ``ItemHome'' y el adaptador, ``ItemHomeAdapter'', para que se sitúen correctamente en la vista que contiene el RecyclerView (véase Listado \ref{lst:homeL}). 
+
 
 \lstinputlisting[caption={Fichero \texttt{HomeFragment.java}, activity de la ventana de \textit{Inicio}.}, label={lst:homeF},]{listings/HomeFragment.java}
+\bigskip
+La clase ``HomeFragment''(véase Listado \ref{lst:homeF}) se encargará de crear una instancia de la clase ``ItemHome'' y el adaptador, ``ItemHomeAdapter'', para que se sitúen correctamente en la vista que contiene el RecyclerView (véase Listado \ref{lst:homeL}). 
 
 \lstinputlisting[stringstyle=\color{purple},language=XML,caption={Fichero \texttt{fragment\_home.xml}, vista principal de la ventana de \textit{Inicio}.}, label={lst:homeL},]{listings/fragment_home.xml}
   
@@ -750,9 +751,14 @@ El menú de la aplicación constituye el elemento principal por el que el usuari
    
 El fichero \texttt{navigation\_draw.xml} contiene la vista del Navigation Draw. Aquí se cuenta con un layout que muestra: la barra superior de la aplicación en la que irá el nombre de la aplicación ``\ULLAR{}'', un ``FrameLayout'' en el que irá el fragmento actual a mostrar y un ``NavigationView'' que será la vista del menú Navigation Drawer y que al inicio de la aplicación estará sin desplegar.
 
+En cuanto al contenido del menú del Navigation Drawer, se encuentra una cabecera en la parte superior del menú con una imagen de la ULL y el nombre del usuario. Después de la cabecera se encuentran las opciones del menú que vienen dadas por el fichero \texttt{nav\_options.xml} (véase Listado \ref{lst:nav_options.xml}). Cada uno de los ítems del menú de opciones tiene: un identificador, un icono asociado y un nombre.
+
+\bigskip
+\bigskip
+\bigskip
+
 \lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{navigation\_draw.xml}, layout del Navigation Drawer.}, label={code:navigation_draw.xml},]{listings/navigation_draw.xml}
 
-En cuanto al contenido del menú del Navigation Drawer, se encuentra una cabecera en la parte superior del menú con una imagen de la ULL y el nombre del usuario. Después de la cabecera se encuentran las opciones del menú que vienen dadas por el fichero \texttt{nav\_options.xml} (véase Listado \ref{lst:nav_options.xml}). Cada uno de los ítems del menú de opciones tiene: un identificador, un icono asociado y un nombre.
 
 % \lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{header\_navigation\_drawer.xml}, cabecera del Navigation Drawer.}, label={code:header_navigation_drawer.xml},]{listings/header_navigation_drawer.xml}
    
@@ -769,15 +775,17 @@ Con esta clase cualquier activity que quiera incorporar el menú Navigation Draw
         
 \section{Instalaciones de la ULL}
 
-En la base de datos se encuentran con la gran mayoría de las instalaciones de la ULL. Se recuerda que todas estas instalaciones constan de su nombre, ubicación, una breve descripción de esta y una lista de enlaces a los servicios, titulaciones, departamentos, etc. Toda esta información puede ser consultada por el usuario, mediante la ventana de \textit{Todas las instalaciones} (véase Figura \ref{fig:allSitesApp}). Esta ventana permite al usuario buscar la facultad, edificio o centro, que se encuentre en la base de datos, para posteriormente permitirle acceder a la ficha de información de la instalación (véase Figura \ref{fig:siteInfoApp}). En esta ficha se encontrará el resto de la información con respecto a esa instalación.
+En la base de datos se encuentran con la gran mayoría de las instalaciones de la ULL. Se recuerda que todas estas instalaciones constan de su nombre, ubicación, una breve descripción de esta y una lista de enlaces a los servicios, titulaciones, departamentos, etc. Toda esta información puede ser consultada por el usuario, mediante la ventana de \textit{Todas las instalaciones} (véase Figura \ref{fig:allSitesApp}). Esta ventana permite al usuario buscar la facultad, edificio o centro, que se encuentre en la base de datos, para posteriormente permitirle acceder a la ficha de información de la instalación (véase Figura \ref{fig:siteInfoApp}). 
 
-En la ventana de \textit{Todas las instalaciones}  aparecerá una lista de ítems con todas las instalaciones con: su imagen a la izquierda y, su nombre y descripción a la derecha. Para la creación de los ítems de la lista se optó por el uso de adaptadores al igual que en el fragmento ``HomeFragment'', pero sin la necesidad de una vista RecyclerView. La clase encargada de representar las instalaciones es ``SiteAdapter'', la cual hereda de la clase ``BaseAdapter'' de Android y, además, implementa la interfaz ``Filterable'' que permite aplicar, de forma dinámica, un filtro de búsqueda sobre la lista de las instalaciones (véase Listado \ref{lst:SiteAdapter.java}). El contenido a representar en cada vista vendrá dado por una lista de objetos de la clase ``ULLSiteSerializable''. Esta clase es una copia de la clase ``ULLSite'' (véase Listado \ref{lst:ULLSite}), pero que implementa la interfaz ``Serializable'' para permitir el paso de objetos de esta clase entre distintos activities. 
-
+En la ventana de \textit{Todas las instalaciones}  aparecerá una lista de ítems con todas las instalaciones  de la ULL con: su imagen a la izquierda y, su nombre y descripción a la derecha. Para la creación de los ítems de la lista se optó por el uso de adaptadores al igual que en el fragmento ``HomeFragment'', pero sin la necesidad de una vista RecyclerView. La clase encargada de representar las instalaciones es ``SiteAdapter'', la cual hereda de la clase ``BaseAdapter'' de Android y, además, implementa la interfaz ``Filterable'' que permite aplicar, de forma dinámica, un filtro de búsqueda sobre la lista de las instalaciones (véase Listado \ref{lst:SiteAdapter.java}). 
 
 \lstinputlisting[language=java, caption={Fichero \texttt{SiteAdapter.java}, adaptador que configura la lista de instalaciones con su imagen, nombre y descripción.}, label={lst:SiteAdapter.java},]{listings/adapters/SiteAdapter.java}
 
+El contenido a representar en cada vista vendrá dado por una lista de objetos de la clase ``ULLSiteSerializable''. Esta clase es una copia de la clase ``ULLSite'' (véase Listado \ref{lst:ULLSite}), pero que implementa la interfaz ``Serializable'' para permitir el paso de objetos de esta clase entre distintos activities. 
 
-El activity ``SiteListActivity'' (véase Listado \ref{lst:SiteListActivity.java}) se encargará de crear una instancia del adaptador ``SiteAdapter'' con la lista de objetos de las instalaciones, las cuales recibe del activity anterior que lo ejecutó. Esté activity dispone de una barra de búsqueda la parte superior de la aplicación que permite al usuario buscar una instalación por su nombre. Esta indicará, al adaptador, el filtro de búsqueda que tiene aplicar a los nombres de las instalaciones cada vez que se escriba en ella o cuando el usuario le dé al botón de buscar, de esta manera solo aparecerán una lista de instalaciones que coinciden con los caracteres de la barra de búsqueda. Cuando una instalación de la lista sea seleccionada, se lanzará el activity ``SiteDescriptionActivity'' y se le pasará el objeto que contiene la instalación seleccionada.
+
+
+El activity ``SiteListActivity'' (véase Listado \ref{lst:SiteListActivity.java}) se encargará de crear una instancia del adaptador ``SiteAdapter'' con la lista de objetos de las instalaciones, las cuales recibe del activity anterior que lo ejecutó. Esté activity dispone de una barra de búsqueda la parte superior de la aplicación que permite al usuario buscar una instalación por su nombre. Esta indicará, al adaptador, el filtro de búsqueda que tiene aplicar a los nombres de las instalaciones cada vez que se escriba en ella o cuando el usuario le dé al botón de buscar, de esta manera solo aparecerán una lista de instalaciones que coinciden con los caracteres de la barra de búsqueda. Cuando una instalación de la lista sea seleccionada, se ejecutará el activity ``SiteDescriptionActivity'' y se le pasará el objeto que contiene la instalación seleccionada.
 
 \lstinputlisting[language=java, caption={Fichero \texttt{SiteListActivity.java}.}, label={lst:SiteListActivity.java},]{listings/SitesListActivity.java}
     
@@ -902,15 +910,19 @@ Dentro de la carpeta principal del repositorio se han de crear dos subdirectorio
     \item \textbf{routes/}
 \end{itemize}
 
-A continuación se creará el fichero \texttt{ullSites.js} (véase Listado \ref{code:ullSites.js})dentro de la carpeta de \textit{models/}. Este fichero contiene el modelo que conecta con la colección de la base de datos y maneja las respuestas, como se explicará más adelante.   
-
 \lstinputlisting[language=JavaScript, caption={Fichero \texttt{ullSites.js}.}, label={code:ullSites.js},]{listings/ullSites.js} %% LISTING
+
+A continuación se creará el fichero \texttt{ullSites.js} (véase Listado \ref{code:ullSites.js}) dentro de la carpeta de \textit{models/}. Este fichero contiene el modelo que conecta con la colección de la base de datos y maneja las respuestas, como se explicará más adelante.   
+
 
 Se necesitará una ruta por la cual el servidor responderá con la información que se solicite de la base de datos. Para ello en la carpeta \textit{routes/} se creará el fichero \texttt{api.js} (véase Listado \ref{lst:api.js}). Este fichero manejará las peticiones que lleguen al servidor a través de la ruta ``\textit{https://server\_url/api/}'' y se encargará principalmente de conectarse con la base de datos para responder a estas peticiones.
 
-\lstinputlisting[language=JavaScript,caption={Fichero \texttt{api.js}.}, label={lst:api.js},]{listings/api.js} %% LISTING
- 
+
 En el caso de que se acceda a la ruta ``\textit{/api/ull-sites}'' del servidor con una petición ``HTTP'' de tipo ``GET'', se enviará una respuesta al cliente con toda la información de las instalaciones que se encuentran en la base de datos.
+
+\bigskip
+
+\lstinputlisting[language=JavaScript,caption={Fichero \texttt{api.js}.}, label={lst:api.js},]{listings/api.js} %% LISTING
 
 \subsubsection{Conexión con mLab}
 

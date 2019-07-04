@@ -4,13 +4,11 @@ public class SitesListActivity extends AppCompatActivity { ...
     SiteAdapter siteAdapter;        // Adaptador de las instalaciones
     protected void onCreate(Bundle savedInstanceState) { 
         setContentView(R.layout.activity_sites_list); // Layout principal
-        ... // Configuracion de la barra superior
         // Se obtiene lista de las instalaciones enviadas por el activity anterior
         sitesToShow = (SitesArray) getIntent().getSerializableExtra("sitesToShow"); 
         showDinamicSites(); // Se muestran las instalaciones contenidas en la lista 
     }
-    // Metodo que crea un objeto de la clase "SiteAdapter" para mostar las instalaciones 
-    private void showDinamicSites() {
+    private void showDinamicSites() {  // Metodo que instancia la clase "SiteAdapter" 
         listSites = findViewById(R.id.listSites); // ListView que contendra las instalaciones 
         siteAdapter = new SiteAdapter(this, R.layout.site_item, sitesToShow); // Adaptador
         listSites.setAdapter(siteAdapter); // Se indica al ListView su adaptador 
@@ -24,8 +22,7 @@ public class SitesListActivity extends AppCompatActivity { ...
                 startActivity(intent); }  // Se lanza el activity
         });
     }
-    @Override // Barra de busqueda y su comportamiento a eventos
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) { // Barra de busqueda
         getMenuInflater().inflate(R.menu.search_bar,menu); // Layout con la barra de busqueda
         MenuItem searchItem = menu.findItem(R.id.app_bar_search); // Barra de busqueda
         searchView = (SearchView) MenuItemCompat.getActionView(searchItem); // Texto con el filtro
@@ -34,10 +31,8 @@ public class SitesListActivity extends AppCompatActivity { ...
             public boolean onQueryTextSubmit(String query) {
                 siteAdapter.getFilter().filter(query); // Le Se indica al adaptador que aplique
                 return false; }                              // el filtro
-            @Override // Cuando el texto cambie
-            public boolean onQueryTextChange(String newText) {...} // Se aplica el filtro 
+            public boolean onQueryTextChange(String newText) {...} // Cuando el texto cambia 
         });
         return super.onCreateOptionsMenu(menu); // Se devuelve la barra de busqueda
-    } 
-    ...
-}
+}   } 
+
