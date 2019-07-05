@@ -115,6 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Más información"
@@ -124,7 +125,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundAR"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
@@ -138,22 +139,23 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/moreInfoBack"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/seenText"
+        app:layout_constraintTop_toTopOf="@+id/moreInfoBack"
         app:layout_constraintVertical_bias="0.961" />
 
     <Button
         android:id="@+id/moreInfoButton"
         android:layout_width="174dp"
         android:layout_height="34dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="Button"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/moreInfoBack"
         app:layout_constraintEnd_toEndOf="@+id/moreInfoBack"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="@+id/moreInfoBack"
-        app:layout_constraintTop_toTopOf="@+id/moreInfoBack"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundAR"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
