@@ -283,6 +283,7 @@ En el Listado \ref{code:loginUll.java} se muestran todos los métodos y conexion
 
 En caso de que la cuenta no pertenezca a la ULL, es decir, una cuenta que no tenga el formato del dominio de las cuentas de correo de la ULL terminadas en ``@ull.edu.es'', se cerrará la sesión de esta cuenta y se mostrará un mensaje con el tipo de cuenta necesaria para utilizar  \ULLAR{}.
 
+\bigskip
 \lstinputlisting[language=java, caption={Fichero \texttt{LoginActivityULL.java}, código que se encarga de realizar el inicio de sesión del usuario con su correo electrónico.}, label={code:loginUll.java},]{listings/LoginActivityULL.java} %% LISTING
 
 
@@ -443,6 +444,8 @@ Este valor se calcula de modo que cuanto más cerca se encuentre el dispositivo 
 
 \lstinputlisting[language=java, caption={Fichero \texttt{Navigation.java}, clase ``Navigation'' que contiene los atributos y métodos que nos permiten identificar las instalaciones de ULL.}, label={lst:NavigationResumen},]{listings/NavigationResumen.java}
 
+El cálculo del ángulo formado por dos puntos geográficos se realiza con el método ``Vector2D.getAngleRad(Vector2D v2)'', como se puede ver en el Listado \ref{lst:angle}. Este método calcula el ángulo que se obtiene al transformar el plano de coordenadas rectangulares (distancia en eje ``x'' y distancia en el eje ``y'') generado por la diferencia entre el punto con la ubicación geográfica del dispositivo ``v2'' y el punto con la ubicación geográfica de la instalación contenida en ``getX()'' y ``getY()'', a coordenadas polares. En las coordenadas polares un punto en el plano se determina por una distancia y un ángulo. Este ángulo que se obtiene será la dirección en la que se encuentra la instalación.
+
 \begin{lstlisting}[caption={Código para calcular el \textit{coneValue} de identificación de cada instalación.}, label={lst:calculateCone}]
     public double calculateCone(double dist) {
         // Si es una instalacion "cercana" del dispositivo
@@ -460,9 +463,6 @@ Este valor se calcula de modo que cuanto más cerca se encuentre el dispositivo 
         }
     }
 \end{lstlisting}
-
-
-El cálculo del ángulo formado por dos puntos geográficos se realiza con el método ``Vector2D.getAngleRad(Vector2D v2)'', como se puede ver en el Listado \ref{lst:angle}. Este método calcula el ángulo que se obtiene al transformar el plano de coordenadas rectangulares (distancia en eje ``x'' y distancia en el eje ``y'') generado por la diferencia entre el punto con la ubicación geográfica del dispositivo ``v2'' y el punto con la ubicación geográfica de la instalación contenida en ``getX()'' y ``getY()'', a coordenadas polares. En las coordenadas polares un punto en el plano se determina por una distancia y un ángulo. Este ángulo que se obtiene será la dirección en la que se encuentra la instalación.
 
 
 \begin{lstlisting}[caption={Método que calcula el ángulo formado por dos puntos.}, label={lst:angle}]
@@ -767,15 +767,14 @@ En cuanto al contenido del menú del Navigation Drawer, se encuentra una cabecer
 \lstinputlisting[stringstyle=\color{purple},language=XML, caption={Fichero \texttt{nav\_options.xml}, opciones del menú Navigation Drawer.}, label={lst:nav_options.xml},]{listings/nav_options.xml}
 
 Para la implementación del menú se ha utilizado una clase heredable llamada ``BaseActivity'', la cual incorpora la vista del Navigation Drawer, gestionará las opciones del menú, cambiará los fragmentos y permitirá moverse a los activities principales de \ULLAR{}. 
-
-\lstinputlisting[language=java, caption={Fichero \texttt{BaseActivity.java}, código que se encarga de configurar la vista del Navigation Drawer.}, label={BaseActivity.java},]{listings/BaseActivity.java}
-
-Con esta clase cualquier activity que quiera incorporar el menú Navigation Drawer  solo tiene que heredar de ésta mediante la palabra reservada en Java ``extends'' y el nombre de la clase ``BaseActivity''.
-
+Con esta clase cualquier activity que quiera incorporar el menú Navigation Drawer 
+solo tiene que heredar de ésta mediante la palabra reservada en Java ``extends'' y el nombre de la clase ``BaseActivity''.
         
 \section{Instalaciones de la ULL}
 
 En la base de datos se encuentran con la gran mayoría de las instalaciones de la ULL. Se recuerda que todas estas instalaciones constan de su nombre, ubicación, una breve descripción de esta y una lista de enlaces a los servicios, titulaciones, departamentos, etc. Toda esta información puede ser consultada por el usuario, mediante la ventana de \textit{Todas las instalaciones} (véase Figura \ref{fig:allSitesApp}). Esta ventana permite al usuario buscar la facultad, edificio o centro, que se encuentre en la base de datos, para posteriormente permitirle acceder a la ficha de información de la instalación (véase Figura \ref{fig:siteInfoApp}). 
+
+\lstinputlisting[language=java, caption={Fichero \texttt{BaseActivity.java}, código que se encarga de configurar la vista del Navigation Drawer.}, label={BaseActivity.java},]{listings/BaseActivity.java}
 
 En la ventana de \textit{Todas las instalaciones}  aparecerá una lista de ítems con todas las instalaciones  de la ULL con: su imagen a la izquierda y, su nombre y descripción a la derecha. Para la creación de los ítems de la lista se optó por el uso de adaptadores al igual que en el fragmento ``HomeFragment'', pero sin la necesidad de una vista RecyclerView. La clase encargada de representar las instalaciones es ``SiteAdapter'', la cual hereda de la clase ``BaseAdapter'' de Android y, además, implementa la interfaz ``Filterable'' que permite aplicar, de forma dinámica, un filtro de búsqueda sobre la lista de las instalaciones (véase Listado \ref{lst:SiteAdapter.java}). 
 
