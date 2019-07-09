@@ -1,0 +1,149 @@
+------------ Presentacion -------
+
+Buenos dias mi nombre es Alejandro Hernández Padrón y voy a presentar el Trabajo de Fin de Grado del Grado,  ULL-AR Tecnología de realidad aumentada en entornos universitarios,   con el que culminare mis estudios del Grado en Ingeniería Informática cursados en la Escuela Superior de Ingeniería y Tecnología de la Universidad de la Laguna (ULL). 
+------------  Introduccion ------------
+
+Este Trabajo de Fin de Grado sea realizado bajo la tutela del profesor Francisco de Sande González aqui presente. Quien me ha apoyado guiado durante la elaboración del proyecto para asegurar la calidad del mismo.
+
+A su vez este trabajo sigue la linea de desarrollo de aplicaciones interactivas con Android. 
+
+------------  Objetivos ------------
+
+xxx
+
+Con este proyecto pretende adquisición conocimientos de la tecnologias móviles 
+en el sistema operativo Android y en el desarrollo de aplicaciones para este sistema.
+
+Tambien se pretende adquirir conocimientos en tecnologias de realidad aumentada presentes en la actualidad
+
+El analisis de las capacidades y ventajas que tienen los Servicios de computacion en la nube. 
+
+Familiarizarse con el uso de herramientas de control de versiones utilizando GitHub.
+GitHub es una plataforma de desarrollo colaborativo para alojar proyectos. 
+Se creado un repositorio del proyecto para poder llevar un control y seguimiento de mismo  junto con el tutor en la reuniones.
+
+La creación de una memoria técnica utilizando Latex.
+LaTeX  es un sistema de composición de textos, orientado a la creación de documentos que presenten una alta calidad tipográfica.
+
+y tras las labores de investigación y recopilacion de informacion se espera que alumno realize una aplicacion Android que cumpla con las necesidades propuestas.
+Esta aplicación Android se he denominado ULL-AR.
+
+------------  Android Studio  ------------
+
+
+Android Studio es el IDE (Entorno de Desarrollo Integrado) oficial para el desarrollo de aplicaciones en Android, basado en IntelliJ IDEA.
+
+Ventajas: 
+Un sistema de compilación basado en Gradle que simplifica añadir librerias al proyecto.
+Un emulador rápido y facil de usar.
+Velocidad para aplicar cambios a aplicaciones ya funcionando.
+Un sistema de depuración con una interfaz sencilla e intuitiva.
+
+Este IDE ofrece numerosas ventajas a la hora de implementar, ejecutar y depurar código de una aplicación Android.
+
+------------  Realidad Aumentada ------------
+
+A continuación pasamos a comentar que es la realidad aumentada.
+
+Como funciona, que requistos necesita sistema para implementar la tecnologia de realidad
+
+Que tipo de RA y las diferencias entre ellos
+
+En qué difiere la realidad aumentada y la realidad virtual
+
+Después comentaremos donde se situa la realidad mixta dentro de estas tecnologias
+
+Que futuro le espera a esta Tecnología
+
+Y por ultimo un analisis de la integración de la tecnologia de realidad aumentada en Android Studio.
+
+------------  Que es la realidad aumentada ------------
+
+Es el término que se usa para definir la visión de un entorno físico del mundo real, a través de un dispositivo tecnológico. Este dispositivo, permite expandir el mundo físico añadiendo capas de información digital generadas por un computador, como pueden ser imágenes, sonidos y vídeos a la visión del entorno en tiempo real. 
+
+Actualmente se encuentra en gran expansión en todos los sectores desde la medicina hasta ingeneria o incluso la educación.
+siendo el sector de los videojuegos del que más se oye hablar.
+
+Cada vez más empresas estan invirtiendo en el desarrollo de esta tecnologia debido a los beneficios y aplicaciones toda por descubrir que tienen
+
+En el futuro desde mi punto de vista es una tecnología que estará integrada en nuestro día a día.
+
+------------  Como funciona esta tecnologia ------------
+
+Requisitos para implementar una tecnologia de Realidad Aumentada
+
+Primero necesitamos de un dispositivo de visualización en el que poder mostrar la tecnica de realidad aumentada, este dispositivo puede ser la pantalla de un móvil o table, o incluso unas gafas especiales como las gafas HOLOLENS de Google.
+
+Un sistema de computación que junto los datos de el entorno que se obtienen de sensores como GPS, Wifi, bluetooth, acelerómetro, etc.
+
+Y un software de RA que permita añadir información digita correspondiente a la visión del entorno real. Permita generar la imagen de realidad aumentada
+
+------------  
+Que tipos de RA existen ------------
+
+Existen 4 tipos
+
+Marker-based AR. Si
+
+Markerless AR.  Corresponde a la RA que recoge los datos de su posición y orientación para mostrar la información correspondiente a esa área. Estos sistemas utilizan los datos obtenidos de la cámara, GPS, brújula, giroscopio y acelerómetro para establecer la ubicación del usuario en el entorno. Utiliza técnicas para reconocer terreno o ambientes para calcular la posición y orientación de la cámara. Con este tipo de tecnología se puede probar un mueble en el salón antes de llegar a comprarlo.
+
+
+Pojection-based AR. Este modo de RA consiste en la proyección de luz en superficies y objetos en el mundo real. Existen muchos usos interesantes de esta tecnología, como aplicaciones para el uso de teclados virtuales proyectados que reconozcan cuando una ``tecla" es pulsada. Esta proyección también se puede hacer en medio del aire con ayuda de la tecnología de láseres de plasma.
+
+Superimposition-based AR. Esta tecnología reemplaza la imagen original por una de RA, de forma completa o parcial. El reconocimiento de objetos juega un papel fundamental en este tipo de tecnología. Tiene gran utilidad el campo de la medicina, por ejemplo, un doctor podría examinar a un paciente mientras ve la imagen de RA que se creado a partir de una visión de rayos X y la imagen real de paciente, así puede ver y entender mejor el daño en un hueso.
+
+---- Diferencias entre la Realidad Aumentada y la Realidad Virtual (RV)  -----
+ 
+La realidad virtual es un entorno de escenas u objetos de apariencia real. Aleja al usuario del entorno real y le brinda la sensación de estar inmerso en él.
+
+Esta tecnica se visualiza mediante gafas o cascos de realidad virtual como el que tenemos en la imagen.
+Y puede ir acompañadas de otros dispositivos como guantes o mandos que permitan al usuario un mayor interaccion con el entorno
+
+La realidad virtual actualmente ha avanzado más en su desarrollo en los últimos años sobre todos gracias a su potencial para realizar videojuegos. 
+Sin embargo la RA tendrá mucha más importancia a largo plazo 
+
+La principal diferencia es que la realidad aumentada no aisla al usuario del mundo exterior si no que traslada objetos e información virtual al mundo real, mediante superimposicion de imagenes.
+
+
+------------ Que es la Realidad Mixta ------------
+
+Es un tipo de tecnología que nace de la unión de realidad aumentada y la realidad virtual, la realidad mixta (RM) \cite{URL::RM}.
+
+En la RM se trata de llevar el mundo real al mundo virtual. La idea es generar un modelo 3D de la realidad y sobre él superponer información virtual.
+
+La RM es mucho más inmersiva que la realidad aumentada y requiere de mucha más capacidad de procesamiento. 
+
+------------  Futuro y usos de la Realidad Aumentada ------------
+
+
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
