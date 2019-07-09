@@ -1,23 +1,23 @@
-\babel@toc {spanish}{}
+\select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Android Studio, un IDE flexible e intuitivo.\relax }}{3}{figure.caption.3}% 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Google Glass. Desmostraci\IeC {\'o}n del uso de RA en deportes.\relax }}{7}{figure.caption.8}% 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Marker-bases AR. Demostraci\IeC {\'o}n de su funcionamiento.\relax }}{8}{figure.caption.10}% 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Espacio de la Realidad Mixta. \relax }}{10}{figure.caption.13}% 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces RA Volc\IeC {\'a}n. Ejemplo de uso de RA en Educaci\IeC {\'o}n. \relax }}{11}{figure.caption.15}% 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Funcionamiento de Node.js.\relax }}{14}{figure.caption.17}% 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Ventajas de Node.js.\relax }}{15}{figure.caption.18}% 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Ventajas de MongodDB. \relax }}{16}{figure.caption.20}% 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Android Studio, un IDE flexible e intuitivo.\relax }}{3}{figure.caption.3}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Google Glass. Desmostraci\IeC {\'o}n del uso de RA en deportes.\relax }}{7}{figure.caption.8}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Marker-bases AR. Demostraci\IeC {\'o}n de su funcionamiento.\relax }}{8}{figure.caption.10}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Espacio de la Realidad Mixta. \relax }}{10}{figure.caption.13}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces RA Volc\IeC {\'a}n. Ejemplo de uso de RA en Educaci\IeC {\'o}n. \relax }}{11}{figure.caption.15}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Funcionamiento de Node.js.\relax }}{14}{figure.caption.17}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Ventajas de Node.js.\relax }}{15}{figure.caption.18}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Ventajas de MongodDB. \relax }}{16}{figure.caption.20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Construcci\IeC {\'o}n de un autom\IeC {\'o}vil de carreras gracias a la RA.\relax }}{22}{figure.caption.21}% 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Funcionamiento de AR Sandbox.\relax }}{23}{figure.caption.22}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Construcci\IeC {\'o}n de un autom\IeC {\'o}vil de carreras gracias a la RA.\relax }}{22}{figure.caption.21}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Funcionamiento de AR Sandbox.\relax }}{23}{figure.caption.22}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Ventana \textit {Inicio} y el \textit {Men\IeC {\'u}} de \textit {\texttt {ULL-AR}{}{}}.\relax }}{26}{figure.caption.23}% 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ventana de \textit {Navegaci\IeC {\'o}n en modo RA} y \textit {Mapa ULL} \textit {\texttt {ULL-AR}{}{}}.\relax }}{27}{figure.caption.24}% 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Ventanas de \textit {Todas las instalaciones ULL} e \textit {Informaci\IeC {\'o}n de la instalaci\IeC {\'o}n} de \textit {\texttt {ULL-AR}{}{}}.\relax }}{28}{figure.caption.25}% 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Ventanas de \textit {Configuraci\IeC {\'o}n} e \textit {Informaci\IeC {\'o}n} de \textit {\texttt {ULL-AR}{}{}}.\relax }}{29}{figure.caption.26}% 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Disposici\IeC {\'o}n de los ejes de un dispositivo Android.\relax }}{35}{figure.caption.29}% 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Explicaci\IeC {\'o}n de los atributos ``coneValue'', ``dirToSite'' y ``disToSite''.\relax }}{38}{figure.caption.31}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ventana \textit {Inicio} y el \textit {Men\IeC {\'u}} de \textit {\texttt {ULL-AR}{}{}}.\relax }}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ventana de \textit {Navegaci\IeC {\'o}n en modo RA} y \textit {Mapa ULL} \textit {\texttt {ULL-AR}{}{}}.\relax }}{27}{figure.caption.24}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ventanas de \textit {Todas las instalaciones ULL} e \textit {Informaci\IeC {\'o}n de la instalaci\IeC {\'o}n} de \textit {\texttt {ULL-AR}{}{}}.\relax }}{28}{figure.caption.25}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Ventanas de \textit {Configuraci\IeC {\'o}n} e \textit {Informaci\IeC {\'o}n} de \textit {\texttt {ULL-AR}{}{}}.\relax }}{29}{figure.caption.26}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Disposici\IeC {\'o}n de los ejes de un dispositivo Android.\relax }}{35}{figure.caption.29}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Explicaci\IeC {\'o}n de los atributos ``coneValue'', ``dirToSite'' y ``disToSite''.\relax }}{38}{figure.caption.31}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

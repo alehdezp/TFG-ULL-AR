@@ -1,0 +1,15 @@
+<android.support.constraint.ConstraintLayout ...>
+    ... <!-- Imagenes de fondo de los TextView para facilitar la lectura de los mensajes-->
+    <!-- Texto informativo de que se ha encontrado una instalacion -->
+    <TextView android:id="@+id/seenText"  android:text="Viendo actualmente" .../>
+    <!-- Nombre de la instalacion encontrada -->
+    <TextView android:id="@+id/ullSiteText" android:text="Facultad de Ciencias ..." .../>
+    <!-- Texto por defecto cuando no se apunta a ninguna instalacion -->
+    <TextView android:id="@+id/.." android:text="Apunte a una instalacion ..." .../>
+    <!-- Boton que accede a la ventana con la informacion de la instalacion -->
+    <Button  android:id="@+id/moreInfoButton" .../>
+    <!-- Texto del boton "moreInfoButton" -->
+    <TextView android:id="@+id/moreInfoText" android:text="Mas informacion" .../>
+    <!-- Boton que despliega la lista con el resto de instalaciones encontradas -->
+    <Button android:id="@+id/..." android:text="Encontradas X instalaciones ".../>
+</android.support.constraint.ConstraintLayout>

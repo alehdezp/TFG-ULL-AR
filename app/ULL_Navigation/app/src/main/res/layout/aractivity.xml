@@ -28,7 +28,6 @@
         android:id="@+id/backgroundAR"
         android:layout_width="match_parent"
         android:layout_height="98dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/ar_back_info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,12 +43,13 @@
         android:id="@+id/moreInfoBack"
         android:layout_width="160dp"
         android:layout_height="32dp"
-        android:layout_marginBottom="600dp"
         android:background="@drawable/ar_back_more_info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundAR"
+        app:layout_constraintVertical_bias="0.0">
 
 
     </ImageView>
@@ -114,19 +114,16 @@
         android:id="@+id/moreInfoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="Más información"
         android:textColor="@android:color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/moreInfoBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backgroundAR"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="@+id/moreInfoBack"
+        app:layout_constraintTop_toTopOf="@+id/moreInfoBack"
+        app:layout_constraintVertical_bias="0.538" />
 
     <ImageView
         android:id="@+id/moreInfoImage"
@@ -137,60 +134,25 @@
         app:layout_constraintBottom_toBottomOf="@+id/moreInfoBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/moreInfoBack"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/moreInfoBack"
         app:layout_constraintTop_toTopOf="@+id/moreInfoBack"
-        app:layout_constraintVertical_bias="0.961" />
+        app:layout_constraintVertical_bias="0.444" />
 
     <Button
         android:id="@+id/moreInfoButton"
-        android:layout_width="174dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="170dp"
+        android:layout_height="31dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
-        android:visibility="invisible"
+        android:background="#00FFFFFF"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/moreInfoBack"
         app:layout_constraintEnd_toEndOf="@+id/moreInfoBack"
         app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="@+id/moreInfoBack"
-        app:layout_constraintTop_toBottomOf="@+id/backgroundAR"
+        app:layout_constraintTop_toTopOf="@+id/moreInfoBack"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/notchAR"
-        android:layout_width="146dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/circle_black"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-    <TextView
-        android:id="@+id/topGradesText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="180º"
-        android:textColor="@color/cardview_light_background"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/AR-NavigationText"

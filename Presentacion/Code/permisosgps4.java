@@ -1,0 +1,1 @@
+currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);

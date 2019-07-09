@@ -8,9 +8,9 @@
 \usepackage{multirow}
 \pdfinfo
 {
-  /Title       (BulletPoint. Tecnología beacon en entornos universitarios.)
-  /Creator     (Laura Padrón Jorge)
-  /Author      (Laura Padrón Jorge)
+  /Title       (ULL-AR Tecnología de realidad aumentada en entornos universitarios)
+  /Creator     (Alejandro Hernández Padrón)
+  /Author      (Alejandro Hernández Padrón)
   /Subject     (Trabajo de Fin de Grado)
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -89,18 +89,18 @@
 	\end{frame}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{\textbf{BulletPoint}}
-\subtitle{Tecnología beacon en entornos universitarios}
-\author[Laura Padrón Jorge]
+\title{\textbf{ULL-AR}}
+\subtitle{Tecnología de RA en entornos universitarios}
+\author[Alejandro Hernández Padrón]
 {
-	\textbf{Laura Padrón Jorge}
+	\textbf{Alejandro Hernández Padrón}
 	%\alert{Francisco~de Sande} \\
 	%\url{fsande@ull.es}
 }
 \institute[ULL]
 
 \date[Trabajo de Fin de Grado]{\textsc{Trabajo de Fin de Grado}     \\
-                           La Laguna, 15 de Julio, 2016}
+                           La Laguna, 16 de Julio, 2018}
 \subject{TFG}
 
 \AtBeginSection[]
@@ -112,7 +112,8 @@
 		}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\BulletPoint}{\texttt{BulletPoint{}}}
+
+\newcommand{\ULLAR}{\texttt{ULL-AR{}}}
 
 \setbeamerfont{title}{size=\Large,shape=\sffamily}
 \setbeamerfont{author}{size=\small,shape=\sffamily}
@@ -123,11 +124,11 @@
 {
   \vbox{}
   %\vspace*{2.3cm}
-  \vfill \includegraphics[width=0.15\linewidth]{Images/logos/logo_vertical}
+  \vfill \includegraphics[width=0.3\linewidth]{Images/marca-universidad-de-la-laguna-original}
     \vfill
   %\hspace*{1.8cm}
-  \begin{columns}
-    \begin{column}{0.6\textwidth}
+  % \begin{columns}
+  %   \begin{column}{0.6\textwidth}
       \begin{beamercolorbox}[sep=8pt,#1]{title}
 	\centering{\usebeamerfont{title}\inserttitle\par}
 	\ifx\insertsubtitle\@empty%
@@ -138,25 +139,25 @@
 	
       \end{beamercolorbox}%
       \vskip1em\par
-      \hspace*{2.35cm}
+
       \begin{beamercolorbox}[sep=8pt,#1]{author}
-	\usebeamerfont{author}\insertauthor
+				\centering{\usebeamerfont{author}\insertauthor}
       \end{beamercolorbox}
       \vskip1em\par
-      \hspace*{2.35cm}
+      \hspace*{3cm}
       \begin{beamercolorbox}[sep=8pt,#1]{institute}
-	\usebeamerfont{institute}\insertinstitute
+				\centering{\usebeamerfont{institute}\insertinstitute}
       \end{beamercolorbox}
-      \hspace*{2.35cm}
+      \hspace*{3cm}
       \begin{beamercolorbox}[sep=8pt,#1]{date}
-	\usebeamerfont{date}\insertdate
+				\centering{\usebeamerfont{date}\insertdate}
       \end{beamercolorbox}\vskip0.5em
-    \end{column}
+    % \end{column}
     
-    \begin{column}{0.4\textwidth}
-      \hfill \includegraphics[width=0.8\linewidth]{Images/App/menuPrincipal.png}
-    \end{column}
-  \end{columns}
+  %   \begin{column}{0.4\textwidth}
+  %     \hfill \includegraphics[width=0.8\linewidth]{Images/App/menuPrincipal.png}
+  %   \end{column}
+  % \end{columns}
     %\hfill \includegraphics[width=0.2\linewidth]{Images/varios/MainActivity.png}
     %{\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
 	%	\vfill \includegraphics[width=0.3\linewidth]{FIGURES/logos/nwo}
@@ -182,17 +183,17 @@
 			\include{Capitulos/Cap1_Prologo}
 		\section{Herramientas y Tecnologías utilizadas}
 			\include{Capitulos/Cap2_HerrSoft}
-		\section{Beacons en entornos universitarios}
+		\section{RA en entornos universitarios}
 			\include{Capitulos/Cap3_EntornosUniversitarios}
-		\section{La aplicación \BulletPoint}
+		\section{La aplicación \ULLAR}
 			\include{Capitulos/Cap4_Desarrollo}
-		\section{Despliegue}
-			\include{Capitulos/Cap5_Despliegue}
+		\section{Back-end de la aplicación}
+			\include{Capitulos/Cap5_Back-end}
 		\section{Presupuesto}	
 			\include{Capitulos/Cap6_Presupuesto}
 		\section{Summary and conclusions}
 			\include{Capitulos/Cap7_Conclusiones}
 		\include{Capitulos/Cap8_Agradecimientos}
-		\include{Capitulos/Cap9_final}
+		\include{Capitulos/Cap9_Final}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{document}
+\end{document} 

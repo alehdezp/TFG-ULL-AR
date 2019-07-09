@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Preferencias de las instalaciones" .../>
+    <!-- Activar o no los radios de busqueda -->
+    <SwitchPreference android:key="showRadius"
+        android:title="Mostrar instalaciones dentro de un rango" .../>
+    <!-- Radio del circulo mayor -->
+    <EditTextPreference
+        android:defaultValue="max"
+        android:inputType="number"
+        android:key="maxRadius"
+        android:title="Selecciona radio circulo mayor (metros)" .../>
+    <!-- Radio del circulo menor -->
+    <EditTextPreference android:key="minRadius" ...>
+</PreferenceScreen>
+

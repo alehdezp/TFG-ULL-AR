@@ -1,0 +1,47 @@
+\begin{frame}
+  \frametitle{Back-end de la aplicación}
+  \block{Base de datos }
+    \begin{itemize}
+    \item Base de datos de MongoDB.
+		\item Se encuentra en la plataforma de mLab.
+    \item Contiene todas la información referente a las instalaciones.
+    \end{itemize}
+  \endblock{}
+  \block{Servidor}
+  \begin{itemize}
+  \item Implementado en Node.js.
+  \item Se encuentra en funcionamiento en la plataforma de Heroku.
+  \item Conecta con la base de datos.
+  \end{itemize}
+\endblock{}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\texttt{server.js}}
+  \lstinputlisting{Code/server.jss} 
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{models/\texttt{ullSites.js}}
+  \lstinputlisting{Code/ullSites.jss} 
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{routes/\texttt{api.js}}
+  \lstinputlisting{Code/api.jss} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Back-end de la aplicación}
+  \block{Despliegue}
+  \begin{itemize}
+    \item Archivo \texttt{Procfile}.
+    \item Subir el repositorio a Heroku.
+    \item URL : \textit{https://server-ull-ar.herokuapp.com/api/ull-sites}.
+    \end{itemize}
+\endblock{}
+  \texttt{Procfile}
+  \lstinputlisting{Code/Procfile}
+\end{frame}

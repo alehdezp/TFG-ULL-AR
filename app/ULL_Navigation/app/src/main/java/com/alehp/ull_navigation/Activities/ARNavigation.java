@@ -28,6 +28,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.alehp.ull_navigation.Models.GetData;
@@ -144,8 +145,6 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
         showHideUIMore(false);
         alternateUIInfo(false, "");
         setMoreSites(false, null);
-
-
     }
 
 
@@ -217,35 +216,21 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
             radians = radians - 360;
         radians = Math.toRadians(radians);
 
-//        int brujula = Math.round(event.values[0]); //Valor de la brujula
-//        topGradesText.setText(brujula + "º");
-
-
         LatLng auxpos = getCurrentPos();
         if (auxpos != null) {
             allResultsSites = navULL.whatCanSee(auxpos, radians);
+
         }
         if (allResultsSites != null) {
             nearSiteResult = allResultsSites.get(0);
             alternateUIInfo(true, nearSiteResult.getName());
             showHideUIMore(true);
-//            String AuxCanFound = "";
-//            for(int i = 0; i < nearSiteResult.getInterestPoints().size(); i++){
-//                AuxCanFound += nearSiteResult.getInterestPoints().get(i) + "\n";
-//            }
 
-
-//            int objetivoDir = Math.round(Math.round(Math.toDegrees(nearSiteResult.getDirToSite())));
-//            int distanceDir = Math.round((float)nearSiteResult.getDistToSite());
-//            int coneValue = Math.round((float)Math.toDegrees(nearSiteResult.getConeValue()));
-
-//            topGradesText.setText("Lugar: " + nearSiteResult.getId() + "\nBrújula: " + brujula + "º"
-//                    + "\nDireccion objetivo: " + objetivoDir + "º" + "\nDistancia: " + distanceDir + "m."
-//                    + "\nValor del cono: " + coneValue + "º" +"\nMaxDist: " + navULL.getMaxDist() + "\nMinDist: " + navULL.getMinDist()+ "\nAquí se encuentra:\n" + AuxCanFound );
             if(allResultsSites.size() > 2) {
                 setMoreSites(true, allResultsSites);
             }
         } else {
+
             alternateUIInfo(false, "");
             showHideUIMore(false);
             setMoreSites(false, null);
@@ -264,10 +249,12 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
             startActivity(intent);
         }
         if(v.getId() == moreInfoButton.getId()){
-            Intent intent = new Intent(getApplicationContext(), SiteDescriptionActivity.class);
-            ULLSiteSerializable actualULLSite = new ULLSiteSerializable(nearSiteResult);
-            intent.putExtra("actualULLSite", actualULLSite);
-            startActivity(intent);
+            if(nearSiteResult != null) {
+                Intent intent = new Intent(getApplicationContext(), SiteDescriptionActivity.class);
+                ULLSiteSerializable actualULLSite = new ULLSiteSerializable(nearSiteResult);
+                intent.putExtra("actualULLSite", actualULLSite);
+                startActivity(intent);
+            }
         }
 
     }
@@ -276,12 +263,10 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
         if(showUI == true){
             moreInfoText.setVisibility(View.VISIBLE);
             moreInfoImage.setVisibility(View.VISIBLE);
-            moreInfoButton.setVisibility(View.INVISIBLE);
             moreInfoBack.setVisibility(View.VISIBLE);
         }else{
             moreInfoText.setVisibility(View.INVISIBLE);
             moreInfoImage.setVisibility(View.INVISIBLE);
-            moreInfoButton.setVisibility(View.GONE);
             moreInfoBack.setVisibility(View.INVISIBLE);
         }
 
@@ -311,7 +296,7 @@ public class ARNavigation extends ARActivity implements GestureDetector.OnGestur
             }
             moreSitesButton.setVisibility(View.VISIBLE);
             moreResultsSites = allSeenResults;
-            moreSitesButton.setText(found + " " + (allResultsSites.size() - 2) + " " +localizations + "más en esta dirección");
+            moreSitesButton.setText(found + " " + (allResultsSites.size() - 2) + " " +localizations + " más en esta dirección");
 
         }else {
             moreSitesButton.setVisibility(View.GONE);

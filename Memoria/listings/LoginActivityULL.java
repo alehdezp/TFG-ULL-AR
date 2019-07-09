@@ -20,17 +20,19 @@ public class LoginActivityULL extends AppCompatActivity implements ... {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == 777) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            handleSingInResult(result); // Se maneja el resultado de la autentificacion
+            handleSignInResult(result); // Se maneja el resultado de la autentificacion
         }
     }
     // Metodo que comprueba si ha sido correcta la autentificacion con Google
-    private void handleSingInResult(GoogleSignInResult result) {
+    private void handleSignInResult(GoogleSignInResult result) {
         if(result.isSuccess()== true) { // Exito en el inicio de sesion con Google
             String userEmail = result.getSignInAccount().getEmail(); // Correo de la cuenta
             if(userEmail.matches("(.*)@ull.edu.es") ) { // Se comprueba si es un correo de la ULL
-                Intent intent = new Intent(this, MainActivity.class); // Se ejecuta la ventana 
-                startActivity(intent);  // principal de la aplicacion
-            }else{ logoutNotULLAcount(); } // No es un correo universitario  
+                Intent intent = new Intent(this, MainActivity.class); 
+                startActivity(intent); /// Se ejecuta la ventana de ``Inicio'' de la aplicacion
+            }else{ 
+                logoutNotULLAcount(); // No es un correo universitario 
+                }  
         }else{ ... } // Fallo al conectar con Google
     }
     // Metodo que realiza el logout de la cuenta cuando la cuenta no pertenece a la ULL

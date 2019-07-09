@@ -6,21 +6,21 @@
 			\item Gradle.
 			\item Sistema de depuración sencillo e intuitivo.
 		\end{itemize}
-		Descarga en: \texttt{https://developer.android.com/studio/index.html}
 	\endblock{}
 \end{frame}
 
 %------------------------------------------------------------------
 \begin{frame}
 	\frametitle{Herramientas y Tecnologías utilizadas}
-	\block{\it Realidad Aumentada}
+	\block{\it Realidad Aumentada (RA)}
 		\begin{itemize}
-			\item {\it ¿Qué es la Realidad Aumentada?}.
+			\item {\it ¿Qué es la RA?}.
 			\item {\it ¿Cómo funciona esta tecnología?}.
 			\item {\it ¿Qué tipos de Realidad Aumentada existen?}.
 			\item {\it ¿En qué se diferencia la Realidad Aumentada con la Realidad Virtual?}.
-			\item {\it ¿Qué futuro le espera a la Realidad Aumentada?}.
-			\item {\it Integración de la Realidad Aumentada en Android Studio}.
+			\item {\it ¿Qué es la Realidad Mixta?}.
+			\item {\it ¿Qué futuro le espera a la RA?}.
+			\item {\it Integración de la RA en Android Studio}.
 		\end{itemize}
 	\endblock{}
 \end{frame}
@@ -33,17 +33,16 @@
 		\begin{column}{0.6\textwidth}
 			\block{\it ¿Qué es la realidad aumentada?}
 			\begin{itemize}
-				\item Pequeño dispositivo que emite señales utilizando Bluetooth.
-				\item Señales unidireccionales que emiten información.
-				\item Recibidas por dispositivos móviles.
-				\item Aplicaciones programadas para recibir estas señales.
+				\item Permite expandir la información del mundo físico.
+				\item Se encuentra en su mejor momento.
+				\item Aplicaciones para todos los ámbitos. 
 			\end{itemize}
 			\endblock{}
 		\end{column}
 		\begin{column}{0.4\textwidth}
 			\vfill 
 			\begin{center}
-				\includegraphics[width=0.8\linewidth]{Images/estimoteBeacon}
+				\includegraphics[width=0.8\linewidth]{Images/googleglass}
 			\end{center}
 		\end{column}
 	\end{columns}
@@ -52,23 +51,19 @@
 %------------------------------------------------------------------
 \begin{frame}
 	\frametitle{Herramientas y Tecnologías utilizadas}
-		\begin{columns}
-			\begin{column}{0.6\textwidth}
-				\block{\it ¿Cómo funciona esta tecnología?}
-					\begin{itemize}
-						\item {Los beacons usan Bluetooth Low Energy (BLE).}
-						\item {Los beacons funcionan con baterías.}
-						\item {Transmiten identificadores cortos.}
-					\end{itemize}
-				\endblock{}
-			\end{column}
-			\begin{column}{0.4\textwidth}
-				\vfill 
-					\begin{center}
-						\includegraphics[width=0.8\linewidth]{Images/estimoteBeaconInside}
-					\end{center}
-			\end{column}
-		\end{columns}
+		\block{\it ¿Cómo funciona esta tecnología?}
+			Componentes necesarios para la tecnología de RA:
+			\begin{itemize}
+				\item {Dispositivo de visualización.}
+				\item {Sistema de computación.}
+				\item {Sensores: GPS, WIFI, Bluetooth, acelerómetro, giroscopio, cámara, etc.}
+				\item {Software de RA.}
+			\end{itemize}
+		\endblock{}
+		\vfill 
+		\begin{center}
+			\includegraphics[width=0.7\linewidth]{Images/hololens}
+		\end{center}
 \end{frame}		
 		
 
@@ -77,19 +72,20 @@
 	\frametitle{Herramientas y Tecnologías utilizadas}
 	\begin{columns}
 			\begin{column}{0.6\textwidth}
-				\block{\it ¿Qué tipos de Realidad Aumentada existen?}
+				\block{\it ¿Qué tipos de RA existen?}
+					Existen distintos tipos de RA:
 					\begin{itemize}
-						\item {Rango de 70 m de radio sin obstáculos.}
-						\item {Este rango puede disminuir signicativamente.}
-						\item {Las aplicaciones suelen definir acciones en tres rangos.}
-						\item {Es posible lanzar acciones a una distancia determinada.}
+						\item {Marker-based AR.}
+						\item {Markerless AR.}
+						\item {Pojection-based AR.}
+						\item {Superimposition-based AR.}
 					\end{itemize}
 				\endblock{}
 			\end{column}
 			\begin{column}{0.4\textwidth}
 				\vfill 
 					\begin{center}
-						\includegraphics[width=0.95\linewidth]{Images/beaconsRange}
+						\includegraphics[width=0.95\linewidth]{Images/marker-ar}
 					\end{center}
 			\end{column}
 	\end{columns}
@@ -101,18 +97,19 @@
 	\frametitle{Herramientas y Tecnologías utilizadas}
 	\begin{columns}
 			\begin{column}{0.6\textwidth}
-				\block{\it ¿En qué se diferencia la Realidad Aumentada con la Realidad Virtual?}
+				\block{\it ¿En qué se diferencia la Realidad Aumentada con la Realidad Virtual (RV)?}
 					\begin{itemize}
-						\item {Todos los dispositivos que soporten BLE.}
-						\item {En IOS7 o superior.}
-						\item {En dispositivos Android.}
+						\item {En la actualidad se encuentra más avanzada que la RA.}
+						\item {Muestra al usuario un entorno de escenas y objetos de aperiencia real.}
+						\item {Dispone de distintos mecanismos de interacción.}
+						\item {Aleja al usuario del entorno real.}
 					\end{itemize}
 				\endblock{}
 			\end{column}
 			\begin{column}{0.4\textwidth}
 				\vfill 
 					\begin{center}
-						\includegraphics[width=0.8\linewidth]{Images/arubaBeacons}
+						\includegraphics[width=0.95\linewidth]{Images/rvimage}
 					\end{center}
 			\end{column}
 	\end{columns}
@@ -120,28 +117,38 @@
 
 %--------------------------------------------------------------------
 
+
+\begin{frame}
+	\frametitle{Herramientas y Tecnologías utilizadas}
+		\block{\it ¿Qué es la Realidad Mixta?}
+			\begin{itemize}
+				\item {Es la union de la RA con la RV}.
+				\item {Consiste en llevar el mundo real al mundo virtual.}
+				\item {Requiere de mayor capacidad de procesamiento que la RA.}
+			\end{itemize}
+		\endblock{}
+		\vfill 
+			\begin{center}
+				\includegraphics[width=0.74\linewidth]{Images/rm}
+			\end{center}
+\end{frame}
+
+
 \begin{frame}
 	\frametitle{Herramientas y Tecnologías utilizadas}
 	\block{\it ¿Qué futuro le espera a la Realidad Aumentada?}
-		\begin{columns}
-			\begin{column}{0.9\textwidth}
-				\block{\it Ventajas}
-					\begin{itemize}
-						\item {BLE menos batería que GPS.}
-						\item {Funciona en el interior de los edificios.}
-					\end{itemize}
-				\endblock{}			
-				\block{\it Desventajas}
-					\begin{itemize}
-						\item {Dependen de aplicaciones instaladas.}
-						\item {Es necesario activar el Bluetooth.}
-						\item {Su utilidad depende de la voluntad de terceros.}
-					\end{itemize}
-				\endblock{}
-			\end{column}
-		\end{columns}
+		Los usos de la RA se acercan a todos los sectores:
+		\begin{itemize}
+			\item {Educación}.
+			\item {Videojuegos.}
+			\item {Industria.}
+			\item {Turismo.}
+			\item {Medicina.}
+		\end{itemize}
+
 	\endblock{}
 \end{frame}
+
 
 
 \begin{frame}
@@ -149,27 +156,33 @@
 	\block{\it  Integración de la Realidad Aumentada en Android Studio}
 		\begin{columns}
 			\begin{column}{0.3\textwidth}
-				Clevedon School App
+				\begin{center}					
+					Vuforia 
+				\end{center}
 				\vspace{3mm}
 				\vfill 
 					\begin{center}
-						\includegraphics[width=0.8\linewidth]{Images/ClevedonApp}
+						\includegraphics[width=0.8\linewidth]{Images/vuforia}
 					\end{center}
 			\end{column}
 			\begin{column}{0.3\textwidth}
-				Levi's Stadium App
+				\begin{center}
+				Kudan AR SDK
+				\end{center}
 				\vspace{3mm}
 				\vfill 
 					\begin{center}
-						\includegraphics[width=0.8\linewidth]{Images/LevisStadium}
+						\includegraphics[width=0.8\linewidth]{Images/kudan}
 					\end{center}
 			\end{column}
 			\begin{column}{0.3\textwidth}
-				Orlando Int'l Airport
+				\begin{center}
+					MaxST SDK
+				\end{center}
 				\vspace{3mm}
 				\vfill 
 					\begin{center}
-						\includegraphics[width=0.8\linewidth]{Images/orlandoAirport}
+						\includegraphics[width=0.5\linewidth]{Images/maxst}
 					\end{center}
 			\end{column}
 		\end{columns}
@@ -180,44 +193,30 @@
 	\frametitle{Herramientas y Tecnologías utilizadas}
 		\block{\it Node.js}
 			\begin{itemize}
-				\item {¿Qué es?}
-				\item {¿Qué nos ha permitido?}
-				\item {¿Por qué se ha decidido utilizar esta tecnología?}
+				\item {¿Qué es?}.
+				\item {¿Cómo funciona?}.
+				\item {¿Por qué se ha decidido utilizar esta tecnología?}.
 			\end{itemize}
 		\endblock{}
 		\vfill 
 			\begin{center}
-				\includegraphics[width=1\linewidth]{Images/couchBase}
+				\includegraphics[width=0.72\linewidth]{Images/nodejsEx}
 			\end{center}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Herramientas y Tecnologías utilizadas}
 		\block{\it MongoDB}
-			Se puede definir AltBeacon como una especificación que:
 			\begin{itemize}
-				\item {Define el formato del protocolo publicitario a través de BLE.}
-				\item {Intenta crear un mercado abierto y competitivo para implementaciones utilizando proximidad.}
-				\item {Puede ser utilizada gratuitamente, sin cuotas ni compromisos.}
-				\item {No favorece a ningún proveedor sobre otro.}
+				\item {Base de datos NoSQL}.
+				\item {De esquema libre}.
+				\item {¿Porqué se ha decidido utilizar MongoDB?}.
 			\end{itemize}
 		\endblock{}
-		\block{\it Funcionamiento}
-			\begin{columns}
-				\begin{column}{0.7\textwidth}
-					\begin{itemize}
-						\item {Monitorizacion(\textit{``Monitoring''})}
-						\item {Rastreo (\textit{``Ranging''})}
-					\end{itemize}
-				\end{column}
-				\begin{column}{0.3\textwidth}
-					\vfill 
-					\begin{center}
-						\includegraphics[width=0.5\linewidth]{Images/logos/altBeacon}
-					\end{center}
-				\end{column}
-			\end{columns}
-		\endblock{}
+		\vfill 
+		\begin{center}
+			\includegraphics[width=0.88\linewidth]{Images/mongodb-architecture}
+		\end{center}
 \end{frame}
 
 \begin{frame}
@@ -226,16 +225,17 @@
 			\begin{column}{0.6\textwidth}
 				\block{\it Heroku}
 					\begin{itemize}
-						\item {Es un método matemático para determinar las posiciones relativasde objetos.}
-						\item {Utiliza las localizaciones de dos o más puntos y las distancias entre el sujeto y cada punto.}
-						\item {En un plano bidimensional, se necesitan al menos tres puntos de referencia.}
+						\item {Plataforma como servicio de computación (PaaS) en la nube}.
+						\item {Soporta distintos lenguajes de programación}.
+						\item {Ejecuta las aplicaciones en ``dynos''.}
+						\item {Servidor de \ULLAR{}}.
 					\end{itemize}
 				\endblock{}
 			\end{column}
 			\begin{column}{0.4\textwidth}
 				\vfill 
 					\begin{center}
-						\includegraphics[width=0.8\linewidth]{Images/trilateration}
+						\includegraphics[width=0.9\linewidth]{Images/heroku}
 					\end{center}
 			\end{column}
 	\end{columns}
@@ -247,16 +247,17 @@
 			\begin{column}{0.6\textwidth}
 				\block{\it mLab}
 					\begin{itemize}
-						\item {Es un método matemático para determinar las posiciones relativasde objetos.}
-						\item {Utiliza las localizaciones de dos o más puntos y las distancias entre el sujeto y cada punto.}
-						\item {En un plano bidimensional, se necesitan al menos tres puntos de referencia.}
+						\item {Servicio de base de datos como servicio en la nube}
+						\item {Ofrece bases de datos MongoDB}.
+						\item {Ejecuta sus máquinas en proveedores de servicios en la nube como AWS, Azure y Google Cloud.}
+						\item {Base de datos de \ULLAR{}.}
 					\end{itemize}
 				\endblock{}
 			\end{column}
 			\begin{column}{0.4\textwidth}
 				\vfill 
 					\begin{center}
-						\includegraphics[width=0.8\linewidth]{Images/trilateration}
+						\includegraphics[width=0.8\linewidth]{Images/mlab}
 					\end{center}
 			\end{column}
 	\end{columns}
@@ -264,23 +265,18 @@
 
 \begin{frame}
 	\frametitle{Herramientas y Tecnologías utilizadas}
-	\begin{columns}
-			\begin{column}{0.6\textwidth}
-				\block{\it Google Maps}
-					\begin{itemize}
-						\item {Es un método matemático para determinar las posiciones relativasde objetos.}
-						\item {Utiliza las localizaciones de dos o más puntos y las distancias entre el sujeto y cada punto.}
-						\item {En un plano bidimensional, se necesitan al menos tres puntos de referencia.}
-					\end{itemize}
-				\endblock{}
-			\end{column}
-			\begin{column}{0.4\textwidth}
-				\vfill 
-					\begin{center}
-						\includegraphics[width=0.8\linewidth]{Images/trilateration}
-					\end{center}
-			\end{column}
-	\end{columns}
+		\block{\it Google Maps}
+			\begin{itemize}
+				\item {API de Google Maps.}
+				\item {Permite integrar los mapas de Google Maps en una aplicación Android.}
+				\item {Permite:}
+				\begin{itemize}
+					\item {Creación de marcadores, polígonos y superposiciones.}
+					\item {Cambiar la vista del mapa.}
+					\item {La posibilidad de elegir el tipo de mapa}
+				\end{itemize}
+			\end{itemize}
+		\endblock{}
 \end{frame}
 
 %--------------------------------------------------------------------

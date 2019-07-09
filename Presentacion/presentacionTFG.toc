@@ -1,8 +1,8 @@
-\babel@toc {spanish}{}
+\select@language {spanish}
 \beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{3}{0}{1}
 \beamer@sectionintoc {2}{Herramientas y Tecnolog\IeC {\'\i }as utilizadas}{6}{0}{2}
-\beamer@sectionintoc {3}{Beacons en entornos universitarios}{20}{0}{3}
-\beamer@sectionintoc {4}{La aplicaci\IeC {\'o}n \texttt {BulletPoint{}}}{24}{0}{4}
-\beamer@sectionintoc {5}{Despliegue}{37}{0}{5}
-\beamer@sectionintoc {6}{Presupuesto}{39}{0}{6}
-\beamer@sectionintoc {7}{Summary and conclusions}{44}{0}{7}
+\beamer@sectionintoc {3}{RA en entornos universitarios}{21}{0}{3}
+\beamer@sectionintoc {4}{La aplicaci\IeC {\'o}n \texttt {ULL-AR{}}}{30}{0}{4}
+\beamer@sectionintoc {5}{Back-end de la aplicaci\IeC {\'o}n}{80}{0}{5}
+\beamer@sectionintoc {6}{Presupuesto}{86}{0}{6}
+\beamer@sectionintoc {7}{Summary and conclusions}{90}{0}{7}

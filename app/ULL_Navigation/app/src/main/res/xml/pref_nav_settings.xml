@@ -16,7 +16,6 @@
         android:singleLine="true"
         android:title="Selecciona radio círculo mayor (metros)"
         android:enabled="false"
-
         />
     <EditTextPreference
         android:defaultValue="min"

@@ -44,8 +44,7 @@ public class Navigation implements Serializable {
     private ArrayList<ULLSite> destSites = new ArrayList<>();
 
 
-    private Vector2D home = new Vector2D(-16.271370844238504, 28.467337376756998);
-    private Vector2D ull = new Vector2D(-16.316877139026133, 28.481857638227176);
+    private Vector2D test = new Vector2D(-16.424486,28.197039);
 
     public Navigation(JSONArray jsonAux) {
 
@@ -58,6 +57,7 @@ public class Navigation implements Serializable {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
     }
 
     public ArrayList<ULLSite> whatCanSee(LatLng actualPos, double actualDir) {
@@ -259,20 +259,5 @@ public class Navigation implements Serializable {
         this.destSites = destSites;
     }
 
-    public Vector2D getHome() {
-        return home;
-    }
-
-    public void setHome(Vector2D home) {
-        this.home = home;
-    }
-
-    public Vector2D getUll() {
-        return ull;
-    }
-
-    public void setUll(Vector2D ull) {
-        this.ull = ull;
-    }
 
 }

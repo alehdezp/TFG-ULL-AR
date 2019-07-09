@@ -1,0 +1,17 @@
+\frametitle{Summary and conclusions}
+	\block{Conclusions}
+		Nowadays, beacon technology is still on a development stage.By itself can be quite limited due to the way it works.The physical and positional limitations require a deep analysis in order to place devices the best way.
+
+		\bigskip
+		On the other hand, each specific beacon provider tries to use his own SDKs to develop the applications.
+
+		\bigskip
+		The solution to this problem, in this case, has been found on the AltBeaconlibrary, which tries to bring close to developers this technology.
+
+		\bigskip
+	The achievement of this Final Year Project is to show that, many apps able to work with this technology exist or can be developed.
+
+		\bigskip
+		For now, we will keep on testing this technology and watching it grow.
+
+	\endblock{}
