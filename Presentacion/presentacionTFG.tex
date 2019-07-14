@@ -7,7 +7,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{multirow}
 \pdfinfo
-{
+{ 
   /Title       (ULL-AR Tecnología de realidad aumentada en entornos universitarios)
   /Creator     (Alejandro Hernández Padrón)
   /Author      (Alejandro Hernández Padrón)
@@ -35,7 +35,7 @@
 \definecolor{gray}{gray}{.45}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lstloadlanguages{Java}
-\lstloadlanguages{XML}
+\lstloadlanguages{XML} 
 \lstset{
 	float=hbp,
 		language = Java,
@@ -64,12 +64,14 @@
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mode<handout>
-{
+{ 
 	\usepackage{pgfpages}
 	\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 	\setbeamercolor{background canvas}{bg=black!0}
 	\setbeameroption{show notes}
 }
+
+
 
 \mode<presentation>
 {
@@ -80,6 +82,28 @@
 	%    \includegraphics[width=.25\textwidth]{FIGURES/logoull-oficial.png}
 	%}
 }
+
+
+
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor%~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginSection[]
 {
@@ -183,7 +207,7 @@
 			\include{Capitulos/Cap1_Prologo}
 		\section{Herramientas y Tecnologías utilizadas}
 			\include{Capitulos/Cap2_HerrSoft}
-		\section{RA en entornos universitarios}
+		\section{RA y RA en entornos universitarios}
 			\include{Capitulos/Cap3_EntornosUniversitarios}
 		\section{La aplicación \ULLAR}
 			\include{Capitulos/Cap4_Desarrollo}
@@ -193,7 +217,6 @@
 			\include{Capitulos/Cap6_Presupuesto}
 		\section{Summary and conclusions}
 			\include{Capitulos/Cap7_Conclusiones}
-		\include{Capitulos/Cap8_Agradecimientos}
 		\include{Capitulos/Cap9_Final}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document} 

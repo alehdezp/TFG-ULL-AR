@@ -27,26 +27,26 @@
 % Explicación activity y layout
 %--------------------------------------------------------------------
 
-\begin{frame}
-	\frametitle{Inicio de la aplicación}
-	\begin{columns}
-		\begin{column}{0.6\textwidth}
-			\block{Splash Screen}
-			\begin{itemize}
-				\item Logo de \ULLAR{}.
-				\item Mejor apariencia.
-				\item Pantalla de carga de la aplicación.
-			\end{itemize}
-			\endblock{}
-		\end{column}
-		\begin{column}{0.4\textwidth}
-			\vfill 
-			\begin{center}
-				\includegraphics[width=0.7\linewidth]{Images/splashApp}
-			\end{center}
-		\end{column}
-	\end{columns}
-\end{frame}
+% \begin{frame}
+% 	\frametitle{Inicio de la aplicación}
+% 	\begin{columns}
+% 		\begin{column}{0.6\textwidth}
+% 			\block{Splash Screen}
+% 			\begin{itemize}
+% 				\item Logo de \ULLAR{}.
+% 				\item Mejor apariencia.
+% 				\item Pantalla de carga de la aplicación.
+% 			\end{itemize}
+% 			\endblock{}
+% 		\end{column}
+% 		\begin{column}{0.4\textwidth}
+% 			\vfill 
+% 			\begin{center}
+% 				\includegraphics[width=0.7\linewidth]{Images/splashApp}
+% 			\end{center}
+% 		\end{column}
+% 	\end{columns}
+% \end{frame}
 
 %--------------------------------------------------------------------
  
@@ -102,7 +102,7 @@
 		\begin{column}{0.4\textwidth} 
 			\vfill 
 			\begin{center}
-				\includegraphics[width=0.7\linewidth]{Images/ar}
+				\includegraphics[width=0.7\linewidth]{Images/imagedera}
 			\end{center}
 		\end{column}
 	\end{columns}
@@ -181,6 +181,13 @@
 				\item \texttt{Vector2D.java}
 			\end{itemize}
 			\endblock{}
+
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Modo de Realidad Aumentada}
 
 			\block{\texttt{ULLSite.java}}
 			\begin{itemize}
@@ -286,22 +293,13 @@
 
 \begin{frame}
 	\frametitle{Modo de Realidad Aumentada}
-	\begin{columns}
-		\begin{column}{0.6\textwidth}
 			\block{Visualización}
 			\begin{itemize}
 				\item El activity ``ARNavigation'' es el encargado de la visualización de la técnica de RA.
 				\item Este activity hereda de la clase ``ARActivity'' del SDK de Kudan.
 			\end{itemize}
 			\endblock{}
-		\end{column}
-		\begin{column}{0.4\textwidth} 
-			\vfill 
-			\begin{center}
-				\includegraphics[width=0.7\linewidth]{Images/ar}
-			\end{center}
-		\end{column}
-	\end{columns}
+
 \end{frame}
 
 \begin{frame}
@@ -361,10 +359,10 @@
 
 
 
-\begin{frame}
-	\frametitle{\texttt{fragment\_maps.xml}}
-	\lstinputlisting{Code/fragmentmaps.xml}
-\end{frame}
+% \begin{frame}
+% 	\frametitle{\texttt{fragment\_maps.xml}}
+% 	\lstinputlisting{Code/fragmentmaps.xml}
+% \end{frame}
 
 \begin{frame}
 	\frametitle{Fragmentos de \ULLAR{}}
@@ -434,47 +432,47 @@
 \end{frame}
 
 
-\begin{frame}
-	\frametitle{Menú de \ULLAR{}}
-	\begin{columns}
-		\begin{column}{0.6\textwidth}
-			\block{Navigation Drawer}
-			\begin{itemize}
-				\item ¿Qué es un menú Navigation Drawer?.
-				\item Se encuentra en multitud de aplicaciones.
-				\item Mejor apariencia.
-				\item Velocidad de carga entre fragmentos.
-				\item La clase ``BaseActivity.java'' incorpora esté menú.
-			\end{itemize}
-			\endblock{}
-		\end{column}
-		\begin{column}{0.4\textwidth} 
-			\vfill 
-			\begin{center}
-				\includegraphics[width=0.8\linewidth]{Images/menuApp}
-			\end{center}
-		\end{column}
-	\end{columns}
-\end{frame}
+% \begin{frame}
+% 	\frametitle{Menú de \ULLAR{}}
+% 	\begin{columns}
+% 		\begin{column}{0.6\textwidth}
+% 			\block{Navigation Drawer}
+% 			\begin{itemize}
+% 				\item ¿Qué es un menú Navigation Drawer?.
+% 				\item Se encuentra en multitud de aplicaciones.
+% 				\item Mejor apariencia.
+% 				\item Velocidad de carga entre fragmentos.
+% 				\item La clase ``BaseActivity.java'' incorpora esté menú.
+% 			\end{itemize}
+% 			\endblock{}
+% 		\end{column}
+% 		\begin{column}{0.4\textwidth} 
+% 			\vfill 
+% 			\begin{center}
+% 				\includegraphics[width=0.8\linewidth]{Images/menuApp}
+% 			\end{center}
+% 		\end{column}
+% 	\end{columns}
+% \end{frame}
 
 
 
-\begin{frame}
-	\frametitle{\texttt{navigation\_draw.xml}}
-	\lstinputlisting{Code/menu1.xml}
-\end{frame}
+% \begin{frame}
+% 	\frametitle{\texttt{navigation\_draw.xml}}
+% 	\lstinputlisting{Code/menu1.xml}
+% \end{frame}
 
 
-\begin{frame}
-	\frametitle{\texttt{nav\_options.xml}}
-	\lstinputlisting{Code/menu2.xml}
-\end{frame} 
+% \begin{frame}
+% 	\frametitle{\texttt{nav\_options.xml}}
+% 	\lstinputlisting{Code/menu2.xml}
+% \end{frame} 
  
 
-\begin{frame}
-	\frametitle{\texttt{BaseActivity.java}}
-	\lstinputlisting{Code/menu3.java}
-\end{frame} 
+% \begin{frame}
+% 	\frametitle{\texttt{BaseActivity.java}}
+% 	\lstinputlisting{Code/menu3.java}
+% \end{frame} 
  
  
 
@@ -565,8 +563,8 @@
 	\end{columns}
 \end{frame} 
 
-\begin{frame}
-	\frametitle{\texttt{SiteAdapter.xml}}
-	\lstinputlisting{Code/settings.xml}
-\end{frame}  
+% \begin{frame}
+% 	\frametitle{\texttt{SiteAdapter.xml}}
+% 	\lstinputlisting{Code/settings.xml}
+% \end{frame}  
 %----------------- ---------------------------------------------------

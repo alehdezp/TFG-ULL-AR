@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.1.28)  9 JUL 2019 23:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.1.28)  15 JUL 2019 00:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -925,23 +925,23 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeMadrid.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemewhale.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemeorchid.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerthemerounded.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemeinfolines.sty)) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/beamercolorthemeull.sty
 Package: beamercolorthemeull 2007/01/28  (rcs-revision 1.2)
-) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.aux (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap1_Prologo.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap2_HerrSoft.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap3_EntornosUniversitarios.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap4_Desarrollo.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap5_Back-end.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap6_Presupuesto.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap7_Conclusiones.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap8_Agradecimientos.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap9_Final.aux))
+) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.aux (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap1_Prologo.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap2_HerrSoft.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap3_EntornosUniversitarios.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap4_Desarrollo.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap5_Back-end.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap6_Presupuesto.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap7_Conclusiones.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap9_Final.aux))
 \openout1 = `presentacionTFG.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 175.
-LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 199.
+LaTeX Font Info:    ... okay on input line 199.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1003,7 +1003,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box61
-Package hyperref Info: Link coloring OFF on input line 175.
+Package hyperref Info: Link coloring OFF on input line 199.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1011,62 +1011,62 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count180
 )
-LaTeX Info: Redefining \ref on input line 175.
-LaTeX Info: Redefining \pageref on input line 175.
-LaTeX Info: Redefining \nameref on input line 175.
+LaTeX Info: Redefining \ref on input line 199.
+LaTeX Info: Redefining \pageref on input line 199.
+LaTeX Info: Redefining \nameref on input line 199.
  (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.out) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.out)
 \@outlinefile=\write5
 \openout5 = `presentacionTFG.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 175.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 199.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 175.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 199.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 175.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 175.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 199.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 175.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 175.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 175.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 199.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 175.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 175.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 175.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 199.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 175.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 175.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 175.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 199.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 175.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 175.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 199.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 175.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 199.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 175.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 175.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 175.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 175.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 175.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 199.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 175.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 175.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 199.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 199.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 175.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 199.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 175.
+(Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 199.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 175.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 199.
  (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-dictionary/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bibliography-dictionary/translator-bibliography-dictionary-English.dict
@@ -1080,25 +1080,25 @@ Dictionary: translator-numbers-dictionary, Language: English
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 175.
+LaTeX Info: Redefining \includegraphics on input line 199.
 \c@lstlisting=\count181
  (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.nav) <Images/marca-universidad-de-la-laguna-original.png, id=42, 235.3593pt x 104.3097pt>
 File: Images/marca-universidad-de-la-laguna-original.png Graphic file (type png)
  <use Images/marca-universidad-de-la-laguna-original.png>
-Package pdftex.def Info: Images/marca-universidad-de-la-laguna-original.png used on input line 179.
+Package pdftex.def Info: Images/marca-universidad-de-la-laguna-original.png used on input line 203.
 (pdftex.def)             Requested size: 136.91603pt x 60.6827pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <8> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 179.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 203.
 
 
-Overfull \hbox (87.7916pt too wide) in paragraph at lines 179--179
+Overfull \hbox (87.7916pt too wide) in paragraph at lines 203--203
 []|  [] 
  []
 
 
-Overfull \hbox (87.7916pt too wide) in paragraph at lines 179--179
+Overfull \hbox (87.7916pt too wide) in paragraph at lines 203--203
 |  []  
  []
 
@@ -1107,7 +1107,7 @@ Overfull \hbox (87.7916pt too wide) in paragraph at lines 179--179
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/marca-universidad-de-la-laguna-original.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 181.
+(Font)              size <5> substituted on input line 205.
 
 [2
 
@@ -1116,413 +1116,340 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 ]
 \openout2 = `Capitulos/Cap1_Prologo.aux'.
 
- (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap1_Prologo.tex <Images/nodejs.png, id=159, 200.75pt x 122.4575pt>
-File: Images/nodejs.png Graphic file (type png)
- <use Images/nodejs.png>
-Package pdftex.def Info: Images/nodejs.png used on input line 14.
-(pdftex.def)             Requested size: 68.45801pt x 41.76018pt.
- <Images/logos/android_logo.jpg, id=160, 592.2125pt x 432.61626pt>
-File: Images/logos/android_logo.jpg Graphic file (type jpg)
- <use Images/logos/android_logo.jpg>
-Package pdftex.def Info: Images/logos/android_logo.jpg used on input line 14.
-(pdftex.def)             Requested size: 68.45801pt x 50.00397pt.
- <Images/mongoDB.png, id=161, 423.0204pt x 114.9093pt>
-File: Images/mongoDB.png Graphic file (type png)
- <use Images/mongoDB.png>
-Package pdftex.def Info: Images/mongoDB.png used on input line 14.
-(pdftex.def)             Requested size: 119.80544pt x 32.54259pt.
- [4
+ (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap1_Prologo.tex [4
 
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/nodejs.png> </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/logos/android_logo.jpg> </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/mongoDB.png>] [5
-
-]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [6
+]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [5
 
 
 ]
 \openout2 = `Capitulos/Cap2_HerrSoft.aux'.
 
- (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap2_HerrSoft.tex [7
+ (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap2_HerrSoft.tex [6
 
 
-] [8
+] <Images/nodejsfunc.png, id=251, 602.25pt x 401.5pt>
+File: Images/nodejsfunc.png Graphic file (type png)
+ <use Images/nodejsfunc.png>
+Package pdftex.def Info: Images/nodejsfunc.png used on input line 25.
+(pdftex.def)             Requested size: 246.45303pt x 164.3036pt.
 
-] <Images/ar3.png, id=314, 1927.2pt x 1084.05pt>
-File: Images/ar3.png Graphic file (type png)
- <use Images/ar3.png>
-Package pdftex.def Info: Images/ar3.png used on input line 44.
-(pdftex.def)             Requested size: 239.60567pt x 134.77809pt.
- [9
+Overfull \vbox (4.26297pt too high) detected at line 25
+ []
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/ar3.png>] <Images/ar1.jpg, id=342, 963.6pt x 642.4pt>
-File: Images/ar1.jpg Graphic file (type jpg)
- <use Images/ar1.jpg>
-Package pdftex.def Info: Images/ar1.jpg used on input line 62.
-(pdftex.def)             Requested size: 147.18446pt x 98.12024pt.
- [10
+[7
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/ar1.jpg>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 87.
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/nodejsfunc.png>] <Images/mongodb-architecture.png, id=282, 1757.56625pt x 822.07124pt>
+File: Images/mongodb-architecture.png Graphic file (type png)
+ <use Images/mongodb-architecture.png>
+Package pdftex.def Info: Images/mongodb-architecture.png used on input line 40.
+(pdftex.def)             Requested size: 301.22153pt x 140.89174pt.
+ [8
+
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/mongodb-architecture.png>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 61.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 87.
+LaTeX Font Info:    Try loading font information for U+msb on input line 61.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input line 87.
+LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input line 61.
  (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/mathkerncmss.
-) <Images/marker-ar.jpg, id=369, 1027.84pt x 684.5575pt>
-File: Images/marker-ar.jpg Graphic file (type jpg)
- <use Images/marker-ar.jpg>
-Package pdftex.def Info: Images/marker-ar.jpg used on input line 87.
-(pdftex.def)             Requested size: 178.8497pt x 119.10994pt.
- [11
-
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/marker-ar.jpg>] <Images/vr1.jpg, id=397, 240.9pt x 135.6267pt>
-File: Images/vr1.jpg Graphic file (type jpg)
- <use Images/vr1.jpg>
-Package pdftex.def Info: Images/vr1.jpg used on input line 104.
-(pdftex.def)             Requested size: 171.14764pt x 96.3577pt.
- [12
-
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/vr1.jpg>] <Images/realidamixta.jpg, id=424, 1553.44pt x 378.87pt>
-File: Images/realidamixta.jpg Graphic file (type jpg)
- <use Images/realidamixta.jpg>
-Package pdftex.def Info: Images/realidamixta.jpg used on input line 122.
-(pdftex.def)             Requested size: 273.83728pt x 66.78307pt.
- [13
-
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/realidamixta.jpg>] [14
-
-] <Images/vuforia.jpg, id=478, 401.5pt x 278.03876pt>
-File: Images/vuforia.jpg Graphic file (type jpg)
- <use Images/vuforia.jpg>
-Package pdftex.def Info: Images/vuforia.jpg used on input line 178.
-(pdftex.def)             Requested size: 82.15201pt x 56.888pt.
- <Images/kudan.jpg, id=479, 1129.21875pt x 753.81625pt>
-File: Images/kudan.jpg Graphic file (type jpg)
- <use Images/kudan.jpg>
-Package pdftex.def Info: Images/kudan.jpg used on input line 178.
-(pdftex.def)             Requested size: 82.15201pt x 54.83144pt.
- <Images/maxst.jpg, id=480, 513.92pt x 513.92pt>
-File: Images/maxst.jpg Graphic file (type jpg)
- <use Images/maxst.jpg>
-Package pdftex.def Info: Images/maxst.jpg used on input line 178.
-(pdftex.def)             Requested size: 51.3448pt x 51.3401pt.
- [15
-
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/vuforia.jpg> </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/kudan.jpg> </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/maxst.jpg>] <Images/nodejsEx.png, id=508, 820.56563pt x 482.55281pt>
-File: Images/nodejsEx.png Graphic file (type png)
- <use Images/nodejsEx.png>
-Package pdftex.def Info: Images/nodejsEx.png used on input line 193.
-(pdftex.def)             Requested size: 246.45303pt x 144.92894pt.
-
-Overfull \vbox (3.48831pt too high) detected at line 193
- []
-
-[16
-
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/nodejsEx.png>] <Images/mongodb-architecture.png, id=536, 1757.56625pt x 822.07124pt>
-File: Images/mongodb-architecture.png Graphic file (type png)
- <use Images/mongodb-architecture.png>
-Package pdftex.def Info: Images/mongodb-architecture.png used on input line 208.
-(pdftex.def)             Requested size: 301.22153pt x 140.89174pt.
- [17
-
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/mongodb-architecture.png>] <Images/heroku.png, id=564, 285.065pt x 177.66376pt>
+) <Images/heroku.png, id=310, 285.065pt x 177.66376pt>
 File: Images/heroku.png Graphic file (type png)
  <use Images/heroku.png>
-Package pdftex.def Info: Images/heroku.png used on input line 230.
+Package pdftex.def Info: Images/heroku.png used on input line 61.
 (pdftex.def)             Requested size: 123.22359pt x 76.79785pt.
- [18
+ [9
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/heroku.png>] <Images/mlab.jpeg, id=592, 602.25pt x 602.25pt>
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/heroku.png>] <Images/mlab.jpeg, id=338, 602.25pt x 602.25pt>
 File: Images/mlab.jpeg Graphic file (type jpg)
  <use Images/mlab.jpeg>
-Package pdftex.def Info: Images/mlab.jpeg used on input line 252.
+Package pdftex.def Info: Images/mlab.jpeg used on input line 83.
 (pdftex.def)             Requested size: 109.53323pt x 109.53064pt.
- [19
+ [10
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/mlab.jpeg>] [20
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/mlab.jpeg>] [11
 
-]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [21
+]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [12
 
 
 ]
 \openout2 = `Capitulos/Cap3_EntornosUniversitarios.aux'.
 
- (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap3_EntornosUniversitarios.tex [22
+ (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap3_EntornosUniversitarios.tex [13
 
 
-] [23
+] <Images/ar3.png, id=454, 1927.2pt x 1084.05pt>
+File: Images/ar3.png Graphic file (type png)
+ <use Images/ar3.png>
+Package pdftex.def Info: Images/ar3.png used on input line 31.
+(pdftex.def)             Requested size: 239.60567pt x 134.77809pt.
+ [14
 
-] <Images/clase.jpg, id=734, 56.90552pt x 37.93701pt>
-File: Images/clase.jpg Graphic file (type jpg)
- <use Images/clase.jpg>
-Package pdftex.def Info: Images/clase.jpg used on input line 62.
-(pdftex.def)             Requested size: 123.22359pt x 82.1586pt.
- [24
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/ar3.png>] <Images/ar1.jpg, id=483, 963.6pt x 642.4pt>
+File: Images/ar1.jpg Graphic file (type jpg)
+ <use Images/ar1.jpg>
+Package pdftex.def Info: Images/ar1.jpg used on input line 49.
+(pdftex.def)             Requested size: 147.18446pt x 98.12024pt.
+ [15
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/clase.jpg>] [25
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/ar1.jpg>] <Images/marker-ar.jpg, id=510, 1027.84pt x 684.5575pt>
+File: Images/marker-ar.jpg Graphic file (type jpg)
+ <use Images/marker-ar.jpg>
+Package pdftex.def Info: Images/marker-ar.jpg used on input line 74.
+(pdftex.def)             Requested size: 178.8497pt x 119.10994pt.
+ [16
 
-] [26
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/marker-ar.jpg>] <Images/vr1.jpg, id=537, 240.9pt x 135.6267pt>
+File: Images/vr1.jpg Graphic file (type jpg)
+ <use Images/vr1.jpg>
+Package pdftex.def Info: Images/vr1.jpg used on input line 91.
+(pdftex.def)             Requested size: 171.14764pt x 96.3577pt.
+ [17
 
-] <Images/carARR.jpeg, id=825, 677.53125pt x 451.6875pt>
-File: Images/carARR.jpeg Graphic file (type jpg)
- <use Images/carARR.jpeg>
-Package pdftex.def Info: Images/carARR.jpeg used on input line 109.
-(pdftex.def)             Requested size: 273.83728pt x 182.56024pt.
- [27
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/vr1.jpg>] <Images/realidamixta.jpg, id=564, 1553.44pt x 378.87pt>
+File: Images/realidamixta.jpg Graphic file (type jpg)
+ <use Images/realidamixta.jpg>
+Package pdftex.def Info: Images/realidamixta.jpg used on input line 109.
+(pdftex.def)             Requested size: 273.83728pt x 66.78307pt.
+ [18
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/carARR.jpeg>] [28
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/realidamixta.jpg>] <Images/vuforia.jpg, id=592, 401.5pt x 278.03876pt>
+File: Images/vuforia.jpg Graphic file (type jpg)
+ <use Images/vuforia.jpg>
+Package pdftex.def Info: Images/vuforia.jpg used on input line 148.
+(pdftex.def)             Requested size: 82.15201pt x 56.888pt.
+ <Images/kudan.jpg, id=593, 1129.21875pt x 753.81625pt>
+File: Images/kudan.jpg Graphic file (type jpg)
+ <use Images/kudan.jpg>
+Package pdftex.def Info: Images/kudan.jpg used on input line 148.
+(pdftex.def)             Requested size: 82.15201pt x 54.83144pt.
+ <Images/maxst.jpg, id=594, 513.92pt x 513.92pt>
+File: Images/maxst.jpg Graphic file (type jpg)
+ <use Images/maxst.jpg>
+Package pdftex.def Info: Images/maxst.jpg used on input line 148.
+(pdftex.def)             Requested size: 51.3448pt x 51.3401pt.
+ [19
 
-] <Images/sandAR.jpg, id=877, 578.16pt x 366.6498pt>
-File: Images/sandAR.jpg Graphic file (type jpg)
- <use Images/sandAR.jpg>
-Package pdftex.def Info: Images/sandAR.jpg used on input line 136.
-(pdftex.def)             Requested size: 273.83728pt x 173.65694pt.
- [29
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/vuforia.jpg> </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/kudan.jpg> </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/maxst.jpg>] [20
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/sandAR.jpg>]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [30
+] [21
+
+]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [22
 
 
 ]
 \openout2 = `Capitulos/Cap4_Desarrollo.aux'.
 
- (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap4_Desarrollo.tex [31
+ (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap4_Desarrollo.tex [23
 
 
-] [32
+] [24
 
-] <Images/splashApp.png, id=992, 1084.05pt x 2168.1pt>
-File: Images/splashApp.png Graphic file (type png)
- <use Images/splashApp.png>
-Package pdftex.def Info: Images/splashApp.png used on input line 49.
-(pdftex.def)             Requested size: 95.84079pt x 191.68pt.
- [33
-
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/splashApp.png>] <Images/loginApp.png, id=1019, 1084.05pt x 2168.1pt>
+] <Images/loginApp.png, id=760, 1084.05pt x 2168.1pt>
 File: Images/loginApp.png Graphic file (type png)
  <use Images/loginApp.png>
 Package pdftex.def Info: Images/loginApp.png used on input line 73.
 (pdftex.def)             Requested size: 95.84079pt x 191.68pt.
- [34
+ [25
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/loginApp.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/login1.java) [35
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/loginApp.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/login1.java) [26
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/login2.java) [36
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/login2.java) [27
 
-] <Images/ar.png, id=1100, 1084.05pt x 2168.1pt>
-File: Images/ar.png Graphic file (type png)
- <use Images/ar.png>
-Package pdftex.def Info: Images/ar.png used on input line 109.
-(pdftex.def)             Requested size: 95.84079pt x 191.68pt.
- [37
+] <Images/imagedera.jpeg, id=842, 642.4pt x 1284.8pt>
+File: Images/imagedera.jpeg Graphic file (type jpg)
+ <use Images/imagedera.jpeg>
+Package pdftex.def Info: Images/imagedera.jpeg used on input line 109.
+(pdftex.def)             Requested size: 95.84079pt x 191.67265pt.
+ [28
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/ar.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/permisosgps.xml) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/permisosgps2.java) [38
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/imagedera.jpeg>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/permisosgps.xml) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/permisosgps2.java) [29
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/permisosgps3.java) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/permisosgps4.java) [39
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/permisosgps3.java) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/permisosgps4.java) [30
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/brujula.java) [40
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/brujula.java) [31
 
-] <Images/xyz.jpg, id=1207, 368.37625pt x 390.45876pt>
+] <Images/xyz.jpg, id=949, 368.37625pt x 390.45876pt>
 File: Images/xyz.jpg Graphic file (type jpg)
  <use Images/xyz.jpg>
 Package pdftex.def Info: Images/xyz.jpg used on input line 165.
 (pdftex.def)             Requested size: 102.68962pt x 108.84511pt.
- <Images/acimut.png, id=1208, 400.49625pt x 383.4325pt>
+ <Images/acimut.png, id=950, 400.49625pt x 383.4325pt>
 File: Images/acimut.png Graphic file (type png)
  <use Images/acimut.png>
 Package pdftex.def Info: Images/acimut.png used on input line 165.
 (pdftex.def)             Requested size: 102.68962pt x 98.30933pt.
- [41
+ [32
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/xyz.jpg> </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/acimut.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/brujula2.java) [42
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/xyz.jpg> </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/acimut.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/brujula2.java) [33
 
-] [43
+] [34
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/ull_site.json) [44
+] [35
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/ULLSite.java) [45
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/ull_site.json) [36
 
-] <Images/imagenAR.png, id=1342, 927.465pt x 631.60968pt>
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/ULLSite.java) [37
+
+] <Images/imagenAR.png, id=1110, 927.465pt x 631.60968pt>
 File: Images/imagenAR.png Graphic file (type png)
  <use Images/imagenAR.png>
-Package pdftex.def Info: Images/imagenAR.png used on input line 218.
+Package pdftex.def Info: Images/imagenAR.png used on input line 225.
 (pdftex.def)             Requested size: 222.48985pt x 151.51231pt.
 
-Overfull \vbox (5.94252pt too high) detected at line 218
+Overfull \vbox (5.94252pt too high) detected at line 225
  []
 
-[46
+[38
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/imagenAR.png>] [47
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/imagenAR.png>] [39
 
 ] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation1.java)
-Overfull \vbox (4.22905pt too high) detected at line 236
+Overfull \vbox (4.22905pt too high) detected at line 243
  []
 
-[48
+[40
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation2.java) [49
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation2.java) [41
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation3.java) [50
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation3.java) [42
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation4.java) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation5.java) [51
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation4.java) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation5.java) [43
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation6.java) [52
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation6.java) [44
 
 ] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/navigation7.java)
-Overfull \vbox (4.22905pt too high) detected at line 262
+Overfull \vbox (4.22905pt too high) detected at line 269
+ []
+
+[45
+
+] [46
+
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/getdata.java) [47
+
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/getdata2.java) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/getdata3.java) [48
+
+] [49
+
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/visualizacion.xml)
+Overfull \vbox (4.22905pt too high) detected at line 308
+ []
+
+[50
+
+] [51
+
+] <Images/mapsApp.png, id=1481, 1084.05pt x 2168.1pt>
+File: Images/mapsApp.png Graphic file (type png)
+ <use Images/mapsApp.png>
+Package pdftex.def Info: Images/mapsApp.png used on input line 352.
+(pdftex.def)             Requested size: 95.84079pt x 191.68pt.
+ [52
+
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/mapsApp.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/mapsfragment.java)
+Overfull \vbox (4.22905pt too high) detected at line 358
  []
 
 [53
 
-] [54
-
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/getdata.java) [55
-
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/getdata2.java) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/getdata3.java) [56
-
-]
-File: Images/ar.png Graphic file (type png)
- <use Images/ar.png>
-Package pdftex.def Info: Images/ar.png used on input line 305.
-(pdftex.def)             Requested size: 95.84079pt x 191.68pt.
- [57
-
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/visualizacion.xml)
-Overfull \vbox (4.22905pt too high) detected at line 310
- []
-
-[58
-
-] [59
-
-] <Images/mapsApp.png, id=1713, 1084.05pt x 2168.1pt>
-File: Images/mapsApp.png Graphic file (type png)
- <use Images/mapsApp.png>
-Package pdftex.def Info: Images/mapsApp.png used on input line 354.
-(pdftex.def)             Requested size: 95.84079pt x 191.68pt.
- [60
-
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/mapsApp.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/mapsfragment.java)
-Overfull \vbox (4.22905pt too high) detected at line 360
- []
-
-[61
-
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/fragmentmaps.xml) [62
-
-] <Images/homeApp.png, id=1794, 804.00375pt x 1397.22pt>
+] <Images/homeApp.png, id=1534, 804.00375pt x 1397.22pt>
 File: Images/homeApp.png Graphic file (type png)
  <use Images/homeApp.png>
-Package pdftex.def Info: Images/homeApp.png used on input line 388.
+Package pdftex.def Info: Images/homeApp.png used on input line 386.
 (pdftex.def)             Requested size: 109.53323pt x 190.34346pt.
- [63
+ [54
 
  </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/homeApp.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/homefragment1.java)
-Overfull \vbox (4.22905pt too high) detected at line 395
+Overfull \vbox (4.22905pt too high) detected at line 393
  []
 
-[64
+[55
 
 ] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/homefragment2.java)
-Overfull \vbox (13.72903pt too high) detected at line 402
+Overfull \vbox (13.72903pt too high) detected at line 400
  []
 
-[65
+[56
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/homefragment3.xml) [66
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/homefragment3.xml) [57
 
-] <Images/infoApp.png, id=1900, 804.00375pt x 1156.32pt>
+] <Images/infoApp.png, id=1641, 804.00375pt x 1156.32pt>
 File: Images/infoApp.png Graphic file (type png)
  <use Images/infoApp.png>
-Package pdftex.def Info: Images/infoApp.png used on input line 434.
+Package pdftex.def Info: Images/infoApp.png used on input line 432.
 (pdftex.def)             Requested size: 109.53323pt x 157.52562pt.
- [67
+ [58
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/infoApp.png>] <Images/menuApp.png, id=1928, 804.00375pt x 1391.95032pt>
-File: Images/menuApp.png Graphic file (type png)
- <use Images/menuApp.png>
-Package pdftex.def Info: Images/menuApp.png used on input line 458.
-(pdftex.def)             Requested size: 109.53323pt x 189.62558pt.
- [68
-
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/menuApp.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/menu1.xml) [69
-
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/menu2.xml) [70
-
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/menu3.java) [71
-
-] <Images/allSitesApp.png, id=2034, 1084.05pt x 2168.1pt>
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/infoApp.png>] <Images/allSitesApp.png, id=1669, 1084.05pt x 2168.1pt>
 File: Images/allSitesApp.png Graphic file (type png)
  <use Images/allSitesApp.png>
-Package pdftex.def Info: Images/allSitesApp.png used on input line 501.
+Package pdftex.def Info: Images/allSitesApp.png used on input line 499.
 (pdftex.def)             Requested size: 102.68701pt x 205.34308pt.
- [72
+ [59
 
  </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/allSitesApp.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/instalaciones1.java)
-Overfull \vbox (4.22905pt too high) detected at line 507
+Overfull \vbox (4.22905pt too high) detected at line 505
  []
 
-[73
+[60
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/instalaciones2.java) [74
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/instalaciones2.java) [61
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/instalaciones3.java) [75
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/instalaciones3.java) [62
 
-] <Images/siteInfoApp.png, id=2141, 1084.05pt x 2168.1pt>
+] <Images/siteInfoApp.png, id=1776, 1084.05pt x 2168.1pt>
 File: Images/siteInfoApp.png Graphic file (type png)
  <use Images/siteInfoApp.png>
-Package pdftex.def Info: Images/siteInfoApp.png used on input line 540.
+Package pdftex.def Info: Images/siteInfoApp.png used on input line 538.
 (pdftex.def)             Requested size: 102.68701pt x 205.34308pt.
- [76
+ [63
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/siteInfoApp.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/instalaciones4.java) [77
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/siteInfoApp.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/instalaciones4.java) [64
 
-] <Images/settingsApp.png, id=2194, 812.28468pt x 1122.44344pt>
+] <Images/settingsApp.png, id=1828, 812.28468pt x 1122.44344pt>
 File: Images/settingsApp.png Graphic file (type png)
  <use Images/settingsApp.png>
-Package pdftex.def Info: Images/settingsApp.png used on input line 566.
+Package pdftex.def Info: Images/settingsApp.png used on input line 564.
 (pdftex.def)             Requested size: 123.22359pt x 170.26036pt.
- [78
+ [65
 
- </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/settingsApp.png>] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/settings.xml) [79
-
-]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [80
+ </home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Images/settingsApp.png>]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [66
 
 
 ]
 \openout2 = `Capitulos/Cap5_Back-end.aux'.
 
- (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap5_Back-end.tex [81
+ (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap5_Back-end.tex [67
 
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/server.jss) [82
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/server.jss) [68
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/ullSites.jss) [83
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/ullSites.jss) [69
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/api.jss) [84
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/api.jss) [70
 
-] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/Procfile) [85
+] (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Code/Procfile) [71
 
-]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [86
+]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [72
 
 
 ]
 \openout2 = `Capitulos/Cap6_Presupuesto.aux'.
 
- (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap6_Presupuesto.tex [87
+ (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap6_Presupuesto.tex [73
 
 
-] [88
+] [74
 
-] [89
+] [75
 
-]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [90
+]) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.toc) [76
 
 
 ]
@@ -1531,14 +1458,7 @@ Package pdftex.def Info: Images/settingsApp.png used on input line 566.
  (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap7_Conclusiones.tex
 \openout4 = `presentacionTFG.vrb'.
 
- (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.vrb) [91
-
-
-])
-\openout2 = `Capitulos/Cap8_Agradecimientos.aux'.
-
- (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap8_Agradecimientos.tex [92
-
+ (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.vrb) [77
 
 
 ])
@@ -1547,7 +1467,7 @@ Package pdftex.def Info: Images/settingsApp.png used on input line 566.
  (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap9_Final.tex
 \openout4 = `presentacionTFG.vrb'.
 
- (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.vrb) [93
+ (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.vrb) [78
 
 
 
@@ -1561,13 +1481,13 @@ Package pdftex.def Info: Images/settingsApp.png used on input line 566.
 \tf@snm=\write8
 \openout8 = `presentacionTFG.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 199.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
- (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.aux (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap1_Prologo.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap2_HerrSoft.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap3_EntornosUniversitarios.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap4_Desarrollo.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap5_Back-end.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap6_Presupuesto.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap7_Conclusiones.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap8_Agradecimientos.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap9_Final.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 199.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 199.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 222.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 222.
+ (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.aux (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap1_Prologo.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap2_HerrSoft.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap3_EntornosUniversitarios.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap4_Desarrollo.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap5_Back-end.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap6_Presupuesto.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap7_Conclusiones.aux) (/home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/Capitulos/Cap9_Final.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 222.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 222.
 Package rerunfilecheck Info: File `presentacionTFG.out' has not changed.
-(rerunfilecheck)             Checksum: 690E7A81186074031C777E031BD326D3;414.
+(rerunfilecheck)             Checksum: E47D74505B18CAE05FEB4B7B043549B2;419.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1575,18 +1495,18 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 24033 strings out of 493013
- 458793 string characters out of 6135682
- 864022 words of memory out of 5000000
- 26624 multiletter control sequences out of 15000+600000
- 14533 words of font info for 53 fonts, out of 8000000 for 9000
+ 23827 strings out of 493013
+ 454782 string characters out of 6135682
+ 862987 words of memory out of 5000000
+ 26479 multiletter control sequences out of 15000+600000
+ 14239 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,64p,845b,1252s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on /home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.pdf (93 pages, 10125618 bytes).
+Output written on /home/alex/TFG/TFG-ULL-NAVIGATION/Presentacion/presentacionTFG.pdf (78 pages, 6095324 bytes).
 PDF statistics:
- 2717 PDF objects out of 2984 (max. 8388607)
- 2524 compressed objects within 26 object streams
- 194 named destinations out of 1000 (max. 500000)
- 343 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2292 PDF objects out of 2487 (max. 8388607)
+ 2134 compressed objects within 22 object streams
+ 164 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 

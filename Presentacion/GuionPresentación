@@ -1,15 +1,14 @@
 ------------ Presentacion -------
 
-Buenos dias mi nombre es Alejandro Hernández Padrón y voy a presentar el Trabajo de Fin de Grado del Grado,  ULL-AR Tecnología de realidad aumentada en entornos universitarios,   con el que culminare mis estudios del Grado en Ingeniería Informática cursados en la Escuela Superior de Ingeniería y Tecnología de la Universidad de la Laguna (ULL). 
-------------  Introduccion ------------
+Buenos dias mi nombre es Alejandro Hernández Padrón y voy a realizar la  presentacion de mi tfg.
 
-Este Trabajo de Fin de Grado sea realizado bajo la tutela del profesor Francisco de Sande González aqui presente. Quien me ha apoyado guiado durante la elaboración del proyecto para asegurar la calidad del mismo.
+------------  Indice ------------
 
-A su vez este trabajo sigue la linea de desarrollo de aplicaciones interactivas con Android. 
+Este es el indice de mi presentación con los temas que se van tratar, donde el punto más importante es el 4 en el que detallaremos la aplicación Android ULL-AR que se ha desarrollado para este proyecto.
 
 ------------  Objetivos ------------
 
-xxx
+Los objetivos principales que se plantearon para este trabajo de fin de grado
 
 Con este proyecto pretende adquisición conocimientos de la tecnologias móviles 
 en el sistema operativo Android y en el desarrollo de aplicaciones para este sistema.
@@ -18,28 +17,66 @@ Tambien se pretende adquirir conocimientos en tecnologias de realidad aumentada 
 
 El analisis de las capacidades y ventajas que tienen los Servicios de computacion en la nube. 
 
-Familiarizarse con el uso de herramientas de control de versiones utilizando GitHub.
-GitHub es una plataforma de desarrollo colaborativo para alojar proyectos. 
-Se creado un repositorio del proyecto para poder llevar un control y seguimiento de mismo  junto con el tutor en la reuniones.
+Familiarizarse con el uso de herramientas de control de versiones utilizando GitHub. Se creado un repositorio del proyecto para poder llevar un control y seguimiento de mismo  junto con el tutor en la reuniones.
 
-La creación de una memoria técnica utilizando Latex.
-LaTeX  es un sistema de composición de textos, orientado a la creación de documentos que presenten una alta calidad tipográfica.
+La creación de una memoria técnica utilizando Latex. LaTeX  es un sistema de composición de textos, orientado a la creación de documentos que presenten una alta calidad tipográfica.
 
-y tras las labores de investigación y recopilacion de informacion se espera que alumno realize una aplicacion Android que cumpla con las necesidades propuestas.
+
+ tras las labores de investigación y recopilacion de informacion se espera que alumno realize una aplicacion Android que cumpla con las necesidades propuestas.
 Esta aplicación Android se he denominado ULL-AR.
+
+
+-------------------
+
+A continuación hablaremos sobre las herramientas y tecnologias utilizadas en el desarrollo de este trabajo.
 
 ------------  Android Studio  ------------
 
 
-Android Studio es el IDE (Entorno de Desarrollo Integrado) oficial para el desarrollo de aplicaciones en Android, basado en IntelliJ IDEA.
+Android Studio es el IDE (Entorno de Desarrollo Integrado) oficial para el desarrollo de aplicaciones en Android.
 
-Ventajas: 
-Un sistema de compilación basado en Gradle que simplifica añadir librerias al proyecto.
-Un emulador rápido y facil de usar.
-Velocidad para aplicar cambios a aplicaciones ya funcionando.
-Un sistema de depuración con una interfaz sencilla e intuitiva.
+Este IDE ofrece numerosas ventajas y facilidades a la hora de implementar, ejecutar y depurar código de una aplicación Android.
 
-Este IDE ofrece numerosas ventajas a la hora de implementar, ejecutar y depurar código de una aplicación Android.
+
+
+------------  Node.js ------------
+
+Node.js es una librería y entorno de ejecución de E/S dirigida por eventos que se ejecuta sobre el intérprete de JavaScript creado por Google llamado Chrome V8.
+
+Se ha optado por el uso de un servidor que implemente la tecnología Node.js como servidor de la aplicacion por la facilidad  para ejecutar este servidor en cualquier tipo de sistema operativo y para su futura integración en la nube, gracias a la plataforma Heroku de la que se hablará más adelante.
+
+------------ MongoDB  ------------
+
+MongoDB  es un sistema de base de datos multiplataforma NoSQL orientado a documentos. Esta base de datos es de esquema libre, es decir, al contrario que las bases de datos relacionales no utilizan una tabla fija para guardar la información.
+
+Esta tecnología nos permitia de forma rápida y sencilla crear una base de datos con la información necesaria para este proyecto.
+
+------------ Heroku  ------------
+
+Heroku es una plataforma como servicio de computación en la nube que soporta distintos lenguajes de programación. Heroku permite a desarrolladores y compañías construir, proporcionar, monitorizar y escalar aplicaciones. Es una forma sencilla de montar una infraestructura en la nube.
+
+Un dyno es simplemente un ordenador virtual que pueden ser encendido y/o apagado en función del tamaño y requisitos de la aplicación. Estos dynos es donde se ejecutara el servidor Node.js de la aplicación Android y en función del tamaño de la aplicación a desarrollar se pueden configurar con mayor potencia o capacidad. 
+
+
+------------ mLab ------------
+
+mLab es un servicio de base de datos en la nube totalmente gestionado que ofrece aprovisionamiento y escalados automáticos de las bases de datos MongoDB, copia de seguridad y recuperación, monitoreo, herramientas de administración basadas en web y soporte experto.
+
+En esta plataforma se ubicará la base de datos de \ULLAR{}. 
+Dadas las facilidades de acceso a ella e integración con el servidor de la aplicación en Node.js, es una opción simple, fácil de manejar y con posibilidad de escalar.
+
+
+
+
+
+
+------------ Google Maps  ------------
+
+La apI de google maps para android es fácil de integrar y con soporte de Google, es la mejor opción para tener un mapa funcional y que permita ubicar al usuario de la aplicación.
+
+------------   ------------
+
+
 
 ------------  Realidad Aumentada ------------
 
@@ -47,7 +84,7 @@ A continuación pasamos a comentar que es la realidad aumentada.
 
 Como funciona, que requistos necesita sistema para implementar la tecnologia de realidad
 
-Que tipo de RA y las diferencias entre ellos
+Que tipos de RA existen y las diferencias entre ellos
 
 En qué difiere la realidad aumentada y la realidad virtual
 
@@ -66,29 +103,28 @@ siendo el sector de los videojuegos del que más se oye hablar.
 
 Cada vez más empresas estan invirtiendo en el desarrollo de esta tecnologia debido a los beneficios y aplicaciones toda por descubrir que tienen
 
-En el futuro desde mi punto de vista es una tecnología que estará integrada en nuestro día a día.
+
 
 ------------  Como funciona esta tecnologia ------------
 
 Requisitos para implementar una tecnologia de Realidad Aumentada
 
-Primero necesitamos de un dispositivo de visualización en el que poder mostrar la tecnica de realidad aumentada, este dispositivo puede ser la pantalla de un móvil o table, o incluso unas gafas especiales como las gafas HOLOLENS de Google.
+Primero necesitamos de un dispositivo de visualización en el que poder mostrar la tecnica de realidad aumentada, este dispositivo puede ser la pantalla de un móvil o tablet, o incluso unas gafas especiales como las gafas HOLOLENS de Google.
 
 Un sistema de computación que junto los datos de el entorno que se obtienen de sensores como GPS, Wifi, bluetooth, acelerómetro, etc.
 
-Y un software de RA que permita añadir información digita correspondiente a la visión del entorno real. Permita generar la imagen de realidad aumentada
+Y un software de RA que permita añadir información digita correspondiente a la visión del entorno real. Permita generar la imagen de realidad aumentada.
 
-------------  
-Que tipos de RA existen ------------
+------------  Que tipos de RA existen ------------
 
 Existen 4 tipos
 
 Marker-based AR. Si
 
-Markerless AR.  Corresponde a la RA que recoge los datos de su posición y orientación para mostrar la información correspondiente a esa área. Estos sistemas utilizan los datos obtenidos de la cámara, GPS, brújula, giroscopio y acelerómetro para establecer la ubicación del usuario en el entorno. Utiliza técnicas para reconocer terreno o ambientes para calcular la posición y orientación de la cámara. Con este tipo de tecnología se puede probar un mueble en el salón antes de llegar a comprarlo.
+Markerless AR.  Corresponde a la RA que recoge los datos de su posición y orientación para mostrar la información correspondiente a esa área. Utiliza técnicas para reconocer terreno o ambientes para calcular la posición y orientación de la cámara. Con este tipo de tecnología se puede probar un mueble en el salón antes de llegar a comprarlo.
 
 
-Pojection-based AR. Este modo de RA consiste en la proyección de luz en superficies y objetos en el mundo real. Existen muchos usos interesantes de esta tecnología, como aplicaciones para el uso de teclados virtuales proyectados que reconozcan cuando una ``tecla" es pulsada. Esta proyección también se puede hacer en medio del aire con ayuda de la tecnología de láseres de plasma.
+Pojection-based AR. Este modo de RA consiste en la proyección de luz en superficies y objetos en el mundo real. Existen muchos usos interesantes de esta tecnología, como aplicaciones para el uso de teclados virtuales proyectados que reconozcan cuando una ``tecla" es pulsada. 
 
 Superimposition-based AR. Esta tecnología reemplaza la imagen original por una de RA, de forma completa o parcial. El reconocimiento de objetos juega un papel fundamental en este tipo de tecnología. Tiene gran utilidad el campo de la medicina, por ejemplo, un doctor podría examinar a un paciente mientras ve la imagen de RA que se creado a partir de una visión de rayos X y la imagen real de paciente, así puede ver y entender mejor el daño en un hueso.
 
@@ -113,7 +149,46 @@ En la RM se trata de llevar el mundo real al mundo virtual. La idea es generar u
 
 La RM es mucho más inmersiva que la realidad aumentada y requiere de mucha más capacidad de procesamiento. 
 
-------------  Futuro y usos de la Realidad Aumentada ------------
+
+------------ Integracion de la Realidad Aumentada en Android Studio ------------
+
+Para la implementacion de la tecnica de realidad aumentada se analizaron los sdk que ofrecen vuforia, kudan ar sdk y maxst sdk para android studio.
+
+De vuforia puedo decir que la integración en Android studio no fue facily la documentación era escasa o desactualizada. No es una buena opción para utilizarla Android Studio.
+
+Luego tenemos kudan y maxst sdk, ambos sdk son faciles de instalar con buen soporte y documentación de cada una de sus funcionalidades.
+
+Kudan SDK fue elegido como el sdk para integrar en la aplicación por su sencillez inicial y que a su vez cumplia con los requisitos de la aplicacion.
+
+
+------------ RA en entornos universitarios ------------
+
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
 
 
 
@@ -146,4 +221,69 @@ La RM es mucho más inmersiva que la realidad aumentada y requiere de mucha más
 ------------   ------------
 
 ------------   ------------
+
+
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
+------------   ------------
+
 
